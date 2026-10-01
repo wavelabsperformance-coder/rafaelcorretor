@@ -2,13 +2,11 @@ import { HeroSection } from "@/components/home/hero-section"
 import { FeaturedCarousel } from "@/components/featured-carousel"
 import { DifferentialsSection } from "@/components/home/differentials-section"
 import { AboutPreviewSection } from "@/components/home/about-preview-section"
-import { FeaturedPropertiesSection } from "@/components/home/featured-properties-section"
 import { ServicesSection } from "@/components/home/services-section"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { CTASection } from "@/components/home/cta-section"
 import { MapSection } from "@/components/home/map-section"
-import { BrokersCarousel } from "@/components/brokers-carousel"
-import { saleProperties } from "@/lib/data"
+import { rentalProperties } from "@/lib/data"
 
 export default function HomePage() {
   return (
@@ -16,18 +14,17 @@ export default function HomePage() {
       <HeroSection />
 
       <FeaturedCarousel
-        properties={saleProperties}
-        title="Imóveis à Venda"
+        properties={rentalProperties}
+        title="Imóveis para Alugar"
         subtitle="Destaques"
-        type="venda"
+        type="aluguel"
+        viewAllHref="/empreendimentos/imoveis-para-alugar"
       />
 
       <DifferentialsSection />
       <AboutPreviewSection />
-      <FeaturedPropertiesSection />
       <ServicesSection />
       <TestimonialsSection />
-      <BrokersCarousel />
       <CTASection />
       <MapSection />
     </>

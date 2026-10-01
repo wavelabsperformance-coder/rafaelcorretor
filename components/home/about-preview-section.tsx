@@ -1,112 +1,192 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { siteConfig, aboutContent } from "@/lib/data"
-import { ArrowUpRight, Sparkles, Compass } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
+import { motion, Variants } from "framer-motion"
+import { ArrowUpRight } from "lucide-react"
+import { siteConfig, aboutContent } from "@/lib/data"
+
+// Caminho atualizado conforme sua estrutura de pastas public/images/sobre/Perfil.png
+const ABOUT_PHOTO = "/images/sobre/Perfil.png"
+
+function WhatsappIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+      <path d="M12 2a10 10 0 0 0-8.58 15.15L2 22l4.98-1.3A9.96 9.96 0 0 0 12 22a10 10 0 0 0 10-10A10 10 0 0 0 12 2zM12 20c-1.57 0-3.08-.42-4.41-1.21l-.32-.19-2.96.78.79-2.89-.21-.33A7.96 7.96 0 0 1 4 12a8 8 0 1 1 16 0 8 8 0 0 1-8 8z" />
+    </svg>
+  )
+}
+
+const fadeUpVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (custom: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1], delay: custom * 0.1 },
+  }),
+}
 
 export function AboutPreviewSection() {
+  const yearsInMarket = new Date().getFullYear() - siteConfig.foundedYear
+
+  const stats = [
+    { value: `${yearsInMarket}`, label: "Anos no mercado imobiliário" },
+    { value: "09", label: "Anos de experiência bancária" },
+    { value: "PE", label: "Atuação em Caruaru e região" },
+  ]
+
   return (
-    <section className="py-24 lg:py-32 bg-[#051813] text-white relative overflow-hidden">
-      {/* Luzes de Fundo Futurísticas (Glow Ambient) */}
-      <div className="absolute top-1/4 left-0 -translate-x-1/2 w-[500px] h-[500px] bg-[#b85d19]/20 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-0 translate-x-1/3 w-[600px] h-[600px] bg-[#0d5c46]/30 rounded-full blur-[160px] pointer-events-none" />
+    <section className="relative overflow-hidden bg-[#F3ECE0] py-24 sm:py-32">
+      {/* Marca D'água Editorial Sutil no Fundo */}
+      <span className="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 select-none font-serif text-[18vw] font-normal leading-none text-[#0D3B2E]/[0.03]">
+        RAFAEL
+      </span>
 
-      {/* Grid Pattern Cyber de Fundo */}
-      <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-        style={{
-          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
-        }}
-      />
-
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-20">
           
-          {/* Lado Esquerdo: Imagem Futurística com Moldura Tech / Neon */}
+          {/* Coluna da Imagem */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            custom={0}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-6 relative"
+            variants={fadeUpVariants}
+            className="lg:col-span-5"
           >
-            {/* Moldura Neon Externa */}
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-[#b85d19] via-[#0d5c46] to-transparent opacity-40 blur-md group-hover:opacity-100 transition duration-1000" />
+            <div className="group relative mx-auto max-w-md lg:max-w-none">
+              {/* Moldura de Contorno Discreto */}
+              <div className="absolute -inset-3 border border-[#B85D19]/30" />
 
-            {/* Container da Imagem com Glassmorphism */}
-            <div className="relative aspect-[4/3] md:aspect-[16/11] w-full rounded-3xl overflow-hidden border border-white/10 bg-[#08221b]/80 backdrop-blur-xl shadow-2xl">
-              <img
-                src="/sobre/institucional.png"
-                alt="Sobre a Acauã Imóveis"
-                className="w-full h-full object-cover opacity-90 transition-all duration-700 hover:scale-105 hover:opacity-100"
-              />
+              {/* Container da Foto com Cores Naturais */}
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#0D3B2E] shadow-2xl">
+                <Image
+                  src={ABOUT_PHOTO}
+                  alt="Rafael Cavalcante, Corretor de Imóveis"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                  priority
+                />
+              </div>
 
-              {/* Tag Flutuante Tech */}
-              <div className="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#051813]/80 border border-white/10 text-[10px] uppercase tracking-widest text-[#b85d19] backdrop-blur-md flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#b85d19] animate-pulse" />
-                Inovação Imobiliária
+              {/* Tag Integrada com Borda Lateral Verde/Dourada */}
+              <div className="mt-4 flex flex-col items-start gap-0.5 border-l-2 border-[#B85D19] pl-3">
+                <p className="font-serif text-sm font-medium tracking-wide text-[#0D3B2E]">
+                  RAFAEL CAVALCANTE
+                </p>
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-[#B85D19]">
+                  CRECI 17307-PE · Atendimento Exclusivo
+                </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Lado Direito: Conteúdo Futurístico */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-6"
-          >
-            {/* Badge Neon Superior */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#b85d19]/10 border border-[#b85d19]/30 text-[#b85d19] text-xs uppercase tracking-[0.25em] font-semibold mb-6">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>O Futuro da Acauã</span>
-            </div>
+          {/* Coluna de Conteúdo Editorial */}
+          <div className="lg:col-span-7">
+            {/* Subtítulo */}
+            <motion.div
+              custom={1}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUpVariants}
+              className="flex items-center gap-3"
+            >
+              <span className="h-px w-10 bg-[#B85D19]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[#B85D19]">
+                Sobre o Corretor
+              </span>
+            </motion.div>
 
-            {/* Título com Gradiente Vibrante */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light font-serif leading-tight bg-gradient-to-r from-white via-[#e2e8f0] to-[#b85d19] bg-clip-text text-transparent">
-              Tradição Reinventada para uma Nova Era
-            </h2>
+            {/* Título Principal */}
+            <motion.h2
+              custom={2}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUpVariants}
+              className="mt-4 font-serif text-4xl font-normal leading-[1.08] tracking-tight text-[#0D3B2E] sm:text-5xl lg:text-6xl"
+            >
+              Prazer, eu sou o{" "}
+              <span className="relative inline-block italic font-normal text-[#B85D19]">
+                Rafael
+              </span>
+            </motion.h2>
 
-            {/* Texto Descritivo com Alto Contraste */}
-            <p className="text-emerald-100/70 mt-6 leading-relaxed text-base md:text-lg font-light">
+            {/* Texto Descritivo */}
+            <motion.p
+              custom={3}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUpVariants}
+              className="mt-8 text-lg leading-relaxed text-[#0D3B2E]/80 sm:text-xl font-light"
+            >
               {aboutContent.shortDescription}
-            </p>
+            </motion.p>
 
-            {/* Botões Futurísticos (Glow + Glass) */}
-            <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="rounded-xl bg-[#b85d19] hover:bg-[#d46d20] text-white px-8 py-6 text-base font-medium shadow-[0_0_25px_rgba(184,93,25,0.35)] hover:shadow-[0_0_35px_rgba(184,93,25,0.6)] transition-all duration-300 border border-white/20"
-              >
-                <Link href="/sobre" className="flex items-center gap-2">
-                  Conheça Nossa História
-                  <ArrowUpRight className="h-5 w-5" />
-                </Link>
-              </Button>
+            {/* Divisor */}
+            <div className="mt-10 h-px w-full bg-gradient-to-r from-[#0D3B2E]/20 via-[#0D3B2E]/10 to-transparent" />
 
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="rounded-xl bg-white/5 hover:bg-white/10 text-white border-white/15 hover:border-white/30 backdrop-blur-md px-8 py-6 text-base font-medium transition-all duration-300"
+            {/* Grade de Métricas */}
+            <motion.div
+              custom={4}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUpVariants}
+              className="mt-8 grid grid-cols-3 gap-8"
+            >
+              {stats.map((item) => (
+                <div key={item.label} className="group">
+                  <p className="font-serif text-4xl font-extralight text-[#0D3B2E] transition-colors duration-300 group-hover:text-[#B85D19] sm:text-5xl lg:text-6xl">
+                    {item.value}
+                  </p>
+                  <p className="mt-2 text-xs font-medium uppercase tracking-widest leading-relaxed text-[#0D3B2E]/60">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Botões de Ação */}
+            <motion.div
+              custom={5}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUpVariants}
+              className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6"
+            >
+              <Link
+                href="/sobre"
+                className="group relative inline-flex h-14 items-center justify-center overflow-hidden bg-[#0D3B2E] px-8 text-xs font-semibold uppercase tracking-[0.2em] text-white transition-all duration-500 hover:bg-[#B85D19]"
               >
-                <a
-                  href={siteConfig.whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <Compass className="h-5 w-5 text-[#b85d19]" />
-                  Falar com a Equipe
-                </a>
-              </Button>
-            </div>
-          </motion.div>
+                <span className="relative z-10 flex items-center gap-3">
+                  Conheça minha história
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </span>
+              </Link>
+
+              <a
+                href={siteConfig.whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex h-14 items-center justify-center gap-3 border border-[#25D366]/40 bg-[#25D366]/10 px-8 text-xs font-semibold uppercase tracking-[0.2em] text-[#0D3B2E] transition-all duration-500 hover:border-[#25D366] hover:bg-[#25D366] hover:text-white hover:shadow-lg hover:shadow-[#25D366]/20"
+              >
+                <WhatsappIcon className="h-5 w-5 text-[#25D366] transition-colors duration-500 group-hover:text-white" />
+                <span>Falar no WhatsApp</span>
+              </a>
+            </motion.div>
+
+          </div>
 
         </div>
       </div>

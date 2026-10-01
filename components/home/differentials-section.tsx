@@ -1,86 +1,99 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { differentials } from "@/lib/data"
-import { User, Building2, BarChart3, Handshake } from "lucide-react" // Substituted Shield for Handshake (or Headset)
+import { ArrowRight, User, Building2, BarChart3, Handshake } from "lucide-react"
+import { differentials, siteConfig } from "@/lib/data"
 
 const iconMap = {
   user: User,
   building: Building2,
   chart: BarChart3,
-  shield: Handshake, // Mapeia a propriedade 'shield' para o ícone Handshake (ou troque por Headset se preferir)
+  shield: Handshake,
 }
 
-// Configuração dos fundos alternados (Laranja / Verde)
-const cardVariants = [
-  {
-    // 1º e 3º Cards: Laranja / Terracota
-    cardBg: "bg-[#b85d19] text-white hover:bg-[#a24f13]",
-    iconBg: "bg-white/15 text-white border-white/20",
-    descriptionColor: "text-white/85",
-  },
-  {
-    // 2º e 4º Cards: Verde Escuro
-    cardBg: "bg-[#0d3b2e] text-white hover:bg-[#08281f]",
-    iconBg: "bg-white/15 text-white border-white/20",
-    descriptionColor: "text-white/85",
-  },
+// Cor de cada bloco: alterna laranja e verde.
+// No celular alterna um a um; no desktop forma um xadrez.
+const blockColors = [
+  "bg-[#b85d19]",
+  "bg-[#1b5a46]",
+  "bg-[#b85d19] sm:bg-[#1b5a46]",
+  "bg-[#1b5a46] sm:bg-[#b85d19]",
 ]
 
 export function DifferentialsSection() {
   return (
-    <section className="py-20 lg:py-28 bg-[#faf7f2]">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <span className="text-[11px] uppercase tracking-[0.3em] text-[#b85d19] font-bold">
-            Por que escolher a Acauã
-          </span>
-          <h2 className="text-3xl md:text-4xl font-light text-[#0d3b2e] mt-3 font-serif text-balance">
-            Diferenciais que Fazem a Diferença
-          </h2>
-        </motion.div>
+    <section className="bg-[#faf7f2] px-4 py-14 sm:px-6 lg:py-24">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#0d3b2e] px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          {/* Título + botão */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5"
+          >
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-8 bg-[#e9a66f]" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#e9a66f]">
+                Meu jeito de trabalhar
+              </span>
+            </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {differentials.map((item, index) => {
-            const Icon = iconMap[item.icon as keyof typeof iconMap] || Handshake
-            // Alterna entre Laranja (0) e Verde (1)
-            const style = cardVariants[index % 2]
+            <h2 className="font-serif text-3xl font-normal leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-5xl text-balance">
+              Do primeiro contato até a chave na mão
+            </h2>
 
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -6 }}
-                className={`group text-center p-8 rounded-3xl transition-all duration-300 shadow-md hover:shadow-2xl ${style.cardBg}`}
-              >
-                {/* Ícone Minimalista */}
-                <div
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl border mb-6 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 ${style.iconBg}`}
+            <p className="mt-5 max-w-md text-base leading-relaxed text-white/70">
+              Aluguel ou venda, você fala direto comigo e sabe em que pé está
+              cada etapa do negócio.
+            </p>
+
+            <a
+              href={siteConfig.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#b85d19] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#0d3b2e] sm:w-auto"
+            >
+              Falar com o Rafael
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          </motion.div>
+
+          {/* Diferenciais em blocos coloridos */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
+            {differentials.map((item, index) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap] || Handshake
+              const color = blockColors[index % blockColors.length]
+
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  whileHover={{ y: -4 }}
+                  className={`flex gap-4 rounded-2xl border border-white/10 p-5 shadow-lg transition-shadow duration-300 hover:shadow-2xl sm:block sm:p-7 ${color}`}
                 >
-                  <Icon className="h-6 w-6" />
-                </div>
+                  <Icon
+                    className="mt-0.5 h-6 w-6 shrink-0 text-white sm:mt-0 sm:h-7 sm:w-7"
+                    strokeWidth={1.5}
+                  />
 
-                {/* Título Branco Clean */}
-                <h3 className="text-xl font-semibold mb-3 font-serif text-white tracking-wide">
-                  {item.title}
-                </h3>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold text-white sm:mt-5 sm:text-xl">
+                      {item.title}
+                    </h3>
 
-                {/* Descrição Leve */}
-                <p className={`text-sm leading-relaxed ${style.descriptionColor}`}>
-                  {item.description}
-                </p>
-              </motion.div>
-            )
-          })}
+                    <p className="mt-1.5 text-sm leading-relaxed text-white/85 sm:mt-2 sm:text-[15px]">
+                      {item.description}
+                    </p>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

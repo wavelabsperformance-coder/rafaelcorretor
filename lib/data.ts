@@ -1,5 +1,5 @@
 // ============================================
-// DADOS EDITÁVEIS DO SITE - ACAUÃ IMÓVEIS
+// DADOS EDITÁVEIS DO SITE - RAFAEL CAVALCANTE
 // ============================================
 
 // ============================================
@@ -7,22 +7,20 @@
 // ============================================
 
 export const siteConfig = {
-  name: "Acauã Imóveis",
+  name: "Rafael Cavalcante",
   description:
-    "Imobiliária de alto padrão especializada em imóveis exclusivos e de luxo em Pernambuco.",
-  cnpj: "00.000.000/0001-00",
-  phone: "(81) 99195-0550",
-  whatsapp: "5581991950550",
-  whatsappLink: "https://wa.me/5581991950550",
-  email: "contato@acauaimoveis.com.br",
-  address: "Acauã Imóveis, Caruaru - PE",
-  instagram: "https://instagram.com/acauaimoveis",
-  googleMapsLink: "https://maps.app.goo.gl/jmg2ap427F8Ch3fD9",
-  googleMapsEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.6143097640174!2d-35.96510612421074!3d-8.241481382766262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a9890006124fe3%3A0x8a3b04ff3103357e!2sAcau%C3%A3%20Imoveis!5e0!3m2!1spt-BR!2sbr!4v1787579016243!5m2!1spt-BR!2sbr",
-  googleReviewsLink:
-    "https://www.google.com.br/maps/place/Acau%C3%A3+Imoveis/@-8.243758,-35.9680024",
-  foundedYear: 2008,
+    "Corretor de imóveis em Caruaru, especialista em locação e venda, com atendimento personalizado, transparência e agilidade.",
+  cnpj: "",
+  phone: "(81) 99686-3213",
+  whatsapp: "5581996863213",
+  whatsappLink: "https://wa.me/5581996863213",
+  email: "Rafael.cavalcantecorretorpe@gmail.com",
+  address: "Caruaru - PE",
+  instagram: "https://instagram.com/",
+  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Caruaru+PE",
+  googleMapsEmbed: "https://www.google.com/maps?q=Caruaru,+PE&output=embed",
+  googleReviewsLink: "",
+  foundedYear: 2021,
   developerName: "Wave Labs Performance",
   developerWhatsapp: "https://wa.me/5581999999999",
 }
@@ -32,41 +30,41 @@ export const siteConfig = {
 // ============================================
 
 export const heroContent = {
-  ctaText: "Falar com Especialista",
-  ctaSecondary: "Ver Empreendimentos",
+  ctaText: "Falar com o Rafael",
+  ctaSecondary: "Ver Imóveis para Alugar",
 }
 
 // ============================================
-// SOBRE A ACAUÃ
+// SOBRE O CORRETOR
 // ============================================
 
 export const aboutContent = {
   shortDescription:
-    "Com quase 3 anos de história e fundadores e colaboradores com mais de 10 anos de experiência no mercado, oferecemos um atendimento personalizado e exclusivo para quem busca realizar os melhores negócios imobiliários em Recife, Caruaru e Litoral.",
+    "Com 5 anos de atuação no mercado imobiliário e 9 anos de experiência no setor bancário, atendo em Caruaru com atendimento personalizado, transparência e agilidade, da primeira conversa até a conclusão do negócio.",
 
-  fullHistory: `A Acauã Imóveis nasceu do sonho e da união de profissionais com mais de 10 anos de sólida experiência no mercado imobiliário de Pernambuco.
+  fullHistory: `Sou Rafael Cavalcante, corretor de imóveis em Caruaru.
 
-Fundada por especialistas apaixonados pelo setor, nossa empresa tem quase 3 anos de atuação marcados por um crescimento constante e pelo compromisso em conectar pessoas aos imóveis ideais com transparência, segurança e eficiência.
+Antes de me dedicar ao mercado imobiliário, trabalhei por 9 anos em bancos, no BNB e no Bradesco. Essa bagagem me trouxe organização, responsabilidade e atenção aos detalhes, qualidades que levo para cada negociação.
 
-Combinando a energia de uma imobiliária moderna e conectada às tendências atuais com a bagagem e maturidade de mais de uma década de expertise de nossos gestores e corretores, construímos uma atuação forte em Recife, Caruaru e Litoral.
+Há 5 anos atuo como corretor, com foco em locação e venda de imóveis na cidade de Caruaru. Meu trabalho cresce pelas indicações de clientes e pelo atendimento nas plataformas digitais, sempre de forma próxima e personalizada.
 
-Nossa reputação é baseada em três pilares fundamentais: excelência no atendimento, conhecimento profundo do mercado local e um portfólio cuidadosamente selecionado de propriedades residenciais e comerciais.
+Acredito que um bom negócio imobiliário começa na transparência. Por isso, explico cada etapa do processo com clareza, busco agilidade na documentação e na negociação e acompanho você do primeiro contato até a conclusão.
 
-Cada cliente é tratado de forma única, recebendo consultoria sob medida para suas necessidades e aspirações. Seja para comprar, vender ou alugar, a Acauã Imóveis está pronta para conduzir você nessa jornada com toda a tranquilidade que você merece.`,
+Seja para alugar, comprar ou vender, meu compromisso é conduzir você nessa jornada com segurança e tranquilidade.`,
 
   mission:
-    "Proporcionar experiências imobiliárias excepcionais, conectando pessoas a propriedades que refletem seus sonhos e estilo de vida, com excelência, ética e compromisso.",
+    "Conectar pessoas ao imóvel certo, com atendimento personalizado, transparência e agilidade em cada etapa do negócio.",
 
   vision:
-    "Ser a imobiliária referência em Recife, Caruaru e Litoral, reconhecida pela qualidade superior dos serviços e pelo impacto positivo na vida de nossos clientes.",
+    "Ser referência em atendimento imobiliário em Caruaru, reconhecido pela confiança e pelo cuidado com cada cliente.",
 
   values: [
-    "Excelência em cada detalhe",
-    "Ética e transparência",
+    "Transparência em todas as etapas",
     "Atendimento personalizado",
-    "Compromisso com resultados",
-    "Inovação constante",
-    "Respeito e valorização das pessoas",
+    "Agilidade nos processos",
+    "Ética e responsabilidade",
+    "Compromisso com o cliente",
+    "Respeito e confiança",
   ],
 }
 
@@ -76,28 +74,28 @@ Cada cliente é tratado de forma única, recebendo consultoria sob medida para s
 
 export const differentials = [
   {
-    title: "Atendimento Exclusivo",
+    title: "Atendimento Personalizado",
     description:
-      "Consultores especializados dedicados a entender suas necessidades e encontrar o imóvel perfeito.",
+      "Cada cliente é único. Entendo o que você procura para indicar as opções certas, sem perder seu tempo.",
     icon: "user",
   },
   {
-    title: "Portfólio Premium",
+    title: "Transparência Total",
     description:
-      "Seleção criteriosa de imóveis de alto padrão em localizações privilegiadas.",
-    icon: "building",
+      "Informações claras em todas as etapas, do primeiro contato à conclusão do negócio.",
+    icon: "shield",
   },
   {
-    title: "Expertise de Mercado",
+    title: "Agilidade nos Processos",
     description:
-      "Mais de 15 anos de experiência e profundo conhecimento do mercado imobiliário local.",
+      "Acompanho visitas, documentação e negociação de perto para que tudo aconteça com rapidez.",
     icon: "chart",
   },
   {
-    title: "Assessoria Completa",
+    title: "Experiência Bancária",
     description:
-      "Acompanhamento em todas as etapas, desde a busca até a conclusão da negociação.",
-    icon: "shield",
+      "9 anos de bancos (BNB e Bradesco) somados a 5 anos no mercado imobiliário de Caruaru.",
+    icon: "building",
   },
 ]
 
@@ -107,27 +105,27 @@ export const differentials = [
 
 export const services = [
   {
-    title: "Compra de Imóveis",
+    title: "Locação de Imóveis",
     description:
-      "Encontre o imóvel ideal com nossa assessoria especializada. Análise de mercado, negociação e acompanhamento completo.",
-    icon: "home",
+      "Encontre o imóvel ideal para alugar, com atendimento próximo, transparência e agilidade no processo.",
+    icon: "key",
   },
   {
     title: "Venda de Imóveis",
     description:
-      "Valorize e venda seu imóvel com estratégias de marketing premium e acesso a compradores qualificados.",
+      "Venda seu imóvel com divulgação estratégica e acompanhamento de todas as etapas da negociação.",
     icon: "tag",
   },
   {
-    title: "Locação Premium",
+    title: "Compra de Imóveis",
     description:
-      "Imóveis para locação de alto padrão com gestão completa e inquilinos selecionados.",
-    icon: "key",
+      "Assessoria para você comprar com segurança, desde a busca até a conclusão do negócio.",
+    icon: "home",
   },
   {
     title: "Consultoria Imobiliária",
     description:
-      "Orientação especializada para investimentos, avaliações e análise de oportunidades no mercado.",
+      "Orientação para quem quer alugar, vender ou investir, com análise das melhores oportunidades em Caruaru.",
     icon: "briefcase",
   },
 ]
@@ -138,39 +136,39 @@ export const services = [
 
 export const testimonials = [
   {
-    name: "Roberto Almeida",
-    role: "Empresário",
-    text: "A Acauã Imóveis superou todas as minhas expectativas. O atendimento personalizado e a qualidade dos imóveis apresentados fizeram toda a diferença na escolha do meu novo lar.",
+    name: "Juliana Ferreira",
+    role: "Professora",
+    text: "Fui atendida com muita atenção desde o primeiro contato. O Rafael entendeu o que eu precisava e me apresentou opções certeiras. Aluguei meu apartamento em poucos dias.",
     rating: 5,
   },
   {
-    name: "Fernanda Costa",
-    role: "Médica",
-    text: "Profissionalismo e dedicação em cada etapa. Encontraram exatamente o que eu procurava em um prazo surpreendente. Recomendo a todos que buscam qualidade.",
+    name: "Thiago Martins",
+    role: "Engenheiro",
+    text: "Processo claro do começo ao fim, sem surpresas. Gostei da transparência e da agilidade na documentação. Recomendo com tranquilidade.",
     rating: 5,
   },
   {
-    name: "Carlos Eduardo",
-    role: "Investidor",
-    text: "Trabalho com a Acauã há anos em meus investimentos imobiliários. A expertise deles em identificar oportunidades é incomparável. Parceria de confiança.",
+    name: "Camila Rocha",
+    role: "Enfermeira",
+    text: "Atendimento rápido e muito educado. Ele me acompanhou nas visitas e resolveu tudo com paciência. Me senti segura em cada etapa.",
     rating: 5,
   },
   {
-    name: "Ana Beatriz",
-    role: "Arquiteta",
-    text: "Como profissional da área, sei reconhecer excelência. A curadoria de imóveis da Acauã é impecável, com propriedades que realmente se destacam no mercado.",
+    name: "Bruno Lacerda",
+    role: "Comerciante",
+    text: "Precisava de um imóvel com urgência e ele foi direto ao ponto. Comunicação sempre pelo WhatsApp, rápida e objetiva. Profissional de confiança.",
     rating: 5,
   },
   {
-    name: "Marcelo Santos",
-    role: "Advogado",
-    text: "Transparência e ética em todo o processo. A equipe jurídica trabalhou em perfeita sintonia com a imobiliária. Experiência exemplar do início ao fim.",
+    name: "Renata Silva",
+    role: "Proprietária",
+    text: "Coloquei meu imóvel para alugar com ele e fiquei tranquila com o acompanhamento. Transparência total sobre cada visita e cada proposta.",
     rating: 5,
   },
   {
-    name: "Patrícia Lima",
-    role: "Executiva",
-    text: "Vendi e comprei meu imóvel com a Acauã. O suporte foi excepcional nas duas operações. Equipe altamente qualificada e atenciosa.",
+    name: "Paulo Henrique",
+    role: "Analista",
+    text: "Fui indicado por um amigo e entendi o porquê. Atendimento personalizado e muito conhecimento da cidade. Fechei negócio sem dor de cabeça.",
     rating: 5,
   },
 ]
@@ -470,6 +468,8 @@ export const featuredProperties: Property[] = [
 
 // ============================================
 // TIPO DE DADOS DOS CORRETORES
+// (mantido só para não quebrar imports; pode ser
+// removido junto com o componente BrokersCarousel)
 // ============================================
 
 export type Broker = {
@@ -483,155 +483,14 @@ export type Broker = {
   instagram: string
 }
 
-// ============================================
-// IMAGEM DA EQUIPE
-// ============================================
-
 export const teamContent = {
-  image: "/corretores/equipe-acaua.png",
-  eyebrow: "NOSSA EQUIPE",
-  title: "Profissionais dedicados a realizar bons negócios",
-  description:
-    "Contamos com uma equipe preparada para entender suas necessidades e apresentar as melhores oportunidades, com atendimento próximo, transparente e personalizado.",
+  image: "",
+  eyebrow: "",
+  title: "",
+  description: "",
 }
 
-// ============================================
-// EQUIPE ACAUÃ IMÓVEIS
-// ============================================
-
-export const brokers: Broker[] = [
-  // 1. Gleydson Tabosa
-  {
-    id: "gleydson-tabosa",
-    name: "Gleydson Tabosa",
-    creci: "CRECI F 17789",
-    role: "Gestor e Proprietário",
-    bio: "Gestor e Proprietário da Acauã Imóveis, participa da condução da empresa e acompanha de perto a busca por um atendimento de qualidade e uma experiência positiva para cada cliente.",
-    image: "/corretores/gleydson-tabosa.jpeg",
-    whatsapp: "5581995477776",
-    instagram: "https://instagram.com/Tabosinha",
-  },
-
-  // 2. Rafael Nunes
-  {
-    id: "rafael-nunes",
-    name: "Rafael Nunes",
-    creci: "CRECI F 18559",
-    role: "Gestor e Proprietário",
-    bio: "Gestor e Proprietário da Acauã Imóveis, atua na gestão da empresa e no relacionamento com clientes, contribuindo para uma experiência imobiliária baseada em confiança, atenção e transparência.",
-    image: "/corretores/rafael-nunes.jpeg",
-    whatsapp: "5581997666571",
-    instagram: "https://instagram.com/rafaelnunes.imoveis",
-  },
-
-  // 3. Larissa Gonçalves
-  {
-    id: "larissa-goncalves",
-    name: "Larissa Gonçalves",
-    creci: "CRECI F 19521",
-    role: "Corretora de Imóveis",
-    bio: "Profissional dedicada ao atendimento imobiliário, acompanhando seus clientes com atenção em cada etapa e buscando tornar a escolha do imóvel mais simples, segura e tranquila.",
-    image: "/corretores/larissa-goncalves.jpeg",
-    whatsapp: "5581985783476",
-    instagram: "https://instagram.com/larissag.corretora",
-  },
-
-  // 4. Janaína Souza
-  {
-    id: "janaina-cabral",
-    name: "Janaína Souza",
-    creci: "CRECI F 19502",
-    role: "Corretora de Imóveis",
-    bio: "Atua junto aos clientes da Acauã Imóveis oferecendo um atendimento atencioso e personalizado, buscando facilitar cada etapa na escolha do imóvel ideal.",
-    image: "/corretores/janaina-cabral.jpeg",
-    whatsapp: "5581981889893",
-    instagram: "https://instagram.com/janas.corretora",
-  },
-
-  // 5. Thays Andrade
-  {
-    id: "thays-andrade",
-    name: "Thays Andrade",
-    creci: "CRECI F 20008",
-    role: "Corretora de Imóveis",
-    bio: "Atua no atendimento aos clientes da Acauã Imóveis, buscando entender suas preferências e apresentar opções de imóveis de forma clara, cuidadosa e personalizada.",
-    image: "/corretores/thays-andrade.jpeg",
-    whatsapp: "5581992361754",
-    instagram: "https://instagram.com/thaysimoveis",
-  },
-
-  // 6. Welston Cristoff
-  {
-    id: "welston-cristoff",
-    name: "Welston Cristoff",
-    creci: "CRECI F 14974",
-    role: "Corretor de Imóveis",
-    bio: "Profissional da Acauã Imóveis que valoriza o relacionamento com seus clientes, oferecendo acompanhamento próximo e transparente durante o processo de compra, venda ou locação.",
-    image: "/corretores/welston-cristoff.jpeg",
-    whatsapp: "5581992535886",
-    instagram: "https://instagram.com/wellcristoff",
-  },
-
-  // 7. George Luis
-  {
-    id: "george-batista",
-    name: "George Luis",
-    creci: "CRECI F 21365",
-    role: "Corretor de Imóveis",
-    bio: "Profissional dedicado ao mercado imobiliário, com foco em compreender o que cada cliente procura e oferecer um atendimento próximo durante toda a jornada.",
-    image: "/corretores/george-batista.jpeg",
-    whatsapp: "5581992240295",
-    instagram: "https://instagram.com/Georgeluisimoveiss",
-  },
-
-  // 8. Wesley Tabosa
-  {
-    id: "weslley-leite",
-    name: "Wesley Tabosa",
-    creci: "CRECI F 22939",
-    role: "Corretor de Imóveis",
-    bio: "Atua no atendimento aos clientes da Acauã Imóveis, buscando compreender cada necessidade e apresentar oportunidades alinhadas ao perfil de cada cliente, com atenção e transparência.",
-    image: "/corretores/weslley-leite.jpeg",
-    whatsapp: "5581997780319",
-    instagram: "https://instagram.com/acauaimoveis",
-  },
-
-  // 9. Vitória Ferro (Substitui Maria)
-  {
-    id: "vitoria-ferro",
-    name: "Vitória Ferro",
-    creci: "CRECI F 20198",
-    role: "Corretora de Imóveis",
-    bio: "Atua no atendimento imobiliário com uma abordagem próxima e cuidadosa, ajudando clientes a encontrar oportunidades que estejam de acordo com seus objetivos e expectativas.",
-    image: "/corretores/vitoria-ferro.jpeg",
-    whatsapp: "5581998495367",
-    instagram: "https://instagram.com/vitoriaferro.corretora",
-  },
-
-  // 10. Joyce Monique
-  {
-    id: "joyce-monique",
-    name: "Joyce Monique",
-    creci: "CRECI E 2009013813",
-    role: "Corretora de Imóveis",
-    bio: "Profissional dedicada ao atendimento imobiliário da Acauã Imóveis, oferecendo assessoria completa e personalizada para conectar você ao imóvel ideal com segurança e transparência.",
-    image: "/corretores/joyce-monique.jpeg",
-    whatsapp: "5581973324605",
-    instagram: "https://instagram.com/joycem_consultora",
-  },
-
-  // 11. Guilherme de Melo Silva
-  {
-    id: "guilherme-melo",
-    name: "Guilherme de Melo Silva",
-    creci: "CRECI E 2009013863",
-    role: "Corretor de Imóveis",
-    bio: "Profissional dedicado da Acauã Imóveis, prestando consultoria especializada e atendimento focado em identificar as melhores oportunidades de investimento e moradia.",
-    image: "/corretores/guilherme-melo.png",
-    whatsapp: "5581992544454",
-    instagram: "https://instagram.com/corretor.guilherme.melo",
-  },
-]
+export const brokers: Broker[] = []
 
 // ============================================
 // BLOG
@@ -656,7 +515,7 @@ Espaços multiuso e home offices bem projetados refletem a nova realidade do tra
     image:
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
     date: "2024-01-15",
-    author: "Equipe Acauã",
+    author: "Rafael Cavalcante",
     category: "Arquitetura",
   },
   {
@@ -677,7 +536,7 @@ O mercado de locação de alto padrão também apresenta demanda consistente, of
     image:
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
     date: "2024-01-10",
-    author: "Equipe Acauã",
+    author: "Rafael Cavalcante",
     category: "Investimentos",
   },
   {
@@ -700,7 +559,7 @@ Não tenha pressa. Visitar diferentes opções e comparar características permi
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
     date: "2024-01-05",
-    author: "Equipe Acauã",
+    author: "Rafael Cavalcante",
     category: "Dicas",
   },
 ]

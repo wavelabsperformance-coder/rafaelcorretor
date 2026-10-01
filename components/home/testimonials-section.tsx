@@ -2,14 +2,47 @@
 
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import { testimonials, siteConfig } from "@/lib/data"
+import { siteConfig } from "@/lib/data"
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+// Depoimentos fictícios focados no Rafael Cavalcante (Caruaru e experiência bancária)
+const testimonialsList = [
+  {
+    name: "Dr. Marcelo Cavalcanti",
+    role: "Comprador de Imóvel – Maurício de Nassau",
+    text: "A bagagem bancária do Rafael fez toda a diferença no meu financiamento. Ele desmistificou o processo de crédito junto ao banco e encontrou o apartamento ideal para minha família.",
+    rating: 5,
+  },
+  {
+    name: "Juliana & Fernando",
+    role: "Locação Residencial – Universitário",
+    text: "Alugamos nosso imóvel em Caruaru com total agilidade. O contrato foi super transparente, o processo cadastral foi rápido e fomos atendidos com um profissionalismo impecável.",
+    rating: 5,
+  },
+  {
+    name: "Carlos Eduardo Menezes",
+    role: "Investidor Imobiliário – Caruaru",
+    text: "Atendimento técnico e extremamente preciso sobre a rentabilidade de mercado. O Rafael tem uma visão estratégica diferenciada para quem busca rentabilizar com imóveis.",
+    rating: 5,
+  },
+  {
+    name: "Patrícia Albuquerque",
+    role: "Proprietária / Venda de Ativo",
+    text: "Vendi meu apartamento em tempo recorde. A curadoria da divulgação e a negociação foram conduzidas com extrema ética e transparência. Recomendo de olhos fechados!",
+    rating: 5,
+  },
+  {
+    name: "Henrique Vasconcelos",
+    role: "Aprovação de Crédito & Compra",
+    text: "Passamos por duas tentativas frustradas antes de conhecer o trabalho do Rafael. Por conta da vivência dele em grandes bancos, conseguimos aprovar nosso crédito sem burocracia.",
+    rating: 5,
+  },
+]
 
 export function TestimonialsSection() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  // Função para controlar as setas de navegação manual
   const handleScroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const scrollAmount = 380
@@ -21,96 +54,103 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="py-20 lg:py-28 bg-primary text-primary-foreground overflow-hidden">
+    <section className="relative overflow-hidden bg-[#0D3B2E] py-20 text-white lg:py-28">
+      
+      {/* Cabeçalho */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="mb-14 text-center"
         >
-          <span className="text-[11px] uppercase tracking-[0.3em] text-accent font-semibold">
-            Depoimentos
-          </span>
-          <h2 className="text-3xl md:text-5xl font-light mt-3 text-balance tracking-tight">
-            O Que Nossos <span className="font-semibold bg-gradient-to-r from-primary-foreground via-primary-foreground/90 to-primary-foreground/60 bg-clip-text text-transparent">Clientes Dizem</span>
+          <div className="inline-flex items-center gap-2">
+            <span className="h-px w-6 bg-[#B85D19]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[#B85D19]">
+              Depoimentos & Experiências
+            </span>
+            <span className="h-px w-6 bg-[#B85D19]" />
+          </div>
+
+          <h2 className="mt-3 font-serif text-3xl font-normal tracking-tight text-white md:text-5xl">
+            A opinião de quem <span className="italic text-[#B85D19]">confia no nosso trabalho</span>
           </h2>
-          <p className="text-primary-foreground/70 mt-4 max-w-xl mx-auto text-base sm:text-lg font-light leading-relaxed">
-            Histórias reais de quem confiou em nosso trabalho para encontrar o imóvel dos sonhos.
+          <p className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed text-white/80 sm:text-lg">
+            Acompanhe o relato de clientes que contaram com suporte técnico e consultivo na realização dos seus negócios imobiliários em Caruaru e região.
           </p>
         </motion.div>
       </div>
 
-      {/* Container Principal */}
-      <div className="relative w-full max-w-[1400px] mx-auto px-4 sm:px-10">
+      {/* Container Principal do Carrossel */}
+      <div className="relative mx-auto max-w-[1400px] px-4 sm:px-10">
         
         {/* Setas de Navegação Manual */}
         <button
           onClick={() => handleScroll("left")}
           aria-label="Depoimento anterior"
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/90 hover:bg-primary text-primary-foreground border border-primary-foreground/20 shadow-xl backdrop-blur-md flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95"
+          className="absolute left-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#B85D19]/40 bg-[#B85D19] text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-[#a04e14] active:scale-95 sm:left-4 sm:h-12 sm:w-12"
         >
-          <ChevronLeft className="w-6 h-6 stroke-[1.75]" />
+          <ChevronLeft className="h-6 w-6 stroke-[1.75]" />
         </button>
 
         <button
           onClick={() => handleScroll("right")}
           aria-label="Próximo depoimento"
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/90 hover:bg-primary text-primary-foreground border border-primary-foreground/20 shadow-xl backdrop-blur-md flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95"
+          className="absolute right-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#B85D19]/40 bg-[#B85D19] text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-[#a04e14] active:scale-95 sm:right-4 sm:h-12 sm:w-12"
         >
-          <ChevronRight className="w-6 h-6 stroke-[1.75]" />
+          <ChevronRight className="h-6 w-6 stroke-[1.75]" />
         </button>
 
-        {/* Gradientes Suaves nas Bordas */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-primary via-primary/80 to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-primary via-primary/80 to-transparent z-20 pointer-events-none" />
+        {/* Gradientes nas Bordas mantendo o Verde do Fundo */}
+        <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-20 w-16 bg-gradient-to-r from-[#0D3B2E] via-[#0D3B2E]/80 to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-20 w-16 bg-gradient-to-l from-[#0D3B2E] via-[#0D3B2E]/80 to-transparent sm:w-28" />
 
-        {/* Container de Rolagem Sem Barra de Scroll */}
+        {/* Container de Rolagem */}
         <div
           ref={scrollRef}
-          className="overflow-x-auto scroll-smooth py-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="overflow-x-auto py-4 scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {/* Framer Motion garantindo o loop contínuo e rápido de 0% a -50% */}
+          {/* Loop Infinito Contínuo via Framer Motion */}
           <motion.div
             className="flex w-max"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
               ease: "linear",
-              duration: 12, // Velocidade aumentada (tempo menor = mais rápido)
+              duration: 25,
               repeat: Infinity,
             }}
           >
-            {/* Bloco 1 de Depoimentos */}
+            {/* Bloco 1 de Depoimentos (Cards em Laranja #B85D19) */}
             <div className="flex shrink-0">
-              {testimonials.map((testimonial, index) => (
+              {testimonialsList.map((item, index) => (
                 <div
                   key={`t1-${index}`}
-                  className="w-[300px] sm:w-[360px] lg:w-[380px] px-3 shrink-0"
+                  className="w-[300px] shrink-0 px-3 sm:w-[360px] lg:w-[380px]"
                 >
-                  <div className="h-full p-7 bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl backdrop-blur-sm flex flex-col justify-between">
+                  <div className="group relative flex h-full flex-col justify-between border border-[#B85D19] bg-[#B85D19] p-7 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/50">
                     <div>
-                      <Quote className="h-7 w-7 text-accent/60 mb-5" />
-                      <p className="text-primary-foreground/80 leading-relaxed text-[15px] mb-6">
-                        {`"${testimonial.text}"`}
+                      <Quote className="mb-4 h-7 w-7 text-white/70" />
+                      <p className="mb-6 text-[15px] font-light leading-relaxed text-white/95">
+                        {`"${item.text}"`}
                       </p>
                     </div>
 
                     <div>
-                      <div className="flex items-center gap-1 mb-4">
-                        {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <div className="mb-4 flex items-center gap-1">
+                        {Array.from({ length: item.rating }).map((_, i) => (
                           <Star
                             key={i}
-                            className="h-4 w-4 fill-accent text-accent"
+                            className="h-4 w-4 fill-white text-white"
                           />
                         ))}
                       </div>
-                      <div className="pt-5 border-t border-primary-foreground/10">
-                        <span className="block font-medium text-primary-foreground">
-                          {testimonial.name}
+                      <div className="border-t border-white/20 pt-4">
+                        <span className="block font-serif text-lg font-normal text-white">
+                          {item.name}
                         </span>
-                        <span className="text-sm text-primary-foreground/50">
-                          {testimonial.role}
+                        <span className="text-xs font-light tracking-wide text-white/80">
+                          {item.role}
                         </span>
                       </div>
                     </div>
@@ -119,36 +159,36 @@ export function TestimonialsSection() {
               ))}
             </div>
 
-            {/* Bloco 2 de Depoimentos (Réplica para o loop infinito contínuo) */}
+            {/* Bloco 2 de Depoimentos (Réplica para o Loop Continuo) */}
             <div className="flex shrink-0">
-              {testimonials.map((testimonial, index) => (
+              {testimonialsList.map((item, index) => (
                 <div
                   key={`t2-${index}`}
-                  className="w-[300px] sm:w-[360px] lg:w-[380px] px-3 shrink-0"
+                  className="w-[300px] shrink-0 px-3 sm:w-[360px] lg:w-[380px]"
                 >
-                  <div className="h-full p-7 bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl backdrop-blur-sm flex flex-col justify-between">
+                  <div className="group relative flex h-full flex-col justify-between border border-[#B85D19] bg-[#B85D19] p-7 text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/50">
                     <div>
-                      <Quote className="h-7 w-7 text-accent/60 mb-5" />
-                      <p className="text-primary-foreground/80 leading-relaxed text-[15px] mb-6">
-                        {`"${testimonial.text}"`}
+                      <Quote className="mb-4 h-7 w-7 text-white/70" />
+                      <p className="mb-6 text-[15px] font-light leading-relaxed text-white/95">
+                        {`"${item.text}"`}
                       </p>
                     </div>
 
                     <div>
-                      <div className="flex items-center gap-1 mb-4">
-                        {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <div className="mb-4 flex items-center gap-1">
+                        {Array.from({ length: item.rating }).map((_, i) => (
                           <Star
                             key={i}
-                            className="h-4 w-4 fill-accent text-accent"
+                            className="h-4 w-4 fill-white text-white"
                           />
                         ))}
                       </div>
-                      <div className="pt-5 border-t border-primary-foreground/10">
-                        <span className="block font-medium text-primary-foreground">
-                          {testimonial.name}
+                      <div className="border-t border-white/20 pt-4">
+                        <span className="block font-serif text-lg font-normal text-white">
+                          {item.name}
                         </span>
-                        <span className="text-sm text-primary-foreground/50">
-                          {testimonial.role}
+                        <span className="text-xs font-light tracking-wide text-white/80">
+                          {item.role}
                         </span>
                       </div>
                     </div>
@@ -161,30 +201,32 @@ export function TestimonialsSection() {
         </div>
       </div>
 
+      {/* Botões de Ação Inferiores */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-14"
+          className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Button
             asChild
             variant="outline"
-            className="border-primary-foreground/25 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent rounded-lg"
+            className="border-white/30 bg-transparent text-white transition-colors duration-300 hover:border-white hover:bg-white hover:text-[#0D3B2E]"
           >
             <a
               href={siteConfig.googleReviewsLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ver no Google
+              Ver mais no Google
             </a>
           </Button>
+
           <Button
             asChild
-            className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg"
+            className="bg-[#B85D19] text-white transition-colors duration-300 hover:bg-[#a04e14]"
           >
             <a
               href={siteConfig.googleReviewsLink}
@@ -196,6 +238,9 @@ export function TestimonialsSection() {
           </Button>
         </motion.div>
       </div>
+
     </section>
   )
 }
+
+export default TestimonialsSection

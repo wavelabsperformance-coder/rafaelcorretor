@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       "Sua imobiliária de confiança em Caruaru, Recife e Litoral. Encontre o imóvel ideal com atendimento exclusivo.",
     images: [
       {
-        url: "https://www.acauaimoveis.com/capa-acaua.jpeg", // URL completa e absoluta com o novo domínio
+        url: "https://www.acauaimoveis.com/capa-rafael.png", // URL completa e absoluta com o novo domínio
         width: 1200,
         height: 630,
         alt: "Acauã Imóveis - Recife | Caruaru | Litoral",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Acauã Imóveis | Recife, Caruaru e Litoral",
     description: "Sua imobiliária de confiança em Caruaru, Recife e Litoral.",
-    images: ["https://www.acauaimoveis.com/capa-acaua.jpeg"],
+    images: ["https://www.acauaimoveis.com/capa-rafael.png"],
   },
   robots: {
     index: true,

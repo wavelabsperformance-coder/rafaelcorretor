@@ -8,41 +8,56 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pb-10">
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-10">
       {/* Background Images */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-[#082a21]">
         {/* Imagem para Celulares (Mobile) */}
         <img
           src="/og-image-mobile.png"
-          alt="Acauã Imóveis Mobile"
-          className="block md:hidden w-full h-full object-cover object-[center_top]"
+          alt="Rafael, corretor de imóveis em Caruaru"
+          className="block md:hidden w-full h-full object-cover object-[center_40%]"
         />
 
-        {/* Imagem para Desktop / Notebooks — Alinhada mais à direita (70%) */}
+        {/* Imagem para Desktop: ocupa o hero inteiro, por baixo do menu */}
         <img
-          src="/capa-acaua.png"
-          alt="Acauã Imóveis Desktop"
+          src="/images/hero/capa-rafael.png"
+          alt="Rafael, corretor de imóveis em Caruaru"
           className="hidden md:block w-full h-full object-cover object-[70%_top]"
         />
+
+        {/* Escurecido suave no topo, só para o menu ficar legível */}
+        <div className="hidden md:block absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 to-transparent" />
 
         {/* Overlay leve para garantir contraste */}
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Content — pt-80 no mobile para descer os botões e md:pt-52 no desktop */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8 pt-80 md:pt-52 mb-12">
-        <div className="flex justify-center">
+      {/* Content — botões na base: centralizados no celular, à esquerda no desktop */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8 mb-4 md:mb-36">
+        <div className="flex justify-center md:justify-start md:pl-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 w-full sm:w-auto"
           >
+            {/* BOTÃO IMÓVEIS PARA ALUGAR */}
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="h-11 md:h-14 rounded-full border-emerald-950 bg-emerald-950 px-6 md:px-8 text-sm md:text-base text-white shadow-lg hover:bg-emerald-900 hover:text-white w-full max-w-[260px] sm:w-auto sm:max-w-none"
+            >
+              <Link href="/empreendimentos/imoveis-para-alugar">
+                {heroContent.ctaSecondary}
+              </Link>
+            </Button>
+
             {/* BOTÃO WHATSAPP */}
             <Button
               asChild
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 px-8 h-14 text-base rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 md:px-8 h-11 md:h-14 text-sm md:text-base rounded-full shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-[260px] sm:w-auto sm:max-w-none"
             >
               <a
                 href={siteConfig.whatsappLink}
@@ -50,20 +65,8 @@ export function HeroSection() {
                 rel="noopener noreferrer"
               >
                 {heroContent.ctaText}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
-            </Button>
-
-            {/* BOTÃO EMPREENDIMENTOS */}
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="h-14 rounded-lg border-emerald-950 bg-emerald-950 px-8 text-base text-white shadow-lg hover:bg-emerald-900 hover:text-white w-full sm:w-auto"
-            >
-              <Link href="/empreendimentos">
-                {heroContent.ctaSecondary}
-              </Link>
             </Button>
           </motion.div>
         </div>

@@ -17,7 +17,7 @@ import {
   Heart,
   Clock
 } from "lucide-react"
-import { BrokersCarousel } from "@/components/brokers-carousel"
+
 
 export const metadata: Metadata = {
   title: "Sobre Nós",
@@ -287,8 +287,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Carrossel de Corretores */}
-      <BrokersCarousel compact />
+     
 
       {/* Por Que nos Escolher (Diferenciais alternando Verde e Laranja) */}
       <section className="py-20 lg:py-28 bg-[#0d3b2e] text-white">
