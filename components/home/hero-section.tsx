@@ -9,8 +9,10 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pb-10">
+
       {/* Background Images */}
       <div className="absolute inset-0 bg-[#082a21]">
+
         {/* Imagem para Celulares (Mobile) */}
         <img
           src="/og-image-mobile.png"
@@ -18,35 +20,79 @@ export function HeroSection() {
           className="block md:hidden w-full h-full object-cover object-[center_40%]"
         />
 
-        {/* Imagem para Desktop: ocupa o hero inteiro, por baixo do menu */}
+        {/* Imagem para Desktop */}
         <img
           src="/images/hero/capa-rafael.png"
           alt="Rafael, corretor de imóveis em Caruaru"
           className="hidden md:block w-full h-full object-cover object-[70%_top]"
         />
 
-        {/* Escurecido suave no topo, só para o menu ficar legível */}
+        {/* Escurecido suave no topo para o menu */}
         <div className="hidden md:block absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/50 to-transparent" />
 
-        {/* Overlay leve para garantir contraste */}
+        {/* Overlay leve */}
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* Content — botões na base: centralizados no celular, à esquerda no desktop */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8 mb-4 md:mb-36">
-        <div className="flex justify-center md:justify-start md:pl-16">
+      {/* Conteúdo / Botões */}
+      <div
+        className="
+          relative z-10
+          mx-auto w-full max-w-7xl
+          px-6 lg:px-8
+          mb-4
+
+          md:mb-[15vh]
+        "
+      >
+        <div
+  className="
+    flex
+    justify-center
+    md:justify-end
+    md:pr-0
+    lg:pr-0
+  "
+>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 w-full sm:w-auto"
+            className="
+              flex flex-col
+              sm:flex-row
+              items-center
+              justify-center
+              gap-3 md:gap-4
+
+              w-full
+              sm:w-auto
+            "
           >
+
             {/* BOTÃO IMÓVEIS PARA ALUGAR */}
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="h-11 md:h-14 rounded-full border-emerald-950 bg-emerald-950 px-6 md:px-8 text-sm md:text-base text-white shadow-lg hover:bg-emerald-900 hover:text-white w-full max-w-[260px] sm:w-auto sm:max-w-none"
+              className="
+                h-11 md:h-14
+                rounded-full
+                border-emerald-950
+                bg-emerald-950
+                px-6 md:px-8
+                text-sm md:text-base
+                text-white
+                shadow-lg
+                hover:bg-emerald-900
+                hover:text-white
+
+                w-full
+                max-w-[260px]
+
+                sm:w-auto
+                sm:max-w-none
+              "
             >
               <Link href="/empreendimentos/imoveis-para-alugar">
                 {heroContent.ctaSecondary}
@@ -57,7 +103,25 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 px-6 md:px-8 h-11 md:h-14 text-sm md:text-base rounded-full shadow-lg hover:shadow-xl transition-all duration-300 w-full max-w-[260px] sm:w-auto sm:max-w-none"
+              className="
+                bg-accent
+                text-accent-foreground
+                hover:bg-accent/90
+                px-6 md:px-8
+                h-11 md:h-14
+                text-sm md:text-base
+                rounded-full
+                shadow-lg
+                hover:shadow-xl
+                transition-all
+                duration-300
+
+                w-full
+                max-w-[260px]
+
+                sm:w-auto
+                sm:max-w-none
+              "
             >
               <a
                 href={siteConfig.whatsappLink}
@@ -65,9 +129,11 @@ export function HeroSection() {
                 rel="noopener noreferrer"
               >
                 {heroContent.ctaText}
+
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </a>
             </Button>
+
           </motion.div>
         </div>
       </div>
@@ -83,6 +149,7 @@ export function HeroSection() {
           <div className="w-px h-10 bg-gradient-to-b from-white/60 to-transparent" />
         </div>
       </motion.div>
+
     </section>
   )
 }
