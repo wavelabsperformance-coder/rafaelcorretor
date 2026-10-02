@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 // Imagens de fundo para desktop
-const HERO_DESKTOP = "/images/sobre/hero-desktop.jpg"
+const HERO_DESKTOP = "/images/sobre/perfil.png"
 
 // Logo do WhatsApp
 function WhatsAppIcon({ className }: { className?: string }) {
