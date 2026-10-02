@@ -8,54 +8,53 @@ import { CookieBanner } from "@/components/cookie-banner"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
 export const metadata: Metadata = {
-  // Atualizado para o seu novo domínio oficial
-  metadataBase: new URL("https://www.acauaimoveis.com"),
+  // Atualize aqui quando tiver o seu novo domínio (ex: https://www.rafaelcavalcante.com.br)
+  metadataBase: new URL("https://www.rafaelcavalcante.com.br"),
   title: {
-    default: "Acauã Imóveis | Recife, Caruaru e Litoral",
-    template: "%s | Acauã Imóveis",
+    default: "Rafael Cavalcante - Corretor | Recife, Caruaru e Litoral",
+    template: "%s | Rafael Cavalcante - Corretor",
   },
   description:
-    "Sua imobiliária de confiança em Caruaru, Recife e Litoral. Encontre casas, apartamentos, pontos comerciais e empreendimentos com atendimento exclusivo.",
+    "Seu corretor de imóveis de confiança em Caruaru, Recife e Litoral. Encontre casas, apartamentos, pontos comerciais e empreendimentos com atendimento exclusivo.",
   keywords: [
-    "imobiliária caruaru",
-    "imobiliária recife",
+    "corretor caruaru",
+    "corretor recife",
     "imóveis no litoral pernambucano",
     "apartamentos boa viagem",
     "casas em caruaru",
     "imóveis pernambuco",
-    "acauã imóveis",
+    "rafael cavalcante corretor",
   ],
-  authors: [{ name: "Acauã Imóveis" }],
-  creator: "Acauã Imóveis",
-  publisher: "Acauã Imóveis",
+  authors: [{ name: "Rafael Cavalcante" }],
+  creator: "Rafael Cavalcante",
+  publisher: "Rafael Cavalcante",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.acauaimoveis.com",
-    siteName: "Acauã Imóveis",
-    title: "Acauã Imóveis | Recife, Caruaru e Litoral",
+    url: "https://www.rafaelcavalcante.com.br",
+    siteName: "Rafael Cavalcante - Corretor",
+    title: "Rafael Cavalcante - Corretor | Recife, Caruaru e Litoral",
     description:
-      "Sua imobiliária de confiança em Caruaru, Recife e Litoral. Encontre o imóvel ideal com atendimento exclusivo.",
+      "Seu corretor de imóveis de confiança em Caruaru, Recife e Litoral. Encontre o imóvel ideal com atendimento exclusivo.",
     images: [
       {
-        url: "https://www.acauaimoveis.com/capa-rafael.png", // URL completa e absoluta com o novo domínio
+        url: "https://www.rafaelcavalcante.com.br/capa-rafael.png",
         width: 1200,
         height: 630,
-        alt: "Acauã Imóveis - Recife | Caruaru | Litoral",
+        alt: "Rafael Cavalcante - Corretor - Recife | Caruaru | Litoral",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Acauã Imóveis | Recife, Caruaru e Litoral",
-    description: "Sua imobiliária de confiança em Caruaru, Recife e Litoral.",
-    images: ["https://www.acauaimoveis.com/capa-rafael.png"],
+    title: "Rafael Cavalcante - Corretor | Recife, Caruaru e Litoral",
+    description: "Seu corretor de imóveis de confiança em Caruaru, Recife e Litoral.",
+    images: ["https://www.rafaelcavalcante.com.br/capa-rafael.png"],
   },
   robots: {
     index: true,
     follow: true,
   },
-  // Favicons e Manifest atualizados conforme os seus arquivos
   icons: {
     icon: [
       {
@@ -81,7 +80,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#1e3a2f",
+  themeColor: "#0d3b2e",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,

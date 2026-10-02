@@ -52,7 +52,7 @@ export default function SobrePage() {
   return (
     <>
       {/* 1. Abertura */}
-      <section className="relative flex min-h-screen items-end overflow-hidden bg-gradient-to-b from-[#0d3b2e] to-[#082a21] pb-24 pt-24 text-white md:items-center md:pb-36 md:pt-36">
+      <section className="relative flex min-h-screen items-end overflow-hidden bg-gradient-to-b from-[#0d3b2e] to-[#082a21] pb-16 pt-20 text-white md:items-center md:pb-36 md:pt-36">
         {/* Imagem do desktop */}
         <div
           aria-hidden="true"
@@ -66,36 +66,36 @@ export default function SobrePage() {
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8">
           <div className="max-w-2xl">
             {/* Tag CRECI com visual premium */}
-            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-[#e9a66f]/30 bg-[#082a21]/80 px-3.5 py-1.5 backdrop-blur-md md:mb-7">
-              <span className="h-2 w-2 rounded-full bg-[#e9a66f]" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#e9a66f]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#e9a66f]/30 bg-[#082a21]/80 px-3 py-1 backdrop-blur-md md:mb-6 md:px-3.5 md:py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#e9a66f]" />
+              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#e9a66f] sm:text-[10px]">
                 Rafael Cavalcante · CRECI/PE 17307
               </span>
             </div>
 
-            {/* Bloco de Título Sofisticado */}
-            <div className="relative rounded-2xl border border-white/10 bg-black/20 p-5 backdrop-blur-sm md:border-none md:bg-transparent md:p-0">
-              <h1 className="font-serif text-4xl font-normal leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+            {/* Bloco de Título Fluido */}
+            <div>
+              <h1 className="font-serif text-3xl font-normal leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                 Nº 1 em aluguéis
                 <br />
                 <em className="italic text-[#e9a66f]">de Caruaru</em>
               </h1>
             </div>
 
-            {/* Imagem sem fundo no Mobile (de canto a canto da tela e colada ao título) */}
-            <div className="relative mt-1 -mx-6 w-[calc(100%+3rem)] max-w-none aspect-[4/5] md:hidden">
+            {/* Imagem no Mobile com leve espaçamento superior */}
+            <div className="relative mt-3 -mx-6 w-[calc(100%+3rem)] max-w-none aspect-[4/3.5] sm:aspect-[4/3] md:hidden">
               <Image
-                src="images/sobre/perfil.png"
+                src="/images/sobre/perfil.png"
                 alt="Rafael Cavalcante"
                 fill
                 priority
                 sizes="100vw"
-                className="object-contain object-center"
+                className="object-contain object-bottom"
               />
             </div>
 
-            {/* Texto Descritivo */}
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 md:mt-7 md:text-lg">
+            {/* Texto Descritivo com respiro ajustado */}
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-base md:mt-6 md:text-lg">
               Com mais de 4 mil locações realizadas, sou o corretor que mais
               aluga em Caruaru. São 5 anos de atuação no mercado imobiliário e
               9 anos de experiência no setor bancário, e atendo de forma
@@ -104,7 +104,7 @@ export default function SobrePage() {
             </p>
 
             {/* Botões de Ação */}
-            <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8 md:mt-10">
+            <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6 md:mt-8">
               <Button
                 asChild
                 size="lg"
@@ -123,7 +123,7 @@ export default function SobrePage() {
 
               <Link
                 href="/empreendimentos/imoveis-para-alugar"
-                className="inline-flex items-center gap-2 text-base font-semibold text-white underline decoration-[#e9a66f] decoration-2 underline-offset-8 transition-colors duration-300 hover:text-[#e9a66f]"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-[#e9a66f] decoration-2 underline-offset-8 transition-colors duration-300 hover:text-[#e9a66f] sm:text-base"
               >
                 Ver imóveis para alugar
                 <ArrowRight className="h-4 w-4" />

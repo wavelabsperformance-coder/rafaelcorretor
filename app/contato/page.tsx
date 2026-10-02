@@ -12,8 +12,12 @@ import {
 
 export const metadata: Metadata = {
   title: "Contato",
-  description: "Entre em contato com a Acauã Imóveis.",
+  description:
+    "Fale com o Rafael Cavalcante, corretor de imóveis em Caruaru.",
 }
+
+// Imagem da coluna da direita (troque por uma imagem do Rafael quando tiver)
+const CONTACT_IMAGE = "images/sobre/perfil.png"
 
 // Ícone vetorial oficial do WhatsApp
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -32,20 +36,20 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export default function ContatoPage() {
   return (
     <main className="bg-background">
-      {/* Banner Superior */}
-      <section className="relative flex min-h-[420px] items-end overflow-hidden py-20">
+   {/* Banner Superior */}
+      <section className="relative flex min-h-[460px] items-end overflow-hidden py-20">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85"
-          alt="Arquitetura residencial Acauã Imóveis"
+          src="/predio.png"
+          alt="Prédios de médio e alto padrão em Caruaru"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-primary/70 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
         <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-8">
           <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold">
-            Fale conosco
+            Fale com o Rafael
           </p>
           <h1 className="mt-3 font-serif text-5xl text-white md:text-6xl font-light">
-            Entre em contato
+            Entre em <em className="italic text-[#e9a66f]">contato</em>
           </h1>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80 font-light">
             Uma conversa cuidadosa é o primeiro passo para encontrar o endereço
@@ -55,7 +59,7 @@ export default function ContatoPage() {
       </section>
 
       {/* Seção Principal de Contato */}
-      <section className="py-20 lg:py-28">
+      <section className="bg-[#f6efe3] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
             
@@ -63,13 +67,13 @@ export default function ContatoPage() {
             <div className="lg:col-span-7 flex flex-col justify-between">
               <div>
                 <span className="text-xs uppercase tracking-[0.3em] text-[#b85d19] font-bold block mb-2">
-                  Atendimento Exclusivo
+                  Atendimento Personalizado
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#0d3b2e] font-semibold">
-                  Estamos aqui para ajudar
+                  Estou aqui para ajudar
                 </h2>
                 <p className="mt-3 leading-relaxed text-muted-foreground max-w-xl">
-                  Nossa equipe acompanha cada etapa com discrição, clareza e alto conhecimento do mercado.
+                  Acompanho cada etapa com clareza, transparência e agilidade, da primeira conversa até a conclusão do negócio.
                 </p>
 
                 {/* Grid de Cards de Contato */}
@@ -77,8 +81,8 @@ export default function ContatoPage() {
                   
                   {/* Telefone */}
                   <a
-                    href={`tel:${siteConfig.phone}`}
-                    className="group relative flex items-start gap-4 rounded-2xl border border-border/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b85d19]/40 hover:shadow-md"
+                    href={`tel:+${siteConfig.whatsapp}`}
+                    className="group relative flex items-start gap-4 rounded-3xl border border-border/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b85d19]/40 hover:shadow-md"
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
                       <Phone className="h-5 w-5" />
@@ -98,7 +102,7 @@ export default function ContatoPage() {
                     href={siteConfig.whatsappLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative flex items-start gap-4 rounded-2xl border border-[#25D366]/30 bg-[#25D366] p-5 text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#20bd5a] hover:shadow-md"
+                    className="group relative flex items-start gap-4 rounded-3xl border border-[#25D366]/30 bg-[#25D366] p-5 text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#20bd5a] hover:shadow-md"
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/20 text-white transition-colors group-hover:bg-white group-hover:text-[#25D366]">
                       <WhatsAppIcon className="h-6 w-6" />
@@ -116,7 +120,7 @@ export default function ContatoPage() {
                   {/* E-mail */}
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="group relative flex items-start gap-4 rounded-2xl border border-border/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b85d19]/40 hover:shadow-md"
+                    className="group relative flex items-start gap-4 rounded-3xl border border-border/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b85d19]/40 hover:shadow-md"
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
                       <Mail className="h-5 w-5" />
@@ -131,22 +135,22 @@ export default function ContatoPage() {
                     </div>
                   </a>
 
-                  {/* Endereço */}
+                  {/* Atendimento */}
                   <a
                     href={siteConfig.googleMapsLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative flex items-start gap-4 rounded-2xl border border-border/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b85d19]/40 hover:shadow-md"
+                    className="group relative flex items-start gap-4 rounded-3xl border border-border/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#b85d19]/40 hover:shadow-md"
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
                       <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                        Endereço
+                        Atendimento
                       </span>
                       <strong className="mt-1 block text-sm font-medium text-foreground leading-snug group-hover:text-primary transition-colors">
-                        R. Candelabro, 14 - Universitário, Caruaru - PE
+                        Caruaru - PE e região
                       </strong>
                     </div>
                   </a>
@@ -154,18 +158,18 @@ export default function ContatoPage() {
                 </div>
               </div>
 
-              {/* Horário de Atendimento e Redes Sociais */}
-              <div className="mt-10 grid gap-6 sm:grid-cols-2 border-t border-border/80 pt-8">
+              {/* Atendimento e Redes Sociais */}
+              <div className="mt-10 grid gap-6 sm:grid-cols-2 border-t border-[#0d3b2e]/15 pt-8">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-accent">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-accent">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Horário de Funcionamento
+                      Como Atendo
                     </p>
                     <p className="text-sm font-medium text-foreground mt-0.5">
-                      Seg a Sex: 9h às 18h | Sáb: 8:30h às 12h
+                      Pelo WhatsApp, com agilidade e transparência
                     </p>
                   </div>
                 </div>
@@ -173,7 +177,7 @@ export default function ContatoPage() {
                 {/* BOTÕES DE REDE SOCIAL COLORIDOS */}
                 <div className="flex items-center gap-3 sm:justify-end">
                   <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Siga a Acauã:
+                    Siga o Rafael:
                   </span>
                   <div className="flex gap-2">
                     {/* Botão Instagram Colorido */}
@@ -182,7 +186,7 @@ export default function ContatoPage() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label="Instagram"
-                      className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md"
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-md"
                     >
                       <Instagram className="h-5 w-5" />
                     </a>
@@ -193,7 +197,7 @@ export default function ContatoPage() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label="WhatsApp"
-                      className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#25D366] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#20bd5a] hover:shadow-md"
+                      className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#20bd5a] hover:shadow-md"
                     >
                       <WhatsAppIcon className="h-5 w-5" />
                     </a>
@@ -202,28 +206,28 @@ export default function ContatoPage() {
               </div>
             </div>
 
-            {/* Coluna Direita: Imagem Institucional + Card CTA */}
+            {/* Coluna Direita: Imagem + Card CTA */}
             <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-              <div className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden rounded-3xl shadow-lg border border-border/50">
+              <div className="relative aspect-[4/5] sm:aspect-[16/11] lg:aspect-[4/5] overflow-hidden rounded-[2rem] shadow-lg border border-border/50">
                 <img
-                  src="/sobre/institucional.png"
-                  alt="Fachada Institucional Acauã Imóveis"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  src={CONTACT_IMAGE}
+                  alt="Rafael Cavalcante, corretor de imóveis em Caruaru"
+                  className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
                 />
               </div>
 
-              <div className="rounded-3xl bg-gradient-to-br from-[#0d3b2e] to-[#061e17] p-8 text-white shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 rounded-full bg-white/5 pointer-events-none" />
+              <div className="rounded-[2rem] bg-gradient-to-br from-[#b85d19] to-[#8f4510] p-8 text-white shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 -mt-6 -mr-6 w-32 h-32 rounded-full bg-white/10 pointer-events-none" />
                 <h3 className="font-serif text-2xl md:text-3xl font-semibold">
-                  Fale com um especialista
+                  Fale com o Rafael
                 </h3>
-                <p className="mt-3 leading-relaxed text-white/80 font-light text-sm">
-                  Conte o que você procura e receberá uma seleção exclusiva pensada especialmente para o seu momento.
+                <p className="mt-3 leading-relaxed text-white/90 font-light text-sm">
+                  Conte o que você procura e eu te mostro as melhores opções para o seu momento.
                 </p>
                 <Button
                   asChild
                   size="lg"
-                  className="mt-6 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl h-12 shadow-md transition-all duration-300"
+                  className="mt-6 w-full bg-[#0d3b2e] hover:bg-[#092920] text-white rounded-full h-12 shadow-md transition-all duration-300"
                 >
                   <a
                     href={siteConfig.whatsappLink}
@@ -251,27 +255,27 @@ export default function ContatoPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            title="Localização da Acauã Imóveis"
+            title="Mapa de Caruaru - PE"
           />
         </div>
         <div className="absolute left-6 top-1/2 hidden -translate-y-1/2 md:block lg:left-16">
-          <div className="max-w-sm rounded-2xl bg-white p-8 shadow-2xl border border-border/60">
+          <div className="max-w-sm rounded-[1.75rem] bg-white p-8 shadow-2xl border border-border/60">
             <p className="text-[11px] font-bold uppercase tracking-widest text-[#b85d19]">
-              Onde estamos
+              Onde eu atendo
             </p>
             <h3 className="mt-2 font-serif text-2xl font-semibold text-[#0d3b2e]">
-              Visite nosso escritório
+              Caruaru - PE e região
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.address}
+              Atendimento personalizado para quem quer alugar, comprar ou vender.
             </p>
-            <Button asChild className="mt-6 w-full bg-[#0d3b2e] hover:bg-[#092920] text-white rounded-xl">
+            <Button asChild className="mt-6 w-full bg-[#0d3b2e] hover:bg-[#092920] text-white rounded-full">
               <a
                 href={siteConfig.googleMapsLink}
                 target="_blank"
                 rel="noreferrer"
               >
-                Como chegar <ArrowRight className="ml-2 h-4 w-4" />
+                Ver no mapa <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </div>

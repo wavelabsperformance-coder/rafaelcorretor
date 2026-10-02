@@ -2,11 +2,16 @@ import Link from "next/link"
 import { Instagram, Mail, MapPin, Phone } from "lucide-react"
 import { siteConfig, propertyCategories } from "@/lib/data"
 
+// Logo do footer (se tiver uma versão clara, salve em public/images/ e troque o caminho)
+const FOOTER_LOGO = "/images/logo.png"
+
+// Link do perfil do Rafael na OLX (troque pelo link real do anunciante)
+const OLX_LINK = "https://www.olx.com.br/"
+
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "Sobre Nós", href: "/sobre" },
+  { name: "Sobre", href: "/sobre" },
   { name: "Empreendimentos", href: "/empreendimentos" },
-  { name: "Corretores", href: "/corretores" },
   { name: "Blog", href: "/blog" },
   { name: "Contato", href: "/contato" },
 ]
@@ -26,10 +31,22 @@ function WhatsAppIcon() {
   )
 }
 
+// Ícone da OLX (texto em negrito, no mesmo tamanho dos outros ícones)
+function OlxIcon() {
+  return (
+    <span
+      aria-hidden="true"
+      className="text-[11px] font-extrabold leading-none tracking-tight"
+    >
+      OLX
+    </span>
+  )
+}
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
   const whatsappMessage = encodeURIComponent(
-    "Olá! Vi o site da Acauã Imóveis feito pela WaveLabs Performance e gostaria de criar um site para a minha empresa também. Podem me ajudar?"
+    "Olá! Vi o site do corretor Rafael Cavalcante feito pela WaveLabs Performance e gostaria de criar um site para o meu negócio também. Podem me ajudar?"
   )
 
   return (
@@ -39,20 +56,20 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block">
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logoacua-removebg-preview-Wxpw89Ny4iPxrjr95YdQd4ij4qRUQa.png"
-                alt="Acauã Imóveis"
+                src={FOOTER_LOGO}
+                alt="Rafael Cavalcante, corretor de imóveis"
                 className="h-16 w-auto object-contain"
               />
             </Link>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
-              Há mais de 15 anos conectando pessoas aos melhores imóveis de Pernambuco.
+              Corretor de imóveis em Caruaru, número 1 em aluguéis, com mais de 4 mil locações realizadas.
             </p>
             <div className="mt-6 flex gap-3">
               <a
                 href={siteConfig.instagram}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram"
+                aria-label="Instagram do Rafael"
                 className="grid h-10 w-10 place-items-center border border-primary-foreground/20 hover:border-accent hover:text-accent transition-colors"
               >
                 <Instagram className="h-4 w-4" />
@@ -61,10 +78,19 @@ export function Footer() {
                 href={siteConfig.whatsappLink}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp"
+                aria-label="WhatsApp do Rafael"
                 className="grid h-10 w-10 place-items-center border border-primary-foreground/20 hover:border-accent hover:text-accent transition-colors"
               >
                 <WhatsAppIcon />
+              </a>
+              <a
+                href={OLX_LINK}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Anúncios do Rafael na OLX"
+                className="grid h-10 w-10 place-items-center border border-primary-foreground/20 hover:border-accent hover:text-accent transition-colors"
+              >
+                <OlxIcon />
               </a>
             </div>
           </div>
@@ -99,7 +125,7 @@ export function Footer() {
             <h3 className="mb-6 text-xs uppercase tracking-widest">Contato</h3>
             <ul className="space-y-4">
               <li>
-                <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-3 text-sm text-primary-foreground/75 hover:text-accent transition-colors">
+                <a href={`tel:+${siteConfig.whatsapp}`} className="flex items-center gap-3 text-sm text-primary-foreground/75 hover:text-accent transition-colors">
                   <Phone className="h-4 w-4 text-accent" />
                   {siteConfig.phone}
                 </a>
@@ -122,7 +148,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-4 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/50 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2">
-            <p>© {currentYear} Acauã Imóveis. Todos os direitos reservados.</p>
+            <p>© {currentYear} Rafael Cavalcante · Corretor de imóveis · CRECI/PE 17307</p>
             <span className="hidden sm:inline">•</span>
             <p>
               Desenvolvido por:{" "}

@@ -109,7 +109,7 @@ export function HeroSection() {
       </div>
 
       {/* Container Mobile */}
-      <div className="block md:hidden absolute bottom-14 inset-x-0 px-6 z-10">
+      <div className="block md:hidden absolute bottom-22 inset-x-0 px-6 z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

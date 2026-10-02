@@ -17,7 +17,7 @@ const navigation = [
   { name: "Empreendimentos", href: "/empreendimentos" },
   { name: "Financie", href: "/financie" },
   { name: "Negocie seu Imóvel", href: "/negocie" },
-  { name: "Corretores", href: "/corretores" },
+
   { name: "Blog", href: "/blog" },
   { name: "Contato", href: "/contato" },
 ]
