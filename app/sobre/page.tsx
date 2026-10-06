@@ -85,7 +85,7 @@ export default function SobrePage() {
             {/* Imagem no Mobile com leve espaçamento superior */}
             <div className="relative mt-3 -mx-6 w-[calc(100%+3rem)] max-w-none aspect-[4/3.5] sm:aspect-[4/3] md:hidden">
               <Image
-                src="/images/sobre/perfil.png"
+                src="/images/sobre/Perfil.png"
                 alt="Rafael Cavalcante"
                 fill
                 priority

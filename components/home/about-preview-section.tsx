@@ -114,9 +114,9 @@ export function AboutPreviewSection() {
               variants={fadeUpVariants}
               className="mt-4 font-serif text-4xl font-normal leading-[1.08] tracking-tight text-[#0D3B2E] sm:text-5xl lg:text-6xl"
             >
-              Prazer, eu sou o{" "}
+              Olá, sou o{" "}
               <span className="relative inline-block italic font-normal text-[#B85D19]">
-                Rafael
+                Rafael Cavalcante
               </span>
             </motion.h2>
 

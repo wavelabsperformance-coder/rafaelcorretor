@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion"
 import { siteConfig } from "@/lib/data"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { MapPin, Phone, Mail, BadgeCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+// CRECI do Rafael (use o mesmo número do footer e confirme com ele)
+const CRECI = "CRECI/PE 17370"
 
 export function MapSection() {
   return (
@@ -18,7 +21,7 @@ export function MapSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Localização Acauã Imóveis"
+          title="Mapa de Caruaru - PE"
           className="transition-all duration-500"
         />
       </div>
@@ -30,30 +33,27 @@ export function MapSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-[min(257px,calc(100vw-3rem))] rounded-xl border border-border bg-card p-7 shadow-2xl lg:p-8"
+          className="w-[min(330px,calc(100vw-3rem))] rounded-xl border border-border bg-card p-7 shadow-2xl lg:p-8"
         >
           <h3 className="text-2xl font-light text-foreground mb-6">
-            Visite-nos
+            Onde eu atendo
           </h3>
           <ul className="space-y-4">
             <li className="flex items-start gap-3 text-sm">
               <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-muted-foreground">{siteConfig.address}</span>
+              <span className="min-w-0 break-words text-muted-foreground">{siteConfig.address}</span>
             </li>
             <li className="flex items-start gap-3 text-sm">
               <Phone className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-muted-foreground">{siteConfig.phone}</span>
+              <span className="min-w-0 break-words text-muted-foreground">{siteConfig.phone}</span>
             </li>
             <li className="flex items-start gap-3 text-sm">
               <Mail className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-muted-foreground">{siteConfig.email}</span>
+              <span className="min-w-0 break-words text-[13px] text-muted-foreground">{siteConfig.email}</span>
             </li>
             <li className="flex items-start gap-3 text-sm">
-              <Clock className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-              <span className="text-muted-foreground">
-                Seg - Sex: 9h às 18h<br />
-                Sáb: 9h às 13h
-              </span>
+              <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+              <span className="min-w-0 break-words text-muted-foreground">{CRECI}</span>
             </li>
           </ul>
           <div className="mt-6">
@@ -63,7 +63,7 @@ export function MapSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Como Chegar
+                Ver no mapa
               </a>
             </Button>
           </div>
@@ -73,20 +73,24 @@ export function MapSection() {
       {/* Mobile Info */}
       <div className="md:hidden bg-card p-6 border-t border-border">
         <h3 className="text-xl font-light text-foreground mb-5">
-          Visite-nos
+          Onde eu atendo
         </h3>
         <ul className="space-y-4">
           <li className="flex items-start gap-3 text-sm">
             <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-            <span className="text-muted-foreground">{siteConfig.address}</span>
+            <span className="min-w-0 break-words text-muted-foreground">{siteConfig.address}</span>
           </li>
           <li className="flex items-start gap-3 text-sm">
             <Phone className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-            <span className="text-muted-foreground">{siteConfig.phone}</span>
+            <span className="min-w-0 break-words text-muted-foreground">{siteConfig.phone}</span>
           </li>
           <li className="flex items-start gap-3 text-sm">
             <Mail className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-            <span className="text-muted-foreground">{siteConfig.email}</span>
+            <span className="min-w-0 break-words text-muted-foreground">{siteConfig.email}</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm">
+            <BadgeCheck className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+            <span className="min-w-0 break-words text-muted-foreground">{CRECI}</span>
           </li>
         </ul>
         <div className="mt-6">
@@ -96,7 +100,7 @@ export function MapSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Como Chegar
+              Ver no mapa
             </a>
           </Button>
         </div>

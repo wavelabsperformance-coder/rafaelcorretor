@@ -26,6 +26,52 @@ export const todosImoveis: ImovelCompleto[] = [
   // --- VENDA ---
   // =========================================================================
   {
+    id: "casa-terrea-quintas-da-colina-2",
+    title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
+    price: "Consulte o valor",
+    location: "Quintas da Colina II, Caruaru - PE",
+    type: "venda",
+    category: "casa",
+    featured: true,
+    coverImage: "/imoveis/casas-para-venda/casa-terrea-quintas-da-colina-2/1.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 6,
+    area: "400m²",
+    description: `MAGNÍFICA CASA DE ALTO PADRÃO PARA VENDA OU LOCAÇÃO | QUINTAS DA COLINA II – CARUARU/PE
+
+Projeto atemporal e sólido no condomínio fechado Quintas da Colina II. Casa nova, nunca habitada, com fachada imponente em pele de vidro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 600 m²
+- Área construída: 400 m²
+
+CARACTERÍSTICAS:
+- Casa térrea
+- 04 suítes, sendo a máster com varanda e closet
+- Sala ampla para 02 ambientes com pé-direito duplo
+- Cozinha integrada com área gourmet e churrasqueira
+- Piscina com prainha
+- Garagem para até 06 veículos
+- Quarto de serviço com banheiro
+- Área de serviço completa
+
+Disponível também para LOCAÇÃO por R$ 13.000,00/mês (incluso condomínio e IPTU).`,
+    images: Array.from({ length: 4 }, (_, i) => `/imoveis/casas-para-venda/casa-terrea-quintas-da-colina-2/${i + 1}.jpeg`),
+    amenities: [
+      "Casa Nova (Nunca Habitada)",
+      "Piscina com Prainha",
+      "Pé-Direito Duplo",
+      "Pele de Vidro na Fachada",
+      "Área Gourmet com Churrasqueira",
+      "4 Suítes com Máster e Closet",
+      "Garagem para 6 Carros",
+      "Terreno de 600m²",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-venda",
+    backLabel: "Voltar para Imóveis para Venda",
+  },
+  {
     id: "casa-condominio-green-garden-residence",
     title: "Casa no Condomínio Green Garden Residence",
     price: "R$ 900.000",
@@ -43,15 +89,15 @@ export const todosImoveis: ImovelCompleto[] = [
 Excelente oportunidade para morar com conforto, segurança 24 horas e infraestrutura completa em condomínio fechado.
 
 DESCRIÇÃO DO IMÓVEL:
-• Área construída de 115 m²
-• Garagem para 4 carros
-• 3 dormitórios, sendo 2 suítes
-• Banheiro social
-• Sala ampla para ambientes de estar e jantar
-• Cozinha tipo americana
-• Escada de acesso ao 1º andar em madeira com estilo rústico
-• Varanda
-• Quintal
+- Área construída de 115 m²
+- Garagem para 4 carros
+- 3 dormitórios, sendo 2 suítes
+- Banheiro social
+- Sala ampla para ambientes de estar e jantar
+- Cozinha tipo americana
+- Escada de acesso ao 1º andar em madeira com estilo rústico
+- Varanda
+- Quintal
 
 Condomínio com portaria e segurança 24h e estrutura completa de lazer.
 
@@ -94,28 +140,28 @@ DESCRIÇÃO DO IMÓVEL:
 Área do Terreno: 12x27m
 
 PAVIMENTO TÉRREO:
-• Garagem para 4 vagas
-• Terraço
-• Sala ampla para 2 ambientes
-• 2 quartos de hóspedes
-• Banheiro social
-• Cozinha ampla
-• Área de serviço
-• Quintal
-• Cozinha de apoio + despensa
-• Dependência completa de serviço + banheiro
-• 2 quartos de hóspedes na área de serviço
-• Jardim de inverno
+- Garagem para 4 vagas
+- Terraço
+- Sala ampla para 2 ambientes
+- 2 quartos de hóspedes
+- Banheiro social
+- Cozinha ampla
+- Área de serviço
+- Quintal
+- Cozinha de apoio + despensa
+- Dependência completa de serviço + banheiro
+- 2 quartos de hóspedes na área de serviço
+- Jardim de inverno
 
 1º ANDAR:
-• Escada de acesso
-• Varanda privativa
-• Escritório
-• Sala ampla de TV
-• 3 suítes master com hidromassagem
-• Salão para área gourmet
-• 1 quarto adicional
-• Banheiro social
+- Escada de acesso
+- Varanda privativa
+- Escritório
+- Sala ampla de TV
+- 3 suítes master com hidromassagem
+- Salão para área gourmet
+- 1 quarto adicional
+- Banheiro social
 
 VALOR DE VENDA: R$ 1.500.000,00
 
@@ -174,16 +220,16 @@ ESTRUTURA DO EDIFÍCIO CELY MIRANDA
 
 Um condomínio pensado para oferecer conforto, lazer e segurança:
 
-• Piscinas adulto e infantil
-• Piscina com raia
-• Academia / fitness
-• Salão de festas
-• Espaço gourmet
-• Brinquedoteca
-• Área esportiva
-• Área de lazer
-• Elevadores sociais e de serviço
-• Portaria 24 horas
+- Piscinas adulto e infantil
+- Piscina com raia
+- Academia / fitness
+- Salão de festas
+- Espaço gourmet
+- Brinquedoteca
+- Área esportiva
+- Área de lazer
+- Elevadores sociais e de serviço
+- Portaria 24 horas
 
 LOCALIZAÇÃO PRIVILEGIADA
 
@@ -191,19 +237,19 @@ Morar no Universitário significa estar cercado por uma das estruturas mais comp
 
 No entorno estão importantes pontos de saúde, educação, serviços, gastronomia, comércio e conveniência, incluindo:
 
-• Polo Médico / Centro Médico do Agreste
-• Hospital da Unimed
-• Hospital Santa Águeda
-• Polo Jurídico de Caruaru
-• Fórum Estadual
-• Fórum Federal
-• ASCES-UNITA
-• Wyden / instituições de ensino
-• Supermercados e conveniências
-• Farmácias
-• Academias
-• Colégios e escolas
-• Restaurantes e serviços
+- Polo Médico / Centro Médico do Agreste
+- Hospital da Unimed
+- Hospital Santa Águeda
+- Polo Jurídico de Caruaru
+- Fórum Estadual
+- Fórum Federal
+- ASCES-UNITA
+- Wyden / instituições de ensino
+- Supermercados e conveniências
+- Farmácias
+- Academias
+- Colégios e escolas
+- Restaurantes e serviços
 
 A região ainda oferece acesso estratégico às principais vias de Caruaru, conectando o Universitário a Maurício de Nassau, Indianópolis, Centro e às principais rodovias de acesso à cidade.
 
@@ -237,75 +283,6 @@ Visitas exclusivamente mediante agendamento.`,
     backLabel: "Voltar para Imóveis para Venda",
   },
   {
-    id: "ap-edificio-ilha-de-ponza-casa-forte",
-    title: "Apartamento no Edifício Ilha de Ponza",
-    price: "R$ 600.000",
-    location: "Casa Forte, Recife - PE",
-    type: "venda",
-    category: "apartamento",
-    featured: true,
-    coverImage: "/imoveis/apartamentos-para-venda/edificio-ilha-de-ponza/1.jpeg",
-    bedrooms: 4,
-    bathrooms: 2,
-    parking: 1,
-    area: "103m²",
-    description: `APARTAMENTO À VENDA NO CORAÇÃO DE CASA FORTE!
-
-EDIFÍCIO ILHA DE PONZA | AO LADO DA PRAÇA DE CASA FORTE
-
-Se você procura espaço, ventilação, localização privilegiada e praticidade, esta é uma excelente oportunidade para morar em uma das regiões mais tradicionais e valorizadas da Zona Norte do Recife.
-
-Localização privilegiada
-Ao lado da Praça de Casa Forte, com fácil acesso a supermercados, escolas, restaurantes, farmácias, serviços e toda a conveniência que o bairro oferece.
-
-SOBRE O APARTAMENTO
-• 103 m² de área
-• 4 quartos
-• Sala ampla
-• Cozinha
-• 1 banheiro social
-• Área de serviço
-• 1 banheiro de serviço
-• Varanda super ventilada
-• Posição frente Sul
-• Vista privilegiada
-• 1 vaga de garagem coberta
-
-Um apartamento com planta generosa e ambientes amplos, ideal para quem não abre mão de espaço e conforto para toda a família.
-
-SOBRE O EDIFÍCIO
-O Edifício Ilha de Ponza está localizado na Rua Edson Álvares, em um dos pontos mais desejados de Casa Forte.
-
-Estrutura e Lazer do Condomínio:
-• Piscina
-• Salão de festas
-• Playground
-• Guarita e sistema de segurança
-• Elevadores
-• Área externa e pilotis
-• Poço artesiano
-• Bicicletário
-• Portão eletrônico
-
-Pode ser financiado!`,
-    images: Array.from({ length: 27 }, (_, i) => `/imoveis/apartamentos-para-venda/edificio-ilha-de-ponza/${i + 1}.jpeg`),
-    amenities: [
-      "4 Quartos",
-      "Varanda Ventilada (Frente Sul)",
-      "Ao Lado da Praça de Casa Forte",
-      "Piscina",
-      "Salão de Festas",
-      "Playground",
-      "Poço Artesiano",
-      "Bicicletário",
-      "Portaria e Segurança 24h",
-      "1 Vaga Coberta",
-      "Aceita Financiamento",
-    ],
-    backUrl: "/empreendimentos/imoveis-para-venda",
-    backLabel: "Voltar para Imóveis para Venda",
-  },
-  {
     id: "ap-viver-bem-indianopolis-908",
     title: "Apartamento no Viver Bem Indianópolis",
     price: "Consulte o valor",
@@ -323,14 +300,14 @@ Pode ser financiado!`,
 O imóvel conta com 3 quartos, sendo 1 suíte, sala para 2 ambientes, varanda, banheiro social e cozinha integrada à área de serviço, proporcionando praticidade e conforto para o dia a dia.
 
 Estrutura completa de lazer, bem-estar e conveniência:
-• Piscina com raia semiolímpica e piscina infantil
-• Espaço churrasco e Espaço Gourmet
-• Salão de festas
-• Academia equipada
-• Sala multifuncional
-• Coworking
-• Espaço Box e bicicletário
-• Ponto de carregamento para veículo elétrico`,
+- Piscina com raia semiolímpica e piscina infantil
+- Espaço churrasco e Espaço Gourmet
+- Salão de festas
+- Academia equipada
+- Sala multifuncional
+- Coworking
+- Espaço Box e bicicletário
+- Ponto de carregamento para veículo elétrico`,
     videos: ["/imoveis/apartamentos-para-venda/edificio-viver-bem-indianopolis/1.mp4"],
     images: Array.from({ length: 38 }, (_, i) => `/imoveis/apartamentos-para-venda/edificio-viver-bem-indianopolis/${i + 1}.jpeg`),
     amenities: [
@@ -345,29 +322,6 @@ Estrutura completa de lazer, bem-estar e conveniência:
       "Bicicletário",
       "Salão de Festas",
     ],
-    backUrl: "/empreendimentos/imoveis-para-venda",
-    backLabel: "Voltar para Imóveis para Venda",
-  },
-  {
-    id: "casa-monte-castelo-gravata",
-    title: "Mansão de Alto Padrão no Condomínio Monte Castelo",
-    price: "R$ 2.400.000",
-    location: "Condomínio Monte Castelo, Gravatá - PE",
-    type: "venda",
-    category: "casa",
-    featured: true,
-    coverImage: "/imoveis/casas-para-venda/casa-monte-castelo-gravata/5.jpeg",
-    bedrooms: 6,
-    bathrooms: 7,
-    parking: 6,
-    area: "1.000m² terreno (com lote anexo)",
-    description: `Exclusiva mansão de alto padrão no prestigiado Condomínio Monte Castelo em Gravatá - PE. Imóvel e lote totalmente escriturados. Projeto de arquitetura moderna integrando madeira nobre, vidro e concreto aparente.`,
-    videos: ["/imoveis/casas-para-venda/casa-monte-castelo-gravata/1.mp4"],
-    images: [
-      "/imoveis/casas-para-venda/casa-monte-castelo-gravata/5.jpeg",
-      ...Array.from({ length: 18 }, (_, i) => `/imoveis/casas-para-venda/casa-monte-castelo-gravata/${i + 2}.jpeg`),
-    ],
-    amenities: ["6 Suítes Privativas", "Lote Anexo 20x50m Incluso", "Varanda Panorâmica", "Espaço Gourmet", "Garagem para 6 Veículos", "Portaria 24h"],
     backUrl: "/empreendimentos/imoveis-para-venda",
     backLabel: "Voltar para Imóveis para Venda",
   },
@@ -465,127 +419,186 @@ Apartamento térreo de esquina, com posição privilegiada e vista aberta para t
     backUrl: "/empreendimentos/imoveis-para-venda",
     backLabel: "Voltar para Imóveis para Venda",
   },
-  {
-    id: "ap-edificio-santa-maria-boa-viagem",
-    title: "Apartamento de Alto Padrão no Edifício Santa Maria",
-    price: "R$ 1.980.000",
-    location: "Boa Viagem, Recife - PE",
-    type: "venda",
-    category: "apartamento",
-    featured: true,
-    coverImage: "/imoveis/apartamentos-para-venda/edificio-santa-maria/1.jpeg",
-    bedrooms: 4,
-    bathrooms: 6,
-    parking: 3,
-    area: "180m²",
-    description: `Apartamento amplo de alto padrão com vista definitiva para o mar em Boa Viagem, 4 suítes, 3 vagas e lazer completo.`,
-    images: Array.from({ length: 29 }, (_, i) => `/imoveis/apartamentos-para-venda/edificio-santa-maria/${i + 1}.jpeg`),
-    amenities: ["4 Suítes", "Vista para o Mar", "3 Vagas de Garagem", "Estação de Carro Elétrico", "Piscina e Sauna"],
-    backUrl: "/empreendimentos/imoveis-para-venda",
-    backLabel: "Voltar para Imóveis para Venda",
-  },
-  {
-    id: "ap-beach-class-convention-by-mai",
-    title: "Apartamento no Beach Class Convention by MAI",
-    price: "R$ 380.000",
-    location: "Boa Viagem, Recife - PE",
-    type: "venda",
-    category: "apartamento",
-    featured: true,
-    coverImage: "/imoveis/apartamentos-para-venda/beach-class-convention-by-mai/1.jpeg",
-    bedrooms: 1,
-    bathrooms: 1,
-    parking: 1,
-    area: "Studio / Flat",
-    description: `APARTAMENTO À VENDA | BEACH CLASS CONVENTION BY MAI
-
-R$ 380.000,00 
-
-Boa Viagem | Recife/PE
-
-1 QUARTO | SUÍTE | ANDAR ALTO
-
-Uma excelente oportunidade para quem busca investir em um dos endereços mais estratégicos de Boa Viagem.`,
-    images: Array.from({ length: 19 }, (_, i) => `/imoveis/apartamentos-para-venda/beach-class-convention-by-mai/${i + 1}.jpeg`),
-    amenities: [
-      "1 Suíte",
-      "Andar Alto",
-      "Piscina",
-      "Academia",
-      "Sauna",
-      "Restaurante no Prédio",
-      "Recepção e Segurança",
-      "Lavanderia",
-      "Business Center",
-      "Próximo ao Shopping Recife",
-      "Escriturado e Financiável",
-    ],
-    backUrl: "/empreendimentos/imoveis-para-venda",
-    backLabel: "Voltar para Imóveis para Venda",
-  },
 
   // =========================================================================
   // --- LOCAÇÃO ---
   // =========================================================================
   {
-    id: "ap-beach-class-residence-santa-maria",
-    title: "Apartamento no Beach Class Residence Santa Maria",
-    price: "R$ 3.800 / mês (Água e Gás inclusos)",
-    location: "Boa Viagem, Recife - PE",
+    id: "casa-green-garden-condominio-club",
+    title: "Casa com Área Gourmet e Jacuzzi no Green Garden Condomínio Club",
+    price: "R$ 6.500 / mês (Incluso Condomínio e IPTU)",
+    location: "Green Garden Residence, Caruaru - PE",
     type: "aluguel",
-    category: "apartamento",
+    category: "casa",
     featured: true,
-    coverImage: "/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    area: "50m²",
-    description: `EXCELENTE OPORTUNIDADE DE LOCAÇÃO EM BOA VIAGEM!
+    coverImage: "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/1.jpeg",
+    bedrooms: 4,
+    bathrooms: 4,
+    parking: 4,
+    area: "200m²",
+    description: `CASA PARA LOCAÇÃO | GREEN GARDEN CONDOMÍNO CLUB – CARUARU/PE
 
-BEACH CLASS RESIDENCE SANTA MARIA
+More em um condomínio fechado às margens da PE-95, com acesso às principais avenidas que levam ao centro da cidade de Caruaru PE.
 
-Se você busca conforto, praticidade e excelente localização em Recife, este apartamento é uma ótima opção para morar em Boa Viagem!
+A casa tem 200 m² e oferece:
+- 04 quartos, sendo 03 suítes
+- 04 vagas de garagem
+- Área gourmet com churrasqueira e jacuzzi
 
-CARACTERÍSTICAS DO IMÓVEL:
-• 2 quartos, sendo 1 suíte
-• Armários planejados nos quartos, cozinha e banheiro
-• Ar-condicionado instalado nos dois quartos
-• Varanda aconchegante
-• Apartamento arejado, ventilado e com excelente iluminação natural
-• 1 vaga de garagem rotativa
-
-ESTRUTURA E LAZER DO CONDOMÍNIO:
-• Piscina na cobertura, com vista privilegiada e mini bar
-• Espaço gourmet com churrasqueira
-• Mini market no condomínio
-• Lavanderia OMO no prédio
-
-LOCALIZAÇÃO PRIVILEGIADA:
-Rua Dr. Pedro de Melo Cahú, 201 – Boa Viagem, Recife/PE.
-Uma localização estratégica, próxima a escolas, hotéis, farmácias, serviços e às principais conveniências do bairro.
-• Praia de Boa Viagem: aproximadamente 400 metros
-• Aeroporto Internacional do Recife: aproximadamente 4,5 km`,
-    videos: [
-      "/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/22.mp4",
-      "/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/23.mp4",
-      "/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/24.mp4",
-    ],
-    images: Array.from(
-      { length: 21 },
-      (_, i) => `/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/${i + 1}.jpeg`
-    ),
+VALOR DE LOCAÇÃO: R$ 6.500,00 por mês (com condomínio e IPTU inclusos).
+Garantia: caução.`,
+    images: Array.from({ length: 17 }, (_, i) => `/imoveis/casas-para-alugar/casa-green-garden-condominio-club/${i + 1}.jpeg`),
     amenities: [
-      "1 Suíte",
-      "Armários Planejados",
-      "Ar-condicionado nos Quartos",
-      "Varanda",
-      "Piscina na Cobertura com Mini Bar",
-      "Espaço Gourmet com Churrasqueira",
-      "Mini Market no Condomínio",
-      "Lavanderia OMO",
-      "Água e Gás Inclusos",
-      "400m da Praia de Boa Viagem",
-      "Garagem Rotativa",
+      "3 Suítes",
+      "Jacuzzi Privativa",
+      "Área Gourmet com Churrasqueira",
+      "Garagem para 4 Carros",
+      "Às margens da PE-95",
+      "Condomínio e IPTU Inclusos",
+      "Condomínio Fechado com Lazer",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-alugar",
+    backLabel: "Voltar para Imóveis para Alugar",
+  },
+  {
+    id: "casa-terrea-quintas-da-colina-2",
+    title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
+    price: "R$ 13.000 / mês (Incluso Condomínio e IPTU)",
+    location: "Quintas da Colina II, Caruaru - PE",
+    type: "aluguel",
+    category: "casa",
+    featured: true,
+    coverImage: "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/1.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 6,
+    area: "400m²",
+    description: `MAGNÍFICA CASA DE ALTO PADRÃO PARA VENDA OU LOCAÇÃO | QUINTAS DA COLINA II – CARUARU/PE
+
+Projeto atemporal e sólido no condomínio fechado Quintas da Colina II. Casa nova, nunca habitada, com fachada imponente em pele de vidro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 600 m²
+- Área construída: 400 m²
+
+CARACTERÍSTICAS:
+- Casa térrea
+- 04 suítes, sendo a máster com varanda e closet
+- Sala ampla para 02 ambientes com pé-direito duplo
+- Cozinha integrada com área gourmet e churrasqueira
+- Piscina com prainha
+- Garagem para até 06 veículos
+- Quarto de serviço com banheiro
+- Área de serviço completa
+
+LOCAÇÃO: R$ 13.000,00/mês (incluso Condomínio e IPTU)
+Disponível também para VENDA (Consulte o valor).`,
+    images: Array.from({ length: 4 }, (_, i) => `/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/${i + 1}.jpeg`),
+    amenities: [
+      "Casa Nova (Nunca Habitada)",
+      "Piscina com Prainha",
+      "Pé-Direito Duplo",
+      "Pele de Vidro na Fachada",
+      "Área Gourmet com Churrasqueira",
+      "4 Suítes com Máster e Closet",
+      "Garagem para 6 Carros",
+      "Condomínio e IPTU Inclusos",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-alugar",
+    backLabel: "Voltar para Imóveis para Alugar",
+  },
+  {
+    id: "casa-quintas-da-colina-2",
+    title: "Casa Semi Mobiliada no Condomínio Quintas da Colina II",
+    price: "R$ 10.000 / mês (Incluso Condomínio e IPTU)",
+    location: "Quintas da Colina II, Caruaru - PE",
+    type: "aluguel",
+    category: "casa",
+    featured: true,
+    coverImage: "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/1.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 4,
+    area: "270m²",
+    description: `CASA PARA LOCAÇÃO | QUINTAS DA COLINA II – CARUARU/PE
+
+Casa disponível para locação no condomínio Quintas da Colina II. Posição nascente e teto em lambri.
+
+SEMI MOBILIADO
+
+ÁREAS DO IMÓVEL:
+- Área do Terreno: 555 m²
+- Área Construída: 270 m²
+
+CARACTERÍSTICAS:
+- 04 vagas de garagem, sendo 02 cobertas
+- 04 suítes, sendo 02 suítes canadenses, 01 reversível e 01 máster com closet
+- 01 quarto de serviço
+- 01 banheiro de serviço
+- Quintal com área verde
+- Área gourmet com churrasqueira
+
+VALOR DE LOCAÇÃO: R$ 10.000,00/mês (incluso Condomínio e IPTU)`,
+    images: Array.from({ length: 5 }, (_, i) => `/imoveis/casas-para-alugar/casa-quintas-da-colina-2/${i + 1}.jpeg`),
+    amenities: [
+      "Semi Mobiliado",
+      "Posição Nascente",
+      "Teto em Lambri",
+      "Suíte Máster com Closet",
+      "Área Gourmet com Churrasqueira",
+      "Quintal com Área Verde",
+      "Condomínio e IPTU Inclusos",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-alugar",
+    backLabel: "Voltar para Imóveis para Alugar",
+  },
+  {
+    id: "casa-duplex-terras-alpha",
+    title: "Casa Duplex no Condomínio Terras Alpha",
+    price: "R$ 10.000 / mês",
+    location: "Terras Alpha, Caruaru - PE",
+    type: "aluguel",
+    category: "casa",
+    featured: true,
+    coverImage: "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/1.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 4,
+    area: "250m²",
+    description: `CASA DUPLEX PARA LOCAÇÃO | TERRAS ALPHA – CARUARU/PE
+
+Conforto, sofisticação e acessibilidade em uma residência com ambientes amplos e excelente distribuição.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 300 m²
+- Área construída: 250 m²
+
+CARACTERÍSTICAS:
+- 04 quartos, sendo 03 suítes
+- Sala ampla para 02 ambientes
+- Cozinha
+- Banheiro social
+- Lavabo
+- Área de serviço
+- Garagem para 04 veículos
+
+DIFERENCIAIS:
+- Amplo espaço gourmet
+- Elevador de acessibilidade
+- Ambientes espaçosos e funcionais
+- Condomínio fechado com segurança e lazer
+
+LOCAÇÃO: R$ 10.000,00/mês
+Condomínio Terras Alpha | Caruaru – PE`,
+    images: Array.from({ length: 16 }, (_, i) => `/imoveis/casas-para-alugar/casa-duplex-terras-alpha/${i + 1}.jpeg`),
+    amenities: [
+      "3 Suítes",
+      "Elevador de Acessibilidade",
+      "Espaço Gourmet",
+      "Condomínio Fechado com Lazer",
+      "Garagem para 4 Veículos",
+      "Lavabo",
+      "Terreno de 300m²",
     ],
     backUrl: "/empreendimentos/imoveis-para-alugar",
     backLabel: "Voltar para Imóveis para Alugar",
@@ -629,25 +642,6 @@ Uma localização estratégica, próxima a escolas, hotéis, farmácias, serviç
     description: `Apartamento mobiliado no bairro Maurício de Nassau, próximo ao polo médico e jurídico. Taxas inclusas.`,
     images: Array.from({ length: 9 }, (_, i) => `/imoveis/apartamentos-para-alugar/apartamento-mobiliado-mauricio-de-nassau/${i + 1}.jpeg`),
     amenities: ["Mobiliado", "Ar-condicionado", "Próximo ao Polo Médico", "Taxas Inclusas"],
-    backUrl: "/empreendimentos/imoveis-para-alugar",
-    backLabel: "Voltar para Imóveis para Alugar",
-  },
-  {
-    id: "ap-edificio-tereza-rodrigues",
-    title: "Apartamento no Edifício Tereza Rodrigues",
-    price: "R$ 4.000 / mês (Incluso Condomínio)",
-    location: "Boa Viagem, Recife - PE",
-    type: "aluguel",
-    category: "apartamento",
-    featured: false,
-    coverImage: "/imoveis/apartamentos-para-alugar/edificio-tereza-rodrigues/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 3,
-    parking: 1,
-    area: "64m²",
-    description: `Excelente oportunidade no Edifício Tereza Rodrigues em Boa Viagem. Andar alto com vista aberta e 1 suíte.`,
-    images: Array.from({ length: 34 }, (_, i) => `/imoveis/apartamentos-para-alugar/edificio-tereza-rodrigues/${i + 1}.jpeg`),
-    amenities: ["Andar Alto", "Varanda", "1 Suíte", "Dependência Completa", "Condomínio Incluso"],
     backUrl: "/empreendimentos/imoveis-para-alugar",
     backLabel: "Voltar para Imóveis para Alugar",
   },
@@ -729,25 +723,6 @@ Uma localização estratégica, próxima a escolas, hotéis, farmácias, serviç
     backLabel: "Voltar para Imóveis para Alugar",
   },
   {
-    id: "casa-residencial-mauricio-de-nassau",
-    title: "Casa Residencial com Quintal no Maurício de Nassau",
-    price: "R$ 3.800 / mês",
-    location: "Maurício de Nassau, Caruaru - PE",
-    type: "aluguel",
-    category: "casa",
-    featured: true,
-    coverImage: "/imoveis/casas-para-venda/casa-moderna-com-quintal/1.jpeg",
-    bedrooms: 3,
-    bathrooms: 3,
-    parking: 2,
-    area: "140m²",
-    description: `Excelente casa residencial disponível para locação no bairro Maurício de Nassau. Cômodos amplos, 1 suíte, garagem para 2 carros e quintal nos fundos.`,
-    images: Array.from({ length: 10 }, (_, i) => `/imoveis/casas-para-venda/casa-moderna-com-quintal/${i + 1}.jpeg`),
-    amenities: ["1 Suíte", "Garagem para 2 Carros", "Quintal Amplo", "Cozinha Integrada", "Ótima Localização"],
-    backUrl: "/empreendimentos/imoveis-para-alugar",
-    backLabel: "Voltar para Imóveis para Alugar",
-  },
-  {
     id: "ap-jardim-das-orquideas-indianopolis",
     title: "Apartamento no Res. Jardim das Orquídeas",
     price: "R$ 1.500 / mês (Incluso Condomínio, IPTU e Gás)",
@@ -767,14 +742,14 @@ Indianópolis | Próximo ao Caruaru Shopping
 Se você procura praticidade, conforto e uma localização estratégica em Caruaru, essa pode ser a oportunidade ideal!
 
 Posição Norte - 2º andar 
-• Aproximadamente 42 m² de área privativa
-• 02 quartos
-• Sala de estar
-• Cozinha
-• Área de serviço
-• Banheiro social
-• 01 vaga de garagem descoberta
-• Condomínio residencial com estrutura de lazer e segurança
+- Aproximadamente 42 m² de área privativa
+- 02 quartos
+- Sala de estar
+- Cozinha
+- Área de serviço
+- Banheiro social
+- 01 vaga de garagem descoberta
+- Condomínio residencial com estrutura de lazer e segurança
 
 Localização privilegiada, em Indianópolis, com fácil acesso ao Caruaru Shopping e a diversos serviços, comércio e conveniências da região.
 
@@ -786,7 +761,7 @@ E o melhor: já estão inclusos no valor:
 - Gás
 
 Condições para locação:
-• 1 aluguel + 1 caução
+- 1 aluguel + 1 caução
 Obs.: Necessário estar com o nome limpo!
 
 Agende sua visita e venha conhecer!`,
@@ -801,62 +776,6 @@ Agende sua visita e venha conhecer!`,
       "Condomínio, IPTU e Gás Inclusos",
       "Estrutura de Lazer e Segurança",
       "1 Vaga Descoberta",
-    ],
-    backUrl: "/empreendimentos/imoveis-para-alugar",
-    backLabel: "Voltar para Imóveis para Alugar",
-  },
-  {
-    id: "ap-puerto-balata-boa-viagem",
-    title: "Apartamento no Edifício Puerto Balata (Indisponível)",
-    price: "R$ 10.000 / mês (Incluso água, gás e IPTU)",
-    location: "Avenida Navegantes, Boa Viagem, Recife - PE",
-    type: "aluguel",
-    category: "apartamento",
-    featured: false,
-    coverImage: "/imoveis/apartamentos-para-alugar/puerto-balata/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    area: "72m²",
-    description: `EXCLUSIVIDADE EDIFÍCIO PUERTO BALATA
-
-Avenida Navegantes
-Próximo ao Quiosque 13
-A poucos passos do mar
-
-Apartamento no 2º andar | 100% mobiliado | Vista mar em todos os ambientes
-
-72m² muito bem distribuídos
-02 quartos, sendo 01 suíte
-Varanda integrada
-Sala ampla e moderna
-Projeto de iluminação sofisticado
-TV na sala e nos quartos
-Ar-condicionado na sala e nos 02 quartos
-01 vaga de garagem coberta
-
-Diferencial de conforto:
-Camas baú com colchões King Koil — marca americana reconhecida internacionalmente e presente em hotéis 5 estrelas como Nanai e Summerville
-
-Todos os ambientes com vista para o mar — quartos e sala trazendo sensação única de conforto, sofisticação e bem-estar.
-
-Valor da locação: R$ 10.000,00
-Incluso água e gás e IPTU 
-
-Um apartamento moderno, elegante e pronto para morar no melhor da Avenida Navegantes.
-
-[Imóvel Indisponível / Alugado]`,
-    images: Array.from({ length: 19 }, (_, i) => `/imoveis/apartamentos-para-alugar/puerto-balata/${i + 1}.jpeg`),
-    amenities: [
-      "Indisponível / Alugado",
-      "2 Quartos (1 Suíte)",
-      "100% Mobiliado",
-      "Vista Mar em Todos os Ambientes",
-      "Varanda Integrada",
-      "Ar-condicionado na Sala e Quartos",
-      "Colchões King Koil 5 Estrelas",
-      "Água, Gás e IPTU Inclusos",
-      "1 Vaga Coberta",
     ],
     backUrl: "/empreendimentos/imoveis-para-alugar",
     backLabel: "Voltar para Imóveis para Alugar",
@@ -889,9 +808,9 @@ Valor: R$ 1.800,00/mês
 TUDO INCLUSO: Condomínio e IPTU já estão inclusos no valor do aluguel! Sem surpresas no fim do mês.
 
 Destaques:
-• Ponto de altíssima visibilidade e grande fluxo na principal avenida da cidade
-• Bairro nobre e estratégico (Maurício de Nassau)
-• Perfeito para escritórios, consultórios, estética ou prestação de serviços`,
+- Ponto de altíssima visibilidade e grande fluxo na principal avenida da cidade
+- Bairro nobre e estratégico (Maurício de Nassau)
+- Perfeito para escritórios, consultórios, estética ou prestação de serviços`,
     videos: ["/imoveis/pontos-comerciais/sala-galeria-avenida-center/1.mp4"],
     images: Array.from({ length: 9 }, (_, i) => `/imoveis/pontos-comerciais/sala-galeria-avenida-center/${i + 1}.jpeg`),
     amenities: [

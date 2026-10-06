@@ -44,33 +44,234 @@ function parsePrecoAluguel(priceStr: string): number {
   return cleanStr ? parseInt(cleanStr, 10) : 0
 }
 
+function getBairro(location: string): string {
+  return location.split(",")[0].trim()
+}
+
 const imoveisAluguel: ImovelAluguel[] = [
-  // 1. BEACH CLASS RESIDENCE SANTA MARIA
+  // 1. CASA COM JACUZZI | GREEN GARDEN CONDOMÍNIO CLUB
   {
-    id: "ap-beach-class-residence-santa-maria",
-    tipo: "apartamento",
-    title: "Apartamento no Beach Class Residence Santa Maria",
-    price: "R$ 3.800 / mês",
-    location: "Boa Viagem, Recife - PE",
+    id: "casa-green-garden-condominio-club",
+    tipo: "casa",
+    title: "Casa com Área Gourmet e Jacuzzi no Green Garden Condomínio Club",
+    price: "R$ 6.500 / mês",
+    location: "Green Garden Residence, Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    area: "50m²",
-    description: `EXCELENTE OPORTUNIDADE DE LOCAÇÃO EM BOA VIAGEM!`,
-    videos: [
-      "/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/22.mp4",
+      "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg",
+    bedrooms: 4,
+    bathrooms: 4,
+    parking: 4,
+    area: "200m²",
+    description: `CASA PARA LOCAÇÃO | GREEN GARDEN CONDOMÍNO CLUB – CARUARU/PE
+
+More em um condomínio fechado às margens da PE-95, com acesso às principais avenidas que levam ao centro da cidade de Caruaru PE.
+
+A casa tem 200 m² e oferece:
+- 04 quartos, sendo 03 suítes
+- 04 vagas de garagem
+- Área gourmet com churrasqueira e jacuzzi
+
+VALOR DE LOCAÇÃO: R$ 6.500,00 por mês (com condomínio e IPTU inclusos).
+Garantia: caução.`,
+    videos: [],
+    images: [
+      "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg",
+      ...Array.from(
+        { length: 17 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-green-garden-condominio-club/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg"
+      ),
     ],
-    images: Array.from(
-      { length: 21 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/beach-class-residence-santa-maria/${i + 1}.jpeg`
-    ),
-    amenities: ["1 Suíte", "Armários Planejados", "Piscina na Cobertura"],
+    amenities: [
+      "3 Suítes",
+      "Jacuzzi Privativa",
+      "Área Gourmet com Churrasqueira",
+      "Garagem para 4 Carros",
+      "Às margens da PE-95",
+      "Condomínio e IPTU Inclusos",
+      "Condomínio Fechado com Lazer",
+    ],
   },
 
-  // 2. CONDOMÍNIO MR. ROTTERDAM
+  // 2. MAGNÍFICA CASA TERREA | QUINTAS DA COLINA II
+  {
+    id: "casa-terrea-quintas-da-colina-2",
+    tipo: "casa",
+    title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
+    price: "R$ 13.000 / mês",
+    location: "Quintas da Colina II, Caruaru - PE",
+    coverImage:
+      "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/4.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 6,
+    area: "400m²",
+    description: `MAGNÍFICA CASA DE ALTO PADRÃO PARA VENDA OU LOCAÇÃO | QUINTAS DA COLINA II – CARUARU/PE
+
+Projeto atemporal e sólido no condomínio fechado Quintas da Colina II. Casa nova, nunca habitada, com fachada imponente em pele de vidro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 600 m²
+- Área construída: 400 m²
+
+CARACTERÍSTICAS:
+- Casa térrea
+- 04 suítes, sendo a máster com varanda e closet
+- Sala ampla para 02 ambientes com pé-direito duplo
+- Cozinha integrada com área gourmet e churrasqueira
+- Piscina com prainha
+- Garagem para até 06 veículos
+- Quarto de serviço com banheiro
+- Área de serviço completa
+
+LOCAÇÃO: R$ 13.000,00/mês (incluso Condomínio e IPTU)
+Disponível também para VENDA (Consulte o valor).`,
+    videos: [],
+    images: [
+      "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/4.jpeg",
+      ...Array.from(
+        { length: 4 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/4.jpeg"
+      ),
+    ],
+    amenities: [
+      "Casa Nova (Nunca Habitada)",
+      "Piscina com Prainha",
+      "Pé-Direito Duplo",
+      "Pele de Vidro na Fachada",
+      "Área Gourmet com Churrasqueira",
+      "4 Suítes com Máster e Closet",
+      "Garagem para 6 Carros",
+      "Condomínio e IPTU Inclusos",
+    ],
+  },
+
+  // 3. CASA SEMI MOBILIADA | QUINTAS DA COLINA II
+  {
+    id: "casa-quintas-da-colina-2",
+    tipo: "casa",
+    title: "Casa Semi Mobiliada no Condomínio Quintas da Colina II",
+    price: "R$ 10.000 / mês",
+    location: "Quintas da Colina II, Caruaru - PE",
+    coverImage:
+      "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/4.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 4,
+    area: "270m²",
+    description: `CASA PARA LOCAÇÃO | QUINTAS DA COLINA II – CARUARU/PE
+
+Casa disponível para locação no condomínio Quintas da Colina II. Posição nascente e teto em lambri.
+
+SEMI MOBILIADO
+
+ÁREAS DO IMÓVEL:
+- Área do Terreno: 555 m²
+- Área Construída: 270 m²
+
+CARACTERÍSTICAS:
+- 04 vagas de garagem, sendo 02 cobertas
+- 04 suítes, sendo 02 suítes canadenses, 01 reversível e 01 máster com closet
+- 01 quarto de serviço
+- 01 banheiro de serviço
+- Quintal com área verde
+- Área gourmet com churrasqueira
+
+VALOR DE LOCAÇÃO: R$ 10.000,00/mês (incluso Condomínio e IPTU)`,
+    videos: [],
+    images: [
+      "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/4.jpeg",
+      ...Array.from(
+        { length: 5 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-quintas-da-colina-2/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/4.jpeg"
+      ),
+    ],
+    amenities: [
+      "Semi Mobiliado",
+      "Posição Nascente",
+      "Teto em Lambri",
+      "Suíte Máster com Closet",
+      "Área Gourmet com Churrasqueira",
+      "Quintal com Área Verde",
+      "Condomínio e IPTU Inclusos",
+    ],
+  },
+
+  // 4. CASA DUPLEX | TERRAS ALPHA
+  {
+    id: "casa-duplex-terras-alpha",
+    tipo: "casa",
+    title: "Casa Duplex no Condomínio Terras Alpha",
+    price: "R$ 10.000 / mês",
+    location: "Terras Alpha, Caruaru - PE",
+    coverImage:
+      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/16.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 4,
+    area: "250m²",
+    description: `CASA DUPLEX PARA LOCAÇÃO | TERRAS ALPHA – CARUARU/PE
+
+Conforto, sofisticação e acessibilidade em uma residência com ambientes amplos e excelente distribuição.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 300 m²
+- Área construída: 250 m²
+
+CARACTERÍSTICAS:
+- 04 quartos, sendo 03 suítes
+- Sala ampla para 02 ambientes
+- Cozinha
+- Banheiro social
+- Lavabo
+- Área de serviço
+- Garagem para 04 veículos
+
+DIFERENCIAIS:
+- Amplo espaço gourmet
+- Elevador de acessibilidade
+- Ambientes espaçosos e funcionais
+- Condomínio fechado com segurança e lazer
+
+LOCAÇÃO: R$ 10.000,00/mês
+Condomínio Terras Alpha | Caruaru – PE`,
+    videos: [],
+    images: [
+      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/16.jpeg",
+      ...Array.from(
+        { length: 16 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-duplex-terras-alpha/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/16.jpeg"
+      ),
+    ],
+    amenities: [
+      "Elevador de Acessibilidade",
+      "Espaço Gourmet",
+      "Condomínio Fechado",
+      "3 Suítes",
+      "Garagem 4 Vagas",
+    ],
+  },
+
+  // 5. CONDOMÍNIO MR. ROTTERDAM
   {
     id: "ap-condominio-mr-rotterdam",
     tipo: "apartamento",
@@ -93,7 +294,7 @@ const imoveisAluguel: ImovelAluguel[] = [
     amenities: ["100% Mobiliado", "Piscina com Deck", "Academia Equipada"],
   },
 
-  // 3. APARTAMENTO MOBILIADO NO MAURÍCIO DE NASSAU
+  // 6. APARTAMENTO MOBILIADO NO MAURÍCIO DE NASSAU
   {
     id: "ap-mobiliado-mauricio-de-nassau",
     tipo: "apartamento",
@@ -116,30 +317,7 @@ const imoveisAluguel: ImovelAluguel[] = [
     amenities: ["Mobiliado", "Ar-condicionado", "Todas as Taxas Inclusas"],
   },
 
-  // 4. EDIFÍCIO TEREZA RODRIGUES
-  {
-    id: "ap-edificio-tereza-rodrigues",
-    tipo: "apartamento",
-    title: "Apartamento no Edifício Tereza Rodrigues",
-    price: "R$ 4.000 / mês",
-    location: "Boa Viagem, Recife - PE",
-    coverImage:
-      "/imoveis/apartamentos-para-alugar/edificio-tereza-rodrigues/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 3,
-    parking: 1,
-    area: "64m²",
-    description: `Excelente oportunidade de locação no Edifício Tereza Rodrigues.`,
-    videos: [],
-    images: Array.from(
-      { length: 34 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/edificio-tereza-rodrigues/${i + 1}.jpeg`
-    ),
-    amenities: ["Andar Alto", "Varanda Panorâmica", "1 Suíte"],
-  },
-
-  // 5. JARDIM DOS ALECRINS
+  // 7. JARDIM DOS ALECRINS
   {
     id: "ap-edificio-jardim-dos-alecrins",
     tipo: "apartamento",
@@ -162,7 +340,7 @@ const imoveisAluguel: ImovelAluguel[] = [
     amenities: ["Totalmente Mobiliado", "Posição Nascente", "Piscina e Lazer"],
   },
 
-  // 6. STUDIO ALTO PADRÃO
+  // 8. STUDIO ALTO PADRÃO
   {
     id: "ap-studio-alto-padrao-shopping",
     tipo: "apartamento",
@@ -187,7 +365,7 @@ const imoveisAluguel: ImovelAluguel[] = [
     amenities: ["Alto Padrão Decorado", "Academia Equipada", "Coworking"],
   },
 
-  // 7. EDIFÍCIO JOÃO SOARES
+  // 9. EDIFÍCIO JOÃO SOARES
   {
     id: "ap-edificio-joao-soares",
     tipo: "apartamento",
@@ -210,7 +388,7 @@ const imoveisAluguel: ImovelAluguel[] = [
     amenities: ["2 Suítes Privativas", "Andar Alto", "2 Vagas Cobertas"],
   },
 
-  // 8. CAMINHO DAS AROEIRAS
+  // 10. CAMINHO DAS AROEIRAS
   {
     id: "ap-caminho-das-aroeiras",
     tipo: "apartamento",
@@ -233,7 +411,7 @@ const imoveisAluguel: ImovelAluguel[] = [
     amenities: ["Ao Lado do Caruaru Shopping", "Piscina", "Salão de Festas"],
   },
 
-  // 9. JARDIM DAS ORQUÍDEAS
+  // 11. JARDIM DAS ORQUÍDEAS
   {
     id: "ap-jardim-das-orquideas-indianopolis",
     tipo: "apartamento",
@@ -255,28 +433,11 @@ const imoveisAluguel: ImovelAluguel[] = [
     ),
     amenities: ["Posição Norte", "2º Andar", "Condomínio, IPTU e Gás Inclusos"],
   },
-
-  // 10. PUERTO BALATA (INDISPONÍVEL / ALUGADO)
-  {
-    id: "ap-puerto-balata-boa-viagem",
-    tipo: "apartamento",
-    title: "Apartamento no Edifício Puerto Balata (Indisponível)",
-    price: "R$ 10.000 / mês",
-    location: "Boa Viagem, Recife - PE",
-    coverImage: "/imoveis/apartamentos-para-alugar/puerto-balata/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    area: "72m²",
-    description: `EXCLUSIVIDADE EDIFÍCIO PUERTO BALATA`,
-    videos: [],
-    images: Array.from(
-      { length: 19 },
-      (_, i) => `/imoveis/apartamentos-para-alugar/puerto-balata/${i + 1}.jpeg`
-    ),
-    amenities: ["Indisponível / Alugado", "100% Mobiliado", "Vista Mar"],
-  },
 ]
+
+const bairrosDisponiveis = Array.from(
+  new Set(imoveisAluguel.map((imovel) => getBairro(imovel.location)))
+).sort((a, b) => a.localeCompare(b, "pt-BR"))
 
 function PropertyCard({ property }: { property: ImovelAluguel }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
@@ -301,8 +462,6 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
     setCurrentImgIndex((prev) => (prev === totalImages - 1 ? 0 : prev + 1))
   }
 
-  const isIndisponivel = property.id === "ap-puerto-balata-boa-viagem"
-
   return (
     <article className="group bg-white rounded-2xl overflow-hidden border border-border/80 hover:border-[#b85d19]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative">
       <div>
@@ -313,22 +472,14 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
           <img
             src={images[currentImgIndex] || "/placeholder.jpg"}
             alt={`${property.title} - foto ${currentImgIndex + 1}`}
-            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-              isIndisponivel ? "grayscale opacity-75" : ""
-            }`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
 
           <div className="absolute top-3 left-3 bg-[#b85d19] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
             Locação
           </div>
 
-          {isIndisponivel && (
-            <div className="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 text-xs font-bold shadow-sm rounded-full">
-              Alugado
-            </div>
-          )}
-
-          {hasVideos && !isIndisponivel && (
+          {hasVideos && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
               <Play className="h-3 w-3 fill-white" />
               {property.videos.length > 1
@@ -433,16 +584,14 @@ function ImoveisParaAlugarContent() {
     "todos" | "apartamento" | "casa"
   >("todos")
 
-  const [cidadeFiltro, setCidadeFiltro] = useState<string>("todas")
+  const [bairroFiltro, setBairroFiltro] = useState<string>("todos")
   const [faixaPrecoFiltro, setFaixaPrecoFiltro] = useState<string>("todas")
 
   const imoveisFiltrados = imoveisAluguel.filter((imovel) => {
     if (tipoFiltro !== "todos" && imovel.tipo !== tipoFiltro) return false
 
-    if (cidadeFiltro !== "todas") {
-      const loc = imovel.location.toLowerCase()
-      if (cidadeFiltro === "caruaru" && !loc.includes("caruaru")) return false
-      if (cidadeFiltro === "recife" && !loc.includes("recife")) return false
+    if (bairroFiltro !== "todos" && getBairro(imovel.location) !== bairroFiltro) {
+      return false
     }
 
     if (faixaPrecoFiltro !== "todas") {
@@ -478,7 +627,7 @@ function ImoveisParaAlugarContent() {
           </h1>
 
           <p className="text-white/75 mt-3 max-w-2xl text-sm md:text-base">
-            Casas e apartamentos selecionados para locação nas regiões mais valorizadas.
+            Casas e apartamentos selecionados para locação em Caruaru.
           </p>
         </div>
       </section>
@@ -493,7 +642,6 @@ function ImoveisParaAlugarContent() {
       <section className="py-12 bg-[#faf7f2]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           
-          {/* BARRA DE FILTROS HIGH-END / ESTILO PORTAL DE LUXO */}
           <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl shadow-black/5 border border-border/60 mb-12">
             <div className="flex items-center justify-between px-2 mb-4">
               <div className="flex items-center gap-2">
@@ -508,12 +656,12 @@ function ImoveisParaAlugarContent() {
                   <strong className="text-[#0d3b2e] font-bold">{imoveisFiltrados.length}</strong> {imoveisFiltrados.length === 1 ? "imóvel encontrado" : "imóveis encontrados"}
                 </span>
 
-                {(tipoFiltro !== "todos" || cidadeFiltro !== "todas" || faixaPrecoFiltro !== "todas") && (
+                {(tipoFiltro !== "todos" || bairroFiltro !== "todos" || faixaPrecoFiltro !== "todas") && (
                   <button
                     type="button"
                     onClick={() => {
                       setTipoFiltro("todos")
-                      setCidadeFiltro("todas")
+                      setBairroFiltro("todos")
                       setFaixaPrecoFiltro("todas")
                     }}
                     className="text-xs font-semibold text-[#b85d19] hover:text-[#0d3b2e] transition-colors"
@@ -526,7 +674,6 @@ function ImoveisParaAlugarContent() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 bg-[#faf8f5] rounded-xl border border-border/80 divide-y md:divide-y-0 md:divide-x divide-border/80 overflow-hidden">
               
-              {/* CAMPO 1: TIPO DE IMÓVEL */}
               <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
                   <Home className="h-4 w-4" />
@@ -550,31 +697,32 @@ function ImoveisParaAlugarContent() {
                 </div>
               </div>
 
-              {/* CAMPO 2: CIDADE / REGIÃO */}
               <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
-                    Localização
+                    Bairro em Caruaru
                   </label>
                   <div className="relative mt-0.5">
                     <select
-                      value={cidadeFiltro}
-                      onChange={(e) => setCidadeFiltro(e.target.value)}
+                      value={bairroFiltro}
+                      onChange={(e) => setBairroFiltro(e.target.value)}
                       className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
                     >
-                      <option value="todas">Todas as Cidades</option>
-                      <option value="caruaru">Caruaru - PE</option>
-                      <option value="recife">Recife - PE</option>
+                      <option value="todos">Todos os Bairros</option>
+                      {bairrosDisponiveis.map((bairro) => (
+                        <option key={bairro} value={bairro}>
+                          {bairro}
+                        </option>
+                      ))}
                     </select>
                     <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
                   </div>
                 </div>
               </div>
 
-              {/* CAMPO 3: FAIXA DE PREÇO */}
               <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
                   <Building className="h-4 w-4" />
@@ -602,7 +750,6 @@ function ImoveisParaAlugarContent() {
             </div>
           </div>
 
-          {/* GRID DOS IMÓVEIS FILTRADOS (4 COLUNAS) */}
           {imoveisFiltrados.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {imoveisFiltrados.map((property) => (
@@ -618,7 +765,7 @@ function ImoveisParaAlugarContent() {
                 type="button"
                 onClick={() => {
                   setTipoFiltro("todos")
-                  setCidadeFiltro("todas")
+                  setBairroFiltro("todos")
                   setFaixaPrecoFiltro("todas")
                 }}
                 className="mt-3 text-[#0d3b2e] font-semibold hover:underline text-sm"

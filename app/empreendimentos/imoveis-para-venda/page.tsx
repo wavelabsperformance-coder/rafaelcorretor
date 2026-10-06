@@ -45,6 +45,13 @@ function parsePreco(priceStr: string): number {
   return cleanStr ? parseInt(cleanStr, 10) : 0
 }
 
+// Retorna o bairro (ex: "Universitário, Caruaru - PE" -> "Universitário").
+// Se o imóvel só tem "Caruaru - PE" (sem bairro), retorna "".
+function getBairro(location: string): string {
+  if (!location.includes(",")) return ""
+  return location.split(",")[0].trim()
+}
+
 const imoveisVenda: ImovelVenda[] = [
   // 1. CASA GREEN GARDEN RESIDENCE
   {
@@ -64,15 +71,15 @@ const imoveisVenda: ImovelVenda[] = [
 Excelente oportunidade para morar com conforto, segurança 24 horas e infraestrutura completa em condomínio fechado.
 
 DESCRIÇÃO DO IMÓVEL:
-• Área construída de 115 m²
-• Garagem para 4 carros
-• 3 dormitórios, sendo 2 suítes
-• Banheiro social
-• Sala ampla para ambientes de estar e jantar
-• Cozinha tipo americana
-• Escada de acesso ao 1º andar em madeira com estilo rústico
-• Varanda
-• Quintal
+- Área construída de 115 m²
+- Garagem para 4 carros
+- 3 dormitórios, sendo 2 suítes
+- Banheiro social
+- Sala ampla para ambientes de estar e jantar
+- Cozinha tipo americana
+- Escada de acesso ao 1º andar em madeira com estilo rústico
+- Varanda
+- Quintal
 
 Condomínio com portaria e segurança 24h e estrutura completa de lazer.
 
@@ -169,42 +176,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     ],
   },
 
-  // 4. EDIFÍCIO ILHA DE PONZA
-  {
-    id: "ap-edificio-ilha-de-ponza-casa-forte",
-    tipo: "apartamento",
-    title: "Apartamento no Edifício Ilha de Ponza",
-    price: "R$ 600.000",
-    location: "Casa Forte, Recife - PE",
-    coverImage:
-      "/imoveis/apartamentos-para-venda/edificio-ilha-de-ponza/1.jpeg",
-    bedrooms: 4,
-    bathrooms: 2,
-    parking: 1,
-    area: "103m²",
-    description: `APARTAMENTO À VENDA NO CORAÇÃO DE CASA FORTE!`,
-    videos: [],
-    images: Array.from(
-      { length: 27 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-venda/edificio-ilha-de-ponza/${i + 1}.jpeg`
-    ),
-    amenities: [
-      "4 Quartos",
-      "Varanda Ventilada (Frente Sul)",
-      "Ao Lado da Praça de Casa Forte",
-      "Piscina",
-      "Salão de Festas",
-      "Playground",
-      "Poço Artesiano",
-      "Bicicletário",
-      "Portaria e Segurança 24h",
-      "1 Vaga Coberta",
-      "Aceita Financiamento",
-    ],
-  },
-
-  // 5. VIVER BEM INDIANÓPOLIS - AP 908
+  // 4. VIVER BEM INDIANÓPOLIS - AP 908
   {
     id: "ap-viver-bem-indianopolis-908",
     tipo: "apartamento",
@@ -240,42 +212,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     ],
   },
 
-  // 6. MANSÃO MONTE CASTELO - GRAVATÁ
-  {
-    id: "casa-monte-castelo-gravata",
-    tipo: "casa",
-    title: "Mansão de Alto Padrão no Condomínio Monte Castelo",
-    price: "R$ 2.400.000",
-    location: "Condomínio Monte Castelo, Gravatá - PE",
-    coverImage:
-      "/imoveis/casas-para-venda/casa-monte-castelo-gravata/5.jpeg",
-    bedrooms: 6,
-    bathrooms: 7,
-    parking: 6,
-    area: "1.000m² terreno",
-    description: `Exclusiva mansão de alto padrão no prestigiado Condomínio Monte Castelo em Gravatá - PE. Imóvel e lote totalmente escriturados.`,
-    videos: [
-      "/imoveis/casas-para-venda/casa-monte-castelo-gravata/1.mp4",
-    ],
-    images: [
-      "/imoveis/casas-para-venda/casa-monte-castelo-gravata/5.jpeg",
-      ...Array.from(
-        { length: 18 },
-        (_, i) =>
-          `/imoveis/casas-para-venda/casa-monte-castelo-gravata/${i + 2}.jpeg`
-      ),
-    ],
-    amenities: [
-      "6 Suítes Privativas",
-      "Lote Anexo 20x50m Incluso",
-      "Varanda Panorâmica",
-      "Espaço Gourmet",
-      "Garagem para 6 Veículos",
-      "Portaria 24h",
-    ],
-  },
-
-  // 7. CASA MODERNA COM QUINTAL
+  // 5. CASA MODERNA COM QUINTAL
   {
     id: "casa-moderna-com-quintal",
     tipo: "casa",
@@ -303,7 +240,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     ],
   },
 
-  // 8. THE HOUSE CLUB
+  // 6. THE HOUSE CLUB
   {
     id: "casa-the-house-club-caruaru",
     tipo: "casa",
@@ -331,7 +268,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     ],
   },
 
-  // 9. VOG VILLE NORTE
+  // 7. VOG VILLE NORTE
   {
     id: "ap-vog-ville-norte",
     tipo: "apartamento",
@@ -363,7 +300,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     ],
   },
 
-  // 10. VOG VILLE NORTE TÉRREO DE ESQUINA
+  // 8. VOG VILLE NORTE TÉRREO DE ESQUINA
   {
     id: "ap-vog-ville-norte-terreo",
     tipo: "apartamento",
@@ -396,69 +333,14 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
       "1 Vaga de Garagem",
     ],
   },
-
-  // 11. EDIFÍCIO SANTA MARIA
-  {
-    id: "ap-edificio-santa-maria-boa-viagem",
-    tipo: "apartamento",
-    title: "Apartamento de Alto Padrão no Edifício Santa Maria",
-    price: "R$ 1.980.000",
-    location: "Boa Viagem, Recife - PE",
-    coverImage:
-      "/imoveis/apartamentos-para-venda/edificio-santa-maria/1.jpeg",
-    bedrooms: 4,
-    bathrooms: 6,
-    parking: 3,
-    area: "180m²",
-    description: `Apartamento amplo de alto padrão com vista definitiva para o mar em Boa Viagem, 4 suítes, 3 vagas e lazer completo.`,
-    images: Array.from(
-      { length: 29 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-venda/edificio-santa-maria/${i + 1}.jpeg`
-    ),
-    amenities: [
-      "4 Suítes",
-      "Vista para o Mar",
-      "3 Vagas de Garagem",
-      "Estação de Carro Elétrico",
-      "Piscina e Sauna",
-    ],
-  },
-
-  // 12. BEACH CLASS CONVENTION BY MAI
-  {
-    id: "ap-beach-class-convention-by-mai",
-    tipo: "apartamento",
-    title: "Apartamento no Beach Class Convention by MAI",
-    price: "R$ 380.000",
-    location: "Boa Viagem, Recife - PE",
-    coverImage:
-      "/imoveis/apartamentos-para-venda/beach-class-convention-by-mai/1.jpeg",
-    bedrooms: 1,
-    bathrooms: 1,
-    parking: 1,
-    area: "Studio / Flat",
-    description: `Apartamento no Beach Class Convention by MAI reunindo localização, praticidade e estrutura para público executivo.`,
-    images: Array.from(
-      { length: 19 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-venda/beach-class-convention-by-mai/${i + 1}.jpeg`
-    ),
-    amenities: [
-      "1 Suíte",
-      "Andar Alto",
-      "Piscina",
-      "Academia",
-      "Sauna",
-      "Restaurante no Prédio",
-      "Recepção e Segurança",
-      "Lavanderia",
-      "Business Center",
-      "Próximo ao Shopping Recife",
-      "Escriturado e Financiável",
-    ],
-  },
 ]
+
+// Lista de bairros gerada automaticamente a partir dos imóveis de Caruaru
+const bairrosDisponiveis = Array.from(
+  new Set(
+    imoveisVenda.map((imovel) => getBairro(imovel.location)).filter(Boolean)
+  )
+).sort((a, b) => a.localeCompare(b, "pt-BR"))
 
 function PropertyCard({ property }: { property: ImovelVenda }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
@@ -611,7 +493,7 @@ function ImoveisParaVendaContent() {
     "todos" | "apartamento" | "casa"
   >("todos")
 
-  const [cidadeFiltro, setCidadeFiltro] = useState<string>("todas")
+  const [bairroFiltro, setBairroFiltro] = useState<string>("todos")
   const [faixaPrecoFiltro, setFaixaPrecoFiltro] = useState<string>("todas")
 
   // Lógica de filtragem combinada
@@ -619,12 +501,9 @@ function ImoveisParaVendaContent() {
     // 1. Tipo
     if (tipoFiltro !== "todos" && imovel.tipo !== tipoFiltro) return false
 
-    // 2. Cidade
-    if (cidadeFiltro !== "todas") {
-      const loc = imovel.location.toLowerCase()
-      if (cidadeFiltro === "caruaru" && !loc.includes("caruaru")) return false
-      if (cidadeFiltro === "recife" && !loc.includes("recife")) return false
-      if (cidadeFiltro === "gravata" && !loc.includes("gravatá") && !loc.includes("gravata")) return false
+    // 2. Bairro (Caruaru)
+    if (bairroFiltro !== "todos" && getBairro(imovel.location) !== bairroFiltro) {
+      return false
     }
 
     // 3. Faixa de Preço
@@ -662,8 +541,7 @@ function ImoveisParaVendaContent() {
           </h1>
 
           <p className="text-white/75 mt-3 max-w-2xl text-sm md:text-base">
-            Casas, apartamentos e residências selecionadas para compra nas
-            regiões mais valorizadas.
+            Casas, apartamentos e residências selecionadas para compra em Caruaru.
           </p>
         </div>
       </section>
@@ -695,12 +573,12 @@ function ImoveisParaVendaContent() {
                   <strong className="text-[#0d3b2e] font-bold">{imoveisFiltrados.length}</strong> {imoveisFiltrados.length === 1 ? "imóvel encontrado" : "imóveis encontrados"}
                 </span>
 
-                {(tipoFiltro !== "todos" || cidadeFiltro !== "todas" || faixaPrecoFiltro !== "todas") && (
+                {(tipoFiltro !== "todos" || bairroFiltro !== "todos" || faixaPrecoFiltro !== "todas") && (
                   <button
                     type="button"
                     onClick={() => {
                       setTipoFiltro("todos")
-                      setCidadeFiltro("todas")
+                      setBairroFiltro("todos")
                       setFaixaPrecoFiltro("todas")
                     }}
                     className="text-xs font-semibold text-[#b85d19] hover:text-[#0d3b2e] transition-colors"
@@ -738,25 +616,27 @@ function ImoveisParaVendaContent() {
                 </div>
               </div>
 
-              {/* CAMPO 2: CIDADE / REGIÃO */}
+              {/* CAMPO 2: BAIRRO (CARUARU) */}
               <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
-                    Localização
+                    Bairro em Caruaru
                   </label>
                   <div className="relative mt-0.5">
                     <select
-                      value={cidadeFiltro}
-                      onChange={(e) => setCidadeFiltro(e.target.value)}
+                      value={bairroFiltro}
+                      onChange={(e) => setBairroFiltro(e.target.value)}
                       className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
                     >
-                      <option value="todas">Todas as Cidades</option>
-                      <option value="caruaru">Caruaru - PE</option>
-                      <option value="recife">Recife - PE</option>
-                      <option value="gravata">Gravatá - PE</option>
+                      <option value="todos">Todos os Bairros</option>
+                      {bairrosDisponiveis.map((bairro) => (
+                        <option key={bairro} value={bairro}>
+                          {bairro}
+                        </option>
+                      ))}
                     </select>
                     <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
                   </div>
@@ -808,7 +688,7 @@ function ImoveisParaVendaContent() {
                 type="button"
                 onClick={() => {
                   setTipoFiltro("todos")
-                  setCidadeFiltro("todas")
+                  setBairroFiltro("todos")
                   setFaixaPrecoFiltro("todas")
                 }}
                 className="mt-3 text-[#0d3b2e] font-semibold hover:underline text-sm"

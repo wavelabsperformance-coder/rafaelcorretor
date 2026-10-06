@@ -1,9 +1,12 @@
 import Link from "next/link"
-import { Instagram, Mail, MapPin, Phone } from "lucide-react"
+import { BadgeCheck, Instagram, Mail, MapPin, Phone } from "lucide-react"
 import { siteConfig, propertyCategories } from "@/lib/data"
 
 // Logo do footer (se tiver uma versão clara, salve em public/images/ e troque o caminho)
 const FOOTER_LOGO = "/images/logo.png"
+
+// CRECI do Rafael (confirme o número com ele)
+const CRECI = "CRECI/PE 17370"
 
 // Link do perfil do Rafael na OLX (troque pelo link real do anunciante)
 const OLX_LINK = "https://www.olx.com.br/"
@@ -142,13 +145,17 @@ export function Footer() {
                   {siteConfig.address}
                 </a>
               </li>
+              <li className="flex items-center gap-3 text-sm text-primary-foreground/75">
+                <BadgeCheck className="h-4 w-4 text-accent" />
+                {CRECI}
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-primary-foreground/15 pt-6 text-xs text-primary-foreground/50 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2">
-            <p>© {currentYear} Rafael Cavalcante · Corretor de imóveis · CRECI/PE 17307</p>
+            <p>© {currentYear} Rafael Cavalcante · Corretor de imóveis · {CRECI}</p>
             <span className="hidden sm:inline">•</span>
             <p>
               Desenvolvido por:{" "}
