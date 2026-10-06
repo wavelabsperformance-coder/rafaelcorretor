@@ -37,6 +37,15 @@ function parsePrecoComercial(priceStr: string): number {
   return cleanStr ? parseInt(cleanStr, 10) : 0
 }
 
+// Retorna o bairro quando a localização tem 3 partes
+// Ex: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE" -> "Maurício de Nassau"
+// Se não tiver bairro (ex: "Av. Agamenon Magalhães, Caruaru - PE"), retorna ""
+function getBairro(location: string): string {
+  const parts = location.split(",").map((p) => p.trim())
+  if (parts.length < 3) return ""
+  return parts[parts.length - 2]
+}
+
 const pontosComerciais: ImovelComercial[] = [
   // 1. SALA COMERCIAL GALERIA AVENIDA CENTER
   {
@@ -59,9 +68,9 @@ Valor: R$ 1.800,00/mês
 TUDO INCLUSO: Condomínio e IPTU já estão inclusos no valor do aluguel! Sem surpresas no fim do mês.
 
 Destaques:
-• Ponto de altíssima visibilidade e grande fluxo na principal avenida da cidade
-• Bairro nobre e estratégico (Maurício de Nassau)
-• Perfeito para escritórios, consultórios, estética ou prestação de serviços`,
+- Ponto de altíssima visibilidade e grande fluxo na principal avenida da cidade
+- Bairro nobre e estratégico (Maurício de Nassau)
+- Perfeito para escritórios, consultórios, estética ou prestação de serviços`,
     videos: ["/imoveis/pontos-comerciais/sala-galeria-avenida-center/1.mp4"],
     images: Array.from(
       { length: 9 },
@@ -104,6 +113,13 @@ Destaques:
   },
 ]
 
+// Lista de bairros gerada automaticamente a partir dos imóveis
+const bairrosDisponiveis = Array.from(
+  new Set(
+    pontosComerciais.map((imovel) => getBairro(imovel.location)).filter(Boolean)
+  )
+).sort((a, b) => a.localeCompare(b, "pt-BR"))
+
 function PropertyCard({ property }: { property: ImovelComercial }) {
   const [currentImgIndex, setCurrentImgIndex] = useState(0)
 
@@ -113,7 +129,15 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
       : [property.coverImage]
 
   const totalImages = images.length
-  const hasVideos = property.videos && property.videos.length > 0
+  const hasVideos = Boolean(property.videos?.length)
+
+  // Preço: "R$ 1.800 / mês (Incluso ...)" vira "R$ 1.800" + "/mês" menor, para caber no bloco.
+  // "Consulte o valor" vira "Sob consulta".
+  const isConsulta =
+    !property.price || property.price.toLowerCase().includes("consulte")
+  const [priceMainRaw, ...priceRest] = (property.price || "").split("/")
+  const priceMain = isConsulta ? "Sob consulta" : priceMainRaw.trim()
+  const priceSuffix = !isConsulta && priceRest.length > 0 ? "/mês" : ""
 
   const handlePrev = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -128,11 +152,12 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
   }
 
   return (
-    <article className="group bg-white rounded-2xl overflow-hidden border border-border/80 hover:border-[#b85d19]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative">
+    <article className="group bg-white rounded-3xl p-2 border border-[#0d3b2e]/10 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#0d3b2e]/30 transition-all duration-300 flex flex-col justify-between h-full">
       <div>
+        {/* IMAGEM */}
         <Link
           href={`/imoveis/${property.id}`}
-          className="block aspect-[4/3] overflow-hidden relative bg-muted cursor-pointer"
+          className="block aspect-[4/3] overflow-hidden relative cursor-pointer bg-muted rounded-2xl"
         >
           <img
             src={images[currentImgIndex] || "/placeholder.jpg"}
@@ -140,10 +165,12 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
 
+          {/* BADGE COMERCIAL */}
           <div className="absolute top-3 left-3 bg-[#0d3b2e] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
             Comercial
           </div>
 
+          {/* VÍDEO */}
           {hasVideos && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
               <Play className="h-3 w-3 fill-white" />
@@ -153,12 +180,14 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
             </div>
           )}
 
+          {/* CONTADOR DE IMAGENS */}
           {totalImages > 1 && (
             <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium px-2 py-0.5 rounded-md">
               {currentImgIndex + 1} / {totalImages}
             </div>
           )}
 
+          {/* NAVEGAÇÃO DAS IMAGENS */}
           {totalImages > 1 && (
             <>
               <button
@@ -182,26 +211,30 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
           )}
         </Link>
 
-        <div className="p-5">
-          <span className="text-[11px] uppercase tracking-wider text-muted-foreground flex items-center gap-1 font-medium">
-            <MapPin className="h-3.5 w-3.5 text-[#b85d19]" />
+        {/* INFORMAÇÕES */}
+        <div className="px-3 sm:px-4 pt-4 pb-2">
+          {/* LOCALIZAÇÃO */}
+          <span className="text-[11px] uppercase tracking-wider text-muted-foreground flex items-start gap-1 font-medium leading-snug">
+            <MapPin className="h-3.5 w-3.5 text-[#0d3b2e] shrink-0 mt-px" />
             {property.location}
           </span>
 
+          {/* TÍTULO */}
           <Link href={`/imoveis/${property.id}`} className="block">
-            <h3 className="text-base font-semibold text-foreground group-hover:text-[#b85d19] transition-colors mt-2 line-clamp-1 font-serif">
+            <h3 className="text-base font-semibold text-foreground group-hover:text-[#0d3b2e] transition-colors mt-2 line-clamp-2 font-serif">
               {property.title}
             </h3>
           </Link>
 
-          <div className="flex items-center gap-3 mt-4 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1">
+          {/* CARACTERÍSTICAS */}
+          <div className="flex flex-wrap items-center gap-1.5 mt-4">
+            <span className="inline-flex items-center gap-1 rounded-full bg-[#0d3b2e]/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
               <Building2 className="h-3.5 w-3.5 text-[#0d3b2e]" />
               Ponto Comercial
             </span>
 
             {property.area && (
-              <span className="flex items-center gap-1">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#0d3b2e]/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
                 <Maximize className="h-3.5 w-3.5 text-[#0d3b2e]" />
                 {property.area}
               </span>
@@ -210,20 +243,27 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
         </div>
       </div>
 
-      <div className="p-5 pt-0">
-        <div className="pt-4 border-t border-border flex items-center justify-between">
-          <span className="text-sm font-semibold text-[#0d3b2e] line-clamp-1 mr-2">
-            {property.price || "Sob Consulta"}
+      {/* PREÇO + CTA */}
+      <div className="px-1 sm:px-2 pb-2 pt-2">
+        <div className="rounded-2xl bg-[#b85d19] pl-4 pr-2 py-2 flex items-center justify-between gap-2">
+          <span className="min-w-0 flex items-baseline gap-1 whitespace-nowrap">
+            <span className="font-serif font-bold text-white text-sm leading-none">
+              {priceMain}
+            </span>
+
+            {priceSuffix && (
+              <span className="text-[11px] font-medium text-white/80 leading-none">
+                {priceSuffix}
+              </span>
+            )}
           </span>
 
           <Button
             asChild
             size="sm"
-            className="bg-[#0d3b2e] hover:bg-[#092920] text-white transition-colors shrink-0"
+            className="rounded-full bg-[#0d3b2e] hover:bg-white hover:text-[#0d3b2e] text-white transition-all duration-200 h-9 px-3 shrink-0 text-[13px] font-semibold"
           >
-            <Link href={`/imoveis/${property.id}`}>
-              Ver Detalhes
-            </Link>
+            <Link href={`/imoveis/${property.id}`}>Ver Detalhes</Link>
           </Button>
         </div>
       </div>
@@ -233,7 +273,7 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
 
 function PontosComerciaisContent() {
   const [tipoFiltro, setTipoFiltro] = useState<string>("todos")
-  const [cidadeFiltro, setCidadeFiltro] = useState<string>("todas")
+  const [bairroFiltro, setBairroFiltro] = useState<string>("todos")
   const [faixaPrecoFiltro, setFaixaPrecoFiltro] = useState<string>("todas")
 
   const imoveisFiltrados = pontosComerciais.filter((imovel) => {
@@ -244,11 +284,9 @@ function PontosComerciaisContent() {
       if (tipoFiltro === "ponto" && !title.includes("ponto")) return false
     }
 
-    // 2. Cidade
-    if (cidadeFiltro !== "todas") {
-      const loc = imovel.location.toLowerCase()
-      if (cidadeFiltro === "caruaru" && !loc.includes("caruaru")) return false
-      if (cidadeFiltro === "recife" && !loc.includes("recife")) return false
+    // 2. Bairro (Caruaru)
+    if (bairroFiltro !== "todos" && getBairro(imovel.location) !== bairroFiltro) {
+      return false
     }
 
     // 3. Faixa de Valor
@@ -285,7 +323,7 @@ function PontosComerciaisContent() {
           </h1>
 
           <p className="text-white/75 mt-3 max-w-2xl text-sm md:text-base">
-            Salas, lojas e espaços comerciais estratégicos para o crescimento do seu negócio.
+            Salas, lojas e espaços comerciais estratégicos para o crescimento do seu negócio em Caruaru.
           </p>
         </div>
       </section>
@@ -308,12 +346,12 @@ function PontosComerciaisContent() {
                   <strong className="text-[#0d3b2e] font-bold">{imoveisFiltrados.length}</strong> {imoveisFiltrados.length === 1 ? "espaço encontrado" : "espaços encontrados"}
                 </span>
 
-                {(tipoFiltro !== "todos" || cidadeFiltro !== "todas" || faixaPrecoFiltro !== "todas") && (
+                {(tipoFiltro !== "todos" || bairroFiltro !== "todos" || faixaPrecoFiltro !== "todas") && (
                   <button
                     type="button"
                     onClick={() => {
                       setTipoFiltro("todos")
-                      setCidadeFiltro("todas")
+                      setBairroFiltro("todos")
                       setFaixaPrecoFiltro("todas")
                     }}
                     className="text-xs font-semibold text-[#b85d19] hover:text-[#0d3b2e] transition-colors"
@@ -350,24 +388,27 @@ function PontosComerciaisContent() {
                 </div>
               </div>
 
-              {/* CAMPO 2: CIDADE / REGIÃO */}
+              {/* CAMPO 2: BAIRRO (CARUARU) */}
               <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
                 <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
-                    Localização
+                    Bairro em Caruaru
                   </label>
                   <div className="relative mt-0.5">
                     <select
-                      value={cidadeFiltro}
-                      onChange={(e) => setCidadeFiltro(e.target.value)}
+                      value={bairroFiltro}
+                      onChange={(e) => setBairroFiltro(e.target.value)}
                       className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
                     >
-                      <option value="todas">Todas as Cidades</option>
-                      <option value="caruaru">Caruaru - PE</option>
-                      <option value="recife">Recife - PE</option>
+                      <option value="todos">Todos os Bairros</option>
+                      {bairrosDisponiveis.map((bairro) => (
+                        <option key={bairro} value={bairro}>
+                          {bairro}
+                        </option>
+                      ))}
                     </select>
                     <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
                   </div>
@@ -418,7 +459,7 @@ function PontosComerciaisContent() {
                 type="button"
                 onClick={() => {
                   setTipoFiltro("todos")
-                  setCidadeFiltro("todas")
+                  setBairroFiltro("todos")
                   setFaixaPrecoFiltro("todas")
                 }}
                 className="mt-3 text-[#0d3b2e] font-semibold hover:underline text-sm"

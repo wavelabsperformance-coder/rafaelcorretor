@@ -66,6 +66,7 @@ export default function EmpreendimentosPage() {
           <div className="max-w-2xl rounded-3xl bg-[#082a21]/80 backdrop-blur-md p-8 md:p-10 border border-[#e9a66f]/20 shadow-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#e9a66f]/30 bg-black/30 px-3.5 py-1 mb-4">
               <Sparkles className="h-3.5 w-3.5 text-[#e9a66f]" />
+
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#e9a66f] font-bold">
                 Exclusividade em Caruaru
               </span>
@@ -83,7 +84,7 @@ export default function EmpreendimentosPage() {
         </div>
       </section>
 
-      {/* 2. CARROSSEL DE DESTAQUES (POSICIONADO NO TOPO) */}
+      {/* 2. CARROSSEL DE DESTAQUES */}
       <div className="bg-[#faf7f2] pt-8">
         <FeaturedCarousel
           properties={rentalProperties}
@@ -95,7 +96,7 @@ export default function EmpreendimentosPage() {
         />
       </div>
 
-      {/* 3. GRID DAS CATEGORIAS (FUNDO SUAVIZADO E SEM O CONTADOR) */}
+      {/* 3. GRID DAS CATEGORIAS */}
       <section className="py-16 lg:py-24 bg-[#faf7f2]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-12 max-w-2xl border-l-2 border-[#b85d19] pl-4">
@@ -125,16 +126,24 @@ export default function EmpreendimentosPage() {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
 
-                  {/* OVERLAY SUAVE LARANJA/ESCURO */}
+                  {/* OVERLAY */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-[#b85d19]/25 to-black/40 transition-opacity duration-500 group-hover:opacity-90" />
 
                   {/* TOPO DO CARD */}
                   <div className="relative z-10 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#b85d19] text-white shadow-md">
+                    {/* BADGE DE CATEGORIA */}
+                    <span
+                      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-md ${
+                        cat.tag === "Venda"
+                          ? "bg-[#b85d19]"
+                          : "bg-[#0d3b2e]"
+                      }`}
+                    >
                       {cat.tag}
                     </span>
 
-                    <div className="w-10 h-10 rounded-2xl bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#b85d19] group-hover:border-[#b85d19] transition-all duration-300">
+                    {/* ÍCONE */}
+                    <div className="w-10 h-10 rounded-2xl bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white group-hover:bg-[#0d3b2e] group-hover:border-[#0d3b2e] transition-all duration-300">
                       <Icon className="h-5 w-5" />
                     </div>
                   </div>
@@ -154,8 +163,9 @@ export default function EmpreendimentosPage() {
                     </p>
 
                     <div className="pt-4 border-t border-white/20 flex items-center justify-end">
-                      <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-white group-hover:text-[#e9a66f] transition-colors">
+                      <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-white group-hover:text-[#0d3b2e] transition-colors">
                         Acessar catálogo
+
                         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
                     </div>
@@ -167,16 +177,16 @@ export default function EmpreendimentosPage() {
         </div>
       </section>
 
-      {/* 4. CTA FINAL COM IMAGEM DE FUNDO (predio.png) */}
+      {/* 4. CTA FINAL */}
       <section className="relative py-24 bg-[#082a21] overflow-hidden">
-        {/* IMAGEM DE FUNDO DA PASTA PUBLIC */}
+        {/* IMAGEM DE FUNDO */}
         <img
           src="/predio.png"
           alt="Prédios em Caruaru"
           className="absolute inset-0 h-full w-full object-cover object-center filter brightness-[0.35]"
         />
 
-        {/* OVERLAY PARA GARANTIR LEGIBILIDADE */}
+        {/* OVERLAY */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#082a21] via-[#082a21]/70 to-black/60 pointer-events-none" />
 
         {/* CONTEÚDO */}
@@ -186,7 +196,8 @@ export default function EmpreendimentosPage() {
           </h2>
 
           <p className="text-white/80 mt-4 leading-relaxed text-sm sm:text-base font-light">
-            Fale diretamente com o Rafael Cavalcante para encontrar imóveis sob medida para sua necessidade.
+            Fale diretamente com o Rafael Cavalcante para encontrar imóveis sob
+            medida para sua necessidade.
           </p>
 
           <div className="mt-8">
@@ -201,6 +212,7 @@ export default function EmpreendimentosPage() {
                 rel="noopener noreferrer"
               >
                 Falar com o Rafael
+
                 <ArrowRight className="ml-2 h-4 w-4 text-white" />
               </a>
             </Button>

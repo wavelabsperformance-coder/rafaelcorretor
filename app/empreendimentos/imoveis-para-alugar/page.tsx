@@ -36,6 +36,8 @@ export interface ImovelAluguel {
   videos: string[]
   images: string[]
   amenities: string[]
+  /** true = já alugado (card cinza com selo). Para liberar de novo, apague a linha ou use false. */
+  alugado?: boolean
 }
 
 function parsePrecoAluguel(priceStr: string): number {
@@ -48,6 +50,11 @@ function getBairro(location: string): string {
   return location.split(",")[0].trim()
 }
 
+// ============================================================
+// COMO MARCAR UM IMÓVEL COMO ALUGADO:
+// dentro do imóvel, adicione a linha:   alugado: true,
+// Para deixar disponível de novo, apague a linha (ou use false).
+// ============================================================
 const imoveisAluguel: ImovelAluguel[] = [
   // 1. CASA COM JACUZZI | GREEN GARDEN CONDOMÍNIO CLUB
   {
@@ -292,6 +299,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
         `/imoveis/apartamentos-para-alugar/edificio-mr-rotterdam/${i + 1}.jpeg`
     ),
     amenities: ["100% Mobiliado", "Piscina com Deck", "Academia Equipada"],
+    alugado: true,
   },
 
   // 6. APARTAMENTO MOBILIADO NO MAURÍCIO DE NASSAU
@@ -448,7 +456,16 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
       : [property.coverImage]
 
   const totalImages = images.length
-  const hasVideos = property.videos && property.videos.length > 0
+  const hasVideos = Boolean(property.videos?.length)
+  const isAlugado = Boolean(property.alugado)
+
+  // Preço: "R$ 13.000 / mês" vira "R$ 13.000" + "/mês" menor, para caber no bloco.
+  // "Consulte o valor" vira "Sob consulta".
+  const isConsulta =
+    !property.price || property.price.toLowerCase().includes("consulte")
+  const [priceMainRaw, ...priceRest] = (property.price || "").split("/")
+  const priceMain = isConsulta ? "Sob consulta" : priceMainRaw.trim()
+  const priceSuffix = !isConsulta && priceRest.length > 0 ? "/mês" : ""
 
   const handlePrev = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -463,23 +480,41 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
   }
 
   return (
-    <article className="group bg-white rounded-2xl overflow-hidden border border-border/80 hover:border-[#b85d19]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative">
+    <article className="group bg-white rounded-3xl p-2 border border-[#0d3b2e]/10 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#0d3b2e]/30 transition-all duration-300 flex flex-col justify-between h-full">
       <div>
+        {/* IMAGEM */}
         <Link
           href={`/imoveis/${property.id}`}
-          className="block aspect-[4/3] overflow-hidden relative bg-muted cursor-pointer"
+          className="block aspect-[4/3] overflow-hidden relative cursor-pointer bg-muted rounded-2xl"
         >
           <img
             src={images[currentImgIndex] || "/placeholder.jpg"}
             alt={`${property.title} - foto ${currentImgIndex + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+              isAlugado ? "grayscale opacity-70" : ""
+            }`}
           />
 
-          <div className="absolute top-3 left-3 bg-[#b85d19] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
-            Locação
+          {/* BADGE LOCAÇÃO / ALUGADO */}
+          <div
+            className={`absolute top-3 left-3 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm ${
+              isAlugado ? "bg-red-600" : "bg-[#b85d19]"
+            }`}
+          >
+            {isAlugado ? "Alugado" : "Locação"}
           </div>
 
-          {hasVideos && (
+          {/* FAIXA CENTRAL "ALUGADO" */}
+          {isAlugado && (
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="bg-black/65 backdrop-blur-sm text-white text-sm font-bold tracking-[0.25em] uppercase px-6 py-2 rounded-full border border-white/30">
+                Alugado
+              </span>
+            </div>
+          )}
+
+          {/* VÍDEO */}
+          {hasVideos && !isAlugado && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
               <Play className="h-3 w-3 fill-white" />
               {property.videos.length > 1
@@ -488,12 +523,14 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
             </div>
           )}
 
+          {/* CONTADOR DE IMAGENS */}
           {totalImages > 1 && (
             <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium px-2 py-0.5 rounded-md">
               {currentImgIndex + 1} / {totalImages}
             </div>
           )}
 
+          {/* NAVEGAÇÃO DAS IMAGENS */}
           {totalImages > 1 && (
             <>
               <button
@@ -517,39 +554,40 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
           )}
         </Link>
 
-        <div className="p-5">
+        {/* INFORMAÇÕES */}
+        <div className="px-3 sm:px-4 pt-4 pb-2">
+          {/* LOCALIZAÇÃO */}
           <span className="text-[11px] uppercase tracking-wider text-muted-foreground flex items-center gap-1 font-medium">
-            <MapPin className="h-3.5 w-3.5 text-[#b85d19]" />
+            <MapPin className="h-3.5 w-3.5 text-[#0d3b2e]" />
             {property.location}
           </span>
 
+          {/* TÍTULO */}
           <Link href={`/imoveis/${property.id}`} className="block">
-            <h3 className="text-base font-semibold text-foreground group-hover:text-[#b85d19] transition-colors mt-2 line-clamp-1 font-serif">
+            <h3 className="text-base font-semibold text-foreground group-hover:text-[#0d3b2e] transition-colors mt-2 line-clamp-2 font-serif">
               {property.title}
             </h3>
           </Link>
 
-          <div className="flex items-center gap-3 mt-4 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1">
+          {/* CARACTERÍSTICAS */}
+          <div className="flex flex-wrap items-center gap-1.5 mt-4">
+            <span className="inline-flex items-center gap-1 rounded-full bg-[#0d3b2e]/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
               <Bed className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.bedrooms}{" "}
-              {property.bedrooms === 1 ? "Quarto" : "Quartos"}
+              {property.bedrooms}
             </span>
 
-            <span className="flex items-center gap-1">
+            <span className="inline-flex items-center gap-1 rounded-full bg-[#0d3b2e]/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
               <Bath className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.bathrooms}{" "}
-              {property.bathrooms === 1 ? "Banheiro" : "Banheiros"}
+              {property.bathrooms}
             </span>
 
-            <span className="flex items-center gap-1">
+            <span className="inline-flex items-center gap-1 rounded-full bg-[#0d3b2e]/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
               <Car className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.parking}{" "}
-              {property.parking === 1 ? "Vaga" : "Vagas"}
+              {property.parking}
             </span>
 
             {property.area && (
-              <span className="flex items-center gap-1">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#0d3b2e]/5 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
                 <Maximize className="h-3.5 w-3.5 text-[#0d3b2e]" />
                 {property.area}
               </span>
@@ -558,20 +596,31 @@ function PropertyCard({ property }: { property: ImovelAluguel }) {
         </div>
       </div>
 
-      <div className="p-5 pt-0">
-        <div className="pt-4 border-t border-border flex items-center justify-between">
-          <span className="text-sm font-semibold text-[#0d3b2e] line-clamp-1 mr-2">
-            {property.price || "Sob Consulta"}
+      {/* PREÇO + CTA */}
+      <div className="px-1 sm:px-2 pb-2 pt-2">
+        <div
+          className={`rounded-2xl pl-4 pr-2 py-2 flex items-center justify-between gap-2 ${
+            isAlugado ? "bg-neutral-500" : "bg-[#b85d19]"
+          }`}
+        >
+          <span className="min-w-0 flex items-baseline gap-1 whitespace-nowrap">
+            <span className="font-serif font-bold text-white text-sm leading-none">
+              {isAlugado ? "Alugado" : priceMain}
+            </span>
+
+            {!isAlugado && priceSuffix && (
+              <span className="text-[11px] font-medium text-white/80 leading-none">
+                {priceSuffix}
+              </span>
+            )}
           </span>
 
           <Button
             asChild
             size="sm"
-            className="bg-[#0d3b2e] hover:bg-[#092920] text-white transition-colors shrink-0"
+            className="rounded-full bg-[#0d3b2e] hover:bg-white hover:text-[#0d3b2e] text-white transition-all duration-200 h-9 px-3 shrink-0 text-[13px] font-semibold"
           >
-            <Link href={`/imoveis/${property.id}`}>
-              Ver Detalhes
-            </Link>
+            <Link href={`/imoveis/${property.id}`}>Ver Detalhes</Link>
           </Button>
         </div>
       </div>

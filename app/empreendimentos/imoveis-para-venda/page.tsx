@@ -41,14 +41,16 @@ export interface ImovelVenda {
 // Função para converter strings de preço (ex: "R$ 900.000") em números
 function parsePreco(priceStr: string): number {
   if (!priceStr || priceStr.toLowerCase().includes("consulte")) return 0
+
   const cleanStr = priceStr.replace(/[^\d]/g, "")
+
   return cleanStr ? parseInt(cleanStr, 10) : 0
 }
 
-// Retorna o bairro (ex: "Universitário, Caruaru - PE" -> "Universitário").
-// Se o imóvel só tem "Caruaru - PE" (sem bairro), retorna "".
+// Retorna o bairro
 function getBairro(location: string): string {
   if (!location.includes(",")) return ""
+
   return location.split(",")[0].trim()
 }
 
@@ -333,12 +335,120 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
       "1 Vaga de Garagem",
     ],
   },
+
+  // 9. CASA COM JACUZZI | GREEN GARDEN CONDOMÍNIO CLUB (também para locação)
+  {
+    id: "casa-green-garden-condominio-club-venda",
+    tipo: "casa",
+    title: "Casa com Área Gourmet e Jacuzzi no Green Garden Condomínio Club",
+    price: "R$ 850.000",
+    location: "Green Garden Residence, Caruaru - PE",
+    // Fotos reaproveitadas da pasta de locação (sem duplicar arquivos)
+    coverImage:
+      "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg",
+    bedrooms: 4,
+    bathrooms: 4,
+    parking: 4,
+    area: "200m²",
+    description: `CASA À VENDA | GREEN GARDEN CONDOMÍNIO CLUB – CARUARU/PE
+
+More em um condomínio fechado às margens da PE-95, com acesso às principais avenidas que levam ao centro da cidade de Caruaru PE.
+
+A casa tem 200 m² e oferece:
+- 04 quartos, sendo 03 suítes
+- 04 vagas de garagem
+- Área gourmet com churrasqueira e jacuzzi
+
+VALOR DE VENDA: R$ 850.000,00
+Imóvel também disponível para locação.`,
+    videos: [],
+    images: [
+      "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg",
+      ...Array.from(
+        { length: 17 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-green-garden-condominio-club/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg"
+      ),
+    ],
+    amenities: [
+      "3 Suítes",
+      "Jacuzzi Privativa",
+      "Área Gourmet com Churrasqueira",
+      "Garagem para 4 Carros",
+      "Às margens da PE-95",
+      "Condomínio Fechado com Lazer",
+    ],
+  },
+
+  // 10. MAGNÍFICA CASA TÉRREA | QUINTAS DA COLINA II (também para locação)
+  {
+    id: "casa-terrea-quintas-da-colina-2-venda",
+    tipo: "casa",
+    title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
+    price: "R$ 2.500.000",
+    location: "Quintas da Colina II, Caruaru - PE",
+    // Fotos reaproveitadas da pasta de locação (sem duplicar arquivos)
+    coverImage:
+      "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/4.jpeg",
+    bedrooms: 4,
+    bathrooms: 5,
+    parking: 6,
+    area: "400m²",
+    description: `MAGNÍFICA CASA DE ALTO PADRÃO À VENDA | QUINTAS DA COLINA II – CARUARU/PE
+
+Projeto atemporal e sólido no condomínio fechado Quintas da Colina II. Casa nova, nunca habitada, com fachada imponente em pele de vidro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 600 m²
+- Área construída: 400 m²
+
+CARACTERÍSTICAS:
+- Casa térrea
+- 04 suítes, sendo a máster com varanda e closet
+- Sala ampla para 02 ambientes com pé-direito duplo
+- Cozinha integrada com área gourmet e churrasqueira
+- Piscina com prainha
+- Garagem para até 06 veículos
+- Quarto de serviço com banheiro
+- Área de serviço completa
+
+VALOR DE VENDA: R$ 2.500.000,00
+Imóvel também disponível para locação.`,
+    videos: [],
+    images: [
+      "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/4.jpeg",
+      ...Array.from(
+        { length: 4 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-terrea-quintas-da-colina-2/4.jpeg"
+      ),
+    ],
+    amenities: [
+      "Casa Nova (Nunca Habitada)",
+      "Piscina com Prainha",
+      "Pé-Direito Duplo",
+      "Pele de Vidro na Fachada",
+      "Área Gourmet com Churrasqueira",
+      "4 Suítes com Máster e Closet",
+      "Garagem para 6 Carros",
+    ],
+  },
 ]
 
-// Lista de bairros gerada automaticamente a partir dos imóveis de Caruaru
+// Lista de bairros gerada automaticamente a partir dos imóveis
 const bairrosDisponiveis = Array.from(
   new Set(
-    imoveisVenda.map((imovel) => getBairro(imovel.location)).filter(Boolean)
+    imoveisVenda
+      .map((imovel) => getBairro(imovel.location))
+      .filter(Boolean)
   )
 ).sort((a, b) => a.localeCompare(b, "pt-BR"))
 
@@ -351,7 +461,12 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
       : [property.coverImage]
 
   const totalImages = images.length
-  const hasVideos = property.videos && property.videos.length > 0
+  const hasVideos = Boolean(property.videos?.length)
+
+  // Preço longo ("Consulte o valor") vira "Sob consulta" para caber no bloco
+  const isConsulta =
+    !property.price || property.price.toLowerCase().includes("consulte")
+  const priceLabel = isConsulta ? "Sob consulta" : property.price
 
   const handlePrev = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -372,44 +487,147 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
   }
 
   return (
-    <article className="group bg-white rounded-2xl overflow-hidden border border-border/80 hover:border-[#b85d19]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative">
+    <article
+      className="
+        group
+        bg-white
+        rounded-3xl
+        p-2
+        border border-[#0d3b2e]/10
+        shadow-sm
+        hover:shadow-xl
+        hover:-translate-y-1
+        hover:border-[#0d3b2e]/30
+        transition-all
+        duration-300
+        flex flex-col
+        justify-between
+        h-full
+      "
+    >
       <div>
+        {/* IMAGEM */}
         <Link
           href={`/imoveis/${property.id}`}
-          className="block aspect-[4/3] overflow-hidden relative bg-muted cursor-pointer"
+          className="
+            block
+            aspect-[4/3]
+            overflow-hidden
+            relative
+            cursor-pointer
+            bg-muted
+            rounded-2xl
+          "
         >
           <img
             src={images[currentImgIndex] || "/placeholder.jpg"}
             alt={`${property.title} - foto ${currentImgIndex + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="
+              w-full
+              h-full
+              object-cover
+              transition-transform
+              duration-500
+              group-hover:scale-105
+            "
           />
 
-          <div className="absolute top-3 left-3 bg-[#0d3b2e] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
+          {/* BADGE VENDA */}
+          <div
+            className="
+              absolute
+              top-3
+              left-3
+              bg-[#b85d19]
+              text-white
+              px-3
+              py-1
+              text-xs
+              rounded-full
+              font-medium
+              shadow-sm
+            "
+          >
             Venda
           </div>
 
+          {/* VÍDEO */}
           {hasVideos && (
-            <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
+            <div
+              className="
+                absolute
+                top-3
+                right-3
+                bg-black/60
+                backdrop-blur-sm
+                text-white
+                px-2.5
+                py-1
+                text-[11px]
+                rounded-full
+                font-medium
+                flex
+                items-center
+                gap-1
+              "
+            >
               <Play className="h-3 w-3 fill-white" />
+
               {property.videos && property.videos.length > 1
                 ? `${property.videos.length} Vídeos`
                 : "Vídeo"}
             </div>
           )}
 
+          {/* CONTADOR DE IMAGENS */}
           {totalImages > 1 && (
-            <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium px-2 py-0.5 rounded-md">
+            <div
+              className="
+                absolute
+                bottom-3
+                left-3
+                bg-black/60
+                backdrop-blur-sm
+                text-white
+                text-[11px]
+                font-medium
+                px-2
+                py-0.5
+                rounded-md
+              "
+            >
               {currentImgIndex + 1} / {totalImages}
             </div>
           )}
 
+          {/* NAVEGAÇÃO DAS IMAGENS */}
           {totalImages > 1 && (
             <>
               <button
                 type="button"
                 onClick={handlePrev}
                 aria-label="Imagem anterior"
-                className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-foreground flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-md hover:scale-105"
+                className="
+                  absolute
+                  left-2
+                  top-1/2
+                  -translate-y-1/2
+                  w-8
+                  h-8
+                  rounded-full
+                  bg-white/80
+                  hover:bg-white
+                  text-foreground
+                  flex
+                  items-center
+                  justify-center
+                  opacity-0
+                  group-hover:opacity-100
+                  transition-all
+                  duration-200
+                  shadow-md
+                  hover:scale-105
+                "
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
@@ -418,7 +636,27 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
                 type="button"
                 onClick={handleNext}
                 aria-label="Próxima imagem"
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-foreground flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-md hover:scale-105"
+                className="
+                  absolute
+                  right-2
+                  top-1/2
+                  -translate-y-1/2
+                  w-8
+                  h-8
+                  rounded-full
+                  bg-white/80
+                  hover:bg-white
+                  text-foreground
+                  flex
+                  items-center
+                  justify-center
+                  opacity-0
+                  group-hover:opacity-100
+                  transition-all
+                  duration-200
+                  shadow-md
+                  hover:scale-105
+                "
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
@@ -426,39 +664,117 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
           )}
         </Link>
 
-        <div className="p-5">
-          <span className="text-[11px] uppercase tracking-wider text-muted-foreground flex items-center gap-1 font-medium">
-            <MapPin className="h-3.5 w-3.5 text-[#b85d19]" />
+        {/* INFORMAÇÕES */}
+        <div className="px-3 sm:px-4 pt-4 pb-2">
+          {/* LOCALIZAÇÃO */}
+          <span
+            className="
+              text-[11px]
+              uppercase
+              tracking-wider
+              text-muted-foreground
+              flex
+              items-center
+              gap-1
+              font-medium
+            "
+          >
+            <MapPin className="h-3.5 w-3.5 text-[#0d3b2e]" />
             {property.location}
           </span>
 
-          <Link href={`/imoveis/${property.id}`} className="block">
-            <h3 className="text-base font-semibold text-foreground group-hover:text-[#b85d19] transition-colors mt-2 line-clamp-1 font-serif">
+          {/* TÍTULO */}
+          <Link
+            href={`/imoveis/${property.id}`}
+            className="block"
+          >
+            <h3
+              className="
+                text-base
+                font-semibold
+                text-foreground
+                group-hover:text-[#0d3b2e]
+                transition-colors
+                mt-2
+                line-clamp-2
+                font-serif
+              "
+            >
               {property.title}
             </h3>
           </Link>
 
-          <div className="flex items-center gap-3 mt-4 text-xs text-muted-foreground">
-            <span className="flex items-center gap-1">
+          {/* CARACTERÍSTICAS */}
+          <div className="flex flex-wrap items-center gap-1.5 mt-4">
+            <span
+              className="
+                inline-flex
+                items-center
+                gap-1
+                rounded-full
+                bg-[#0d3b2e]/5
+                px-2.5
+                py-1
+                text-[11px]
+                font-medium
+                text-muted-foreground
+              "
+            >
               <Bed className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.bedrooms}{" "}
-              {property.bedrooms === 1 ? "Quarto" : "Quartos"}
+              {property.bedrooms}
             </span>
 
-            <span className="flex items-center gap-1">
+            <span
+              className="
+                inline-flex
+                items-center
+                gap-1
+                rounded-full
+                bg-[#0d3b2e]/5
+                px-2.5
+                py-1
+                text-[11px]
+                font-medium
+                text-muted-foreground
+              "
+            >
               <Bath className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.bathrooms}{" "}
-              {property.bathrooms === 1 ? "Banheiro" : "Banheiros"}
+              {property.bathrooms}
             </span>
 
-            <span className="flex items-center gap-1">
+            <span
+              className="
+                inline-flex
+                items-center
+                gap-1
+                rounded-full
+                bg-[#0d3b2e]/5
+                px-2.5
+                py-1
+                text-[11px]
+                font-medium
+                text-muted-foreground
+              "
+            >
               <Car className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.parking}{" "}
-              {property.parking === 1 ? "Vaga" : "Vagas"}
+              {property.parking}
             </span>
 
             {property.area && (
-              <span className="flex items-center gap-1">
+              <span
+                className="
+                  inline-flex
+                  items-center
+                  gap-1
+                  rounded-full
+                  bg-[#0d3b2e]/5
+                  px-2.5
+                  py-1
+                  text-[11px]
+                  font-medium
+                  text-muted-foreground
+                "
+              >
                 <Maximize className="h-3.5 w-3.5 text-[#0d3b2e]" />
                 {property.area}
               </span>
@@ -467,20 +783,19 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
         </div>
       </div>
 
-      <div className="p-5 pt-0">
-        <div className="pt-4 border-t border-border flex items-center justify-between">
-          <span className="text-sm font-semibold text-[#0d3b2e] line-clamp-1 mr-2">
-            {property.price || "Sob Consulta"}
+      {/* PREÇO + CTA */}
+      <div className="px-1 sm:px-2 pb-2 pt-2">
+        <div className="rounded-2xl bg-[#b85d19] pl-4 pr-2 py-2 flex items-center justify-between gap-2">
+          <span className="min-w-0 truncate font-serif font-bold text-white text-sm leading-none whitespace-nowrap">
+            {priceLabel}
           </span>
 
           <Button
             asChild
             size="sm"
-            className="bg-[#0d3b2e] hover:bg-[#092920] text-white transition-colors shrink-0"
+            className="rounded-full bg-[#0d3b2e] hover:bg-white hover:text-[#0d3b2e] text-white transition-all duration-200 h-9 px-3 shrink-0 text-[13px] font-semibold"
           >
-            <Link href={`/imoveis/${property.id}`}>
-              Ver Detalhes
-            </Link>
+            <Link href={`/imoveis/${property.id}`}>Ver Detalhes</Link>
           </Button>
         </div>
       </div>
@@ -494,26 +809,59 @@ function ImoveisParaVendaContent() {
   >("todos")
 
   const [bairroFiltro, setBairroFiltro] = useState<string>("todos")
-  const [faixaPrecoFiltro, setFaixaPrecoFiltro] = useState<string>("todas")
+  const [faixaPrecoFiltro, setFaixaPrecoFiltro] =
+    useState<string>("todas")
 
   // Lógica de filtragem combinada
   const imoveisFiltrados = imoveisVenda.filter((imovel) => {
     // 1. Tipo
-    if (tipoFiltro !== "todos" && imovel.tipo !== tipoFiltro) return false
+    if (
+      tipoFiltro !== "todos" &&
+      imovel.tipo !== tipoFiltro
+    ) {
+      return false
+    }
 
-    // 2. Bairro (Caruaru)
-    if (bairroFiltro !== "todos" && getBairro(imovel.location) !== bairroFiltro) {
+    // 2. Bairro
+    if (
+      bairroFiltro !== "todos" &&
+      getBairro(imovel.location) !== bairroFiltro
+    ) {
       return false
     }
 
     // 3. Faixa de Preço
     if (faixaPrecoFiltro !== "todas") {
       const valor = parsePreco(imovel.price)
+
       if (valor > 0) {
-        if (faixaPrecoFiltro === "ate_300" && valor > 300000) return false
-        if (faixaPrecoFiltro === "300_600" && (valor < 300000 || valor > 600000)) return false
-        if (faixaPrecoFiltro === "600_1500" && (valor < 600000 || valor > 1500000)) return false
-        if (faixaPrecoFiltro === "acima_1500" && valor < 1500000) return false
+        if (
+          faixaPrecoFiltro === "ate_300" &&
+          valor > 300000
+        ) {
+          return false
+        }
+
+        if (
+          faixaPrecoFiltro === "300_600" &&
+          (valor < 300000 || valor > 600000)
+        ) {
+          return false
+        }
+
+        if (
+          faixaPrecoFiltro === "600_1500" &&
+          (valor < 600000 || valor > 1500000)
+        ) {
+          return false
+        }
+
+        if (
+          faixaPrecoFiltro === "acima_1500" &&
+          valor < 1500000
+        ) {
+          return false
+        }
       }
     }
 
@@ -522,30 +870,59 @@ function ImoveisParaVendaContent() {
 
   return (
     <>
+      {/* HERO */}
       <section className="pt-28 pb-10 bg-[#0d3b2e] text-white">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Link
             href="/empreendimentos"
-            className="inline-flex items-center text-sm text-white/70 hover:text-white transition-colors mb-6"
+            className="
+              inline-flex
+              items-center
+              text-sm
+              text-white/70
+              hover:text-white
+              transition-colors
+              mb-6
+            "
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Voltar para Categorias
           </Link>
 
-          <span className="text-xs uppercase tracking-[0.3em] text-[#b85d19] font-semibold block">
+          <span
+            className="
+              text-xs
+              uppercase
+              tracking-[0.3em]
+              text-[#b85d19]
+              font-semibold
+              block
+            "
+          >
             Categoria
           </span>
 
-          <h1 className="font-serif text-4xl md:text-5xl font-light mt-2 text-white">
+          <h1
+            className="
+              font-serif
+              text-4xl
+              md:text-5xl
+              font-light
+              mt-2
+              text-white
+            "
+          >
             Imóveis para Venda
           </h1>
 
           <p className="text-white/75 mt-3 max-w-2xl text-sm md:text-base">
-            Casas, apartamentos e residências selecionadas para compra em Caruaru.
+            Casas, apartamentos e residências selecionadas para compra em
+            Caruaru.
           </p>
         </div>
       </section>
 
+      {/* DESTAQUES */}
       <FeaturedCarousel
         properties={saleProperties}
         title="Imóveis em Destaque para Venda"
@@ -553,27 +930,54 @@ function ImoveisParaVendaContent() {
         type="venda"
       />
 
+      {/* CATÁLOGO */}
       <section className="py-12 bg-[#faf7f2]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          
-          {/* BARRA DE FILTROS HIGH-END / ESTILO PORTAL DE LUXO */}
-          <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl shadow-black/5 border border-border/60 mb-12">
-            
-            {/* Topo da barra: Título limpo e Badge de Contagem */}
+          {/* FILTROS */}
+          <div
+            className="
+              bg-white
+              rounded-2xl
+              p-4
+              md:p-6
+              shadow-xl
+              shadow-black/5
+              border
+              border-border/60
+              mb-12
+            "
+          >
+            {/* TOPO DOS FILTROS */}
             <div className="flex items-center justify-between px-2 mb-4">
               <div className="flex items-center gap-2">
                 <Filter className="h-4 w-4 text-[#b85d19]" />
-                <span className="text-xs font-bold uppercase tracking-widest text-[#0d3b2e]">
+
+                <span
+                  className="
+                    text-xs
+                    font-bold
+                    uppercase
+                    tracking-widest
+                    text-[#0d3b2e]
+                  "
+                >
                   Filtrar Catálogo
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
                 <span className="text-xs font-medium text-muted-foreground">
-                  <strong className="text-[#0d3b2e] font-bold">{imoveisFiltrados.length}</strong> {imoveisFiltrados.length === 1 ? "imóvel encontrado" : "imóveis encontrados"}
+                  <strong className="text-[#0d3b2e] font-bold">
+                    {imoveisFiltrados.length}
+                  </strong>{" "}
+                  {imoveisFiltrados.length === 1
+                    ? "imóvel encontrado"
+                    : "imóveis encontrados"}
                 </span>
 
-                {(tipoFiltro !== "todos" || bairroFiltro !== "todos" || faixaPrecoFiltro !== "todas") && (
+                {(tipoFiltro !== "todos" ||
+                  bairroFiltro !== "todos" ||
+                  faixaPrecoFiltro !== "todas") && (
                   <button
                     type="button"
                     onClick={() => {
@@ -581,7 +985,13 @@ function ImoveisParaVendaContent() {
                       setBairroFiltro("todos")
                       setFaixaPrecoFiltro("todas")
                     }}
-                    className="text-xs font-semibold text-[#b85d19] hover:text-[#0d3b2e] transition-colors"
+                    className="
+                      text-xs
+                      font-semibold
+                      text-[#b85d19]
+                      hover:text-[#0d3b2e]
+                      transition-colors
+                    "
                   >
                     Resetar
                   </button>
@@ -589,101 +999,336 @@ function ImoveisParaVendaContent() {
               </div>
             </div>
 
-            {/* Container Único com Divisórias Internas */}
-            <div className="grid grid-cols-1 md:grid-cols-3 bg-[#faf8f5] rounded-xl border border-border/80 divide-y md:divide-y-0 md:divide-x divide-border/80 overflow-hidden">
-              
-              {/* CAMPO 1: TIPO DE IMÓVEL */}
-              <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
+            {/* CAMPOS */}
+            <div
+              className="
+                grid
+                grid-cols-1
+                md:grid-cols-3
+                bg-[#faf8f5]
+                rounded-xl
+                border
+                border-border/80
+                divide-y
+                md:divide-y-0
+                md:divide-x
+                divide-border/80
+                overflow-hidden
+              "
+            >
+              {/* TIPO */}
+              <div
+                className="
+                  relative
+                  p-3.5
+                  px-4
+                  hover:bg-white
+                  transition-colors
+                  duration-200
+                  flex
+                  items-center
+                  gap-3
+                "
+              >
+                <div
+                  className="
+                    p-2.5
+                    rounded-lg
+                    bg-[#0d3b2e]/5
+                    text-[#0d3b2e]
+                    shrink-0
+                  "
+                >
                   <Home className="h-4 w-4" />
                 </div>
+
                 <div className="flex-1 min-w-0">
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
+                  <label
+                    className="
+                      block
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-wider
+                      text-[#b85d19]
+                    "
+                  >
                     Tipo de Imóvel
                   </label>
+
                   <div className="relative mt-0.5">
                     <select
                       value={tipoFiltro}
-                      onChange={(e) => setTipoFiltro(e.target.value as any)}
-                      className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
+                      onChange={(e) =>
+                        setTipoFiltro(
+                          e.target.value as
+                            | "todos"
+                            | "apartamento"
+                            | "casa"
+                        )
+                      }
+                      className="
+                        w-full
+                        bg-transparent
+                        text-sm
+                        font-semibold
+                        text-foreground
+                        focus:outline-none
+                        appearance-none
+                        cursor-pointer
+                        pr-6
+                        truncate
+                      "
                     >
-                      <option value="todos">Todos os Tipos (Casas e Apts)</option>
-                      <option value="casa">Casas</option>
-                      <option value="apartamento">Apartamentos</option>
+                      <option value="todos">
+                        Todos os Tipos (Casas e Apts)
+                      </option>
+
+                      <option value="casa">
+                        Casas
+                      </option>
+
+                      <option value="apartamento">
+                        Apartamentos
+                      </option>
                     </select>
-                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+
+                    <ChevronDown
+                      className="
+                        absolute
+                        right-0
+                        top-1/2
+                        -translate-y-1/2
+                        h-4
+                        w-4
+                        text-muted-foreground
+                        pointer-events-none
+                      "
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* CAMPO 2: BAIRRO (CARUARU) */}
-              <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
+              {/* BAIRRO */}
+              <div
+                className="
+                  relative
+                  p-3.5
+                  px-4
+                  hover:bg-white
+                  transition-colors
+                  duration-200
+                  flex
+                  items-center
+                  gap-3
+                "
+              >
+                <div
+                  className="
+                    p-2.5
+                    rounded-lg
+                    bg-[#0d3b2e]/5
+                    text-[#0d3b2e]
+                    shrink-0
+                  "
+                >
                   <MapPin className="h-4 w-4" />
                 </div>
+
                 <div className="flex-1 min-w-0">
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
+                  <label
+                    className="
+                      block
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-wider
+                      text-[#b85d19]
+                    "
+                  >
                     Bairro em Caruaru
                   </label>
+
                   <div className="relative mt-0.5">
                     <select
                       value={bairroFiltro}
-                      onChange={(e) => setBairroFiltro(e.target.value)}
-                      className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
+                      onChange={(e) =>
+                        setBairroFiltro(e.target.value)
+                      }
+                      className="
+                        w-full
+                        bg-transparent
+                        text-sm
+                        font-semibold
+                        text-foreground
+                        focus:outline-none
+                        appearance-none
+                        cursor-pointer
+                        pr-6
+                        truncate
+                      "
                     >
-                      <option value="todos">Todos os Bairros</option>
+                      <option value="todos">
+                        Todos os Bairros
+                      </option>
+
                       {bairrosDisponiveis.map((bairro) => (
-                        <option key={bairro} value={bairro}>
+                        <option
+                          key={bairro}
+                          value={bairro}
+                        >
                           {bairro}
                         </option>
                       ))}
                     </select>
-                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+
+                    <ChevronDown
+                      className="
+                        absolute
+                        right-0
+                        top-1/2
+                        -translate-y-1/2
+                        h-4
+                        w-4
+                        text-muted-foreground
+                        pointer-events-none
+                      "
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* CAMPO 3: FAIXA DE PREÇO */}
-              <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
+              {/* PREÇO */}
+              <div
+                className="
+                  relative
+                  p-3.5
+                  px-4
+                  hover:bg-white
+                  transition-colors
+                  duration-200
+                  flex
+                  items-center
+                  gap-3
+                "
+              >
+                <div
+                  className="
+                    p-2.5
+                    rounded-lg
+                    bg-[#0d3b2e]/5
+                    text-[#0d3b2e]
+                    shrink-0
+                  "
+                >
                   <Building className="h-4 w-4" />
                 </div>
+
                 <div className="flex-1 min-w-0">
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
+                  <label
+                    className="
+                      block
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-wider
+                      text-[#b85d19]
+                    "
+                  >
                     Valor Investimento
                   </label>
+
                   <div className="relative mt-0.5">
                     <select
                       value={faixaPrecoFiltro}
-                      onChange={(e) => setFaixaPrecoFiltro(e.target.value)}
-                      className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
+                      onChange={(e) =>
+                        setFaixaPrecoFiltro(e.target.value)
+                      }
+                      className="
+                        w-full
+                        bg-transparent
+                        text-sm
+                        font-semibold
+                        text-foreground
+                        focus:outline-none
+                        appearance-none
+                        cursor-pointer
+                        pr-6
+                        truncate
+                      "
                     >
-                      <option value="todas">Todas as Faixas de Preço</option>
-                      <option value="ate_300">Até R$ 300 mil</option>
-                      <option value="300_600">R$ 300 mil – R$ 600 mil</option>
-                      <option value="600_1500">R$ 600 mil – R$ 1,5 milhão</option>
-                      <option value="acima_1500">Acima de R$ 1,5 milhão</option>
+                      <option value="todas">
+                        Todas as Faixas de Preço
+                      </option>
+
+                      <option value="ate_300">
+                        Até R$ 300 mil
+                      </option>
+
+                      <option value="300_600">
+                        R$ 300 mil – R$ 600 mil
+                      </option>
+
+                      <option value="600_1500">
+                        R$ 600 mil – R$ 1,5 milhão
+                      </option>
+
+                      <option value="acima_1500">
+                        Acima de R$ 1,5 milhão
+                      </option>
                     </select>
-                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+
+                    <ChevronDown
+                      className="
+                        absolute
+                        right-0
+                        top-1/2
+                        -translate-y-1/2
+                        h-4
+                        w-4
+                        text-muted-foreground
+                        pointer-events-none
+                      "
+                    />
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
-          {/* GRID DOS IMÓVEIS FILTRADOS */}
+          {/* GRID */}
           {imoveisFiltrados.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              className="
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                lg:grid-cols-4
+                gap-8
+              "
+            >
               {imoveisFiltrados.map((property) => (
-                <PropertyCard key={property.id} property={property} />
+                <PropertyCard
+                  key={property.id}
+                  property={property}
+                />
               ))}
             </div>
           ) : (
-            <div className="text-center py-16 bg-white rounded-2xl border border-border">
+            <div
+              className="
+                text-center
+                py-16
+                bg-white
+                rounded-2xl
+                border
+                border-border
+              "
+            >
               <p className="text-muted-foreground text-sm">
                 Nenhum imóvel encontrado com os filtros selecionados.
               </p>
+
               <button
                 type="button"
                 onClick={() => {
@@ -691,7 +1336,13 @@ function ImoveisParaVendaContent() {
                   setBairroFiltro("todos")
                   setFaixaPrecoFiltro("todas")
                 }}
-                className="mt-3 text-[#0d3b2e] font-semibold hover:underline text-sm"
+                className="
+                  mt-3
+                  text-[#0d3b2e]
+                  font-semibold
+                  hover:underline
+                  text-sm
+                "
               >
                 Resetar filtros
               </button>
@@ -705,7 +1356,13 @@ function ImoveisParaVendaContent() {
 
 export default function ImoveisParaVendaPage() {
   return (
-    <Suspense fallback={<div className="py-20 text-center">Carregando imóveis para venda...</div>}>
+    <Suspense
+      fallback={
+        <div className="py-20 text-center">
+          Carregando imóveis para venda...
+        </div>
+      }
+    >
       <ImoveisParaVendaContent />
     </Suspense>
   )
