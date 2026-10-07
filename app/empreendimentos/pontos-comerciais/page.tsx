@@ -111,6 +111,47 @@ Destaques:
       "Alto Fluxo",
     ],
   },
+
+  // 3. GALERIA AGAMENON - ESPAÇOS DISPONÍVEIS
+{
+  id: "galeria-agamenon-espacos-disponiveis",
+  title: "Salas e Lojas Comerciais na Galeria Agamenon",
+  price: "A partir de R$ 700 / mês",
+  location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
+  coverImage:
+    "/imoveis/pontos-comerciais/galeria-agamenon/1.jpeg",
+  bathrooms: 2,
+  area: "De 12m² a 43m²",
+  description: `GALERIA AGAMENON | ESPAÇOS DISPONÍVEIS PARA LOCAÇÃO
+
+Excelente oportunidade para instalar seu negócio na principal avenida de Caruaru! Espaços ideais para consultórios, clínicas de estética, estúdios de Pilates, escritórios, lojas e serviços profissionais.
+
+OPÇÕES DISPONÍVEIS:
+- Loja 02 + Sala/Consultório: 43,50 m² — R$ 3.000,00/mês
+- Sala Interna: 22,88 m² — R$ 1.500,00/mês
+- Loja 03 (Externa): 18,98 m² — R$ 1.500,00/mês
+- Sala de Entrada / Recepção: 12,56 m² — R$ 700,00/mês
+
+ESTRUTURA DA GALERIA:
+✓ Manutenção das áreas comuns inclusa
+✓ Banheiros na galeria
+✓ Segurança no período noturno`,
+  videos: [],
+  images: Array.from(
+    { length: 7 },
+    (_, i) =>
+      `/imoveis/pontos-comerciais/galeria-agamenon/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Av. Agamenon Magalhães",
+    "Opções de Salas e Lojas",
+    "Manutenção de Áreas Comuns Inclusa",
+    "Segurança Noturna",
+    "Banheiros na Galeria",
+    "Ideal para Consultórios e Lojas",
+  ],
+},
+
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis

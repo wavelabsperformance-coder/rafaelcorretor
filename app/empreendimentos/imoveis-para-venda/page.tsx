@@ -441,6 +441,69 @@ Imóvel também disponível para locação.`,
       "Garagem para 6 Carros",
     ],
   },
+// 11. CASA LUAR DO SUMARÉ
+{
+  id: "casa-luar-do-sumare-indianopolis",
+  tipo: "casa",
+  title: "Casa Térrea Residencial no Luar do Sumaré",
+  price: "R$ 450.000",
+  location: "Indianópolis, Caruaru - PE",
+  coverImage:
+    "/imoveis/casas-para-venda/casa-luar-do-sumare/5.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 1,
+  area: "109m²",
+  description: `CASA TÉRREA RESIDENCIAL À VENDA | LUAR DO SUMARÉ — INDIANÓPOLIS/PE
+
+Excelente oportunidade para morar ou investir em uma das regiões mais valorizadas de Caruaru!
+
+Casas térreas em localização privileged, no Indianópolis, a apenas 5 minutos do Centro e próximas ao Caruaru Shopping e ao Parque Ambiental Severino Montenegro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 150 m²
+- Área construída: 109 m²
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Sala para 02 ambientes
+- 03 quartos, sendo 01 suíte máster
+- Cozinha
+- WC social
+- Jardim de inverno
+- Área de serviço
+- Garagem
+
+DIFERENCIAIS:
+- Possibilidade de implantação de área gourmet
+- Cisterna com capacidade de 12.000 litros
+- Casas térreas com excelente aproveitamento dos espaços
+- Possibilidade de financiamento bancário
+
+INVESTIMENTO: A partir de R$ 450.000,00`,
+  videos: [],
+  images: [
+    "/imoveis/casas-para-venda/casa-luar-do-sumare/5.jpeg",
+    ...Array.from(
+      { length: 7 },
+      (_, i) =>
+        `/imoveis/casas-para-venda/casa-luar-do-sumare/${i + 1}.jpeg`
+    ).filter(
+      (img) =>
+        img !==
+        "/imoveis/casas-para-venda/casa-luar-do-sumare/5.jpeg"
+    ),
+  ],
+  amenities: [
+    "1 Suíte Máster",
+    "Jardim de Inverno",
+    "Cisterna de 12.000 Litros",
+    "Possibilidade de Área Gourmet",
+    "A 5 Minutos do Centro",
+    "Próximo ao Caruaru Shopping",
+    "Aceita Financiamento",
+  ],
+},
+
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis

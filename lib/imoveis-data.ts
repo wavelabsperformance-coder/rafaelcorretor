@@ -6,8 +6,8 @@ export type ImovelCompleto = {
   price: string
   location: string
   type: "venda" | "aluguel" | "comercial"
-  category: "apartamento" | "casa" | "ponto"
-  featured?: boolean // Define se aparece no Carrossel da Home
+  category: "apartamento" | "casa" | "ponto" | "comercial"
+  featured?: boolean
   coverImage: string
   bedrooms?: number
   bathrooms: number
@@ -25,6 +25,124 @@ export const todosImoveis: ImovelCompleto[] = [
   // =========================================================================
   // --- VENDA ---
   // =========================================================================
+
+  {
+  id: "casa-luar-do-sumare-indianopolis",
+  title: "Casa Térrea Residencial no Luar do Sumaré",
+  price: "R$ 450.000",
+  location: "Indianópolis, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  featured: true,
+  coverImage: "/imoveis/casas-para-venda/casa-luar-do-sumare/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 1,
+  area: "109m²",
+  description: `CASA TÉRREA RESIDENCIAL À VENDA | LUAR DO SUMARÉ — INDIANÓPOLIS/PE
+
+Excelente oportunidade para morar ou investir em uma das regiões mais valorizadas de Caruaru!
+
+Casas térreas em localização privilegiada, no Indianópolis, a apenas 5 minutos do Centro e próximas ao Caruaru Shopping e ao Parque Ambiental Severino Montenegro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 150 m²
+- Área construída: 109 m²
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Sala para 02 ambientes
+- 03 quartos, sendo 01 suíte máster
+- Cozinha
+- WC social
+- Jardim de inverno
+- Área de serviço
+- Garagem
+
+DIFERENCIAIS:
+- Possibilidade de implantação de área gourmet
+- Cisterna com capacidade de 12.000 litros
+- Casas térreas com excelente aproveitamento dos espaços
+- Possibilidade de financiamento bancário
+
+INVESTIMENTO: A partir de R$ 450.000,00`,
+  images: [
+    ...Array.from(
+      { length: 7 },
+      (_, i) =>
+        `/imoveis/casas-para-venda/casa-luar-do-sumare/${i + 1}.jpeg`
+    ),
+  ],
+  amenities: [
+    "1 Suíte Máster",
+    "Jardim de Inverno",
+    "Cisterna de 12.000 Litros",
+    "Possibilidade de Área Gourmet",
+    "A 5 Minutos do Centro",
+    "Próximo ao Caruaru Shopping",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis",
+},
+
+  {
+  id: "casa-luar-do-sumare-indianopolis",
+  title: "Casa Térrea Residencial no Luar do Sumaré",
+  price: "R$ 450.000",
+  location: "Indianópolis, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  featured: true,
+  coverImage: "/imoveis/casas-para-venda/casa-luar-do-sumare/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 1,
+  area: "109m²",
+  description: `CASA TÉRREA RESIDENCIAL À VENDA | LUAR DO SUMARÉ — INDIANÓPOLIS/PE
+
+Excelente oportunidade para morar ou investir em uma das regiões mais valorizadas de Caruaru!
+
+Casas térreas em localização privilegiada, no Indianópolis, a apenas 5 minutos do Centro e próximas ao Caruaru Shopping e ao Parque Ambiental Severino Montenegro.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 150 m²
+- Área construída: 109 m²
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Sala para 02 ambientes
+- 03 quartos, sendo 01 suíte máster
+- Cozinha
+- WC social
+- Jardim de inverno
+- Área de serviço
+- Garagem
+
+DIFERENCIAIS:
+- Possibilidade de implantação de área gourmet
+- Cisterna com capacidade de 12.000 litros
+- Casas térreas com excelente aproveitamento dos espaços
+- Possibilidade de financiamento bancário
+
+INVESTIMENTO: A partir de R$ 450.000,00`,
+  images: [
+    ...Array.from(
+      { length: 7 },
+      (_, i) =>
+        `/imoveis/casas-para-venda/casa-luar-do-sumare/${i + 1}.jpeg`
+    ),
+  ],
+  amenities: [
+    "1 Suíte Máster",
+    "Jardim de Inverno",
+    "Cisterna de 12.000 Litros",
+    "Possibilidade de Área Gourmet",
+    "A 5 Minutos do Centro",
+    "Próximo ao Caruaru Shopping",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis",
+},
   {
     id: "casa-terrea-quintas-da-colina-2",
     title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
@@ -423,7 +541,117 @@ Apartamento térreo de esquina, com posição privilegiada e vista aberta para t
   // =========================================================================
   // --- LOCAÇÃO ---
   // =========================================================================
+  
+{
+  id: "casa-petropolis-caruaru",
+  title: "Casa Espaçosa com Quintal no Bairro Petrópolis",
+  price: "R$ 3.500 / mês (Incluso IPTU)",
+  location: "Petrópolis, Caruaru - PE",
+  type: "aluguel",
+  category: "casa",
+  featured: true,
+  coverImage: "/imoveis/casas-para-alugar/casa-petropolis/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 2,
+  parking: 2,
+  area: "200m²",
+  description: `CASA PARA ALUGAR NO BAIRRO PETRÓPOLIS – CARUARU/PE
+
+Excelente localização, próxima ao Centro, à Faculdade FAFICA, ao Supermercado Atacadão e a farmácias.
+
+ÁREAS DO IMÓVEL:
+- Área: 200 m²
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 04 quartos
+- 02 banheiros
+- Garagem para 02 carros
+- 03 salas
+- Cozinha projetada
+- Varanda
+- Quintal enorme
+
+Uma ótima oportunidade para quem busca espaço, conforto e praticidade em uma das melhores localizações de Caruaru.
+
+VALOR DE LOCAÇÃO: R$ 3.500,00/mês (IPTU incluso).`,
+  images: [
+    ...Array.from(
+      { length: 12 },
+      (_, i) =>
+        `/imoveis/casas-para-alugar/casa-petropolis/${i + 1}.jpeg`
+    ),
+  ],
+  amenities: [
+    "4 Quartos",
+    "3 Salas",
+    "Cozinha Projetada",
+    "Quintal Enorme",
+    "Varanda",
+    "Próximo à FAFICA",
+    "Próximo ao Atacadão e Centro",
+    "IPTU Incluso",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+},
+
+  
   {
+  id: "ap-terraco-portugal-universitario",
+  title: "Apartamento Mobiliado no Condomínio Terraço Portugal",
+  price: "R$ 2.600 / mês",
+  location: "Universitário, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  featured: true,
+  coverImage: "/imoveis/apartamentos-para-alugar/terraco-portugal/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 1,
+  parking: 1,
+  area: "50m²",
+  description: `APARTAMENTO MOBILIADO PARA LOCAÇÃO | TERRAÇO PORTUGAL – CARUARU/PE
+
+Apartamento mobiliado na Av. Portugal, no condomínio Terraço Portugal.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Mobiliado
+- Área: 50 m²
+- 02 quartos
+- 01 banheiro
+- 01 vaga de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Academia
+- Mini mercado
+- Salão de festas
+
+VALOR DE LOCAÇÃO: R$ 2.600,00/mês (Condomínio e IPTU inclusos).
+Garantia: caução.`,
+  images: [
+    ...Array.from(
+      { length: 10 },
+      (_, i) =>
+        `/imoveis/apartamentos-para-alugar/terraco-portugal/${i + 1}.jpeg`
+    ),
+  ],
+  amenities: [
+    "Mobiliado",
+    "Av. Portugal",
+    "Portaria 24h",
+    "Piscina",
+    "Academia",
+    "Mini Mercado",
+    "Salão de Festas",
+    "1 Vaga de Garagem",
+    "Condomínio e IPTU Inclusos",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+},
+  
+  { 
     id: "casa-green-garden-condominio-club",
     title: "Casa com Área Gourmet e Jacuzzi no Green Garden Condomínio Club",
     price: "R$ 6.500 / mês (Incluso Condomínio e IPTU)",
@@ -780,24 +1008,75 @@ Agende sua visita e venha conhecer!`,
     backUrl: "/empreendimentos/imoveis-para-alugar",
     backLabel: "Voltar para Imóveis para Alugar",
   },
-
-  // =========================================================================
-  // --- COMERCIAL ---
-  // =========================================================================
   {
-    id: "sala-comercial-galeria-avenida-center",
-    title: "Sala Comercial na Galeria Avenida Center",
-    price: "R$ 1.800 / mês (Incluso Condomínio e IPTU)",
-    location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
-    type: "comercial",
-    category: "ponto",
+    id: "ap-edificio-monalisa-mauricio-de-nassau",
+    title: "Apartamento no Edf. Monalisa - Maurício de Nassau",
+    price: "R$ 4.000 / mês (Incluso Condomínio e IPTU)",
+    location: "Maurício de Nassau, Caruaru - PE",
+    type: "aluguel",
+    category: "apartamento",
     featured: true,
-    coverImage: "/imoveis/pontos-comerciais/sala-galeria-avenida-center/1.jpeg",
-    bedrooms: 0,
-    bathrooms: 1,
-    parking: 0,
-    area: "30m²",
-    description: `OPORTUNIDADE DE ALUGUEL — SALA COMERCIAL NA AGAMENON MAGALHÃES!
+    coverImage: "/imoveis/apartamentos-para-alugar/edificio-monalisa/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 2,
+    parking: 2,
+    area: "95m²",
+    description: `APARTAMENTO PARA LOCAÇÃO | EDF. MONALISA – MAURÍCIO DE NASSAU
+
+Excelente apartamento na área nobre do bairro Maurício de Nassau.
+Localizado em frente ao Colégio Diocesano, ao lado do Shopping Difusora e próximo ao centro da cidade.
+
+ÁREA E ESTRUTURA:
+- Área: 95 m²
+- 03 quartos, sendo 01 suíte
+- Varanda
+- 01 WC social
+- 01 WC serviço
+- 02 vagas de garagem cobertas
+
+ESTRUTURA DO CONDOMÍNIO:
+- Piscina aquecida
+- Mini campo
+- Sala de jogos
+- Salão de festas
+- Área gourmet com churrasqueira
+- Parquinho
+- Área de convivência
+
+VALOR DE LOCAÇÃO: R$ 4.000,00/mês (Condomínio e IPTU inclusos).`,
+    images: Array.from({ length: 17 }, (_, i) => `/imoveis/apartamentos-para-alugar/edificio-monalisa/${i + 1}.jpeg`),
+    amenities: [
+      "Em Frente ao Colégio Diocesano",
+      "Ao Lado do Shopping Difusora",
+      "1 Suíte Privativa",
+      "Varanda",
+      "2 Vagas Cobertas",
+      "Piscina Aquecida",
+      "Condomínio e IPTU Inclusos",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-alugar",
+    backLabel: "Voltar para Imóveis para Alugar",
+  },
+  
+ // ==========================================
+// PONTOS COMERCIAIS
+// ==========================================
+
+// 1. SALA COMERCIAL GALERIA AVENIDA CENTER
+{
+  id: "sala-comercial-galeria-avenida-center",
+  title: "Sala Comercial na Galeria Avenida Center",
+  price: "R$ 1.800 / mês (Incluso Condomínio e IPTU)",
+  location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  featured: true,
+  coverImage: "/imoveis/pontos-comerciais/sala-galeria-avenida-center/6.jpeg",
+  bedrooms: 0,
+  bathrooms: 6,
+  parking: 0,
+  area: "30m²",
+  description: `OPORTUNIDADE DE ALUGUEL — SALA COMERCIAL NA AGAMENON MAGALHÃES!
 
 Excelente oportunidade para instalar ou expandir o seu negócio no coração de Caruaru!
 
@@ -811,36 +1090,94 @@ Destaques:
 - Ponto de altíssima visibilidade e grande fluxo na principal avenida da cidade
 - Bairro nobre e estratégico (Maurício de Nassau)
 - Perfeito para escritórios, consultórios, estética ou prestação de serviços`,
-    videos: ["/imoveis/pontos-comerciais/sala-galeria-avenida-center/1.mp4"],
-    images: Array.from({ length: 9 }, (_, i) => `/imoveis/pontos-comerciais/sala-galeria-avenida-center/${i + 1}.jpeg`),
-    amenities: [
-      "Galeria Avenida Center",
-      "Av. Agamenon Magalhães",
-      "Condomínio e IPTU Inclusos",
-      "Bairro Maurício de Nassau",
-      "Grande Fluxo de Pedestres e Veículos",
-      "Ideal para Consultórios e Escritórios",
-    ],
-    backUrl: "/empreendimentos/pontos-comerciais",
-    backLabel: "Voltar para Pontos Comerciais",
-  },
-  {
-    id: "ponto-comercial-agamenon-magalhaes",
-    title: "Ponto Comercial na Avenida Agamenon Magalhães",
-    price: "R$ 4.500 / mês",
-    location: "Av. Agamenon Magalhães, Caruaru - PE",
-    type: "comercial",
-    category: "ponto",
-    featured: true,
-    coverImage: "/imoveis/pontos-comerciais/ponto-comercial-agamenon-magalhaes/1.jpeg",
-    bedrooms: 0,
-    bathrooms: 1,
-    parking: 0,
-    area: "25m² (5m x 5m)",
-    description: `Ponto comercial na principal avenida de Caruaru: Av. Agamenon Magalhães. Alto fluxo de pedestres e carros.`,
-    images: Array.from({ length: 4 }, (_, i) => `/imoveis/pontos-comerciais/ponto-comercial-agamenon-magalhaes/${i + 1}.jpeg`),
-    amenities: ["Avenida Principal", "Excelente Visibilidade", "1 Banheiro", "Alto Fluxo"],
-    backUrl: "/empreendimentos/pontos-comerciais",
-    backLabel: "Voltar para Pontos Comerciais",
-  },
-]
+  videos: ["/imoveis/pontos-comerciais/sala-galeria-avenida-center/1.mp4"],
+  images: Array.from(
+    { length: 9 },
+    (_, i) => `/imoveis/pontos-comerciais/sala-galeria-avenida-center/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Galeria Avenida Center",
+    "Av. Agamenon Magalhães",
+    "Condomínio e IPTU Inclusos",
+    "Bairro Maurício de Nassau",
+    "Grande Fluxo de Pedestres e Veículos",
+    "Ideal para Consultórios e Escritórios",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+},
+
+// 2. PONTO COMERCIAL AGAMENON MAGALHÃES
+{
+  id: "ponto-comercial-agamenon-magalhaes",
+  title: "Ponto Comercial na Avenida Agamenon Magalhães",
+  price: "R$ 4.500 / mês",
+  location: "Av. Agamenon Magalhães, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  featured: true,
+  coverImage: "/imoveis/pontos-comerciais/ponto-comercial-agamenon-magalhaes/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 1,
+  parking: 0,
+  area: "25m² (5m x 5m)",
+  description: `Ponto comercial na principal avenida de Caruaru: Av. Agamenon Magalhães. Alto fluxo de pedestres e carros.`,
+  videos: [],
+  images: Array.from(
+    { length: 4 },
+    (_, i) => `/imoveis/pontos-comerciais/ponto-comercial-agamenon-magalhaes/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Avenida Principal",
+    "Excelente Visibilidade",
+    "1 Banheiro",
+    "Alto Fluxo",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+},
+
+// 3. GALERIA AGAMENON - ESPAÇOS DISPONÍVEIS
+{
+  id: "galeria-agamenon-espacos-disponiveis",
+  title: "Salas e Lojas Comerciais na Galeria Agamenon",
+  price: "A partir de R$ 700 / mês",
+  location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  featured: true,
+  coverImage: "/imoveis/pontos-comerciais/galeria-agamenon/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 2,
+  parking: 0,
+  area: "De 12m² a 43m²",
+  description: `GALERIA AGAMENON | ESPAÇOS DISPONÍVEIS PARA LOCAÇÃO
+
+Excelente oportunidade para instalar seu negócio na principal avenida de Caruaru! Espaços ideais para consultórios, clínicas de estética, estúdios de Pilates, escritórios, lojas e serviços profissionais.
+
+OPÇÕES DISPONÍVEIS:
+- Loja 02 + Sala/Consultório: 43,50 m² — R$ 3.000,00/mês
+- Sala Interna: 22,88 m² — R$ 1.500,00/mês
+- Loja 03 (Externa): 18,98 m² — R$ 1.500,00/mês
+- Sala de Entrada / Recepção: 12,56 m² — R$ 700,00/mês
+
+ESTRUTURA DA GALERIA:
+✓ Manutenção das áreas comuns inclusa
+✓ Banheiros na galeria
+✓ Segurança no período noturno`,
+  images: Array.from(
+    { length: 7 },
+    (_, i) => `/imoveis/pontos-comerciais/galeria-agamenon/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Av. Agamenon Magalhães",
+    "Opções de Salas e Lojas",
+    "Manutenção de Áreas Comuns Inclusa",
+    "Segurança Noturna",
+    "Banheiros na Galeria",
+    "Ideal para Consultórios e Lojas",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+} // <-- REMOVA a vírgula do último objeto do array!
+]; 

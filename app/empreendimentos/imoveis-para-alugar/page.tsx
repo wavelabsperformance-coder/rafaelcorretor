@@ -55,6 +55,7 @@ function getBairro(location: string): string {
 // dentro do imóvel, adicione a linha:   alugado: true,
 // Para deixar disponível de novo, apague a linha (ou use false).
 // ============================================================
+
 const imoveisAluguel: ImovelAluguel[] = [
   // 1. CASA COM JACUZZI | GREEN GARDEN CONDOMÍNIO CLUB
   {
@@ -293,11 +294,18 @@ Condomínio Terras Alpha | Caruaru – PE`,
     area: "38m²",
     description: `Excelente oportunidade de locação no Condomínio Mr. Rotterdam.`,
     videos: [],
-    images: Array.from(
-      { length: 15 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/edificio-mr-rotterdam/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/edificio-mr-rotterdam/2.jpeg",
+      ...Array.from(
+        { length: 15 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/edificio-mr-rotterdam/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/edificio-mr-rotterdam/2.jpeg"
+      ),
+    ],
     amenities: ["100% Mobiliado", "Piscina com Deck", "Academia Equipada"],
     alugado: true,
   },
@@ -317,11 +325,18 @@ Condomínio Terras Alpha | Caruaru – PE`,
     area: "35m²",
     description: "Apartamento mobiliado e prático para locação no bairro Maurício de Nassau.",
     videos: [],
-    images: Array.from(
-      { length: 9 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/apartamento-mobiliado-mauricio-de-nassau/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/apartamento-mobiliado-mauricio-de-nassau/1.jpeg",
+      ...Array.from(
+        { length: 9 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/apartamento-mobiliado-mauricio-de-nassau/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/apartamento-mobiliado-mauricio-de-nassau/1.jpeg"
+      ),
+    ],
     amenities: ["Mobiliado", "Ar-condicionado", "Todas as Taxas Inclusas"],
   },
 
@@ -340,11 +355,18 @@ Condomínio Terras Alpha | Caruaru – PE`,
     area: "54m²",
     description: `Excelente apartamento totalmente mobiliado e nascente no Edifício Jardim dos Alecrins.`,
     videos: [],
-    images: Array.from(
-      { length: 33 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/1.jpeg",
+      ...Array.from(
+        { length: 33 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/1.jpeg"
+      ),
+    ],
     amenities: ["Totalmente Mobiliado", "Posição Nascente", "Piscina e Lazer"],
   },
 
@@ -365,11 +387,18 @@ Condomínio Terras Alpha | Caruaru – PE`,
     videos: [
       "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/19.mp4",
     ],
-    images: Array.from(
-      { length: 29 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/1.jpeg",
+      ...Array.from(
+        { length: 29 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/1.jpeg"
+      ),
+    ],
     amenities: ["Alto Padrão Decorado", "Academia Equipada", "Coworking"],
   },
 
@@ -388,11 +417,18 @@ Condomínio Terras Alpha | Caruaru – PE`,
     area: "80m²",
     description: "Apartamento impecável no Edifício João Soares.",
     videos: [],
-    images: Array.from(
-      { length: 13 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/edificio-joao-soares/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/edificio-joao-soares/1.jpeg",
+      ...Array.from(
+        { length: 13 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/edificio-joao-soares/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/edificio-joao-soares/1.jpeg"
+      ),
+    ],
     amenities: ["2 Suítes Privativas", "Andar Alto", "2 Vagas Cobertas"],
   },
 
@@ -411,11 +447,18 @@ Condomínio Terras Alpha | Caruaru – PE`,
     area: "52m²",
     description: "Excelente oportunidade de locação ao lado do Caruaru Shopping.",
     videos: [],
-    images: Array.from(
-      { length: 10 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/caminho-das-aroeiras/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/caminho-das-aroeiras/7.jpeg",
+      ...Array.from(
+        { length: 10 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/caminho-das-aroeiras/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/caminho-das-aroeiras/7.jpeg"
+      ),
+    ],
     amenities: ["Ao Lado do Caruaru Shopping", "Piscina", "Salão de Festas"],
   },
 
@@ -434,14 +477,199 @@ Condomínio Terras Alpha | Caruaru – PE`,
     area: "42m²",
     description: `APARTAMENTO PARA LOCAÇÃO | JARDIM DAS ORQUÍDEAS — CARUARU`,
     videos: [],
-    images: Array.from(
-      { length: 13 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-alugar/jardim-das-orquideas/${i + 1}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-alugar/jardim-das-orquideas/1.jpeg",
+      ...Array.from(
+        { length: 13 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/jardim-das-orquideas/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/jardim-das-orquideas/1.jpeg"
+      ),
+    ],
     amenities: ["Posição Norte", "2º Andar", "Condomínio, IPTU e Gás Inclusos"],
   },
-]
+
+  // 12. EDF. MONALISA
+  {
+    id: "ap-edificio-monalisa-mauricio-de-nassau",
+    tipo: "apartamento",
+    title: "Apartamento no Edf. Monalisa - Maurício de Nassau",
+    price: "R$ 4.000 / mês",
+    location: "Maurício de Nassau, Caruaru - PE",
+    coverImage:
+      "/imoveis/apartamentos-para-alugar/edificio-monalisa/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 2,
+    parking: 2,
+    area: "95m²",
+    description: `APARTAMENTO PARA LOCAÇÃO | EDF. MONALISA – MAURÍCIO DE NASSAU
+
+Excelente apartamento na área nobre do bairro Maurício de Nassau.
+Localizado em frente ao Colégio Diocesano, ao lado do Shopping Difusora e próximo ao centro da cidade.
+
+ÁREA E ESTRUTURA:
+- Área: 95 m²
+- 03 quartos, sendo 01 suíte
+- Varanda
+- 01 WC social
+- 01 WC serviço
+- 02 vagas de garagem cobertas
+
+ESTRUTURA DO CONDOMÍNIO:
+- Piscina aquecida
+- Mini campo
+- Sala de jogos
+- Salão de festas
+- Área gourmet com churrasqueira
+- Parquinho
+- Área de convivência
+
+VALOR DE LOCAÇÃO: R$ 4.000,00/mês (Condomínio e IPTU inclusos).`,
+    videos: [],
+    images: [
+      "/imoveis/apartamentos-para-alugar/edificio-monalisa/1.jpeg",
+      ...Array.from(
+        { length: 17 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-alugar/edificio-monalisa/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-alugar/edificio-monalisa/1.jpeg"
+      ),
+    ],
+    amenities: [
+      "Em Frente ao Colégio Diocesano",
+      "Ao Lado do Shopping Difusora",
+      "1 Suíte Privativa",
+      "Varanda",
+      "2 Vagas Cobertas",
+      "Piscina Aquecida",
+      "Condomínio e IPTU Inclusos",
+    ],
+  },
+// 13. TERRAÇO PORTUGAL
+{
+  id: "ap-terraco-portugal-universitario",
+  tipo: "apartamento",
+  title: "Apartamento Mobiliado no Condomínio Terraço Portugal",
+  price: "R$ 2.600 / mês",
+  location: "Universitário, Caruaru - PE",
+  coverImage:
+    "/imoveis/apartamentos-para-alugar/terraco-portugal/9.jpeg",
+  bedrooms: 2,
+  bathrooms: 1,
+  parking: 1,
+  area: "50m²",
+  description: `APARTAMENTO MOBILIADO PARA LOCAÇÃO | TERRAÇO PORTUGAL – CARUARU/PE
+
+Apartamento mobiliado na Av. Portugal, no condomínio Terraço Portugal.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Mobiliado
+- Área: 50 m²
+- 02 quartos
+- 01 banheiro
+- 01 vaga de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Academia
+- Mini mercado
+- Salão de festas
+
+VALOR DE LOCAÇÃO: R$ 2.600,00/mês (Condomínio e IPTU inclusos).
+Garantia: caução.`,
+  videos: [],
+  images: [
+    "/imoveis/apartamentos-para-alugar/terraco-portugal/9.jpeg",
+    ...Array.from(
+      { length: 10 },
+      (_, i) =>
+        `/imoveis/apartamentos-para-alugar/terraco-portugal/${i + 1}.jpeg`
+    ).filter(
+      (img) =>
+        img !==
+        "/imoveis/apartamentos-para-alugar/terraco-portugal/9.jpeg"
+    ),
+  ],
+  amenities: [
+    "Mobiliado",
+    "Av. Portugal",
+    "Portaria 24h",
+    "Piscina",
+    "Academia",
+    "Mini Mercado",
+    "Salão de Festas",
+    "1 Vaga de Garagem",
+    "Condomínio e IPTU Inclusos",
+  ],
+},
+
+// 14. CASA NO BAIRRO PETRÓPOLIS
+{
+  id: "casa-petropolis-caruaru",
+  tipo: "casa",
+  title: "Casa Espaçosa com Quintal no Bairro Petrópolis",
+  price: "R$ 3.500 / mês (Incluso IPTU)",
+  location: "Petrópolis, Caruaru - PE",
+  coverImage:
+    "/imoveis/casas-para-alugar/casa-petropolis/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 2,
+  parking: 2,
+  area: "200m²",
+  description: `CASA PARA ALUGAR NO BAIRRO PETRÓPOLIS – CARUARU/PE
+
+Excelente localização, próxima ao Centro, à Faculdade FAFICA, ao Supermercado Atacadão e a farmácias.
+
+ÁREAS DO IMÓVEL:
+- Área: 200 m²
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 04 quartos
+- 02 banheiros
+- Garagem para 02 carros
+- 03 salas
+- Cozinha projetada
+- Varanda
+- Quintal enorme
+
+Uma ótima oportunidade para quem busca espaço, conforto e praticidade em uma das melhores localizações de Caruaru.
+
+VALOR DE LOCAÇÃO: R$ 3.500,00/mês (IPTU incluso).`,
+  videos: [],
+  images: [
+    "/imoveis/casas-para-alugar/casa-petropolis/6.jpeg",
+    ...Array.from(
+      { length: 12 },
+      (_, i) =>
+        `/imoveis/casas-para-alugar/casa-petropolis/${i + 1}.jpeg`
+    ).filter(
+      (img) =>
+        img !==
+        "/imoveis/casas-para-alugar/casa-petropolis/1.jpeg"
+    ),
+  ],
+  amenities: [
+    "4 Quartos",
+    "3 Salas",
+    "Cozinha Projetada",
+    "Quintal Enorme",
+    "Varanda",
+    "Próximo à FAFICA",
+    "Próximo ao Atacadão e Centro",
+    "IPTU Incluso",
+  ],
+},
+
+
+ 
+];
 
 const bairrosDisponiveis = Array.from(
   new Set(imoveisAluguel.map((imovel) => getBairro(imovel.location)))
