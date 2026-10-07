@@ -537,6 +537,56 @@ Apartamento térreo de esquina, com posição privilegiada e vista aberta para t
     backUrl: "/empreendimentos/imoveis-para-venda",
     backLabel: "Voltar para Imóveis para Venda",
   },
+  {
+    id: "ap-terraco-holanda-mauricio-de-nassau",
+    title: "Apartamento no Condomínio Terraço Holanda",
+    price: "R$ 580.000",
+    location: "Maurício de Nassau, Caruaru - PE",
+    type: "venda",
+    category: "apartamento",
+    featured: false,
+    coverImage: "/imoveis/apartamentos-para-venda/terraco-holanda/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 3,
+    parking: 2,
+    area: "89m²",
+    description: `APARTAMENTO À VENDA | TERRAÇO HOLANDA – CARUARU/PE
+
+Localizado na área nobre do bairro Maurício de Nassau, em Caruaru, este apartamento oferece espaço e conforto em uma excelente localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Posição nascente, 3º andar, com sensação de altura equivalente ao 5º andar
+- Área: 89 m²
+- 03 quartos, sendo 01 suíte
+- Banheiro social
+- Banheiro de serviço
+- Cozinha ampla
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+
+VALOR DE VENDA: R$ 580.000,00`,
+    images: Array.from(
+      { length: 9 },
+      (_, i) => `/imoveis/apartamentos-para-venda/terraco-holanda/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Posição Nascente",
+      "3º Andar com Altura de 5º Andar",
+      "89m² de Área",
+      "01 Suíte",
+      "Cozinha Ampla",
+      "Banheiro Social",
+      "Banheiro de Serviço",
+      "02 Vagas de Garagem",
+      "Portaria 24 Horas",
+      "Piscina",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-venda",
+    backLabel: "Voltar para Imóveis para Venda",
+  },
 
   // =========================================================================
   // --- LOCAÇÃO ---
