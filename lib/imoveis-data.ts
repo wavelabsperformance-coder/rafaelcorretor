@@ -6,7 +6,7 @@ export type ImovelCompleto = {
   price: string
   location: string
   type: "venda" | "aluguel" | "comercial"
-  category: "apartamento" | "casa" | "ponto" | "comercial"
+  category: "apartamento" | "casa" | "ponto" | "comercial" | "terreno"
   featured?: boolean
   coverImage: string
   bedrooms?: number
@@ -806,6 +806,861 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   backLabel: "Voltar para Imóveis para Venda",
 },
 
+  // --- APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA - À VENDA) ---
+  {
+  id: "ap-edf-plaza-caruaru",
+  title: "Apartamento Mobiliado no Edifício Plaza",
+  price: "R$ 680.000",
+  location: "Edifício Plaza, Caruaru - PE",
+  type: "venda",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 1,
+  area: "78m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | EDF. PLAZA – CARUARU/PE
+
+Localizado na área mais nobre e valorizada da cidade, a 30 m da Avenida Agamenon Magalhães. Próximo a padarias, mercados, escolas e shopping: perto de tudo para tornar sua vida mais prática.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 78 m²
+- Sala para dois ambientes integrados
+- 03 quartos, sendo 01 suíte
+- Cozinha
+- WC social
+- Área de serviço
+- WC de serviço
+- 01 vaga de garagem
+
+DIFERENCIAIS:
+- Mobília fixa de alta qualidade
+- Ar-condicionado nos 03 quartos
+- Automação com comando por voz no Alexa
+
+CONDOMÍNIO:
+- 02 elevadores
+- Piscina adulto e infantil
+- Salão de festas
+- Quadra poliesportiva
+
+VALOR DE VENDA: R$ 680.000,00
+
+OBS.: o imóvel está alugado por R$ 3.500,00/mês (incluso condomínio e IPTU) e continua disponível para aquisição.`,
+  videos: [],
+  images: Array.from(
+    { length: 14 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "78m² de Área",
+    "Mobília Fixa de Alta Qualidade",
+    "Ar-condicionado nos 03 Quartos",
+    "Automação por Voz (Alexa)",
+    "01 Suíte",
+    "01 Vaga de Garagem",
+    "Piscina Adulto e Infantil",
+    "Quadra Poliesportiva",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- APARTAMENTO TOTALMENTE REFORMADO NO EKO HOME CLUB – TORRE IPÊ A (À VENDA) ---
+  {
+  id: "ap-eko-home-club-torre-ipe-a",
+  title: "Apartamento Totalmente Reformado no Eko Home Club – Torre Ipê A",
+  price: "R$ 420.000",
+  location: "Bairro Universitário, Caruaru - PE",
+  type: "venda",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 2,
+  area: "60m²",
+  description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ A – CARUARU/PE
+
+Exclusivo apartamento totalmente reformado na área nobre do bairro Universitário, no polo médico, jurídico e estudantil da cidade.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m²
+- Posição sul, voltado para a piscina
+- Sala para dois ambientes
+- 02 quartos, sendo 01 suíte
+- Cozinha ampla planejada
+- Área de serviço
+- 02 vagas de garagem descobertas
+
+ACABAMENTO E MOBILIÁRIO:
+- Móveis planejados, guarda-roupas e iluminação projetada
+- Forno embutido com cooktop
+- Ficam no imóvel apenas os móveis fixos planejados
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Academia, piscina e salão de festas
+- Área gourmet, espaço de pilates e pista de cooper
+- Quadra poliesportiva, quadra de tênis e lava jato
+
+VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
+  videos: [
+    "/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/1.mp4",
+  ],
+  images: Array.from(
+    { length: 18 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "60m² de Área Privativa",
+    "Posição Sul Voltada para a Piscina",
+    "01 Suíte",
+    "Móveis Planejados e Iluminação Projetada",
+    "Forno Embutido com Cooktop",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Academia, Piscina e Salão de Festas",
+    "Quadra Poliesportiva e de Tênis",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - SEM FOTOS - À VENDA) ---
+  {
+  id: "ap-lusia-maciel",
+  title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
+  price: "R$ 850.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "venda",
+  category: "apartamento",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 2,
+  area: "107m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | EDF. LUSIA MACIEL – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Imóvel totalmente reformado com fino acabamento de alto padrão, na área nobre do bairro Maurício de Nassau. Exclusivo: 02 apartamentos por andar.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 107 m²
+- Sala para dois ambientes
+- 03 quartos, sendo 01 suíte
+- 01 dependência com WC
+- Área de serviço
+- 02 vagas de garagem cobertas
+
+ACABAMENTO:
+- Porcelanato Porto Belo AA
+- Louças e metais Deca
+- Móveis planejados Florêncio
+- Iluminação projetada
+- Todos os ambientes com pontos de ar-condicionado
+- Varanda com pele de vidro
+
+VALOR DE VENDA: R$ 850.000,00 — não aceita financiamento no momento.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "107m² de Área",
+    "Exclusivo 02 por Andar",
+    "Móveis Planejados Florêncio",
+    "Porcelanato Porto Belo AA",
+    "Louças e Metais Deca",
+    "Iluminação Projetada",
+    "Pontos de Ar-condicionado em Todos os Ambientes",
+    "Varanda com Pele de Vidro",
+    "02 Vagas Cobertas",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO ANDREZZA (À VENDA) ---
+  {
+  id: "ap-andrezza-mauricio-de-nassau",
+  title: "Apartamento de Alto Padrão no Edifício Andrezza",
+  price: "R$ 800.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "venda",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 3,
+  area: "240m²",
+  description: `APARTAMENTO À VENDA | EDF. ANDREZZA – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Apartamento na área nobre do bairro Maurício de Nassau, imóvel exclusivo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 02 por andar
+- Posição sul
+- Área de 240 m²
+- 04 quartos, sendo 03 suítes
+- 01 dependência
+- Varanda
+- Sala para 02 ambientes
+- Cozinha ampla
+- Área de serviço
+- 03 vagas de garagem coberta
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Salão de jogos
+- Salão de festas
+- Bicicletário
+- Academia
+
+VALOR DE VENDA: R$ 800.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 8 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "240m² de Área",
+    "Exclusivo 02 por Andar",
+    "Posição Sul",
+    "04 Quartos, sendo 03 Suítes",
+    "01 Dependência",
+    "Varanda",
+    "Sala para 02 Ambientes",
+    "Cozinha Ampla",
+    "03 Vagas de Garagem Coberta",
+    "Portaria 24 Horas",
+    "Piscina e Salão de Festas",
+    "Salão de Jogos e Bicicletário",
+    "Academia",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- APARTAMENTO COM VARANDA NO MAURÍCIO DE NASSAU (ALUGADA - À VENDA) ---
+  {
+  id: "ap-mauricio-de-nassau-80m",
+  title: "Apartamento com Varanda no Maurício de Nassau",
+  price: "R$ 450.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "venda",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "80m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 80 m²
+- Varanda
+- 03 quartos, sendo 01 suíte
+- 02 vagas de garagem
+
+CONDOMÍNIO:
+- Portaria eletrônica
+- Piscina
+- Salão de festas
+- Mini academia
+- Elevador
+- Taxa de condomínio: R$ 600,00
+
+VALOR DE VENDA: R$ 450.000,00
+
+OBS.: o imóvel está alugado por R$ 2.600,00/mês e continua disponível para venda.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "80m² de Área",
+    "Varanda",
+    "01 Suíte",
+    "02 Vagas de Garagem",
+    "Portaria Eletrônica",
+    "Piscina",
+    "Salão de Festas",
+    "Mini Academia",
+    "Elevador",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- CASA TÉRREA COM JARDIM NO MAURÍCIO DE NASSAU (À VENDA) ---
+  {
+  id: "casa-mauricio-de-nassau-jardim",
+  title: "Casa Térrea com Jardim no Maurício de Nassau",
+  price: "R$ 700.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 1,
+  area: "",
+  description: `CASA À VENDA | BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Se você busca conforto, modernidade e localização privilegiada, essa é a oportunidade perfeita.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 03 quartos, sendo 01 suíte
+- Banheiro social
+- Sala ampla para 02 ambientes
+- Cozinha espaçosa e bem ventilada
+- Jardim encantador
+- Área de serviço ampla
+- Quarto de apoio com varanda
+- Garagem para 01 veículo
+- Cisterna de 7.000 litros + caixa d'água
+
+LOCALIZAÇÃO: no coração de Maurício de Nassau, um dos bairros mais valorizados e desejados da cidade.
+
+VALOR DE VENDA: R$ 700.000,00 — pronta para morar. Pode ser financiada por qualquer banco da sua preferência.`,
+  videos: [
+    "/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/1.mp4",
+  ],
+  images: Array.from(
+    { length: 19 },
+    (_, i) => `/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "01 Suíte",
+    "Sala Amplа para 02 Ambientes",
+    "Jardim Encantador",
+    "Quarto de Apoio com Varanda",
+    "Cisterna de 7.000 Litros",
+    "Cozinha Espaçosa e Ventilada",
+    "Pronta para Morar",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- CASA NO CONDOMÍNIO PORTAL DO SOL (ALUGADA - À VENDA) ---
+  {
+  id: "casa-portal-do-sol-venda",
+  title: "Casa no Condomínio Portal do Sol",
+  price: "R$ 620.000",
+  location: "Condomínio Portal do Sol, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-portal-do-sol/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "150m²",
+  alugado: true,
+  description: `CASA À VENDA | CONDOMÍNIO PORTAL DO SOL – CARUARU/PE
+
+Excelente oportunidade para quem busca conforto, segurança e qualidade de vida em um condomínio completo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área de 150 m²
+- 03 quartos, sendo 01 suíte
+- 02 salas
+- Cozinha
+- Quintal
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Quadra poliesportiva
+- Salão de festas
+- Parquinho infantil
+
+VALOR DE VENDA: R$ 620.000,00
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação por R$ 3.500,00/mês, incluso condomínio e IPTU).`,
+  videos: [],
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-portal-do-sol/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "150m² de Área",
+    "01 Suíte",
+    "02 Salas",
+    "Quintal",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Piscina e Quadra Poliesportiva",
+    "Salão de Festas e Parquinho Infantil",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- CASA DE GRANDES PROPORÇÕES NO MAURÍCIO DE NASSAU (À VENDA) ---
+  {
+  id: "casa-mauricio-de-nassau-ampla",
+  title: "Casa de Grandes Proporções no Maurício de Nassau",
+  price: "R$ 2.500.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/1.jpeg",
+  bedrooms: 8,
+  bathrooms: 6,
+  parking: 0,
+  area: "360m²",
+  description: `CASA À VENDA | BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Casa de grandes proporções em dois pavimentos, na área nobre do bairro Maurício de Nassau.
+
+TERREO:
+- 04 salas
+- 04 quartos, sendo 03 suítes
+- 01 cozinha
+- 01 subsolo com cerca de 150 m²
+
+1º ANDAR:
+- 01 sala de som
+- Varanda
+- 04 quartos, sendo 01 suíte com closet
+- 01 cozinha
+- 02 salas
+- Área de serviço com quarto de empregada e banheiro
+
+DADOS DO IMÓVEL:
+- Terreno: 12 x 30 m = 360 m²
+
+VALOR DE VENDA: R$ 2.500.000,00 — imóvel escriturado. Negocia e aceita troca.`,
+  videos: [],
+  images: Array.from(
+    { length: 44 },
+    (_, i) => `/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno 12 x 30 m (360 m²)",
+    "Dois Pavimentos",
+    "04 Suítes no Total",
+    "01 Subsolo com 150 m²",
+    "Varanda",
+    "02 Cozinhas e 03 Salas",
+    "Quarto de Empregada com Banheiro",
+    "Escriturado",
+    "Aceita Troca",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- CASA DUPLEX DE ALTO PADRÃO NO QUINTAS DA COLINA II (À VENDA) ---
+  {
+  id: "casa-duplex-quintas-da-colina-ii",
+  title: "Casa Duplex de Alto Padrão no Quintas da Colina II",
+  price: "R$ 2.100.000",
+  location: "Quintas da Colina II, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/1.jpeg",
+  bedrooms: 5,
+  bathrooms: 5,
+  parking: 4,
+  area: "541m²",
+  description: `CASA DUPLEX À VENDA | CONDOMÍNIO QUINTAS DA COLINA II – CARUARU/PE
+
+Área total: 600 m² | Área construída: 541 m²
+
+TERREO:
+- Garagem para 04 carros
+- 02 salas de estar (principal e multimídia)
+- Sala de jantar
+- Cozinha com despensa
+- Quarto de visitas com closet e banheiro
+- Área de lazer com piscina, churrasqueira a gás, WC e chuveirão
+- Dependência de secretária com banheiro
+- 02 depósitos
+- Área de serviço
+
+1º ANDAR:
+- Mezanino
+- 04 quartos com closet e banheiro, sendo uma suíte master
+- Sala reversível
+- Quarto reversível
+- Escritório
+
+DETALHES:
+- Móveis fixos e lustres ficam no imóvel
+- Piscina aquecida
+- Casa com energia solar
+- Ar-condicionados acompanham a compra
+
+CONDOMÍNIO:
+- Academia bem equipada, piscina e portaria 24h
+- Quadras de vôlei, poliesportiva, tênis e beach tênis
+- Vários parquinhos infantis e pista de bike
+- Aulas coletivas adulto e infantil, natação e muito mais
+
+VALOR DE VENDA: R$ 2.100.000,00 — aceita imóvel de menor valor como permuta.`,
+  videos: [],
+  images: Array.from(
+    { length: 24 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "541m² de Área Construída",
+    "Terreno de 600m²",
+    "Piscina Aquecida",
+    "Energia Solar",
+    "Móveis Fixos e Lustres Inclusos",
+    "Garagem para 04 Carros",
+    "Academia e Quadras do Condomínio",
+    "Aceita Permuta",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- CASA DUPLEX NO CONDOMÍNIO CLODOALDO SAMPAIO (À VENDA) ---
+  {
+  id: "casa-duplex-clodoaldo-sampaio",
+  title: "Casa Duplex no Condomínio Clodoaldo Sampaio",
+  price: "R$ 280.000",
+  location: "Boa Vista, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-clodoaldo-sampaio/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 2,
+  area: "",
+  description: `CASA DUPLEX À VENDA | CONDOMÍNIO CLODOALDO SAMPAIO – BOA VISTA – CARUARU/PE
+(Próximo ao SESI)
+
+Encantadora casa duplex no bairro Boa Vista, dentro do condomínio Clodoaldo Sampaio, com segurança e excelente localização.
+
+TERREO:
+- Portão eletrônico
+- Garagem para 02 carros
+- Cisterna de 4.000 litros com bomba instalada
+- Sala para dois ambientes
+- Cozinha e área de serviço
+- Lavabo
+
+PAVIMENTO SUPERIOR:
+- 03 quartos, sendo 01 suíte master com varanda
+- Banheiro social
+- Espaço para home office
+
+VALOR DE VENDA: R$ 280.000,00 — aceita financiamento.
+Condomínio: R$ 340,00.`,
+  videos: [],
+  images: Array.from(
+    { length: 32 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-clodoaldo-sampaio/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Cisterna de 4.000 Litros com Bomba",
+    "01 Suíte Master com Varanda",
+    "Espaço para Home Office",
+    "Portão Eletrônico",
+    "Garagem para 02 Carros",
+    "Lavabo",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- CASA DE ALTO PADRÃO NO BAIRRO LUIZ GONZAGA (À VENDA) ---
+  {
+  id: "casa-luiz-gonzaga",
+  title: "Casa de Alto Padrão no Bairro Luiz Gonzaga",
+  price: "R$ 499.000",
+  location: "Luiz Gonzaga, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 3,
+  area: "180m²",
+  description: `OPORTUNIDADE NO BAIRRO LUIZ GONZAGA – CARUARU/PE
+
+Conforto, sofisticação e uma excelente localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Terreno com 180 m²
+- Garagem para até 03 carros
+- Sala ampla para dois ambientes
+- Cozinha funcional
+- Área de serviço
+- 03 quartos, sendo 02 suítes
+- WC de serviço
+- WC social
+
+VALOR DE VENDA: R$ 499.000,00 — pode ser financiada.`,
+  videos: [],
+  images: Array.from(
+    { length: 29 },
+    (_, i) => `/imoveis/casas-para-venda/casa-luiz-gonzaga/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 180m²",
+    "02 Suítes",
+    "Sala Ampla para 02 Ambientes",
+    "Garagem para 03 Carros",
+    "Cozinha Funcional",
+    "WC de Serviço",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- LOTE NO CONDOMÍNIO SOLAR DA SERRA – VILLA DO VITORINO (À VENDA) ---
+  {
+  id: "lote-solar-da-serra-villa-do-vitorino",
+  title: "Lote no Condomínio Solar da Serra – Villa do Vitorino",
+  price: "R$ 85.000",
+  location: "Villa do Vitorino, Caruaru - PE",
+  type: "venda",
+  category: "terreno",
+  coverImage: "/imoveis/terrenos-e-lotes/lote-solar-da-serra-villa-do-vitorino/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "700m²",
+  description: `LOTE À VENDA NO CONDOMÍNIO SOLAR DA SERRA – VILLA DO VITORINO
+
+Excelente oportunidade para construir sua casa de campo em um condomínio fechado, cercado pela natureza, com segurança, tranquilidade e lazer para toda a família.
+
+CARACTERÍSTICAS DO LOTE:
+- Dimensões: 20 x 35 metros
+- Área total: 700 m²
+
+ESTRUTURA DE LAZER DO CONDOMÍNIO:
+- Quadra poliesportiva
+- Espaço gourmet com churrasqueira
+- Lago
+- Piscina aquecida
+- Bosque com trilha
+- Salão de jogos
+- Salão de festas
+
+VALOR: R$ 85.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 16 },
+    (_, i) => `/imoveis/terrenos-e-lotes/lote-solar-da-serra-villa-do-vitorino/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "700m² (20 x 35 m)",
+    "Condomínio Fechado",
+    "Piscina Aquecida",
+    "Espaço Gourmet com Churrasqueira",
+    "Quadra Poliesportiva",
+    "Lago e Bosque com Trilha",
+    "Salão de Jogos e de Festas",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- LOTE COMERCIAL NO ALTO DO MOURA (À VENDA) ---
+  {
+  id: "terreno-alto-do-moura-centro-artes",
+  title: "Lote Comercial no Alto do Moura",
+  price: "R$ 300.000",
+  location: "Alto do Moura, Caruaru - PE",
+  type: "venda",
+  category: "terreno",
+  coverImage: "/imoveis/terrenos-e-lotes/terreno-alto-do-moura-centro-artes/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "840m²",
+  description: `LOTE TERRENO À VENDA | ÁREA COMERCIAL DO CENTRO DE ARTES FIGURATIVAS DAS AMÉRICAS – ALTO DO MOURA/CARUARU-PE
+
+CARACTERÍSTICAS DO TERRENO:
+- Localização: Alto do Moura, Caruaru - PE
+- Área: 14 x 60 m = 840 m²
+- Escriturado
+
+VALOR DE VENDA: R$ 300.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 3 },
+    (_, i) => `/imoveis/terrenos-e-lotes/terreno-alto-do-moura-centro-artes/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "840m² (14 x 60 m)",
+    "Área Comercial",
+    "Centro de Artes Figurativas das Américas",
+    "Escriturado",
+    "Alto do Moura",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- MAGNÍFICA ÁREA RURAL NA ZONA URBANA DE BONITO - PE (À VENDA) ---
+  {
+  id: "area-rural-bonito",
+  title: "Magnífica Área Rural na Zona Urbana de Bonito - PE",
+  price: "R$ 47.000 / ha",
+  location: "Bonito - PE",
+  type: "venda",
+  category: "terreno",
+  coverImage: "/imoveis/terrenos-e-lotes/area-rural-bonito/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "11,5 hectares",
+  description: `MAGNÍFICA ÁREA RURAL NA ZONA URBANA DA CIDADE DE BONITO – PE
+
+- 11,5 hectares
+- Localizada a 3 km da pista principal
+- A 15 km da região das cachoeiras (Bonito tem a parte alta, a das cachoeiras, e a parte baixa, onde está o terreno)
+- Relevo levemente inclinado, sem ladeiras
+- Açudes naturais e nascente de água natural: abundância de água
+- Pontos mais altos com vista para o vale
+- Cercado com porteira
+- Escriturado e registrado
+
+OBSERVAÇÃO: não se cria animais na parte alta devido ao frio e à intensa umidade.
+
+VALOR: R$ 47.000,00 por hectare (negociável) — 11,5 hectares.`,
+  videos: [],
+  images: Array.from(
+    { length: 7 },
+    (_, i) => `/imoveis/terrenos-e-lotes/area-rural-bonito/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "11,5 Hectares",
+    "Zona Urbana de Bonito - PE",
+    "A 3 km da Pista Principal",
+    "Açudes Naturais e Nascente de Água",
+    "Vista para o Vale",
+    "Cercado com Porteira",
+    "Escriturado e Registrado",
+    "Valor Negociável",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- TERRENO DE 2.500M² ÀS MARGENS DA BR-232 (SEM FOTOS - À VENDA) ---
+  {
+  id: "terreno-br-232-caruaru",
+  title: "Terreno de 2.500m² às Margens da BR-232",
+  price: "R$ 3.000.000",
+  location: "BR-232, Caruaru - PE",
+  type: "venda",
+  category: "terreno",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "2.500m²",
+  description: `TERRENO À VENDA | BR-232, ÀS MARGENS DA VIA LOCAL – CARUARU/PE
+
+Ponto de referência: a 500 metros, em linha reta, do Park Hotel, que fica do outro lado da pista.
+
+CARACTERÍSTICAS DO TERRENO:
+- 2.500 m² — escriturado
+- Valor: R$ 1.200,00 o metro quadrado (negociável)
+
+POTENCIAL DE USO:
+- Posto de combustível
+- Hotel e pousada
+- Galpões e distribuidora
+- Outros ramos de atividades
+
+VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "2.500m² Escriturado",
+    "Às Margens da BR-232",
+    "A 500m do Park Hotel",
+    "Ideal para Posto, Hotel ou Galpão",
+    "R$ 1.200,00/m²",
+    "Aceita Troca",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
+  // --- BELÍSSIMA CHÁCARA EM CONDOMÍNIO NA ZONA RURAL DE CARUARU (SEM FOTOS - À VENDA) ---
+  {
+  id: "chacara-zona-rural-caruaru",
+  title: "Belíssima Chácara em Condomínio na Zona Rural de Caruaru",
+  price: "R$ 850.000",
+  location: "Zona Rural, Caruaru - PE",
+  type: "venda",
+  category: "terreno",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 6,
+  area: "3.168m²",
+  description: `BELÍSSIMA CHÁCARA À VENDA | ZONA RURAL DE CARUARU – PE
+
+Loteamento tipo condomínio fechado na zona rural de Caruaru, cerca de 15 minutos do centro da cidade e a 1 km da pista. São 247 lotes, com praça central como área comum. Não paga condomínio; há projeto futuro para portaria 24 horas.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área: 88 x 36 m = 3.168 m²
+- Totalmente na posição nascente
+- 01 suíte master (primeiro andar) com vista privativa da piscina
+- 02 quartos sociais
+- 01 WC social
+- Sala para 02 ambientes
+- Cozinha ampla com despensa
+- Piscina adulto e infantil com cascata
+- Espaço wine
+- Área gourmet com churrasqueira a carvão e 02 banheiros
+- Lago de carpas
+- Cisterna de 100 mil litros
+- Poço com 1.500 litros/hora
+- Circuito de câmeras e alarme
+- Portão automático
+- Energia fotovoltaica
+- Vaga para 06 veículos
+- 02 terrenos com árvores frutíferas (12 x 24 m e 36 x 52 m)
+
+VALOR DE VENDA: R$ 850.000,00
+
+Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de vida.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "3.168m² (88 x 36 m)",
+    "Condomínio Fechado com 247 Lotes",
+    "Piscina Adulto e Infantil com Cascata",
+    "Espaço Wine",
+    "Área Gourmet com Churrasqueira",
+    "Lago de Carpas",
+    "Cisterna de 100 Mil Litros",
+    "Poço com 1.500 Litros/Hora",
+    "Energia Fotovoltaica",
+    "Câmeras, Alarme e Portão Automático",
+    "Vaga para 06 Veículos",
+    "Posição Nascente",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
   // =========================================================================
   // --- LOCAÇÃO ---
   // =========================================================================
@@ -1490,6 +2345,461 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 750.
   backLabel: "Voltar para Imóveis para Alugar",
 },
 
+  // --- APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA - LOCAÇÃO) ---
+  {
+  id: "ap-edf-plaza-caruaru-aluguel",
+  title: "Apartamento Mobiliado no Edifício Plaza",
+  price: "R$ 3.500 / mês",
+  location: "Edifício Plaza, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 1,
+  area: "78m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | EDF. PLAZA – CARUARU/PE
+
+Localizado na área mais nobre e valorizada da cidade, a 30 m da Avenida Agamenon Magalhães. Próximo a padarias, mercados, escolas e shopping: perto de tudo para tornar sua vida mais prática.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 78 m²
+- Sala para dois ambientes integrados
+- 03 quartos, sendo 01 suíte
+- Cozinha
+- WC social
+- Área de serviço
+- WC de serviço
+- 01 vaga de garagem
+
+DIFERENCIAIS:
+- Mobília fixa de alta qualidade
+- Ar-condicionado nos 03 quartos
+- Automação com comando por voz no Alexa
+
+CONDOMÍNIO:
+- 02 elevadores
+- Piscina adulto e infantil
+- Salão de festas
+- Quadra poliesportiva
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês — incluso condomínio e IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 14 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "78m² de Área",
+    "Mobília Fixa de Alta Qualidade",
+    "Ar-condicionado nos 03 Quartos",
+    "Automação por Voz (Alexa)",
+    "01 Suíte",
+    "01 Vaga de Garagem",
+    "Condomínio e IPTU Inclusos",
+    "Piscina Adulto e Infantil",
+    "Quadra Poliesportiva",
+    "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- FLAT MOBILIADO NO LIFE CENTER (SEM FOTOS - LOCAÇÃO) ---
+  {
+  id: "ap-life-center-flat-mobiliado",
+  title: "Flat Mobiliado no Life Center",
+  price: "R$ 2.500 / mês",
+  location: "Life Center, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "40m²",
+  description: `FLAT MOBILIADO PARA LOCAÇÃO | LIFE CENTER – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 40 m²
+- Sala para 02 ambientes
+- Cozinha equipada
+- Ar-condicionado, TV e guarda-roupa
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Academia
+- Área gourmet equipada com churrasqueira
+- Espaço home office
+- Mini mercado
+
+VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio, IPTU e estacionamento.
+
+CONDIÇÕES:
+- Garantia: caução
+- Água, gás e energia são consumos individuais
+- Vaga de garagem opcional, contratada diretamente com o condomínio`,
+  videos: [],
+  images: [],
+  amenities: [
+    "40m² de Área",
+    "Cozinha Equipada",
+    "Portaria 24 Horas",
+    "Academia",
+    "Área Gourmet com Churrasqueira",
+    "Espaço Home Office",
+    "Mini Mercado",
+    "Condomínio, IPTU e Estacionamento Inclusos",
+    "Garantia mediante Caução",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- FLAT MOBILIADO NO EDIFÍCIO MULTIPORTO (LOCAÇÃO) ---
+  {
+  id: "ap-flat-multiporto-indianopolis",
+  title: "Flat Mobiliado no Edifício Multiporto",
+  price: "R$ 2.200 / mês",
+  location: "Indianópolis, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-flat-multiporto-indianopolis/1.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "35m²",
+  description: `FLAT MOBILIADO PARA LOCAÇÃO | EDF. MULTIPORTO – INDIANÓPOLIS/CARUARU-PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 35 m²
+- 01 sala integrada à cozinha
+- 01 quarto
+- 01 banheiro
+
+VALOR DA LOCAÇÃO: R$ 2.200,00/mês — incluso condomínio e IPTU.
+
+CONDIÇÕES: garantia mediante caução.`,
+  videos: [],
+  images: Array.from(
+    { length: 10 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-flat-multiporto-indianopolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "35m² de Área",
+    "Mobiliado",
+    "Sala Integrada à Cozinha",
+    "Condomínio e IPTU Inclusos",
+    "Garantia mediante Caução",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- APARTAMENTO PARA LOCAÇÃO NO BAIRRO UNIVERSITÁRIO (ALUGADA - LOCAÇÃO) ---
+  {
+  id: "ap-universitario-aracati-aluguel",
+  title: "Apartamento para Locação no Bairro Universitário",
+  price: "R$ 1.200 / mês",
+  location: "Bairro Universitário, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-universitario-aracati/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 1,
+  parking: 0,
+  area: "50m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Próximo ao Colégio Bela Flor, na Rua Aracati, Bairro Universitário.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 1º andar (escada)
+- 50 m²
+- Sala ampla
+- 02 quartos
+- Cozinha integrada com área de serviço
+- 01 banheiro
+- SEM vaga de garagem
+
+VALOR DA LOCAÇÃO: R$ 1.200,00/mês, incluso IPTU.
+
+Água e energia são consumos individuais.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 9 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-universitario-aracati/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "50m² de Área",
+    "Sala Ampla",
+    "02 Quartos",
+    "Cozinha Integrada com Área de Serviço",
+    "IPTU Incluso",
+    "1º Andar (Escada)",
+    "Sem Vaga de Garagem",
+    "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- FLAT DE 01 QUARTO NO BELLE VILLE (LOCAÇÃO) ---
+  {
+  id: "ap-belle-ville-flat",
+  title: "Flat de 01 Quarto no Belle Ville",
+  price: "R$ 2.500 / mês",
+  location: "Belle Ville, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-belle-ville-flat/1.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "",
+  description: `FLAT PARA LOCAÇÃO | BELLE VILLE – CARUARU/PE
+
+Flat com 01 quarto disponível para locação.
+
+VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio e IPTU.
+
+CONDIÇÕES: garantia mediante caução em 3x.`,
+  videos: [],
+  images: Array.from(
+    { length: 8 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-belle-ville-flat/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "01 Quarto",
+    "Flat Mobiliado",
+    "Condomínio e IPTU Inclusos",
+    "Garantia: Caução em 3x",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- APARTAMENTO COM VARANDA NO MAURÍCIO DE NASSAU (ALUGADA - LOCAÇÃO) ---
+  {
+  id: "ap-mauricio-de-nassau-80m-aluguel",
+  title: "Apartamento com Varanda no Maurício de Nassau",
+  price: "R$ 2.600 / mês",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "80m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 80 m²
+- Varanda
+- 03 quartos, sendo 01 suíte
+- 02 vagas de garagem
+
+CONDOMÍNIO:
+- Portaria eletrônica
+- Piscina
+- Salão de festas
+- Mini academia
+- Elevador
+- Taxa de condomínio: R$ 600,00
+
+VALOR DA LOCAÇÃO: R$ 2.600,00/mês
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "80m² de Área",
+    "Varanda",
+    "01 Suíte",
+    "02 Vagas de Garagem",
+    "Portaria Eletrônica",
+    "Piscina",
+    "Salão de Festas",
+    "Elevador",
+    "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- CASA PARA LOCAÇÃO COMERCIAL NO MAURÍCIO DE NASSAU (LOCAÇÃO) ---
+  {
+  id: "casa-mauricio-de-nassau-comercial",
+  title: "Casa para Locação Comercial no Maurício de Nassau",
+  price: "R$ 5.000 / mês",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "aluguel",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 2,
+  area: "506m²",
+  description: `CASA PARA LOCAÇÃO COMERCIAL | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Posição sul, com estrutura completa e área externa generosa — ideal para uso comercial.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Terreno: 22 x 23 m — 506 m²
+- Varanda
+- 01 sala para 02 ambientes
+- 01 sala de TV
+- 04 suítes, sendo 02 máster
+- Espaço gourmet com churrasqueira
+- Piscina
+- Garagem para 02 veículos
+- Área externa
+
+VALOR DA LOCAÇÃO: R$ 5.000,00/mês — IPTU por fora.`,
+  videos: [],
+  images: Array.from(
+    { length: 22 },
+    (_, i) => `/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 506m² (22 x 23 m)",
+    "04 Suítes, sendo 02 Máster",
+    "Espaço Gourmet com Churrasqueira",
+    "Piscina",
+    "Área Externa",
+    "Garagem para 02 Veículos",
+    "Posição Sul",
+    "IPTU por Fora",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- CASA NO CONDOMÍNIO PORTAL DO SOL (ALUGADA - LOCAÇÃO) ---
+  {
+  id: "casa-portal-do-sol-aluguel",
+  title: "Casa no Condomínio Portal do Sol",
+  price: "R$ 3.500 / mês",
+  location: "Condomínio Portal do Sol, Caruaru - PE",
+  type: "aluguel",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-venda/casa-portal-do-sol/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "150m²",
+  alugado: true,
+  description: `CASA PARA LOCAÇÃO | CONDOMÍNIO PORTAL DO SOL – CARUARU/PE
+
+Excelente oportunidade para quem busca conforto, segurança e qualidade de vida em um condomínio completo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área de 150 m²
+- 03 quartos, sendo 01 suíte
+- 02 salas
+- Cozinha
+- Quintal
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Quadra poliesportiva
+- Salão de festas
+- Parquinho infantil
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês — incluso condomínio e IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 620.000,00.`,
+  videos: [],
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-portal-do-sol/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "150m² de Área",
+    "01 Suíte",
+    "02 Salas",
+    "Quintal",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Piscina e Quadra Poliesportiva",
+    "Condomínio e IPTU Inclusos",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- CASA MOBILIADA NO PINHEIROPOLIS (ALUGADA - LOCAÇÃO) ---
+  {
+  id: "casa-pinheiropolis-aluguel",
+  title: "Casa Mobiliada no Pinheiropolis",
+  price: "R$ 3.500 / mês",
+  location: "Pinheiropolis, Caruaru - PE",
+  type: "aluguel",
+  category: "casa",
+  coverImage: "/imoveis/casas-para-alugar/casa-pinheiropolis/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 3,
+  area: "180m²",
+  alugado: true,
+  description: `CASA PARA LOCAÇÃO | PINHEIROPOLIS – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área total: 6 x 30 m = 180 m²
+- 02 quartos, sendo 01 suíte com closet
+- Sala para 02 ambientes
+- 01 banheiro social
+- Jardim lateral
+- Vaga coberta para 03 veículos
+- Cisterna com capacidade de 12 mil litros
+- 01 dependência / quarto depósito
+
+MOBÍLIA QUE FICA NO IMÓVEL:
+- Sala: mesa com 4 cadeiras, sofá e home theater
+- Cozinha: fogão, micro-ondas e geladeira inox, toda mobiliada e planejada
+- Quarto social: guarda-roupa planejado
+- Quarto suíte: cama e closet planejado
+- Área de serviço: máquina de lavar
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês, incluso IPTU.
+
+CONDIÇÕES: garantia mediante caução.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-alugar/casa-pinheiropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "180m² de Área Total",
+    "Totalmente Mobiliado",
+    "01 Suíte com Closet",
+    "Sala para 02 Ambientes",
+    "Vaga Coberta para 03 Veículos",
+    "Cisterna de 12 Mil Litros",
+    "Jardim Lateral",
+    "IPTU Incluso",
+    "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
  // ==========================================
 // PONTOS COMERCIAIS
 // ==========================================
@@ -1611,5 +2921,233 @@ ESTRUTURA DA GALERIA:
   ],
   backUrl: "/empreendimentos/pontos-comerciais",
   backLabel: "Voltar para Pontos Comerciais",
-} // <-- REMOVA a vírgula do último objeto do array!
+},
+
+  // 4. SALA COMERCIAL À VENDA NO EMPRESARIAL NORDESTE CORPORATE (SEM FOTOS)
+  {
+  id: "sala-nordeste-corporate-venda",
+  title: "Sala Comercial à Venda no Empresarial Nordeste Corporate",
+  price: "R$ 330.000",
+  location: "Bairro Universitário, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 0,
+  bathrooms: 1,
+  parking: 1,
+  area: "40m²",
+  description: `SALA COMERCIAL À VENDA | EMPRESARIAL NORDESTE CORPORATE – CARUARU/PE
+
+Excelente oportunidade para instalar seu negócio em uma localização estratégica: área nobre do bairro Universitário, no polo médico, jurídico e estudantil da cidade.
+
+CARACTERÍSTICAS DO ESPAÇO:
+- 40 m² de área
+- 01 vaga de garagem
+- Portaria 24 horas
+
+Praticidade e localização privilegiada para seu escritório ou consultório.
+
+VALOR DE VENDA: R$ 330.000,00 — aceita financiamento.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "40m² de Área",
+    "01 Vaga de Garagem",
+    "Portaria 24 Horas",
+    "Polo Médico, Jurídico e Estudantil",
+    "Ideal para Escritório ou Consultório",
+    "Aceita Financiamento",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+  },
+
+  // 5. PRÉDIO COMERCIAL COM SALAS NO BAIRRO UNIVERSITÁRIO
+  {
+  id: "predio-comercial-universitario",
+  title: "Prédio Comercial com Salas no Bairro Universitário",
+  price: "R$ 15.000 / mês",
+  location: "Bairro Universitário, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  coverImage: "/imoveis/pontos-comerciais/predio-comercial-universitario/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 8,
+  parking: 0,
+  area: "Salas de 30 a 60 m²",
+  description: `ALUGO PRÉDIO COMERCIAL – CARUARU/PE
+
+Localização estratégica no bairro Universitário, ao lado do Empresarial Nordeste Corporate e da Unimed Caruaru.
+
+Imóvel onde funcionava a antiga CGU — ideal para escola de cursos, escritórios e clínicas em geral.
+
+TÉRREO:
+- 04 vagas de garagem
+- Recepção
+- Depósito
+- Lateral livre para acesso de serviço
+- Área verde lateral
+- Sala de máquinas
+- 01 sala com WC (40 m²)
+- 01 sala com WC (60 m²)
+- 01 sala com WC + quintal (36 m²)
+- Copa
+- Cisterna de grande capacidade
+
+1º ANDAR:
+- Corredor amplo de circulação
+- 05 salas com WC privativo: 55 m², 40 m², 30 m², 40 m² e 40 m²
+- Banheiro com acessibilidade
+
+VALOR DA LOCAÇÃO: R$ 15.000,00/mês`,
+  videos: [],
+  images: Array.from(
+    { length: 23 },
+    (_, i) => `/imoveis/pontos-comerciais/predio-comercial-universitario/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Localização ao lado do Nordeste Corporate e da Unimed",
+    "04 Vagas de Garagem no Térreo",
+    "08 Salas com WC",
+    "01 Sala com Quintal",
+    "Copa e Depósito",
+    "Cisterna de Grande Capacidade",
+    "Banheiro com Acessibilidade",
+    "Ideal para Cursos, Escritórios e Clínicas",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+  },
+
+  // 6. SALA COMERCIAL E PONTO DE LOJA NO BAIRRO UNIVERSITÁRIO
+  {
+  id: "sala-loja-universitario",
+  title: "Sala Comercial e Ponto de Loja no Bairro Universitário",
+  price: "A partir de R$ 1.200 / mês",
+  location: "Rua Aracati, Bairro Universitário, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  coverImage: "/imoveis/pontos-comerciais/sala-loja-universitario/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 1,
+  parking: 0,
+  area: "",
+  description: `SALA COMERCIAL E PONTO DE LOJA PARA LOCAÇÃO | BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Esquina com a Rua Aracati, próximo ao Colégio Bela Flor.
+
+OPÇÕES DISPONÍVEIS:
+- Sala comercial: R$ 1.200,00/mês
+- Loja (ponto): R$ 1.400,00/mês`,
+  videos: [],
+  images: Array.from(
+    { length: 27 },
+    (_, i) => `/imoveis/pontos-comerciais/sala-loja-universitario/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Esquina com a Rua Aracati",
+    "Próximo ao Colégio Bela Flor",
+    "Sala Comercial e Loja",
+    "Bairro Universitário",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+  },
+
+  // 7. PONTO COMERCIAL / LOJA NA AV. AGAMENON MAGALHÃES (ALUGADA)
+  {
+  id: "loja-agamenon-magalhaes",
+  title: "Ponto Comercial / Loja na Av. Agamenon Magalhães",
+  price: "R$ 28.000 / mês",
+  location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  coverImage: "/imoveis/pontos-comerciais/loja-agamenon-magalhaes/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 4,
+  parking: 0,
+  area: "464m² (construção de 297m²)",
+  alugado: true,
+  description: `LOJA / PONTO COMERCIAL PARA LOCAÇÃO | AV. AGAMENON MAGALHÃES – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área total: 14,5 x 32 m = 464 m²
+- Construção: 297 m²
+- Imóvel com acessibilidade
+
+TÉRREO:
+- Salão principal
+- Banheiros
+- 01 sala ampla
+- Cisterna de 2.000 litros
+- 05 vagas de estacionamento
+
+SUPERIOR:
+- Copa
+- Banheiros
+- Depósito
+
+VALOR DA LOCAÇÃO: R$ 28.000,00/mês — IPTU por fora.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/pontos-comerciais/loja-agamenon-magalhaes/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "464m² de Área Total",
+    "297m² de Construção",
+    "05 Vagas de Estacionamento",
+    "Salão Principal com Dois Pavimentos",
+    "Cisterna de 2.000 Litros",
+    "Imóvel com Acessibilidade",
+    "Av. Agamenon Magalhães",
+    "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+  },
+
+  // 8. PONTO COMERCIAL NO CENTRO DE CARUARU – PETRÓPOLIS (ALUGADA)
+  {
+  id: "ponto-comercial-petropolis",
+  title: "Ponto Comercial no Centro de Caruaru – Petrópolis",
+  price: "R$ 5.500 / mês",
+  location: "Petrópolis, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  coverImage: "/imoveis/pontos-comerciais/ponto-comercial-petropolis/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 1,
+  parking: 0,
+  area: "110m²",
+  alugado: true,
+  description: `PONTO COMERCIAL PARA LOCAÇÃO | CENTRO DE CARUARU – BAIRRO PETRÓPOLIS
+
+Ponto de referência: ao lado da Loja Rota do Mar.
+
+CARACTERÍSTICAS DO ESPAÇO:
+- 5,20 x 22 m = 110 m²
+- 01 banheiro
+
+VALOR DA LOCAÇÃO: R$ 5.500,00/mês, incluso IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 5 },
+    (_, i) => `/imoveis/pontos-comerciais/ponto-comercial-petropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "110m² (5,20 x 22 m)",
+    "01 Banheiro",
+    "IPTU Incluso",
+    "Centro de Caruaru",
+    "Ao Lado da Loja Rota do Mar",
+    "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+  },
 ]; 

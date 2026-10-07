@@ -414,6 +414,269 @@ OBS.: o mesmo apartamento também está à venda por R$ 410.000,00.`,
       "Bairro Universitário",
     ],
   },
+  // 7. APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA)
+  {
+  id: "ap-edf-plaza-caruaru-aluguel",
+  title: "Apartamento Mobiliado no Edifício Plaza",
+  price: "R$ 3.500 / mês",
+  location: "Edifício Plaza, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 1,
+  area: "78m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | EDF. PLAZA – CARUARU/PE
+
+Localizado na área mais nobre e valorizada da cidade, a 30 m da Avenida Agamenon Magalhães. Próximo a padarias, mercados, escolas e shopping: perto de tudo para tornar sua vida mais prática.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 78 m²
+- Sala para dois ambientes integrados
+- 03 quartos, sendo 01 suíte
+- Cozinha
+- WC social
+- Área de serviço
+- WC de serviço
+- 01 vaga de garagem
+
+DIFERENCIAIS:
+- Mobília fixa de alta qualidade
+- Ar-condicionado nos 03 quartos
+- Automação com comando por voz no Alexa
+
+CONDOMÍNIO:
+- 02 elevadores
+- Piscina adulto e infantil
+- Salão de festas
+- Quadra poliesportiva
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês — incluso condomínio e IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  video: null,
+  images: Array.from(
+    { length: 14 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "78m² de Área",
+    "Mobília Fixa de Alta Qualidade",
+    "Ar-condicionado nos 03 Quartos",
+    "Automação por Voz (Alexa)",
+    "01 Suíte",
+    "01 Vaga de Garagem",
+    "Condomínio e IPTU Inclusos",
+    "Piscina Adulto e Infantil",
+    "Quadra Poliesportiva",
+    "Imóvel Alugado",
+  ],
+  },
+  // 8. FLAT MOBILIADO NO LIFE CENTER (SEM FOTOS)
+  {
+  id: "ap-life-center-flat-mobiliado",
+  title: "Flat Mobiliado no Life Center",
+  price: "R$ 2.500 / mês",
+  location: "Life Center, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "40m²",
+  description: `FLAT MOBILIADO PARA LOCAÇÃO | LIFE CENTER – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 40 m²
+- Sala para 02 ambientes
+- Cozinha equipada
+- Ar-condicionado, TV e guarda-roupa
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Academia
+- Área gourmet equipada com churrasqueira
+- Espaço home office
+- Mini mercado
+
+VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio, IPTU e estacionamento.
+
+CONDIÇÕES:
+- Garantia: caução
+- Água, gás e energia são consumos individuais
+- Vaga de garagem opcional, contratada diretamente com o condomínio`,
+  video: null,
+  images: [],
+  amenities: [
+    "40m² de Área",
+    "Cozinha Equipada",
+    "Portaria 24 Horas",
+    "Academia",
+    "Área Gourmet com Churrasqueira",
+    "Espaço Home Office",
+    "Mini Mercado",
+    "Condomínio, IPTU e Estacionamento Inclusos",
+    "Garantia mediante Caução",
+  ],
+  },
+  // 9. FLAT MOBILIADO NO EDIFÍCIO MULTIPORTO
+  {
+  id: "ap-flat-multiporto-indianopolis",
+  title: "Flat Mobiliado no Edifício Multiporto",
+  price: "R$ 2.200 / mês",
+  location: "Indianópolis, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-flat-multiporto-indianopolis/1.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "35m²",
+  description: `FLAT MOBILIADO PARA LOCAÇÃO | EDF. MULTIPORTO – INDIANÓPOLIS/CARUARU-PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 35 m²
+- 01 sala integrada à cozinha
+- 01 quarto
+- 01 banheiro
+
+VALOR DA LOCAÇÃO: R$ 2.200,00/mês — incluso condomínio e IPTU.
+
+CONDIÇÕES: garantia mediante caução.`,
+  video: null,
+  images: Array.from(
+    { length: 10 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-flat-multiporto-indianopolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "35m² de Área",
+    "Mobiliado",
+    "Sala Integrada à Cozinha",
+    "Condomínio e IPTU Inclusos",
+    "Garantia mediante Caução",
+  ],
+  },
+  // 10. APARTAMENTO PARA LOCAÇÃO NO BAIRRO UNIVERSITÁRIO (ALUGADA)
+  {
+  id: "ap-universitario-aracati-aluguel",
+  title: "Apartamento para Locação no Bairro Universitário",
+  price: "R$ 1.200 / mês",
+  location: "Bairro Universitário, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-universitario-aracati/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 1,
+  parking: 0,
+  area: "50m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Próximo ao Colégio Bela Flor, na Rua Aracati, Bairro Universitário.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 1º andar (escada)
+- 50 m²
+- Sala ampla
+- 02 quartos
+- Cozinha integrada com área de serviço
+- 01 banheiro
+- SEM vaga de garagem
+
+VALOR DA LOCAÇÃO: R$ 1.200,00/mês, incluso IPTU.
+
+Água e energia são consumos individuais.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  video: null,
+  images: Array.from(
+    { length: 9 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-universitario-aracati/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "50m² de Área",
+    "Sala Ampla",
+    "02 Quartos",
+    "Cozinha Integrada com Área de Serviço",
+    "IPTU Incluso",
+    "1º Andar (Escada)",
+    "Sem Vaga de Garagem",
+    "Imóvel Alugado",
+  ],
+  },
+  // 11. FLAT DE 01 QUARTO NO BELLE VILLE
+  {
+  id: "ap-belle-ville-flat",
+  title: "Flat de 01 Quarto no Belle Ville",
+  price: "R$ 2.500 / mês",
+  location: "Belle Ville, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-belle-ville-flat/1.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "",
+  description: `FLAT PARA LOCAÇÃO | BELLE VILLE – CARUARU/PE
+
+Flat com 01 quarto disponível para locação.
+
+VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio e IPTU.
+
+CONDIÇÕES: garantia mediante caução em 3x.`,
+  video: null,
+  images: Array.from(
+    { length: 8 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-belle-ville-flat/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "01 Quarto",
+    "Flat Mobiliado",
+    "Condomínio e IPTU Inclusos",
+    "Garantia: Caução em 3x",
+  ],
+  },
+  // 12. APARTAMENTO COM VARANDA NO MAURÍCIO DE NASSAU (ALUGADA)
+  {
+  id: "ap-mauricio-de-nassau-80m-aluguel",
+  title: "Apartamento com Varanda no Maurício de Nassau",
+  price: "R$ 2.600 / mês",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "80m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 80 m²
+- Varanda
+- 03 quartos, sendo 01 suíte
+- 02 vagas de garagem
+
+CONDOMÍNIO:
+- Portaria eletrônica
+- Piscina
+- Salão de festas
+- Mini academia
+- Elevador
+- Taxa de condomínio: R$ 600,00
+
+VALOR DA LOCAÇÃO: R$ 2.600,00/mês
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  video: null,
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "80m² de Área",
+    "Varanda",
+    "01 Suíte",
+    "02 Vagas de Garagem",
+    "Portaria Eletrônica",
+    "Piscina",
+    "Salão de Festas",
+    "Elevador",
+    "Imóvel Alugado",
+  ],
+  },
 ]
 
 function PropertyCard({
@@ -449,6 +712,12 @@ function PropertyCard({
           <div className="absolute top-3 left-3 bg-[#b85d19] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
             Locação
           </div>
+
+          {property.alugado && (
+            <div className="absolute bottom-3 right-3 bg-red-600 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
+              Alugado
+            </div>
+          )}
 
           {property.video && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
@@ -556,7 +825,11 @@ function ApartamentosParaAlugarContent() {
   const mediaItems = activeProperty
     ? [
         ...(activeProperty.video ? [{ type: "video" as const, src: activeProperty.video }] : []),
-        ...activeProperty.images.map((src) => ({ type: "image" as const, src, alt: activeProperty.title })),
+        ...(activeProperty.images.length > 0 ? activeProperty.images : [activeProperty.coverImage]).map((src) => ({
+          type: "image" as const,
+          src,
+          alt: activeProperty.title,
+        })),
       ]
     : []
 
@@ -758,6 +1031,12 @@ function ApartamentosParaAlugarContent() {
                   <p className="font-serif text-2xl md:text-3xl text-[#0d3b2e] font-bold my-2">
                     {activeProperty.price || "Sob Consulta"}
                   </p>
+
+                  {activeProperty.alugado && (
+                    <p className="text-sm font-medium text-red-600">
+                      Imóvel alugado no momento
+                    </p>
+                  )}
 
                   <div className="space-y-3 mt-6">
                     <Button asChild className="w-full bg-[#0d3b2e] hover:bg-[#092920] text-white" size="lg">

@@ -272,6 +272,275 @@ OBS.: também disponível para locação por R$ 2.700,00/mês.`,
       "Escriturado - Pronto para Financiamento",
     ],
   },
+  // 5. APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA)
+  {
+  id: "ap-edf-plaza-caruaru",
+  title: "Apartamento Mobiliado no Edifício Plaza",
+  price: "R$ 680.000",
+  location: "Edifício Plaza, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 1,
+  area: "78m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | EDF. PLAZA – CARUARU/PE
+
+Localizado na área mais nobre e valorizada da cidade, a 30 m da Avenida Agamenon Magalhães. Próximo a padarias, mercados, escolas e shopping: perto de tudo para tornar sua vida mais prática.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 78 m²
+- Sala para dois ambientes integrados
+- 03 quartos, sendo 01 suíte
+- Cozinha
+- WC social
+- Área de serviço
+- WC de serviço
+- 01 vaga de garagem
+
+DIFERENCIAIS:
+- Mobília fixa de alta qualidade
+- Ar-condicionado nos 03 quartos
+- Automação com comando por voz no Alexa
+
+CONDOMÍNIO:
+- 02 elevadores
+- Piscina adulto e infantil
+- Salão de festas
+- Quadra poliesportiva
+
+VALOR DE VENDA: R$ 680.000,00
+
+OBS.: o imóvel está alugado por R$ 3.500,00/mês (incluso condomínio e IPTU) e continua disponível para aquisição.`,
+  videos: [],
+  images: Array.from(
+    { length: 14 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "78m² de Área",
+    "Mobília Fixa de Alta Qualidade",
+    "Ar-condicionado nos 03 Quartos",
+    "Automação por Voz (Alexa)",
+    "01 Suíte",
+    "01 Vaga de Garagem",
+    "Piscina Adulto e Infantil",
+    "Quadra Poliesportiva",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 6. APARTAMENTO TOTALMENTE REFORMADO NO EKO HOME CLUB – TORRE IPÊ A
+  {
+  id: "ap-eko-home-club-torre-ipe-a",
+  title: "Apartamento Totalmente Reformado no Eko Home Club – Torre Ipê A",
+  price: "R$ 420.000",
+  location: "Bairro Universitário, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 2,
+  area: "60m²",
+  description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ A – CARUARU/PE
+
+Exclusivo apartamento totalmente reformado na área nobre do bairro Universitário, no polo médico, jurídico e estudantil da cidade.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m²
+- Posição sul, voltado para a piscina
+- Sala para dois ambientes
+- 02 quartos, sendo 01 suíte
+- Cozinha ampla planejada
+- Área de serviço
+- 02 vagas de garagem descobertas
+
+ACABAMENTO E MOBILIÁRIO:
+- Móveis planejados, guarda-roupas e iluminação projetada
+- Forno embutido com cooktop
+- Ficam no imóvel apenas os móveis fixos planejados
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Academia, piscina e salão de festas
+- Área gourmet, espaço de pilates e pista de cooper
+- Quadra poliesportiva, quadra de tênis e lava jato
+
+VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
+  videos: [
+    "/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/1.mp4",
+  ],
+  images: Array.from(
+    { length: 18 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "60m² de Área Privativa",
+    "Posição Sul Voltada para a Piscina",
+    "01 Suíte",
+    "Móveis Planejados e Iluminação Projetada",
+    "Forno Embutido com Cooktop",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Academia, Piscina e Salão de Festas",
+    "Quadra Poliesportiva e de Tênis",
+    "Aceita Financiamento",
+  ],
+  },
+  // 7. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - SEM FOTOS)
+  {
+  id: "ap-lusia-maciel",
+  title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
+  price: "R$ 850.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 2,
+  area: "107m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | EDF. LUSIA MACIEL – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Imóvel totalmente reformado com fino acabamento de alto padrão, na área nobre do bairro Maurício de Nassau. Exclusivo: 02 apartamentos por andar.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 107 m²
+- Sala para dois ambientes
+- 03 quartos, sendo 01 suíte
+- 01 dependência com WC
+- Área de serviço
+- 02 vagas de garagem cobertas
+
+ACABAMENTO:
+- Porcelanato Porto Belo AA
+- Louças e metais Deca
+- Móveis planejados Florêncio
+- Iluminação projetada
+- Todos os ambientes com pontos de ar-condicionado
+- Varanda com pele de vidro
+
+VALOR DE VENDA: R$ 850.000,00 — não aceita financiamento no momento.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "107m² de Área",
+    "Exclusivo 02 por Andar",
+    "Móveis Planejados Florêncio",
+    "Porcelanato Porto Belo AA",
+    "Louças e Metais Deca",
+    "Iluminação Projetada",
+    "Pontos de Ar-condicionado em Todos os Ambientes",
+    "Varanda com Pele de Vidro",
+    "02 Vagas Cobertas",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 8. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO ANDREZZA
+  {
+  id: "ap-andrezza-mauricio-de-nassau",
+  title: "Apartamento de Alto Padrão no Edifício Andrezza",
+  price: "R$ 800.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 3,
+  area: "240m²",
+  description: `APARTAMENTO À VENDA | EDF. ANDREZZA – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Apartamento na área nobre do bairro Maurício de Nassau, imóvel exclusivo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 02 por andar
+- Posição sul
+- Área de 240 m²
+- 04 quartos, sendo 03 suítes
+- 01 dependência
+- Varanda
+- Sala para 02 ambientes
+- Cozinha ampla
+- Área de serviço
+- 03 vagas de garagem coberta
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Salão de jogos
+- Salão de festas
+- Bicicletário
+- Academia
+
+VALOR DE VENDA: R$ 800.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 8 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "240m² de Área",
+    "Exclusivo 02 por Andar",
+    "Posição Sul",
+    "04 Quartos, sendo 03 Suítes",
+    "01 Dependência",
+    "Varanda",
+    "Sala para 02 Ambientes",
+    "Cozinha Ampla",
+    "03 Vagas de Garagem Coberta",
+    "Portaria 24 Horas",
+    "Piscina e Salão de Festas",
+    "Salão de Jogos e Bicicletário",
+    "Academia",
+  ],
+  },
+  // 9. APARTAMENTO COM VARANDA NO MAURÍCIO DE NASSAU (ALUGADA)
+  {
+  id: "ap-mauricio-de-nassau-80m",
+  title: "Apartamento com Varanda no Maurício de Nassau",
+  price: "R$ 450.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "80m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 80 m²
+- Varanda
+- 03 quartos, sendo 01 suíte
+- 02 vagas de garagem
+
+CONDOMÍNIO:
+- Portaria eletrônica
+- Piscina
+- Salão de festas
+- Mini academia
+- Elevador
+- Taxa de condomínio: R$ 600,00
+
+VALOR DE VENDA: R$ 450.000,00
+
+OBS.: o imóvel está alugado por R$ 2.600,00/mês e continua disponível para venda.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "80m² de Área",
+    "Varanda",
+    "01 Suíte",
+    "02 Vagas de Garagem",
+    "Portaria Eletrônica",
+    "Piscina",
+    "Salão de Festas",
+    "Mini Academia",
+    "Elevador",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
 ]
 
 // =========================================================================
@@ -312,6 +581,12 @@ function PropertyCard({
           <div className="absolute top-3 left-3 bg-[#0d3b2e] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
             Venda
           </div>
+
+          {property.alugado && (
+            <div className="absolute bottom-3 right-3 bg-red-600 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
+              Alugado
+            </div>
+          )}
 
           {hasVideos && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
@@ -418,7 +693,11 @@ function ApartamentosParaVendaContent() {
 
   const mediaItems = activeProperty
     ? [
-        ...activeProperty.images.map((src) => ({ type: "image" as const, src, alt: activeProperty.title })),
+        ...(activeProperty.images.length > 0 ? activeProperty.images : [activeProperty.coverImage]).map((src) => ({
+          type: "image" as const,
+          src,
+          alt: activeProperty.title,
+        })),
         ...(activeProperty.videos?.map((src) => ({ type: "video" as const, src })) || []),
       ]
     : []
@@ -625,6 +904,12 @@ function ApartamentosParaVendaContent() {
                   <p className="font-serif text-2xl md:text-3xl text-[#0d3b2e] font-bold my-2">
                     {activeProperty.price || "Sob Consulta"}
                   </p>
+
+                  {activeProperty.alugado && (
+                    <p className="text-sm font-medium text-red-600">
+                      Imóvel alugado · disponível para venda
+                    </p>
+                  )}
 
                   <div className="space-y-3 mt-6">
                     <Button asChild className="w-full bg-[#0d3b2e] hover:bg-[#092920] text-white" size="lg">

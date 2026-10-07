@@ -360,6 +360,301 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
       "Imóvel Alugado - Disponível para Venda",
     ],
   },
+  // 7. CASA TÉRREA COM JARDIM NO MAURÍCIO DE NASSAU
+  {
+  id: "casa-mauricio-de-nassau-jardim",
+  title: "Casa Térrea com Jardim no Maurício de Nassau",
+  price: "R$ 700.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 1,
+  area: "",
+  description: `CASA À VENDA | BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Se você busca conforto, modernidade e localização privilegiada, essa é a oportunidade perfeita.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 03 quartos, sendo 01 suíte
+- Banheiro social
+- Sala ampla para 02 ambientes
+- Cozinha espaçosa e bem ventilada
+- Jardim encantador
+- Área de serviço ampla
+- Quarto de apoio com varanda
+- Garagem para 01 veículo
+- Cisterna de 7.000 litros + caixa d'água
+
+LOCALIZAÇÃO: no coração de Maurício de Nassau, um dos bairros mais valorizados e desejados da cidade.
+
+VALOR DE VENDA: R$ 700.000,00 — pronta para morar. Pode ser financiada por qualquer banco da sua preferência.`,
+  video: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/1.mp4",
+  images: Array.from(
+    { length: 19 },
+    (_, i) => `/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "01 Suíte",
+    "Sala Amplа para 02 Ambientes",
+    "Jardim Encantador",
+    "Quarto de Apoio com Varanda",
+    "Cisterna de 7.000 Litros",
+    "Cozinha Espaçosa e Ventilada",
+    "Pronta para Morar",
+    "Aceita Financiamento",
+  ],
+  },
+  // 8. CASA NO CONDOMÍNIO PORTAL DO SOL (ALUGADA)
+  {
+  id: "casa-portal-do-sol-venda",
+  title: "Casa no Condomínio Portal do Sol",
+  price: "R$ 620.000",
+  location: "Condomínio Portal do Sol, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-portal-do-sol/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "150m²",
+  alugado: true,
+  description: `CASA À VENDA | CONDOMÍNIO PORTAL DO SOL – CARUARU/PE
+
+Excelente oportunidade para quem busca conforto, segurança e qualidade de vida em um condomínio completo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área de 150 m²
+- 03 quartos, sendo 01 suíte
+- 02 salas
+- Cozinha
+- Quintal
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Quadra poliesportiva
+- Salão de festas
+- Parquinho infantil
+
+VALOR DE VENDA: R$ 620.000,00
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação por R$ 3.500,00/mês, incluso condomínio e IPTU).`,
+  video: null,
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-portal-do-sol/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "150m² de Área",
+    "01 Suíte",
+    "02 Salas",
+    "Quintal",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Piscina e Quadra Poliesportiva",
+    "Salão de Festas e Parquinho Infantil",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 9. CASA DE GRANDES PROPORÇÕES NO MAURÍCIO DE NASSAU
+  {
+  id: "casa-mauricio-de-nassau-ampla",
+  title: "Casa de Grandes Proporções no Maurício de Nassau",
+  price: "R$ 2.500.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/1.jpeg",
+  bedrooms: 8,
+  bathrooms: 6,
+  parking: 0,
+  area: "360m²",
+  description: `CASA À VENDA | BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Casa de grandes proporções em dois pavimentos, na área nobre do bairro Maurício de Nassau.
+
+TERREO:
+- 04 salas
+- 04 quartos, sendo 03 suítes
+- 01 cozinha
+- 01 subsolo com cerca de 150 m²
+
+1º ANDAR:
+- 01 sala de som
+- Varanda
+- 04 quartos, sendo 01 suíte com closet
+- 01 cozinha
+- 02 salas
+- Área de serviço com quarto de empregada e banheiro
+
+DADOS DO IMÓVEL:
+- Terreno: 12 x 30 m = 360 m²
+
+VALOR DE VENDA: R$ 2.500.000,00 — imóvel escriturado. Negocia e aceita troca.`,
+  video: null,
+  images: Array.from(
+    { length: 44 },
+    (_, i) => `/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno 12 x 30 m (360 m²)",
+    "Dois Pavimentos",
+    "04 Suítes no Total",
+    "01 Subsolo com 150 m²",
+    "Varanda",
+    "02 Cozinhas e 03 Salas",
+    "Quarto de Empregada com Banheiro",
+    "Escriturado",
+    "Aceita Troca",
+  ],
+  },
+  // 10. CASA DUPLEX DE ALTO PADRÃO NO QUINTAS DA COLINA II
+  {
+  id: "casa-duplex-quintas-da-colina-ii",
+  title: "Casa Duplex de Alto Padrão no Quintas da Colina II",
+  price: "R$ 2.100.000",
+  location: "Quintas da Colina II, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/1.jpeg",
+  bedrooms: 5,
+  bathrooms: 5,
+  parking: 4,
+  area: "541m²",
+  description: `CASA DUPLEX À VENDA | CONDOMÍNIO QUINTAS DA COLINA II – CARUARU/PE
+
+Área total: 600 m² | Área construída: 541 m²
+
+TERREO:
+- Garagem para 04 carros
+- 02 salas de estar (principal e multimídia)
+- Sala de jantar
+- Cozinha com despensa
+- Quarto de visitas com closet e banheiro
+- Área de lazer com piscina, churrasqueira a gás, WC e chuveirão
+- Dependência de secretária com banheiro
+- 02 depósitos
+- Área de serviço
+
+1º ANDAR:
+- Mezanino
+- 04 quartos com closet e banheiro, sendo uma suíte master
+- Sala reversível
+- Quarto reversível
+- Escritório
+
+DETALHES:
+- Móveis fixos e lustres ficam no imóvel
+- Piscina aquecida
+- Casa com energia solar
+- Ar-condicionados acompanham a compra
+
+CONDOMÍNIO:
+- Academia bem equipada, piscina e portaria 24h
+- Quadras de vôlei, poliesportiva, tênis e beach tênis
+- Vários parquinhos infantis e pista de bike
+- Aulas coletivas adulto e infantil, natação e muito mais
+
+VALOR DE VENDA: R$ 2.100.000,00 — aceita imóvel de menor valor como permuta.`,
+  video: null,
+  images: Array.from(
+    { length: 24 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "541m² de Área Construída",
+    "Terreno de 600m²",
+    "Piscina Aquecida",
+    "Energia Solar",
+    "Móveis Fixos e Lustres Inclusos",
+    "Garagem para 04 Carros",
+    "Academia e Quadras do Condomínio",
+    "Aceita Permuta",
+  ],
+  },
+  // 11. CASA DUPLEX NO CONDOMÍNIO CLODOALDO SAMPAIO
+  {
+  id: "casa-duplex-clodoaldo-sampaio",
+  title: "Casa Duplex no Condomínio Clodoaldo Sampaio",
+  price: "R$ 280.000",
+  location: "Boa Vista, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-clodoaldo-sampaio/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 2,
+  area: "",
+  description: `CASA DUPLEX À VENDA | CONDOMÍNIO CLODOALDO SAMPAIO – BOA VISTA – CARUARU/PE
+(Próximo ao SESI)
+
+Encantadora casa duplex no bairro Boa Vista, dentro do condomínio Clodoaldo Sampaio, com segurança e excelente localização.
+
+TERREO:
+- Portão eletrônico
+- Garagem para 02 carros
+- Cisterna de 4.000 litros com bomba instalada
+- Sala para dois ambientes
+- Cozinha e área de serviço
+- Lavabo
+
+PAVIMENTO SUPERIOR:
+- 03 quartos, sendo 01 suíte master com varanda
+- Banheiro social
+- Espaço para home office
+
+VALOR DE VENDA: R$ 280.000,00 — aceita financiamento.
+Condomínio: R$ 340,00.`,
+  video: null,
+  images: Array.from(
+    { length: 32 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-clodoaldo-sampaio/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Cisterna de 4.000 Litros com Bomba",
+    "01 Suíte Master com Varanda",
+    "Espaço para Home Office",
+    "Portão Eletrônico",
+    "Garagem para 02 Carros",
+    "Lavabo",
+    "Aceita Financiamento",
+  ],
+  },
+  // 12. CASA DE ALTO PADRÃO NO BAIRRO LUIZ GONZAGA
+  {
+  id: "casa-luiz-gonzaga",
+  title: "Casa de Alto Padrão no Bairro Luiz Gonzaga",
+  price: "R$ 499.000",
+  location: "Luiz Gonzaga, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 3,
+  area: "180m²",
+  description: `OPORTUNIDADE NO BAIRRO LUIZ GONZAGA – CARUARU/PE
+
+Conforto, sofisticação e uma excelente localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Terreno com 180 m²
+- Garagem para até 03 carros
+- Sala ampla para dois ambientes
+- Cozinha funcional
+- Área de serviço
+- 03 quartos, sendo 02 suítes
+- WC de serviço
+- WC social
+
+VALOR DE VENDA: R$ 499.000,00 — pode ser financiada.`,
+  video: null,
+  images: Array.from(
+    { length: 29 },
+    (_, i) => `/imoveis/casas-para-venda/casa-luiz-gonzaga/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 180m²",
+    "02 Suítes",
+    "Sala Ampla para 02 Ambientes",
+    "Garagem para 03 Carros",
+    "Cozinha Funcional",
+    "WC de Serviço",
+    "Aceita Financiamento",
+  ],
+  },
 ]
 
 // Componente do Card com navegação individual de fotos

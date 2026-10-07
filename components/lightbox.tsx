@@ -80,7 +80,7 @@ export function Lightbox({ items, initialIndex, isOpen, onClose }: LightboxProps
 
   return (
     <AnimatePresence>
-      {isOpen && (
+      {isOpen && items.length > 0 && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

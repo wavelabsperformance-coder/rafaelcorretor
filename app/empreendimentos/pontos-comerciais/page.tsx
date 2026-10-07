@@ -29,6 +29,7 @@ export interface ImovelComercial {
   videos?: string[]
   images: string[]
   amenities: string[]
+  alugado?: boolean
 }
 
 function parsePrecoComercial(priceStr: string): number {
@@ -42,6 +43,10 @@ function parsePrecoComercial(priceStr: string): number {
 // Se não tiver bairro (ex: "Av. Agamenon Magalhães, Caruaru - PE"), retorna ""
 function getBairro(location: string): string {
   const parts = location.split(",").map((p) => p.trim())
+  // "Bairro Universitário, Caruaru - PE" -> "Bairro Universitário"
+  if (parts.length === 2) {
+    return /^(av\.|avenida|rua|travessa|alameda|rodovia|estrada|beco)\b/i.test(parts[0]) ? "" : parts[0]
+  }
   if (parts.length < 3) return ""
   return parts[parts.length - 2]
 }
@@ -151,7 +156,199 @@ ESTRUTURA DA GALERIA:
     "Ideal para Consultórios e Lojas",
   ],
 },
+  // 4. SALA COMERCIAL À VENDA NO EMPRESARIAL NORDESTE CORPORATE (SEM FOTOS)
+  {
+  id: "sala-nordeste-corporate-venda",
+  title: "Sala Comercial à Venda no Empresarial Nordeste Corporate",
+  price: "R$ 330.000",
+  location: "Bairro Universitário, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bathrooms: 1,
+  area: "40m²",
+  description: `SALA COMERCIAL À VENDA | EMPRESARIAL NORDESTE CORPORATE – CARUARU/PE
 
+Excelente oportunidade para instalar seu negócio em uma localização estratégica: área nobre do bairro Universitário, no polo médico, jurídico e estudantil da cidade.
+
+CARACTERÍSTICAS DO ESPAÇO:
+- 40 m² de área
+- 01 vaga de garagem
+- Portaria 24 horas
+
+Praticidade e localização privilegiada para seu escritório ou consultório.
+
+VALOR DE VENDA: R$ 330.000,00 — aceita financiamento.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "40m² de Área",
+    "01 Vaga de Garagem",
+    "Portaria 24 Horas",
+    "Polo Médico, Jurídico e Estudantil",
+    "Ideal para Escritório ou Consultório",
+    "Aceita Financiamento",
+  ],
+  },
+  // 5. PRÉDIO COMERCIAL COM SALAS NO BAIRRO UNIVERSITÁRIO
+  {
+  id: "predio-comercial-universitario",
+  title: "Prédio Comercial com Salas no Bairro Universitário",
+  price: "R$ 15.000 / mês",
+  location: "Bairro Universitário, Caruaru - PE",
+  coverImage: "/imoveis/pontos-comerciais/predio-comercial-universitario/1.jpeg",
+  bathrooms: 8,
+  area: "Salas de 30 a 60 m²",
+  description: `ALUGO PRÉDIO COMERCIAL – CARUARU/PE
+
+Localização estratégica no bairro Universitário, ao lado do Empresarial Nordeste Corporate e da Unimed Caruaru.
+
+Imóvel onde funcionava a antiga CGU — ideal para escola de cursos, escritórios e clínicas em geral.
+
+TÉRREO:
+- 04 vagas de garagem
+- Recepção
+- Depósito
+- Lateral livre para acesso de serviço
+- Área verde lateral
+- Sala de máquinas
+- 01 sala com WC (40 m²)
+- 01 sala com WC (60 m²)
+- 01 sala com WC + quintal (36 m²)
+- Copa
+- Cisterna de grande capacidade
+
+1º ANDAR:
+- Corredor amplo de circulação
+- 05 salas com WC privativo: 55 m², 40 m², 30 m², 40 m² e 40 m²
+- Banheiro com acessibilidade
+
+VALOR DA LOCAÇÃO: R$ 15.000,00/mês`,
+  videos: [],
+  images: Array.from(
+    { length: 23 },
+    (_, i) => `/imoveis/pontos-comerciais/predio-comercial-universitario/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Localização ao lado do Nordeste Corporate e da Unimed",
+    "04 Vagas de Garagem no Térreo",
+    "08 Salas com WC",
+    "01 Sala com Quintal",
+    "Copa e Depósito",
+    "Cisterna de Grande Capacidade",
+    "Banheiro com Acessibilidade",
+    "Ideal para Cursos, Escritórios e Clínicas",
+  ],
+  },
+  // 6. SALA COMERCIAL E PONTO DE LOJA NO BAIRRO UNIVERSITÁRIO
+  {
+  id: "sala-loja-universitario",
+  title: "Sala Comercial e Ponto de Loja no Bairro Universitário",
+  price: "A partir de R$ 1.200 / mês",
+  location: "Rua Aracati, Bairro Universitário, Caruaru - PE",
+  coverImage: "/imoveis/pontos-comerciais/sala-loja-universitario/1.jpeg",
+  bathrooms: 1,
+  area: "",
+  description: `SALA COMERCIAL E PONTO DE LOJA PARA LOCAÇÃO | BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Esquina com a Rua Aracati, próximo ao Colégio Bela Flor.
+
+OPÇÕES DISPONÍVEIS:
+- Sala comercial: R$ 1.200,00/mês
+- Loja (ponto): R$ 1.400,00/mês`,
+  videos: [],
+  images: Array.from(
+    { length: 27 },
+    (_, i) => `/imoveis/pontos-comerciais/sala-loja-universitario/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Esquina com a Rua Aracati",
+    "Próximo ao Colégio Bela Flor",
+    "Sala Comercial e Loja",
+    "Bairro Universitário",
+  ],
+  },
+  // 7. PONTO COMERCIAL / LOJA NA AV. AGAMENON MAGALHÃES (ALUGADA)
+  {
+  id: "loja-agamenon-magalhaes",
+  title: "Ponto Comercial / Loja na Av. Agamenon Magalhães",
+  price: "R$ 28.000 / mês",
+  location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/pontos-comerciais/loja-agamenon-magalhaes/1.jpeg",
+  bathrooms: 4,
+  area: "464m² (construção de 297m²)",
+  alugado: true,
+  description: `LOJA / PONTO COMERCIAL PARA LOCAÇÃO | AV. AGAMENON MAGALHÃES – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área total: 14,5 x 32 m = 464 m²
+- Construção: 297 m²
+- Imóvel com acessibilidade
+
+TÉRREO:
+- Salão principal
+- Banheiros
+- 01 sala ampla
+- Cisterna de 2.000 litros
+- 05 vagas de estacionamento
+
+SUPERIOR:
+- Copa
+- Banheiros
+- Depósito
+
+VALOR DA LOCAÇÃO: R$ 28.000,00/mês — IPTU por fora.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/pontos-comerciais/loja-agamenon-magalhaes/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "464m² de Área Total",
+    "297m² de Construção",
+    "05 Vagas de Estacionamento",
+    "Salão Principal com Dois Pavimentos",
+    "Cisterna de 2.000 Litros",
+    "Imóvel com Acessibilidade",
+    "Av. Agamenon Magalhães",
+    "Imóvel Alugado",
+  ],
+  },
+  // 8. PONTO COMERCIAL NO CENTRO DE CARUARU – PETRÓPOLIS (ALUGADA)
+  {
+  id: "ponto-comercial-petropolis",
+  title: "Ponto Comercial no Centro de Caruaru – Petrópolis",
+  price: "R$ 5.500 / mês",
+  location: "Petrópolis, Caruaru - PE",
+  coverImage: "/imoveis/pontos-comerciais/ponto-comercial-petropolis/1.jpeg",
+  bathrooms: 1,
+  area: "110m²",
+  alugado: true,
+  description: `PONTO COMERCIAL PARA LOCAÇÃO | CENTRO DE CARUARU – BAIRRO PETRÓPOLIS
+
+Ponto de referência: ao lado da Loja Rota do Mar.
+
+CARACTERÍSTICAS DO ESPAÇO:
+- 5,20 x 22 m = 110 m²
+- 01 banheiro
+
+VALOR DA LOCAÇÃO: R$ 5.500,00/mês, incluso IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 5 },
+    (_, i) => `/imoveis/pontos-comerciais/ponto-comercial-petropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "110m² (5,20 x 22 m)",
+    "01 Banheiro",
+    "IPTU Incluso",
+    "Centro de Caruaru",
+    "Ao Lado da Loja Rota do Mar",
+    "Imóvel Alugado",
+  ],
+  },
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis
@@ -210,6 +407,12 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
           <div className="absolute top-3 left-3 bg-[#0d3b2e] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
             Comercial
           </div>
+
+          {property.alugado && (
+            <div className="absolute bottom-3 right-3 bg-red-600 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
+              Alugado
+            </div>
+          )}
 
           {/* VÍDEO */}
           {hasVideos && (

@@ -50,7 +50,11 @@ export default function ImovelDetalhesPage() {
   }
 
   const mediaItems = [
-    ...imovel.images.map((src) => ({ type: "image" as const, src, alt: imovel.title })),
+    ...(imovel.images.length > 0 ? imovel.images : [imovel.coverImage]).map((src) => ({
+      type: "image" as const,
+      src,
+      alt: imovel.title,
+    })),
     ...(imovel.videos?.map((src) => ({ type: "video" as const, src })) || []),
   ]
 
@@ -160,10 +164,12 @@ export default function ImovelDetalhesPage() {
                     <span className="font-medium text-foreground">{imovel.bedrooms}</span> {imovel.bedrooms === 1 ? "Quarto" : "Quartos"}
                   </div>
                 )}
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Bath className="h-5 w-5 text-[#0d3b2e]" />
-                  <span className="font-medium text-foreground">{imovel.bathrooms}</span> {imovel.bathrooms === 1 ? "Banheiro" : "Banheiros"}
-                </div>
+                {imovel.bathrooms > 0 && (
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Bath className="h-5 w-5 text-[#0d3b2e]" />
+                    <span className="font-medium text-foreground">{imovel.bathrooms}</span> {imovel.bathrooms === 1 ? "Banheiro" : "Banheiros"}
+                  </div>
+                )}
                 {imovel.parking > 0 && (
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Car className="h-5 w-5 text-[#0d3b2e]" />

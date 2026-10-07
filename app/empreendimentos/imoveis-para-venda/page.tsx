@@ -23,7 +23,7 @@ import { FeaturedCarousel } from "@/components/featured-carousel"
 
 export interface ImovelVenda {
   id: string
-  tipo: "casa" | "apartamento"
+  tipo: "casa" | "apartamento" | "terreno"
   title: string
   price: string
   location: string
@@ -754,7 +754,797 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
       "Imóvel Alugado - Disponível para Venda",
     ],
   },
+  // 17. APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA)
+  {
+  id: "ap-edf-plaza-caruaru",
+  tipo: "apartamento",
+  title: "Apartamento Mobiliado no Edifício Plaza",
+  price: "R$ 680.000",
+  location: "Edifício Plaza, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 1,
+  area: "78m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | EDF. PLAZA – CARUARU/PE
 
+Localizado na área mais nobre e valorizada da cidade, a 30 m da Avenida Agamenon Magalhães. Próximo a padarias, mercados, escolas e shopping: perto de tudo para tornar sua vida mais prática.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 78 m²
+- Sala para dois ambientes integrados
+- 03 quartos, sendo 01 suíte
+- Cozinha
+- WC social
+- Área de serviço
+- WC de serviço
+- 01 vaga de garagem
+
+DIFERENCIAIS:
+- Mobília fixa de alta qualidade
+- Ar-condicionado nos 03 quartos
+- Automação com comando por voz no Alexa
+
+CONDOMÍNIO:
+- 02 elevadores
+- Piscina adulto e infantil
+- Salão de festas
+- Quadra poliesportiva
+
+VALOR DE VENDA: R$ 680.000,00
+
+OBS.: o imóvel está alugado por R$ 3.500,00/mês (incluso condomínio e IPTU) e continua disponível para aquisição.`,
+  videos: [],
+  images: Array.from(
+    { length: 14 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "78m² de Área",
+    "Mobília Fixa de Alta Qualidade",
+    "Ar-condicionado nos 03 Quartos",
+    "Automação por Voz (Alexa)",
+    "01 Suíte",
+    "01 Vaga de Garagem",
+    "Piscina Adulto e Infantil",
+    "Quadra Poliesportiva",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 18. APARTAMENTO TOTALMENTE REFORMADO NO EKO HOME CLUB – TORRE IPÊ A
+  {
+  id: "ap-eko-home-club-torre-ipe-a",
+  tipo: "apartamento",
+  title: "Apartamento Totalmente Reformado no Eko Home Club – Torre Ipê A",
+  price: "R$ 420.000",
+  location: "Bairro Universitário, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 2,
+  area: "60m²",
+  description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ A – CARUARU/PE
+
+Exclusivo apartamento totalmente reformado na área nobre do bairro Universitário, no polo médico, jurídico e estudantil da cidade.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m²
+- Posição sul, voltado para a piscina
+- Sala para dois ambientes
+- 02 quartos, sendo 01 suíte
+- Cozinha ampla planejada
+- Área de serviço
+- 02 vagas de garagem descobertas
+
+ACABAMENTO E MOBILIÁRIO:
+- Móveis planejados, guarda-roupas e iluminação projetada
+- Forno embutido com cooktop
+- Ficam no imóvel apenas os móveis fixos planejados
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Academia, piscina e salão de festas
+- Área gourmet, espaço de pilates e pista de cooper
+- Quadra poliesportiva, quadra de tênis e lava jato
+
+VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
+  videos: [
+    "/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/1.mp4",
+  ],
+  images: Array.from(
+    { length: 18 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-eko-home-club-torre-ipe-a/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "60m² de Área Privativa",
+    "Posição Sul Voltada para a Piscina",
+    "01 Suíte",
+    "Móveis Planejados e Iluminação Projetada",
+    "Forno Embutido com Cooktop",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Academia, Piscina e Salão de Festas",
+    "Quadra Poliesportiva e de Tênis",
+    "Aceita Financiamento",
+  ],
+  },
+  // 19. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - SEM FOTOS)
+  {
+  id: "ap-lusia-maciel",
+  tipo: "apartamento",
+  title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
+  price: "R$ 850.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 2,
+  area: "107m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | EDF. LUSIA MACIEL – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Imóvel totalmente reformado com fino acabamento de alto padrão, na área nobre do bairro Maurício de Nassau. Exclusivo: 02 apartamentos por andar.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 107 m²
+- Sala para dois ambientes
+- 03 quartos, sendo 01 suíte
+- 01 dependência com WC
+- Área de serviço
+- 02 vagas de garagem cobertas
+
+ACABAMENTO:
+- Porcelanato Porto Belo AA
+- Louças e metais Deca
+- Móveis planejados Florêncio
+- Iluminação projetada
+- Todos os ambientes com pontos de ar-condicionado
+- Varanda com pele de vidro
+
+VALOR DE VENDA: R$ 850.000,00 — não aceita financiamento no momento.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "107m² de Área",
+    "Exclusivo 02 por Andar",
+    "Móveis Planejados Florêncio",
+    "Porcelanato Porto Belo AA",
+    "Louças e Metais Deca",
+    "Iluminação Projetada",
+    "Pontos de Ar-condicionado em Todos os Ambientes",
+    "Varanda com Pele de Vidro",
+    "02 Vagas Cobertas",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 20. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO ANDREZZA
+  {
+  id: "ap-andrezza-mauricio-de-nassau",
+  tipo: "apartamento",
+  title: "Apartamento de Alto Padrão no Edifício Andrezza",
+  price: "R$ 800.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 3,
+  area: "240m²",
+  description: `APARTAMENTO À VENDA | EDF. ANDREZZA – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Apartamento na área nobre do bairro Maurício de Nassau, imóvel exclusivo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 02 por andar
+- Posição sul
+- Área de 240 m²
+- 04 quartos, sendo 03 suítes
+- 01 dependência
+- Varanda
+- Sala para 02 ambientes
+- Cozinha ampla
+- Área de serviço
+- 03 vagas de garagem coberta
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Salão de jogos
+- Salão de festas
+- Bicicletário
+- Academia
+
+VALOR DE VENDA: R$ 800.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 8 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "240m² de Área",
+    "Exclusivo 02 por Andar",
+    "Posição Sul",
+    "04 Quartos, sendo 03 Suítes",
+    "01 Dependência",
+    "Varanda",
+    "Sala para 02 Ambientes",
+    "Cozinha Ampla",
+    "03 Vagas de Garagem Coberta",
+    "Portaria 24 Horas",
+    "Piscina e Salão de Festas",
+    "Salão de Jogos e Bicicletário",
+    "Academia",
+  ],
+  },
+  // 21. APARTAMENTO COM VARANDA NO MAURÍCIO DE NASSAU (ALUGADA)
+  {
+  id: "ap-mauricio-de-nassau-80m",
+  tipo: "apartamento",
+  title: "Apartamento com Varanda no Maurício de Nassau",
+  price: "R$ 450.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "80m²",
+  alugado: true,
+  description: `APARTAMENTO À VENDA | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 80 m²
+- Varanda
+- 03 quartos, sendo 01 suíte
+- 02 vagas de garagem
+
+CONDOMÍNIO:
+- Portaria eletrônica
+- Piscina
+- Salão de festas
+- Mini academia
+- Elevador
+- Taxa de condomínio: R$ 600,00
+
+VALOR DE VENDA: R$ 450.000,00
+
+OBS.: o imóvel está alugado por R$ 2.600,00/mês e continua disponível para venda.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "80m² de Área",
+    "Varanda",
+    "01 Suíte",
+    "02 Vagas de Garagem",
+    "Portaria Eletrônica",
+    "Piscina",
+    "Salão de Festas",
+    "Mini Academia",
+    "Elevador",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 22. CASA TÉRREA COM JARDIM NO MAURÍCIO DE NASSAU
+  {
+  id: "casa-mauricio-de-nassau-jardim",
+  tipo: "casa",
+  title: "Casa Térrea com Jardim no Maurício de Nassau",
+  price: "R$ 700.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 1,
+  area: "",
+  description: `CASA À VENDA | BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Se você busca conforto, modernidade e localização privilegiada, essa é a oportunidade perfeita.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 03 quartos, sendo 01 suíte
+- Banheiro social
+- Sala ampla para 02 ambientes
+- Cozinha espaçosa e bem ventilada
+- Jardim encantador
+- Área de serviço ampla
+- Quarto de apoio com varanda
+- Garagem para 01 veículo
+- Cisterna de 7.000 litros + caixa d'água
+
+LOCALIZAÇÃO: no coração de Maurício de Nassau, um dos bairros mais valorizados e desejados da cidade.
+
+VALOR DE VENDA: R$ 700.000,00 — pronta para morar. Pode ser financiada por qualquer banco da sua preferência.`,
+  videos: [
+    "/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/1.mp4",
+  ],
+  images: Array.from(
+    { length: 19 },
+    (_, i) => `/imoveis/casas-para-venda/casa-mauricio-de-nassau-jardim/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "01 Suíte",
+    "Sala Amplа para 02 Ambientes",
+    "Jardim Encantador",
+    "Quarto de Apoio com Varanda",
+    "Cisterna de 7.000 Litros",
+    "Cozinha Espaçosa e Ventilada",
+    "Pronta para Morar",
+    "Aceita Financiamento",
+  ],
+  },
+  // 23. CASA NO CONDOMÍNIO PORTAL DO SOL (ALUGADA)
+  {
+  id: "casa-portal-do-sol-venda",
+  tipo: "casa",
+  title: "Casa no Condomínio Portal do Sol",
+  price: "R$ 620.000",
+  location: "Condomínio Portal do Sol, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-portal-do-sol/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "150m²",
+  alugado: true,
+  description: `CASA À VENDA | CONDOMÍNIO PORTAL DO SOL – CARUARU/PE
+
+Excelente oportunidade para quem busca conforto, segurança e qualidade de vida em um condomínio completo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área de 150 m²
+- 03 quartos, sendo 01 suíte
+- 02 salas
+- Cozinha
+- Quintal
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Quadra poliesportiva
+- Salão de festas
+- Parquinho infantil
+
+VALOR DE VENDA: R$ 620.000,00
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação por R$ 3.500,00/mês, incluso condomínio e IPTU).`,
+  videos: [],
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-portal-do-sol/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "150m² de Área",
+    "01 Suíte",
+    "02 Salas",
+    "Quintal",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Piscina e Quadra Poliesportiva",
+    "Salão de Festas e Parquinho Infantil",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 24. CASA DE GRANDES PROPORÇÕES NO MAURÍCIO DE NASSAU
+  {
+  id: "casa-mauricio-de-nassau-ampla",
+  tipo: "casa",
+  title: "Casa de Grandes Proporções no Maurício de Nassau",
+  price: "R$ 2.500.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/1.jpeg",
+  bedrooms: 8,
+  bathrooms: 6,
+  parking: 0,
+  area: "360m²",
+  description: `CASA À VENDA | BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Casa de grandes proporções em dois pavimentos, na área nobre do bairro Maurício de Nassau.
+
+TERREO:
+- 04 salas
+- 04 quartos, sendo 03 suítes
+- 01 cozinha
+- 01 subsolo com cerca de 150 m²
+
+1º ANDAR:
+- 01 sala de som
+- Varanda
+- 04 quartos, sendo 01 suíte com closet
+- 01 cozinha
+- 02 salas
+- Área de serviço com quarto de empregada e banheiro
+
+DADOS DO IMÓVEL:
+- Terreno: 12 x 30 m = 360 m²
+
+VALOR DE VENDA: R$ 2.500.000,00 — imóvel escriturado. Negocia e aceita troca.`,
+  videos: [],
+  images: Array.from(
+    { length: 44 },
+    (_, i) => `/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno 12 x 30 m (360 m²)",
+    "Dois Pavimentos",
+    "04 Suítes no Total",
+    "01 Subsolo com 150 m²",
+    "Varanda",
+    "02 Cozinhas e 03 Salas",
+    "Quarto de Empregada com Banheiro",
+    "Escriturado",
+    "Aceita Troca",
+  ],
+  },
+  // 25. CASA DUPLEX DE ALTO PADRÃO NO QUINTAS DA COLINA II
+  {
+  id: "casa-duplex-quintas-da-colina-ii",
+  tipo: "casa",
+  title: "Casa Duplex de Alto Padrão no Quintas da Colina II",
+  price: "R$ 2.100.000",
+  location: "Quintas da Colina II, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/1.jpeg",
+  bedrooms: 5,
+  bathrooms: 5,
+  parking: 4,
+  area: "541m²",
+  description: `CASA DUPLEX À VENDA | CONDOMÍNIO QUINTAS DA COLINA II – CARUARU/PE
+
+Área total: 600 m² | Área construída: 541 m²
+
+TERREO:
+- Garagem para 04 carros
+- 02 salas de estar (principal e multimídia)
+- Sala de jantar
+- Cozinha com despensa
+- Quarto de visitas com closet e banheiro
+- Área de lazer com piscina, churrasqueira a gás, WC e chuveirão
+- Dependência de secretária com banheiro
+- 02 depósitos
+- Área de serviço
+
+1º ANDAR:
+- Mezanino
+- 04 quartos com closet e banheiro, sendo uma suíte master
+- Sala reversível
+- Quarto reversível
+- Escritório
+
+DETALHES:
+- Móveis fixos e lustres ficam no imóvel
+- Piscina aquecida
+- Casa com energia solar
+- Ar-condicionados acompanham a compra
+
+CONDOMÍNIO:
+- Academia bem equipada, piscina e portaria 24h
+- Quadras de vôlei, poliesportiva, tênis e beach tênis
+- Vários parquinhos infantis e pista de bike
+- Aulas coletivas adulto e infantil, natação e muito mais
+
+VALOR DE VENDA: R$ 2.100.000,00 — aceita imóvel de menor valor como permuta.`,
+  videos: [],
+  images: Array.from(
+    { length: 24 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "541m² de Área Construída",
+    "Terreno de 600m²",
+    "Piscina Aquecida",
+    "Energia Solar",
+    "Móveis Fixos e Lustres Inclusos",
+    "Garagem para 04 Carros",
+    "Academia e Quadras do Condomínio",
+    "Aceita Permuta",
+  ],
+  },
+  // 26. CASA DUPLEX NO CONDOMÍNIO CLODOALDO SAMPAIO
+  {
+  id: "casa-duplex-clodoaldo-sampaio",
+  tipo: "casa",
+  title: "Casa Duplex no Condomínio Clodoaldo Sampaio",
+  price: "R$ 280.000",
+  location: "Boa Vista, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-clodoaldo-sampaio/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 2,
+  area: "",
+  description: `CASA DUPLEX À VENDA | CONDOMÍNIO CLODOALDO SAMPAIO – BOA VISTA – CARUARU/PE
+(Próximo ao SESI)
+
+Encantadora casa duplex no bairro Boa Vista, dentro do condomínio Clodoaldo Sampaio, com segurança e excelente localização.
+
+TERREO:
+- Portão eletrônico
+- Garagem para 02 carros
+- Cisterna de 4.000 litros com bomba instalada
+- Sala para dois ambientes
+- Cozinha e área de serviço
+- Lavabo
+
+PAVIMENTO SUPERIOR:
+- 03 quartos, sendo 01 suíte master com varanda
+- Banheiro social
+- Espaço para home office
+
+VALOR DE VENDA: R$ 280.000,00 — aceita financiamento.
+Condomínio: R$ 340,00.`,
+  videos: [],
+  images: Array.from(
+    { length: 32 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-clodoaldo-sampaio/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Cisterna de 4.000 Litros com Bomba",
+    "01 Suíte Master com Varanda",
+    "Espaço para Home Office",
+    "Portão Eletrônico",
+    "Garagem para 02 Carros",
+    "Lavabo",
+    "Aceita Financiamento",
+  ],
+  },
+  // 27. CASA DE ALTO PADRÃO NO BAIRRO LUIZ GONZAGA
+  {
+  id: "casa-luiz-gonzaga",
+  tipo: "casa",
+  title: "Casa de Alto Padrão no Bairro Luiz Gonzaga",
+  price: "R$ 499.000",
+  location: "Luiz Gonzaga, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 3,
+  area: "180m²",
+  description: `OPORTUNIDADE NO BAIRRO LUIZ GONZAGA – CARUARU/PE
+
+Conforto, sofisticação e uma excelente localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Terreno com 180 m²
+- Garagem para até 03 carros
+- Sala ampla para dois ambientes
+- Cozinha funcional
+- Área de serviço
+- 03 quartos, sendo 02 suítes
+- WC de serviço
+- WC social
+
+VALOR DE VENDA: R$ 499.000,00 — pode ser financiada.`,
+  videos: [],
+  images: Array.from(
+    { length: 29 },
+    (_, i) => `/imoveis/casas-para-venda/casa-luiz-gonzaga/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 180m²",
+    "02 Suítes",
+    "Sala Ampla para 02 Ambientes",
+    "Garagem para 03 Carros",
+    "Cozinha Funcional",
+    "WC de Serviço",
+    "Aceita Financiamento",
+  ],
+  },
+  // 28. LOTE NO CONDOMÍNIO SOLAR DA SERRA – VILLA DO VITORINO
+  {
+  id: "lote-solar-da-serra-villa-do-vitorino",
+  tipo: "terreno",
+  title: "Lote no Condomínio Solar da Serra – Villa do Vitorino",
+  price: "R$ 85.000",
+  location: "Villa do Vitorino, Caruaru - PE",
+  coverImage: "/imoveis/terrenos-e-lotes/lote-solar-da-serra-villa-do-vitorino/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "700m²",
+  description: `LOTE À VENDA NO CONDOMÍNIO SOLAR DA SERRA – VILLA DO VITORINO
+
+Excelente oportunidade para construir sua casa de campo em um condomínio fechado, cercado pela natureza, com segurança, tranquilidade e lazer para toda a família.
+
+CARACTERÍSTICAS DO LOTE:
+- Dimensões: 20 x 35 metros
+- Área total: 700 m²
+
+ESTRUTURA DE LAZER DO CONDOMÍNIO:
+- Quadra poliesportiva
+- Espaço gourmet com churrasqueira
+- Lago
+- Piscina aquecida
+- Bosque com trilha
+- Salão de jogos
+- Salão de festas
+
+VALOR: R$ 85.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 16 },
+    (_, i) => `/imoveis/terrenos-e-lotes/lote-solar-da-serra-villa-do-vitorino/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "700m² (20 x 35 m)",
+    "Condomínio Fechado",
+    "Piscina Aquecida",
+    "Espaço Gourmet com Churrasqueira",
+    "Quadra Poliesportiva",
+    "Lago e Bosque com Trilha",
+    "Salão de Jogos e de Festas",
+  ],
+  },
+  // 29. LOTE COMERCIAL NO ALTO DO MOURA
+  {
+  id: "terreno-alto-do-moura-centro-artes",
+  tipo: "terreno",
+  title: "Lote Comercial no Alto do Moura",
+  price: "R$ 300.000",
+  location: "Alto do Moura, Caruaru - PE",
+  coverImage: "/imoveis/terrenos-e-lotes/terreno-alto-do-moura-centro-artes/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "840m²",
+  description: `LOTE TERRENO À VENDA | ÁREA COMERCIAL DO CENTRO DE ARTES FIGURATIVAS DAS AMÉRICAS – ALTO DO MOURA/CARUARU-PE
+
+CARACTERÍSTICAS DO TERRENO:
+- Localização: Alto do Moura, Caruaru - PE
+- Área: 14 x 60 m = 840 m²
+- Escriturado
+
+VALOR DE VENDA: R$ 300.000,00`,
+  videos: [],
+  images: Array.from(
+    { length: 3 },
+    (_, i) => `/imoveis/terrenos-e-lotes/terreno-alto-do-moura-centro-artes/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "840m² (14 x 60 m)",
+    "Área Comercial",
+    "Centro de Artes Figurativas das Américas",
+    "Escriturado",
+    "Alto do Moura",
+  ],
+  },
+  // 30. MAGNÍFICA ÁREA RURAL NA ZONA URBANA DE BONITO - PE
+  {
+  id: "area-rural-bonito",
+  tipo: "terreno",
+  title: "Magnífica Área Rural na Zona Urbana de Bonito - PE",
+  price: "R$ 47.000 / ha",
+  location: "Bonito - PE",
+  coverImage: "/imoveis/terrenos-e-lotes/area-rural-bonito/1.jpeg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "11,5 hectares",
+  description: `MAGNÍFICA ÁREA RURAL NA ZONA URBANA DA CIDADE DE BONITO – PE
+
+- 11,5 hectares
+- Localizada a 3 km da pista principal
+- A 15 km da região das cachoeiras (Bonito tem a parte alta, a das cachoeiras, e a parte baixa, onde está o terreno)
+- Relevo levemente inclinado, sem ladeiras
+- Açudes naturais e nascente de água natural: abundância de água
+- Pontos mais altos com vista para o vale
+- Cercado com porteira
+- Escriturado e registrado
+
+OBSERVAÇÃO: não se cria animais na parte alta devido ao frio e à intensa umidade.
+
+VALOR: R$ 47.000,00 por hectare (negociável) — 11,5 hectares.`,
+  videos: [],
+  images: Array.from(
+    { length: 7 },
+    (_, i) => `/imoveis/terrenos-e-lotes/area-rural-bonito/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "11,5 Hectares",
+    "Zona Urbana de Bonito - PE",
+    "A 3 km da Pista Principal",
+    "Açudes Naturais e Nascente de Água",
+    "Vista para o Vale",
+    "Cercado com Porteira",
+    "Escriturado e Registrado",
+    "Valor Negociável",
+  ],
+  },
+  // 31. TERRENO DE 2.500M² ÀS MARGENS DA BR-232 (SEM FOTOS)
+  {
+  id: "terreno-br-232-caruaru",
+  tipo: "terreno",
+  title: "Terreno de 2.500m² às Margens da BR-232",
+  price: "R$ 3.000.000",
+  location: "BR-232, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 0,
+  bathrooms: 0,
+  parking: 0,
+  area: "2.500m²",
+  description: `TERRENO À VENDA | BR-232, ÀS MARGENS DA VIA LOCAL – CARUARU/PE
+
+Ponto de referência: a 500 metros, em linha reta, do Park Hotel, que fica do outro lado da pista.
+
+CARACTERÍSTICAS DO TERRENO:
+- 2.500 m² — escriturado
+- Valor: R$ 1.200,00 o metro quadrado (negociável)
+
+POTENCIAL DE USO:
+- Posto de combustível
+- Hotel e pousada
+- Galpões e distribuidora
+- Outros ramos de atividades
+
+VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "2.500m² Escriturado",
+    "Às Margens da BR-232",
+    "A 500m do Park Hotel",
+    "Ideal para Posto, Hotel ou Galpão",
+    "R$ 1.200,00/m²",
+    "Aceita Troca",
+  ],
+  },
+  // 32. BELÍSSIMA CHÁCARA EM CONDOMÍNIO NA ZONA RURAL DE CARUARU (SEM FOTOS)
+  {
+  id: "chacara-zona-rural-caruaru",
+  tipo: "terreno",
+  title: "Belíssima Chácara em Condomínio na Zona Rural de Caruaru",
+  price: "R$ 850.000",
+  location: "Zona Rural, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 6,
+  area: "3.168m²",
+  description: `BELÍSSIMA CHÁCARA À VENDA | ZONA RURAL DE CARUARU – PE
+
+Loteamento tipo condomínio fechado na zona rural de Caruaru, cerca de 15 minutos do centro da cidade e a 1 km da pista. São 247 lotes, com praça central como área comum. Não paga condomínio; há projeto futuro para portaria 24 horas.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área: 88 x 36 m = 3.168 m²
+- Totalmente na posição nascente
+- 01 suíte master (primeiro andar) com vista privativa da piscina
+- 02 quartos sociais
+- 01 WC social
+- Sala para 02 ambientes
+- Cozinha ampla com despensa
+- Piscina adulto e infantil com cascata
+- Espaço wine
+- Área gourmet com churrasqueira a carvão e 02 banheiros
+- Lago de carpas
+- Cisterna de 100 mil litros
+- Poço com 1.500 litros/hora
+- Circuito de câmeras e alarme
+- Portão automático
+- Energia fotovoltaica
+- Vaga para 06 veículos
+- 02 terrenos com árvores frutíferas (12 x 24 m e 36 x 52 m)
+
+VALOR DE VENDA: R$ 850.000,00
+
+Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de vida.`,
+  videos: [],
+  images: [],
+  amenities: [
+    "3.168m² (88 x 36 m)",
+    "Condomínio Fechado com 247 Lotes",
+    "Piscina Adulto e Infantil com Cascata",
+    "Espaço Wine",
+    "Área Gourmet com Churrasqueira",
+    "Lago de Carpas",
+    "Cisterna de 100 Mil Litros",
+    "Poço com 1.500 Litros/Hora",
+    "Energia Fotovoltaica",
+    "Câmeras, Alarme e Portão Automático",
+    "Vaga para 06 Veículos",
+    "Posição Nascente",
+  ],
+  },
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis
@@ -1142,7 +1932,7 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
 
 function ImoveisParaVendaContent() {
   const [tipoFiltro, setTipoFiltro] = useState<
-    "todos" | "apartamento" | "casa"
+    "todos" | "apartamento" | "casa" | "terreno"
   >("todos")
 
   const [bairroFiltro, setBairroFiltro] = useState<string>("todos")
@@ -1402,6 +2192,7 @@ function ImoveisParaVendaContent() {
                             | "todos"
                             | "apartamento"
                             | "casa"
+                            | "terreno"
                         )
                       }
                       className="
@@ -1418,7 +2209,7 @@ function ImoveisParaVendaContent() {
                       "
                     >
                       <option value="todos">
-                        Todos os Tipos (Casas e Apts)
+                        Todos os Tipos
                       </option>
 
                       <option value="casa">
@@ -1427,6 +2218,10 @@ function ImoveisParaVendaContent() {
 
                       <option value="apartamento">
                         Apartamentos
+                      </option>
+
+                      <option value="terreno">
+                        Terrenos e Lotes
                       </option>
                     </select>
 

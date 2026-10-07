@@ -820,10 +820,425 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 750.
       "Imóvel Alugado - Disponível para Venda",
     ],
   },
+  // 16. APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA)
+  {
+  id: "ap-edf-plaza-caruaru-aluguel",
+  tipo: "apartamento",
+  title: "Apartamento Mobiliado no Edifício Plaza",
+  price: "R$ 3.500 / mês",
+  location: "Edifício Plaza, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 1,
+  area: "78m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | EDF. PLAZA – CARUARU/PE
 
+Localizado na área mais nobre e valorizada da cidade, a 30 m da Avenida Agamenon Magalhães. Próximo a padarias, mercados, escolas e shopping: perto de tudo para tornar sua vida mais prática.
 
+CARACTERÍSTICAS DO IMÓVEL:
+- 78 m²
+- Sala para dois ambientes integrados
+- 03 quartos, sendo 01 suíte
+- Cozinha
+- WC social
+- Área de serviço
+- WC de serviço
+- 01 vaga de garagem
 
- 
+DIFERENCIAIS:
+- Mobília fixa de alta qualidade
+- Ar-condicionado nos 03 quartos
+- Automação com comando por voz no Alexa
+
+CONDOMÍNIO:
+- 02 elevadores
+- Piscina adulto e infantil
+- Salão de festas
+- Quadra poliesportiva
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês — incluso condomínio e IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 14 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-plaza-caruaru/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "78m² de Área",
+    "Mobília Fixa de Alta Qualidade",
+    "Ar-condicionado nos 03 Quartos",
+    "Automação por Voz (Alexa)",
+    "01 Suíte",
+    "01 Vaga de Garagem",
+    "Condomínio e IPTU Inclusos",
+    "Piscina Adulto e Infantil",
+    "Quadra Poliesportiva",
+    "Imóvel Alugado",
+  ],
+  },
+  // 17. FLAT MOBILIADO NO LIFE CENTER (SEM FOTOS)
+  {
+  id: "ap-life-center-flat-mobiliado",
+  tipo: "apartamento",
+  title: "Flat Mobiliado no Life Center",
+  price: "R$ 2.500 / mês",
+  location: "Life Center, Caruaru - PE",
+  coverImage: "/placeholder.jpg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "40m²",
+  description: `FLAT MOBILIADO PARA LOCAÇÃO | LIFE CENTER – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 40 m²
+- Sala para 02 ambientes
+- Cozinha equipada
+- Ar-condicionado, TV e guarda-roupa
+
+CONDOMÍNIO:
+- Portaria 24 horas
+- Academia
+- Área gourmet equipada com churrasqueira
+- Espaço home office
+- Mini mercado
+
+VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio, IPTU e estacionamento.
+
+CONDIÇÕES:
+- Garantia: caução
+- Água, gás e energia são consumos individuais
+- Vaga de garagem opcional, contratada diretamente com o condomínio`,
+  videos: [],
+  images: [],
+  amenities: [
+    "40m² de Área",
+    "Cozinha Equipada",
+    "Portaria 24 Horas",
+    "Academia",
+    "Área Gourmet com Churrasqueira",
+    "Espaço Home Office",
+    "Mini Mercado",
+    "Condomínio, IPTU e Estacionamento Inclusos",
+    "Garantia mediante Caução",
+  ],
+  },
+  // 18. FLAT MOBILIADO NO EDIFÍCIO MULTIPORTO
+  {
+  id: "ap-flat-multiporto-indianopolis",
+  tipo: "apartamento",
+  title: "Flat Mobiliado no Edifício Multiporto",
+  price: "R$ 2.200 / mês",
+  location: "Indianópolis, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-flat-multiporto-indianopolis/1.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "35m²",
+  description: `FLAT MOBILIADO PARA LOCAÇÃO | EDF. MULTIPORTO – INDIANÓPOLIS/CARUARU-PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 35 m²
+- 01 sala integrada à cozinha
+- 01 quarto
+- 01 banheiro
+
+VALOR DA LOCAÇÃO: R$ 2.200,00/mês — incluso condomínio e IPTU.
+
+CONDIÇÕES: garantia mediante caução.`,
+  videos: [],
+  images: Array.from(
+    { length: 10 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-flat-multiporto-indianopolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "35m² de Área",
+    "Mobiliado",
+    "Sala Integrada à Cozinha",
+    "Condomínio e IPTU Inclusos",
+    "Garantia mediante Caução",
+  ],
+  },
+  // 19. APARTAMENTO PARA LOCAÇÃO NO BAIRRO UNIVERSITÁRIO (ALUGADA)
+  {
+  id: "ap-universitario-aracati-aluguel",
+  tipo: "apartamento",
+  title: "Apartamento para Locação no Bairro Universitário",
+  price: "R$ 1.200 / mês",
+  location: "Bairro Universitário, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-universitario-aracati/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 1,
+  parking: 0,
+  area: "50m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Próximo ao Colégio Bela Flor, na Rua Aracati, Bairro Universitário.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 1º andar (escada)
+- 50 m²
+- Sala ampla
+- 02 quartos
+- Cozinha integrada com área de serviço
+- 01 banheiro
+- SEM vaga de garagem
+
+VALOR DA LOCAÇÃO: R$ 1.200,00/mês, incluso IPTU.
+
+Água e energia são consumos individuais.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 9 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-universitario-aracati/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "50m² de Área",
+    "Sala Ampla",
+    "02 Quartos",
+    "Cozinha Integrada com Área de Serviço",
+    "IPTU Incluso",
+    "1º Andar (Escada)",
+    "Sem Vaga de Garagem",
+    "Imóvel Alugado",
+  ],
+  },
+  // 20. FLAT DE 01 QUARTO NO BELLE VILLE
+  {
+  id: "ap-belle-ville-flat",
+  tipo: "apartamento",
+  title: "Flat de 01 Quarto no Belle Ville",
+  price: "R$ 2.500 / mês",
+  location: "Belle Ville, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-belle-ville-flat/1.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 0,
+  area: "",
+  description: `FLAT PARA LOCAÇÃO | BELLE VILLE – CARUARU/PE
+
+Flat com 01 quarto disponível para locação.
+
+VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio e IPTU.
+
+CONDIÇÕES: garantia mediante caução em 3x.`,
+  videos: [],
+  images: Array.from(
+    { length: 8 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-belle-ville-flat/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "01 Quarto",
+    "Flat Mobiliado",
+    "Condomínio e IPTU Inclusos",
+    "Garantia: Caução em 3x",
+  ],
+  },
+  // 21. APARTAMENTO COM VARANDA NO MAURÍCIO DE NASSAU (ALUGADA)
+  {
+  id: "ap-mauricio-de-nassau-80m-aluguel",
+  tipo: "apartamento",
+  title: "Apartamento com Varanda no Maurício de Nassau",
+  price: "R$ 2.600 / mês",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "80m²",
+  alugado: true,
+  description: `APARTAMENTO PARA LOCAÇÃO | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 80 m²
+- Varanda
+- 03 quartos, sendo 01 suíte
+- 02 vagas de garagem
+
+CONDOMÍNIO:
+- Portaria eletrônica
+- Piscina
+- Salão de festas
+- Mini academia
+- Elevador
+- Taxa de condomínio: R$ 600,00
+
+VALOR DA LOCAÇÃO: R$ 2.600,00/mês
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 12 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "80m² de Área",
+    "Varanda",
+    "01 Suíte",
+    "02 Vagas de Garagem",
+    "Portaria Eletrônica",
+    "Piscina",
+    "Salão de Festas",
+    "Elevador",
+    "Imóvel Alugado",
+  ],
+  },
+  // 22. CASA PARA LOCAÇÃO COMERCIAL NO MAURÍCIO DE NASSAU
+  {
+  id: "casa-mauricio-de-nassau-comercial",
+  tipo: "casa",
+  title: "Casa para Locação Comercial no Maurício de Nassau",
+  price: "R$ 5.000 / mês",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 2,
+  area: "506m²",
+  description: `CASA PARA LOCAÇÃO COMERCIAL | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Posição sul, com estrutura completa e área externa generosa — ideal para uso comercial.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Terreno: 22 x 23 m — 506 m²
+- Varanda
+- 01 sala para 02 ambientes
+- 01 sala de TV
+- 04 suítes, sendo 02 máster
+- Espaço gourmet com churrasqueira
+- Piscina
+- Garagem para 02 veículos
+- Área externa
+
+VALOR DA LOCAÇÃO: R$ 5.000,00/mês — IPTU por fora.`,
+  videos: [],
+  images: Array.from(
+    { length: 22 },
+    (_, i) => `/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 506m² (22 x 23 m)",
+    "04 Suítes, sendo 02 Máster",
+    "Espaço Gourmet com Churrasqueira",
+    "Piscina",
+    "Área Externa",
+    "Garagem para 02 Veículos",
+    "Posição Sul",
+    "IPTU por Fora",
+  ],
+  },
+  // 23. CASA NO CONDOMÍNIO PORTAL DO SOL (ALUGADA)
+  {
+  id: "casa-portal-do-sol-aluguel",
+  tipo: "casa",
+  title: "Casa no Condomínio Portal do Sol",
+  price: "R$ 3.500 / mês",
+  location: "Condomínio Portal do Sol, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-portal-do-sol/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "150m²",
+  alugado: true,
+  description: `CASA PARA LOCAÇÃO | CONDOMÍNIO PORTAL DO SOL – CARUARU/PE
+
+Excelente oportunidade para quem busca conforto, segurança e qualidade de vida em um condomínio completo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área de 150 m²
+- 03 quartos, sendo 01 suíte
+- 02 salas
+- Cozinha
+- Quintal
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Quadra poliesportiva
+- Salão de festas
+- Parquinho infantil
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês — incluso condomínio e IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 620.000,00.`,
+  videos: [],
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-portal-do-sol/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "150m² de Área",
+    "01 Suíte",
+    "02 Salas",
+    "Quintal",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Piscina e Quadra Poliesportiva",
+    "Condomínio e IPTU Inclusos",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 24. CASA MOBILIADA NO PINHEIROPOLIS (ALUGADA)
+  {
+  id: "casa-pinheiropolis-aluguel",
+  tipo: "casa",
+  title: "Casa Mobiliada no Pinheiropolis",
+  price: "R$ 3.500 / mês",
+  location: "Pinheiropolis, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-alugar/casa-pinheiropolis/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 3,
+  area: "180m²",
+  alugado: true,
+  description: `CASA PARA LOCAÇÃO | PINHEIROPOLIS – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área total: 6 x 30 m = 180 m²
+- 02 quartos, sendo 01 suíte com closet
+- Sala para 02 ambientes
+- 01 banheiro social
+- Jardim lateral
+- Vaga coberta para 03 veículos
+- Cisterna com capacidade de 12 mil litros
+- 01 dependência / quarto depósito
+
+MOBÍLIA QUE FICA NO IMÓVEL:
+- Sala: mesa com 4 cadeiras, sofá e home theater
+- Cozinha: fogão, micro-ondas e geladeira inox, toda mobiliada e planejada
+- Quarto social: guarda-roupa planejado
+- Quarto suíte: cama e closet planejado
+- Área de serviço: máquina de lavar
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês, incluso IPTU.
+
+CONDIÇÕES: garantia mediante caução.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  videos: [],
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-alugar/casa-pinheiropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "180m² de Área Total",
+    "Totalmente Mobiliado",
+    "01 Suíte com Closet",
+    "Sala para 02 Ambientes",
+    "Vaga Coberta para 03 Veículos",
+    "Cisterna de 12 Mil Litros",
+    "Jardim Lateral",
+    "IPTU Incluso",
+    "Imóvel Alugado",
+  ],
+  },
 ];
 
 const bairrosDisponiveis = Array.from(

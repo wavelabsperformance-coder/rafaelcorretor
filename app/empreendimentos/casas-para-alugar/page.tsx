@@ -129,6 +129,150 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 750.
       "Imóvel Alugado - Disponível para Venda",
     ],
   },
+  // 4. CASA PARA LOCAÇÃO COMERCIAL NO MAURÍCIO DE NASSAU
+  {
+  id: "casa-mauricio-de-nassau-comercial",
+  title: "Casa para Locação Comercial no Maurício de Nassau",
+  price: "R$ 5.000 / mês",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/1.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 2,
+  area: "506m²",
+  description: `CASA PARA LOCAÇÃO COMERCIAL | ÁREA NOBRE DO BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
+
+Posição sul, com estrutura completa e área externa generosa — ideal para uso comercial.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Terreno: 22 x 23 m — 506 m²
+- Varanda
+- 01 sala para 02 ambientes
+- 01 sala de TV
+- 04 suítes, sendo 02 máster
+- Espaço gourmet com churrasqueira
+- Piscina
+- Garagem para 02 veículos
+- Área externa
+
+VALOR DA LOCAÇÃO: R$ 5.000,00/mês — IPTU por fora.`,
+  images: Array.from(
+    { length: 22 },
+    (_, i) => `/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 506m² (22 x 23 m)",
+    "04 Suítes, sendo 02 Máster",
+    "Espaço Gourmet com Churrasqueira",
+    "Piscina",
+    "Área Externa",
+    "Garagem para 02 Veículos",
+    "Posição Sul",
+    "IPTU por Fora",
+  ],
+  },
+  // 5. CASA NO CONDOMÍNIO PORTAL DO SOL (ALUGADA)
+  {
+  id: "casa-portal-do-sol-aluguel",
+  title: "Casa no Condomínio Portal do Sol",
+  price: "R$ 3.500 / mês",
+  location: "Condomínio Portal do Sol, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-portal-do-sol/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 2,
+  parking: 2,
+  area: "150m²",
+  alugado: true,
+  description: `CASA PARA LOCAÇÃO | CONDOMÍNIO PORTAL DO SOL – CARUARU/PE
+
+Excelente oportunidade para quem busca conforto, segurança e qualidade de vida em um condomínio completo.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área de 150 m²
+- 03 quartos, sendo 01 suíte
+- 02 salas
+- Cozinha
+- Quintal
+- 02 vagas de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria 24 horas
+- Piscina
+- Quadra poliesportiva
+- Salão de festas
+- Parquinho infantil
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês — incluso condomínio e IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 620.000,00.`,
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-portal-do-sol/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "150m² de Área",
+    "01 Suíte",
+    "02 Salas",
+    "Quintal",
+    "02 Vagas de Garagem",
+    "Portaria 24 Horas",
+    "Piscina e Quadra Poliesportiva",
+    "Condomínio e IPTU Inclusos",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  },
+  // 6. CASA MOBILIADA NO PINHEIROPOLIS (ALUGADA)
+  {
+  id: "casa-pinheiropolis-aluguel",
+  title: "Casa Mobiliada no Pinheiropolis",
+  price: "R$ 3.500 / mês",
+  location: "Pinheiropolis, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-alugar/casa-pinheiropolis/1.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 3,
+  area: "180m²",
+  alugado: true,
+  description: `CASA PARA LOCAÇÃO | PINHEIROPOLIS – CARUARU/PE
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Área total: 6 x 30 m = 180 m²
+- 02 quartos, sendo 01 suíte com closet
+- Sala para 02 ambientes
+- 01 banheiro social
+- Jardim lateral
+- Vaga coberta para 03 veículos
+- Cisterna com capacidade de 12 mil litros
+- 01 dependência / quarto depósito
+
+MOBÍLIA QUE FICA NO IMÓVEL:
+- Sala: mesa com 4 cadeiras, sofá e home theater
+- Cozinha: fogão, micro-ondas e geladeira inox, toda mobiliada e planejada
+- Quarto social: guarda-roupa planejado
+- Quarto suíte: cama e closet planejado
+- Área de serviço: máquina de lavar
+
+VALOR DA LOCAÇÃO: R$ 3.500,00/mês, incluso IPTU.
+
+CONDIÇÕES: garantia mediante caução.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-alugar/casa-pinheiropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "180m² de Área Total",
+    "Totalmente Mobiliado",
+    "01 Suíte com Closet",
+    "Sala para 02 Ambientes",
+    "Vaga Coberta para 03 Veículos",
+    "Cisterna de 12 Mil Litros",
+    "Jardim Lateral",
+    "IPTU Incluso",
+    "Imóvel Alugado",
+  ],
+  },
 ]
 
 export default function CasasParaAlugarPage() {
