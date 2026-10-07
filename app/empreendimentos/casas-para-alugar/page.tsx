@@ -28,6 +28,107 @@ const casasAluguel = [
     ],
     amenities: ["Piscina privativa", "Churrasqueira", "Jardim", "Segurança 24h"],
   },
+
+  {
+    id: "casa-duplex-indianopolis-aluguel",
+    title: "Casa Duplex para Locação no Bairro Indianópolis",
+    price: "R$ 2.000 / mês",
+    location: "Indianópolis, Caruaru - PE",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 1,
+    area: "65m²",
+    description: `CASA DUPLEX PARA LOCAÇÃO | INDIANÓPOLIS – CARUARU/PE
+
+Imóvel em posição nascente, com 65 m² de área construída.
+
+PAVIMENTO TERREO:
+- Garagem para um veículo de pequeno porte
+- Sala de estar
+- Cozinha planejada
+- Banheiro social
+- Lavanderia
+
+PAVIMENTO SUPERIOR:
+- 02 quartos, sendo 01 suíte
+
+DIFERENCIAIS DO IMÓVEL:
+- Cisterna com capacidade para 10 mil litros
+- Cerca elétrica
+- Sistema de câmeras de segurança
+- Móveis fixos planejados
+- Forno e cooktop inclusos
+- Ar-condicionado
+
+VALOR DA LOCAÇÃO: R$ 2.000,00/mês
+Condomínio e IPTU inclusos. Garantia mediante caução.
+
+OBS.: a casa também está à venda por R$ 225.000,00.`,
+    video: null,
+    images: Array.from(
+      { length: 31 },
+      (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Posição Nascente",
+      "01 Suíte",
+      "Cozinha Planejada",
+      "Cisterna para 10 Mil Litros",
+      "Cerca Elétrica e Câmeras de Segurança",
+      "Condomínio e IPTU Inclusos",
+      "Garantia mediante Caução",
+      "01 Vaga de Garagem",
+    ],
+  },
+
+  {
+    id: "casa-reformada-petropolis-aluguel",
+    title: "Magnífica Casa Reformada para Locação no Petrópolis",
+    price: "R$ 5.500 / mês (Incluso IPTU)",
+    location: "Petrópolis, Caruaru - PE",
+    bedrooms: 3,
+    bathrooms: 3,
+    parking: 4,
+    area: "258m²",
+    alugado: true,
+    description: `CASA REFORMADA PARA LOCAÇÃO | PETRÓPOLIS – CARUARU/PE
+
+MAGNÍFICA CASA REFORMADA, MODERNA E PRONTA PARA MORAR NO PETRÓPOLIS
+
+LOCALIZAÇÃO: Bairro Petrópolis | Próximo à principal
+- 258 m² de área construída
+- Terreno 13 x 23 m
+- 03 quartos, sendo 01 suíte
+- Sala para 02 ambientes
+- Cozinha
+- Banheiro social
+- Garagem para 04 carros
+- Casa solta na lateral
+
+ÁREA GOURMET E LAZER:
+- Área gourmet principal com piscina aquecida, teto retrátil e churrasqueira a gás
+- Segunda área gourmet com churrasqueira a carvão e banheiro
+- Iluminação em LED, fachada revestida em porcelanato e acabamentos modernos
+
+VALOR DA LOCAÇÃO: R$ 5.500,00/mês, incluso IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 750.000,00.`,
+    video: null,
+    images: Array.from(
+      { length: 23 },
+      (_, i) => `/imoveis/casas-para-venda/casa-reformada-petropolis/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "258m² de Área Construída",
+      "01 Suíte",
+      "Sala para 02 Ambientes",
+      "Garagem para 04 Carros",
+      "Piscina Aquecida com Teto Retrátil",
+      "Churrasqueira a Gás e a Carvão",
+      "IPTU Incluso",
+      "Imóvel Alugado - Disponível para Venda",
+    ],
+  },
 ]
 
 export default function CasasParaAlugarPage() {
@@ -69,7 +170,9 @@ export default function CasasParaAlugarPage() {
                 <div className="flex flex-wrap items-center gap-6 my-6 py-4 border-y border-border">
                   <div className="flex items-center gap-2 text-muted-foreground"><Bed className="h-5 w-5" /> <span className="font-medium text-foreground">{activeProperty.bedrooms}</span> Quartos</div>
                   <div className="flex items-center gap-2 text-muted-foreground"><Bath className="h-5 w-5" /> <span className="font-medium text-foreground">{activeProperty.bathrooms}</span> Banheiros</div>
-                  <div className="flex items-center gap-2 text-muted-foreground"><Car className="h-5 w-5" /> <span className="font-medium text-foreground">{activeProperty.parking}</span> Vagas</div>
+                  {activeProperty.parking > 0 && (
+                    <div className="flex items-center gap-2 text-muted-foreground"><Car className="h-5 w-5" /> <span className="font-medium text-foreground">{activeProperty.parking}</span> Vagas</div>
+                  )}
                   <div className="flex items-center gap-2 text-muted-foreground"><Maximize className="h-5 w-5" /> <span className="font-medium text-foreground">{activeProperty.area}</span></div>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Sobre o Imóvel</h3>
@@ -79,6 +182,9 @@ export default function CasasParaAlugarPage() {
                 <div className="sticky top-28 bg-secondary p-6 rounded-xl border border-border">
                   <span className="text-xs uppercase text-muted-foreground">Valor</span>
                   <p className="font-serif text-3xl font-semibold my-2">{activeProperty.price}</p>
+                  {activeProperty.alugado && (
+                    <p className="text-sm font-medium text-red-600">Imóvel alugado no momento</p>
+                  )}
                   <Button asChild className="w-full mt-4" size="lg">
                     <a href={`${siteConfig.whatsappLink}?text=Tenho interesse na casa para alugar: ${activeProperty.title}`} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="mr-2 h-5 w-5" /> Falar no WhatsApp
@@ -101,6 +207,9 @@ export default function CasasParaAlugarPage() {
                   <div className="aspect-[4/3] overflow-hidden relative cursor-pointer" onClick={() => { setSelectedId(property.id); const el = document.getElementById("detalhes"); if (el) el.scrollIntoView({ behavior: "smooth" }); }}>
                     <img src={property.images[0] || "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"} alt={property.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="absolute top-3 left-3 bg-primary/90 text-primary-foreground px-3 py-1 text-xs rounded font-medium">Locação</div>
+                    {property.alugado && (
+                      <div className="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 text-xs rounded font-medium">Alugado</div>
+                    )}
                   </div>
                   <div className="p-5">
                     <span className="text-[10px] uppercase tracking-wider text-muted-foreground flex items-center gap-1"><MapPin className="h-3.5 w-3.5" /> {property.location}</span>
@@ -108,7 +217,9 @@ export default function CasasParaAlugarPage() {
                     <div className="flex items-center gap-3 mt-3 text-xs text-muted-foreground">
                       <span className="flex items-center gap-1"><Bed className="h-3.5 w-3.5" /> {property.bedrooms}</span>
                       <span className="flex items-center gap-1"><Bath className="h-3.5 w-3.5" /> {property.bathrooms}</span>
-                      <span className="flex items-center gap-1"><Car className="h-3.5 w-3.5" /> {property.parking}</span>
+                      {property.parking > 0 && (
+                        <span className="flex items-center gap-1"><Car className="h-3.5 w-3.5" /> {property.parking}</span>
+                      )}
                       <span className="flex items-center gap-1"><Maximize className="h-3.5 w-3.5" /> {property.area}</span>
                     </div>
                   </div>

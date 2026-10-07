@@ -36,6 +36,8 @@ export interface ImovelVenda {
   videos?: string[]
   images: string[]
   amenities: string[]
+  /** true = imóvel alugado (selo vermelho; continua disponível para venda) */
+  alugado?: boolean
 }
 
 // Função para converter strings de preço (ex: "R$ 900.000") em números
@@ -554,6 +556,205 @@ VALOR DE VENDA: R$ 580.000,00`,
     ],
   },
 
+  // 13. EKO HOME CLUB - TORRE IPÊ (À VENDA)
+  {
+    id: "ap-eko-home-club-torre-ipe",
+    tipo: "apartamento",
+    title: "Apartamento à Venda no Eko Home Club – Torre Ipê",
+    price: "R$ 410.000",
+    location: "Universitário, Caruaru - PE",
+    coverImage: "/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/13.jpeg",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 0,
+    area: "60m²",
+    description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
+
+Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade. Uma excelente opção para quem busca conforto, praticidade e ótima localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m² de área privativa
+- Andar alto e posição sul
+- 02 quartos, sendo 01 suíte
+- Quartos com ar-condicionado e guarda-roupas
+- Sala para 02 ambientes, com iluminação projetada
+- Cozinha ampla com móveis planejados, cooktop e forno embutido
+
+VALOR DE VENDA: R$ 410.000,00
+Imóvel escriturado e pronto para financiamento.
+
+OBS.: também disponível para locação por R$ 2.700,00/mês.`,
+    videos: [],
+    images: Array.from(
+      { length: 13 },
+      (_, i) => `/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "60m² de Área Privativa",
+      "Andar Alto - Posição Sul",
+      "01 Suíte",
+      "Ar-condicionado nos Quartos",
+      "Cozinha com Móveis Planejados, Cooktop e Forno",
+      "Sala para 02 Ambientes",
+      "Bairro Universitário",
+      "Escriturado - Pronto para Financiamento",
+    ],
+  },
+
+  // 14. CASA DUPLEX | INDIANÓPOLIS (À VENDA)
+  {
+    id: "casa-duplex-indianopolis",
+    tipo: "casa",
+    title: "Casa Duplex no Bairro Indianópolis",
+    price: "R$ 225.000",
+    location: "Indianópolis, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 1,
+    area: "65m²",
+    description: `CASA DUPLEX À VENDA | INDIANÓPOLIS – CARUARU/PE
+
+Imóvel em posição nascente, com 65 m² de área construída.
+
+PAVIMENTO TERREO:
+- Garagem para um veículo de pequeno porte
+- Sala de estar
+- Cozinha planejada
+- Banheiro social
+- Lavanderia
+
+PAVIMENTO SUPERIOR:
+- 02 quartos, sendo 01 suíte
+
+DIFERENCIAIS DO IMÓVEL:
+- Cisterna com capacidade para 10 mil litros
+- Cerca elétrica
+- Sistema de câmeras de segurança
+- Móveis fixos planejados
+- Forno e cooktop inclusos
+- Ar-condicionado
+
+VALOR DE VENDA: R$ 225.000,00
+Não aceita financiamento.
+
+OBS.: também disponível para locação por R$ 2.000,00/mês.`,
+    videos: [],
+    images: Array.from(
+      { length: 31 },
+      (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Posição Nascente",
+      "65m² de Área Construída",
+      "01 Suíte",
+      "Cozinha Planejada",
+      "Cisterna para 10 Mil Litros",
+      "Cerca Elétrica e Câmeras de Segurança",
+      "Forno, Cooktop e Ar-condicionado",
+      "01 Vaga de Garagem",
+    ],
+  },
+
+  // 15. LOTEAMENTO 7 LUAS | ALTO DO MOURA (ALUGADA - À VENDA)
+  {
+    id: "casa-alto-do-moura-7-luas",
+    tipo: "casa",
+    title: "Casa no Loteamento 7 Luas – Alto do Moura",
+    price: "R$ 215.000",
+    location: "Alto do Moura, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/11.jpeg",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 0,
+    area: "56m²",
+    alugado: true,
+    description: `CASA À VENDA | LOTEAMENTO 7 LUAS – ALTO DO MOURA – CARUARU/PE
+
+Imóvel construído em terreno de 7 x 22 metros, com 56 m² de área construída, oferecendo conforto, funcionalidade e excelente aproveitamento dos espaços.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Sala de estar e jantar integradas
+- Cozinha planejada, com móveis sob medida e bancada em mármore
+- 02 quartos, sendo 01 suíte
+- Banheiros completos, com bancada em mármore, móveis planejados e luminárias
+- Quintal amplo de 5 x 7 metros, com possibilidade de construção de um terceiro quarto
+
+VALOR DE VENDA: R$ 215.000,00 (preço de oportunidade)
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+    videos: [],
+    images: Array.from(
+      { length: 15 },
+      (_, i) => `/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Terreno 7 x 22 m - 56m² Construídos",
+      "01 Suíte",
+      "Cozinha Planejada com Móveis Sob Medida",
+      "Bancadas em Mármore",
+      "Quintal de 5 x 7 m",
+      "Potencial para um Terceiro Quarto",
+      "Imóvel Alugado - Disponível para Venda",
+    ],
+  },
+
+  // 16. CASA REFORMADA | PETRÓPOLIS (ALUGADA - À VENDA)
+  {
+    id: "casa-reformada-petropolis",
+    tipo: "casa",
+    title: "Magnífica Casa Reformada no Bairro Petrópolis",
+    price: "R$ 750.000",
+    location: "Petrópolis, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-reformada-petropolis/23.jpeg",
+    bedrooms: 3,
+    bathrooms: 3,
+    parking: 4,
+    area: "258m²",
+    alugado: true,
+    description: `CASA REFORMADA À VENDA | PETRÓPOLIS – CARUARU/PE
+
+MAGNÍFICA CASA REFORMADA, MODERNA E PRONTA PARA MORAR NO PETRÓPOLIS
+
+LOCALIZAÇÃO: Bairro Petrópolis | Próximo à principal
+- 258 m² de área construída
+- Terreno 13 x 23 m
+- 03 quartos, sendo 01 suíte
+- Sala para 02 ambientes
+- Cozinha
+- Banheiro social
+- Garagem para 04 carros
+- Casa solta na lateral
+
+ÁREA GOURMET E LAZER:
+- Área gourmet principal com piscina aquecida, teto retrátil e churrasqueira a gás
+- Segunda área gourmet com churrasqueira a carvão e banheiro
+- Iluminação em LED, fachada revestida em porcelanato e acabamentos modernos
+
+Imóvel escriturado.
+
+VALOR DE VENDA: R$ 750.000,00
+Aceita carro ou lote em condomínio como parte do pagamento, mediante avaliação.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+    videos: [],
+    images: Array.from(
+      { length: 23 },
+      (_, i) => `/imoveis/casas-para-venda/casa-reformada-petropolis/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "258m² de Área Construída",
+      "01 Suíte",
+      "Sala para 02 Ambientes",
+      "Garagem para 04 Carros",
+      "Piscina Aquecida com Teto Retrátil",
+      "Churrasqueira a Gás e a Carvão",
+      "Fachada em Porcelanato",
+      "Imóvel Escriturado",
+      "Imóvel Alugado - Disponível para Venda",
+    ],
+  },
+
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis
@@ -689,6 +890,27 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
               {property.videos && property.videos.length > 1
                 ? `${property.videos.length} Vídeos`
                 : "Vídeo"}
+            </div>
+          )}
+
+          {/* BADGE ALUGADO */}
+          {property.alugado && (
+            <div
+              className="
+                absolute
+                bottom-3
+                right-3
+                bg-red-600
+                text-white
+                px-3
+                py-1
+                text-xs
+                rounded-full
+                font-medium
+                shadow-sm
+              "
+            >
+              Alugado
             </div>
           )}
 
@@ -855,23 +1077,25 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
               {property.bathrooms}
             </span>
 
-            <span
-              className="
-                inline-flex
-                items-center
-                gap-1
-                rounded-full
-                bg-[#0d3b2e]/5
-                px-2.5
-                py-1
-                text-[11px]
-                font-medium
-                text-muted-foreground
-              "
-            >
-              <Car className="h-3.5 w-3.5 text-[#0d3b2e]" />
-              {property.parking}
-            </span>
+            {property.parking > 0 && (
+              <span
+                className="
+                  inline-flex
+                  items-center
+                  gap-1
+                  rounded-full
+                  bg-[#0d3b2e]/5
+                  px-2.5
+                  py-1
+                  text-[11px]
+                  font-medium
+                  text-muted-foreground
+                "
+              >
+                <Car className="h-3.5 w-3.5 text-[#0d3b2e]" />
+                {property.parking}
+              </span>
+            )}
 
             {property.area && (
               <span

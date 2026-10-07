@@ -17,6 +17,8 @@ export type ImovelCompleto = {
   videos?: string[]
   images: string[]
   amenities: string[]
+  /** true = imóvel alugado (exibido com selo "Alugado"; continua disponível para venda) */
+  alugado?: boolean
   backUrl: string
   backLabel: string
 }
@@ -588,6 +590,222 @@ VALOR DE VENDA: R$ 580.000,00`,
     backLabel: "Voltar para Imóveis para Venda",
   },
 
+  // --- EKO HOME CLUB - TORRE IPÊ (À VENDA) ---
+  {
+  id: "ap-eko-home-club-torre-ipe",
+  title: "Apartamento à Venda no Eko Home Club – Torre Ipê",
+  price: "R$ 410.000",
+  location: "Universitário, Caruaru - PE",
+  type: "venda",
+  category: "apartamento",
+  featured: false,
+  coverImage: "/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/13.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 0,
+  area: "60m²",
+  description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
+
+Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade. Uma excelente opção para quem busca conforto, praticidade e ótima localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m² de área privativa
+- Andar alto e posição sul
+- 02 quartos, sendo 01 suíte
+- Quartos com ar-condicionado e guarda-roupas
+- Sala para 02 ambientes, com iluminação projetada
+- Cozinha ampla com móveis planejados, cooktop e forno embutido
+
+VALOR DE VENDA: R$ 410.000,00
+Imóvel escriturado e pronto para financiamento.
+
+OBS.: o mesmo apartamento também está disponível para locação por R$ 2.700,00/mês (condomínio e IPTU inclusos, mediante caução equivalente a 03 meses de aluguel).`,
+  images: Array.from(
+    { length: 13 },
+    (_, i) => `/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "60m² de Área Privativa",
+    "Andar Alto - Posição Sul",
+    "01 Suíte",
+    "Ar-condicionado nos Quartos",
+    "Cozinha com Móveis Planejados, Cooktop e Forno",
+    "Sala para 02 Ambientes",
+    "Bairro Universitário",
+    "Escriturado - Pronto para Financiamento",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+},
+
+  // --- CASA DUPLEX | INDIANÓPOLIS (À VENDA) ---
+  {
+  id: "casa-duplex-indianopolis",
+  title: "Casa Duplex no Bairro Indianópolis",
+  price: "R$ 225.000",
+  location: "Indianópolis, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  featured: false,
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 1,
+  area: "65m²",
+  description: `CASA DUPLEX À VENDA | INDIANÓPOLIS – CARUARU/PE
+
+Imóvel em posição nascente, com 65 m² de área construída.
+
+PAVIMENTO TERREO:
+- Garagem para um veículo de pequeno porte
+- Sala de estar
+- Cozinha planejada
+- Banheiro social
+- Lavanderia
+
+PAVIMENTO SUPERIOR:
+- 02 quartos, sendo 01 suíte
+
+DIFERENCIAIS DO IMÓVEL:
+- Cisterna com capacidade para 10 mil litros
+- Cerca elétrica
+- Sistema de câmeras de segurança
+- Móveis fixos planejados
+- Forno e cooktop inclusos
+- Ar-condicionado
+
+VALOR DE VENDA: R$ 225.000,00
+Não aceita financiamento.
+
+OBS.: a casa também está disponível para locação por R$ 2.000,00/mês (condomínio e IPTU inclusos, garantia mediante caução).`,
+  images: Array.from(
+    { length: 31 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Posição Nascente",
+    "65m² de Área Construída",
+    "01 Suíte",
+    "Cozinha Planejada",
+    "Cisterna para 10 Mil Litros",
+    "Cerca Elétrica e Câmeras de Segurança",
+    "Móveis Fixos Planejados",
+    "Forno, Cooktop e Ar-condicionado",
+    "01 Vaga de Garagem",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+},
+
+  // --- CASA NO LOTEAMENTO 7 LUAS | ALTO DO MOURA (ALUGADA - À VENDA) ---
+  {
+  id: "casa-alto-do-moura-7-luas",
+  title: "Casa no Loteamento 7 Luas – Alto do Moura",
+  price: "R$ 215.000",
+  location: "Alto do Moura, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  featured: false,
+  coverImage: "/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/11.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 0,
+  area: "56m²",
+  alugado: true,
+  description: `CASA À VENDA | LOTEAMENTO 7 LUAS – ALTO DO MOURA – CARUARU/PE
+
+Imóvel construído em terreno de 7 x 22 metros, com 56 m² de área construída, oferecendo conforto, funcionalidade e excelente aproveitamento dos espaços.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Sala de estar e jantar integradas, trazendo mais amplitude e aconchego
+- Cozinha planejada, com móveis sob medida e bancada em mármore
+- 02 quartos, sendo 01 suíte
+- Banheiros completos, com bancada em mármore, móveis planejados e luminárias
+- Quintal amplo de 5 x 7 metros, com possibilidade de construção de um terceiro quarto
+
+Ideal para quem busca um imóvel moderno, bem distribuído e com potencial de ampliação.
+
+VALOR DE VENDA: R$ 215.000,00 (preço de oportunidade)
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+  images: Array.from(
+    { length: 15 },
+    (_, i) => `/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno 7 x 22 m - 56m² Construídos",
+    "01 Suíte",
+    "Cozinha Planejada com Móveis Sob Medida",
+    "Bancadas em Mármore",
+    "Quintal de 5 x 7 m",
+    "Potencial para um Terceiro Quarto",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+},
+
+  // --- CASA REFORMADA | PETRÓPOLIS (ALUGADA - À VENDA) ---
+  {
+  id: "casa-reformada-petropolis",
+  title: "Magnífica Casa Reformada no Bairro Petrópolis",
+  price: "R$ 750.000",
+  location: "Petrópolis, Caruaru - PE",
+  type: "venda",
+  category: "casa",
+  featured: false,
+  coverImage: "/imoveis/casas-para-venda/casa-reformada-petropolis/23.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 4,
+  area: "258m²",
+  alugado: true,
+  description: `CASA REFORMADA À VENDA | PETRÓPOLIS – CARUARU/PE
+
+MAGNÍFICA CASA REFORMADA, MODERNA E PRONTA PARA MORAR NO PETRÓPOLIS
+Uma casa que une arquitetura contemporânea, conforto e espaços pensados para receber bem.
+
+LOCALIZAÇÃO: Bairro Petrópolis | Próximo à principal
+- 258 m² de área construída
+- Terreno 13 x 23 m
+- 03 quartos, sendo 01 suíte
+- Sala para 02 ambientes
+- Cozinha
+- Banheiro social
+- Garagem para 04 carros
+- Casa solta na lateral
+
+ÁREA GOURMET E LAZER:
+- Área gourmet principal com piscina aquecida, teto retrátil e churrasqueira a gás
+- Segunda área gourmet com churrasqueira a carvão e banheiro
+- Iluminação em LED, fachada revestida em porcelanato e acabamentos modernos
+
+Imóvel escriturado.
+
+VALOR DE VENDA: R$ 750.000,00
+Aceita carro ou lote em condomínio como parte do pagamento, mediante avaliação.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+  images: Array.from(
+    { length: 23 },
+    (_, i) => `/imoveis/casas-para-venda/casa-reformada-petropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "258m² de Área Construída",
+    "01 Suíte",
+    "Sala para 02 Ambientes",
+    "Garagem para 04 Carros",
+    "Piscina Aquecida com Teto Retrátil",
+    "Churrasqueira a Gás e a Carvão",
+    "Iluminação em LED",
+    "Fachada em Porcelanato",
+    "Imóvel Escriturado",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+},
+
   // =========================================================================
   // --- LOCAÇÃO ---
   // =========================================================================
@@ -1108,6 +1326,170 @@ VALOR DE LOCAÇÃO: R$ 4.000,00/mês (Condomínio e IPTU inclusos).`,
     backLabel: "Voltar para Imóveis para Alugar",
   },
   
+  // --- EKO HOME CLUB - TORRE IPÊ (LOCAÇÃO) ---
+  {
+  id: "ap-eko-home-club-torre-ipe-aluguel",
+  title: "Apartamento para Locação no Eko Home Club – Torre Ipê",
+  price: "R$ 2.700 / mês (Condomínio e IPTU Inclusos)",
+  location: "Universitário, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  featured: false,
+  coverImage: "/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/13.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 0,
+  area: "60m²",
+  description: `APARTAMENTO PARA LOCAÇÃO | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
+
+Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade. Uma excelente opção para quem busca conforto, praticidade e ótima localização.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m² de área privativa
+- Andar alto e posição sul
+- 02 quartos, sendo 01 suíte
+- Quartos com ar-condicionado e guarda-roupas
+- Sala para 02 ambientes, com iluminação projetada
+- Cozinha ampla com móveis planejados, cooktop e forno embutido
+
+VALOR DA LOCAÇÃO: R$ 2.700,00/mês
+Condomínio e IPTU inclusos.
+Locação mediante caução equivalente a 03 meses de aluguel.
+
+OBS.: o mesmo apartamento também está à venda por R$ 410.000,00 (escriturado e pronto para financiamento).`,
+  images: Array.from(
+    { length: 13 },
+    (_, i) => `/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "60m² de Área Privativa",
+    "Andar Alto - Posição Sul",
+    "01 Suíte",
+    "Ar-condicionado nos Quartos",
+    "Cozinha com Móveis Planejados, Cooktop e Forno",
+    "Condomínio e IPTU Inclusos",
+    "Caucão de 03 Meses de Aluguel",
+    "Bairro Universitário",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+},
+
+  // --- CASA DUPLEX | INDIANÓPOLIS (LOCAÇÃO) ---
+  {
+  id: "casa-duplex-indianopolis-aluguel",
+  title: "Casa Duplex para Locação no Bairro Indianópolis",
+  price: "R$ 2.000 / mês (Condomínio e IPTU Inclusos)",
+  location: "Indianópolis, Caruaru - PE",
+  type: "aluguel",
+  category: "casa",
+  featured: false,
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+  bedrooms: 2,
+  bathrooms: 2,
+  parking: 1,
+  area: "65m²",
+  description: `CASA DUPLEX PARA LOCAÇÃO | INDIANÓPOLIS – CARUARU/PE
+
+Imóvel em posição nascente, com 65 m² de área construída.
+
+PAVIMENTO TERREO:
+- Garagem para um veículo de pequeno porte
+- Sala de estar
+- Cozinha planejada
+- Banheiro social
+- Lavanderia
+
+PAVIMENTO SUPERIOR:
+- 02 quartos, sendo 01 suíte
+
+DIFERENCIAIS DO IMÓVEL:
+- Cisterna com capacidade para 10 mil litros
+- Cerca elétrica
+- Sistema de câmeras de segurança
+- Móveis fixos planejados
+- Forno e cooktop inclusos
+- Ar-condicionado
+
+VALOR DA LOCAÇÃO: R$ 2.000,00/mês
+Condomínio e IPTU inclusos. Garantia mediante caução.
+
+OBS.: a casa também está à venda por R$ 225.000,00 (não aceita financiamento).`,
+  images: Array.from(
+    { length: 31 },
+    (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Posição Nascente",
+    "65m² de Área Construída",
+    "01 Suíte",
+    "Cozinha Planejada",
+    "Cisterna para 10 Mil Litros",
+    "Cerca Elétrica e Câmeras de Segurança",
+    "Condomínio e IPTU Inclusos",
+    "Garantia mediante Caução",
+    "01 Vaga de Garagem",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+},
+
+  // --- CASA REFORMADA | PETRÓPOLIS (LOCAÇÃO - ALUGADA) ---
+  {
+  id: "casa-reformada-petropolis-aluguel",
+  title: "Magnífica Casa Reformada para Locação no Petrópolis",
+  price: "R$ 5.500 / mês (Incluso IPTU)",
+  location: "Petrópolis, Caruaru - PE",
+  type: "aluguel",
+  category: "casa",
+  featured: false,
+  coverImage: "/imoveis/casas-para-venda/casa-reformada-petropolis/23.jpeg",
+  bedrooms: 3,
+  bathrooms: 3,
+  parking: 4,
+  area: "258m²",
+  alugado: true,
+  description: `CASA REFORMADA PARA LOCAÇÃO | PETRÓPOLIS – CARUARU/PE
+
+MAGNÍFICA CASA REFORMADA, MODERNA E PRONTA PARA MORAR NO PETRÓPOLIS
+Uma casa que une arquitetura contemporânea, conforto e espaços pensados para receber bem.
+
+LOCALIZAÇÃO: Bairro Petrópolis | Próximo à principal
+- 258 m² de área construída
+- Terreno 13 x 23 m
+- 03 quartos, sendo 01 suíte
+- Sala para 02 ambientes
+- Cozinha
+- Banheiro social
+- Garagem para 04 carros
+- Casa solta na lateral
+
+ÁREA GOURMET E LAZER:
+- Área gourmet principal com piscina aquecida, teto retrátil e churrasqueira a gás
+- Segunda área gourmet com churrasqueira a carvão e banheiro
+- Iluminação em LED, fachada revestida em porcelanato e acabamentos modernos
+
+VALOR DA LOCAÇÃO: R$ 5.500,00/mês, incluso IPTU.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 750.000,00.`,
+  images: Array.from(
+    { length: 23 },
+    (_, i) => `/imoveis/casas-para-venda/casa-reformada-petropolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "258m² de Área Construída",
+    "01 Suíte",
+    "Sala para 02 Ambientes",
+    "Garagem para 04 Carros",
+    "Piscina Aquecida com Teto Retrátil",
+    "Churrasqueira a Gás e a Carvão",
+    "IPTU Incluso",
+    "Imóvel Alugado - Disponível para Venda",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+},
+
  // ==========================================
 // PONTOS COMERCIAIS
 // ==========================================

@@ -77,6 +77,11 @@ export default function ImovelDetalhesPage() {
             <span className="bg-[#b85d19] text-white text-xs px-3 py-1 rounded-full font-medium uppercase tracking-wider">
               {imovel.type === "venda" ? "Venda" : imovel.type === "aluguel" ? "Locação" : "Comercial"}
             </span>
+            {imovel.alugado && (
+              <span className="bg-red-600 text-white text-xs px-3 py-1 rounded-full font-medium uppercase tracking-wider">
+                Alugado
+              </span>
+            )}
             <span className="text-sm text-white/70 flex items-center gap-1">
               <MapPin className="h-3.5 w-3.5 text-[#b85d19]" /> {imovel.location}
             </span>
@@ -159,10 +164,12 @@ export default function ImovelDetalhesPage() {
                   <Bath className="h-5 w-5 text-[#0d3b2e]" />
                   <span className="font-medium text-foreground">{imovel.bathrooms}</span> {imovel.bathrooms === 1 ? "Banheiro" : "Banheiros"}
                 </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Car className="h-5 w-5 text-[#0d3b2e]" />
-                  <span className="font-medium text-foreground">{imovel.parking}</span> {imovel.parking === 1 ? "Vaga" : "Vagas"}
-                </div>
+                {imovel.parking > 0 && (
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <Car className="h-5 w-5 text-[#0d3b2e]" />
+                    <span className="font-medium text-foreground">{imovel.parking}</span> {imovel.parking === 1 ? "Vaga" : "Vagas"}
+                  </div>
+                )}
                 {imovel.area && (
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Maximize className="h-5 w-5 text-[#0d3b2e]" />
@@ -224,6 +231,13 @@ export default function ImovelDetalhesPage() {
                 <p className="font-serif text-2xl md:text-3xl text-[#0d3b2e] font-bold my-2">
                   {imovel.price}
                 </p>
+                {imovel.alugado && (
+                  <p className="text-sm font-medium text-red-600">
+                    {imovel.type === "venda"
+                      ? "Imóvel alugado · disponível para venda"
+                      : "Imóvel alugado no momento"}
+                  </p>
+                )}
 
                 <div className="space-y-3 mt-6">
                   <Button asChild className="w-full bg-[#0d3b2e] hover:bg-[#092920] text-white" size="lg">

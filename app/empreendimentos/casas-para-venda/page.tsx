@@ -209,6 +209,157 @@ Lazer e infraestrutura do condomínio:
       "2 Vagas Cobertas",
     ],
   },
+
+  // 4. CASA DUPLEX | INDIANÓPOLIS
+  {
+    id: "casa-duplex-indianopolis",
+    title: "Casa Duplex no Bairro Indianópolis",
+    price: "R$ 225.000",
+    location: "Indianópolis, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 1,
+    area: "65m²",
+    description: `CASA DUPLEX À VENDA | INDIANÓPOLIS – CARUARU/PE
+
+Imóvel em posição nascente, com 65 m² de área construída.
+
+PAVIMENTO TERREO:
+- Garagem para um veículo de pequeno porte
+- Sala de estar
+- Cozinha planejada
+- Banheiro social
+- Lavanderia
+
+PAVIMENTO SUPERIOR:
+- 02 quartos, sendo 01 suíte
+
+DIFERENCIAIS DO IMÓVEL:
+- Cisterna com capacidade para 10 mil litros
+- Cerca elétrica
+- Sistema de câmeras de segurança
+- Móveis fixos planejados
+- Forno e cooktop inclusos
+- Ar-condicionado
+
+VALOR DE VENDA: R$ 225.000,00
+Não aceita financiamento.
+
+OBS.: também disponível para locação por R$ 2.000,00/mês.`,
+    video: null,
+    images: Array.from(
+      { length: 31 },
+      (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Posição Nascente",
+      "65m² de Área Construída",
+      "01 Suíte",
+      "Cozinha Planejada",
+      "Cisterna para 10 Mil Litros",
+      "Cerca Elétrica e Câmeras de Segurança",
+      "Forno, Cooktop e Ar-condicionado",
+      "01 Vaga de Garagem",
+    ],
+  },
+
+  // 5. LOTEAMENTO 7 LUAS | ALTO DO MOURA (ALUGADA)
+  {
+    id: "casa-alto-do-moura-7-luas",
+    title: "Casa no Loteamento 7 Luas – Alto do Moura",
+    price: "R$ 215.000",
+    location: "Alto do Moura, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/11.jpeg",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 0,
+    area: "56m²",
+    alugado: true,
+    description: `CASA À VENDA | LOTEAMENTO 7 LUAS – ALTO DO MOURA – CARUARU/PE
+
+Imóvel construído em terreno de 7 x 22 metros, com 56 m² de área construída, oferecendo conforto, funcionalidade e excelente aproveitamento dos espaços.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- Sala de estar e jantar integradas
+- Cozinha planejada, com móveis sob medida e bancada em mármore
+- 02 quartos, sendo 01 suíte
+- Banheiros completos, com bancada em mármore, móveis planejados e luminárias
+- Quintal amplo de 5 x 7 metros, com possibilidade de construção de um terceiro quarto
+
+VALOR DE VENDA: R$ 215.000,00 (preço de oportunidade)
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+    video: null,
+    images: Array.from(
+      { length: 15 },
+      (_, i) => `/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Terreno 7 x 22 m - 56m² Construídos",
+      "01 Suíte",
+      "Cozinha Planejada com Móveis Sob Medida",
+      "Bancadas em Mármore",
+      "Quintal de 5 x 7 m",
+      "Potencial para um Terceiro Quarto",
+      "Imóvel Alugado - Disponível para Venda",
+    ],
+  },
+
+  // 6. MAGNÍFICA CASA REFORMADA | PETRÓPOLIS (ALUGADA)
+  {
+    id: "casa-reformada-petropolis",
+    title: "Magnífica Casa Reformada no Bairro Petrópolis",
+    price: "R$ 750.000",
+    location: "Petrópolis, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-reformada-petropolis/23.jpeg",
+    bedrooms: 3,
+    bathrooms: 3,
+    parking: 4,
+    area: "258m²",
+    alugado: true,
+    description: `CASA REFORMADA À VENDA | PETRÓPOLIS – CARUARU/PE
+
+MAGNÍFICA CASA REFORMADA, MODERNA E PRONTA PARA MORAR NO PETRÓPOLIS
+
+LOCALIZAÇÃO: Bairro Petrópolis | Próximo à principal
+- 258 m² de área construída
+- Terreno 13 x 23 m
+- 03 quartos, sendo 01 suíte
+- Sala para 02 ambientes
+- Cozinha
+- Banheiro social
+- Garagem para 04 carros
+- Casa solta na lateral
+
+ÁREA GOURMET E LAZER:
+- Área gourmet principal com piscina aquecida, teto retrátil e churrasqueira a gás
+- Segunda área gourmet com churrasqueira a carvão e banheiro
+- Iluminação em LED, fachada revestida em porcelanato e acabamentos modernos
+
+Imóvel escriturado.
+
+VALOR DE VENDA: R$ 750.000,00
+Aceita carro ou lote em condomínio como parte do pagamento, mediante avaliação.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
+    video: null,
+    images: Array.from(
+      { length: 23 },
+      (_, i) => `/imoveis/casas-para-venda/casa-reformada-petropolis/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "258m² de Área Construída",
+      "01 Suíte",
+      "Sala para 02 Ambientes",
+      "Garagem para 04 Carros",
+      "Piscina Aquecida com Teto Retrátil",
+      "Churrasqueira a Gás e a Carvão",
+      "Fachada em Porcelanato",
+      "Imóvel Escriturado",
+      "Imóvel Alugado - Disponível para Venda",
+    ],
+  },
 ]
 
 // Componente do Card com navegação individual de fotos
@@ -245,6 +396,12 @@ function PropertyCard({
           <div className="absolute top-3 left-3 bg-[#0d3b2e] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
             Venda
           </div>
+
+          {property.alugado && (
+            <div className="absolute bottom-3 right-3 bg-red-600 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
+              Alugado
+            </div>
+          )}
 
           {property.video && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
@@ -299,9 +456,11 @@ function PropertyCard({
             <span className="flex items-center gap-1">
               <Bath className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.bathrooms} {property.bathrooms === 1 ? "Banheiro" : "Banheiros"}
             </span>
-            <span className="flex items-center gap-1">
-              <Car className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.parking} {property.parking === 1 ? "Vaga" : "Vagas"}
-            </span>
+            {property.parking > 0 && (
+              <span className="flex items-center gap-1">
+                <Car className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.parking} {property.parking === 1 ? "Vaga" : "Vagas"}
+              </span>
+            )}
             {property.area && (
               <span className="flex items-center gap-1">
                 <Maximize className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.area}
@@ -492,10 +651,12 @@ function CasasParaVendaContent() {
                     <Bath className="h-5 w-5 text-[#0d3b2e]" />{" "}
                     <span className="font-medium text-foreground">{activeProperty.bathrooms}</span> {activeProperty.bathrooms === 1 ? "Banheiro" : "Banheiros"}
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Car className="h-5 w-5 text-[#0d3b2e]" />{" "}
-                    <span className="font-medium text-foreground">{activeProperty.parking}</span> {activeProperty.parking === 1 ? "Vaga" : "Vagas"}
-                  </div>
+                  {activeProperty.parking > 0 && (
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Car className="h-5 w-5 text-[#0d3b2e]" />{" "}
+                      <span className="font-medium text-foreground">{activeProperty.parking}</span> {activeProperty.parking === 1 ? "Vaga" : "Vagas"}
+                    </div>
+                  )}
                   {activeProperty.area && (
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <Maximize className="h-5 w-5 text-[#0d3b2e]" />{" "}
@@ -554,6 +715,11 @@ function CasasParaVendaContent() {
                   <p className="font-serif text-2xl md:text-3xl text-[#0d3b2e] font-bold my-2">
                     {activeProperty.price || "Sob Consulta"}
                   </p>
+                  {activeProperty.alugado && (
+                    <p className="text-sm font-medium text-red-600">
+                      Imóvel alugado · disponível para venda
+                    </p>
+                  )}
 
                   <div className="space-y-3 mt-6">
                     <Button asChild className="w-full bg-[#0d3b2e] hover:bg-[#092920] text-white" size="lg">

@@ -229,6 +229,49 @@ VALOR DE VENDA: R$ 580.000,00`,
       "Piscina",
     ],
   },
+  // 4. EKO HOME CLUB - TORRE IPÊ
+  {
+    id: "ap-eko-home-club-torre-ipe",
+    title: "Apartamento à Venda no Eko Home Club – Torre Ipê",
+    price: "R$ 410.000",
+    location: "Universitário, Caruaru - PE",
+    coverImage: "/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/13.jpeg",
+    bedrooms: 2,
+    bathrooms: 2,
+    parking: 0,
+    area: "60m²",
+    description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
+
+Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 60 m² de área privativa
+- Andar alto e posição sul
+- 02 quartos, sendo 01 suíte
+- Quartos com ar-condicionado e guarda-roupas
+- Sala para 02 ambientes, com iluminação projetada
+- Cozinha ampla com móveis planejados, cooktop e forno embutido
+
+VALOR DE VENDA: R$ 410.000,00
+Imóvel escriturado e pronto para financiamento.
+
+OBS.: também disponível para locação por R$ 2.700,00/mês.`,
+    videos: [],
+    images: Array.from(
+      { length: 13 },
+      (_, i) => `/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "60m² de Área Privativa",
+      "Andar Alto - Posição Sul",
+      "01 Suíte",
+      "Ar-condicionado nos Quartos",
+      "Cozinha com Móveis Planejados, Cooktop e Forno",
+      "Sala para 02 Ambientes",
+      "Bairro Universitário",
+      "Escriturado - Pronto para Financiamento",
+    ],
+  },
 ]
 
 // =========================================================================
@@ -323,9 +366,11 @@ function PropertyCard({
             <span className="flex items-center gap-1">
               <Bath className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.bathrooms} {property.bathrooms === 1 ? "Banheiro" : "Banheiros"}
             </span>
-            <span className="flex items-center gap-1">
-              <Car className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.parking} {property.parking === 1 ? "Vaga" : "Vagas"}
-            </span>
+            {property.parking > 0 && (
+              <span className="flex items-center gap-1">
+                <Car className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.parking} {property.parking === 1 ? "Vaga" : "Vagas"}
+              </span>
+            )}
             {property.area && (
               <span className="flex items-center gap-1">
                 <Maximize className="h-3.5 w-3.5 text-[#0d3b2e]" /> {property.area}
@@ -510,10 +555,12 @@ function ApartamentosParaVendaContent() {
                     <Bath className="h-5 w-5 text-[#0d3b2e]" />{" "}
                     <span className="font-medium text-foreground">{activeProperty.bathrooms}</span> {activeProperty.bathrooms === 1 ? "Banheiro" : "Banheiros"}
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <Car className="h-5 w-5 text-[#0d3b2e]" />{" "}
-                    <span className="font-medium text-foreground">{activeProperty.parking}</span> {activeProperty.parking === 1 ? "Vaga" : "Vagas"}
-                  </div>
+                  {activeProperty.parking > 0 && (
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Car className="h-5 w-5 text-[#0d3b2e]" />{" "}
+                      <span className="font-medium text-foreground">{activeProperty.parking}</span> {activeProperty.parking === 1 ? "Vaga" : "Vagas"}
+                    </div>
+                  )}
                   {activeProperty.area && (
                     <div className="flex items-center gap-2 text-muted-foreground">
                       <Maximize className="h-5 w-5 text-[#0d3b2e]" />{" "}
