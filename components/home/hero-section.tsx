@@ -32,7 +32,7 @@ export function HeroSection() {
         {/* Imagem */}
         <div className="relative overflow-hidden">
 
-          <img
+          <img 
             src="/og-image-mobile.png"
             alt="Rafael, corretor de imóveis em Caruaru"
             className="block w-full h-auto"
