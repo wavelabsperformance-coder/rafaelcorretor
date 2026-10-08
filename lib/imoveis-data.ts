@@ -2048,9 +2048,12 @@ Condomínio Terras Alpha | Caruaru – PE`,
     bathrooms: 1,
     parking: 1,
     area: "35m²",
-    description: `Apartamento mobiliado no bairro Maurício de Nassau, próximo ao polo médico e jurídico. Taxas inclusas.`,
+    alugado: true,
+    description: `Apartamento mobiliado no bairro Maurício de Nassau, próximo ao polo médico e jurídico. Taxas inclusas.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
     images: Array.from({ length: 9 }, (_, i) => `/imoveis/apartamentos-para-alugar/apartamento-mobiliado-mauricio-de-nassau/${i + 1}.jpeg`),
-    amenities: ["Mobiliado", "Ar-condicionado", "Próximo ao Polo Médico", "Taxas Inclusas"],
+    amenities: ["Mobiliado", "Ar-condicionado", "Próximo ao Polo Médico", "Taxas Inclusas", "Imóvel Alugado"],
     backUrl: "/empreendimentos/imoveis-para-alugar",
     backLabel: "Voltar para Imóveis para Alugar",
   },
@@ -2144,6 +2147,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
     bathrooms: 1,
     parking: 1,
     area: "42m²",
+    alugado: true,
     description: `APARTAMENTO PARA LOCAÇÃO | JARDIM DAS ORQUÍDEAS — CARUARU
 
 Indianópolis | Próximo ao Caruaru Shopping
@@ -2173,7 +2177,9 @@ Condições para locação:
 - 1 aluguel + 1 caução
 Obs.: Necessário estar com o nome limpo!
 
-Agende sua visita e venha conhecer!`,
+Agende sua visita e venha conhecer!
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
     images: Array.from(
       { length: 13 },
       (_, i) => `/imoveis/apartamentos-para-alugar/jardim-das-orquideas/${i + 1}.jpeg`
@@ -2185,6 +2191,7 @@ Agende sua visita e venha conhecer!`,
       "Condomínio, IPTU e Gás Inclusos",
       "Estrutura de Lazer e Segurança",
       "1 Vaga Descoberta",
+      "Imóvel Alugado",
     ],
     backUrl: "/empreendimentos/imoveis-para-alugar",
     backLabel: "Voltar para Imóveis para Alugar",
@@ -2534,6 +2541,7 @@ CONDIÇÕES:
   bathrooms: 1,
   parking: 0,
   area: "35m²",
+  alugado: true,
   description: `FLAT MOBILIADO PARA LOCAÇÃO | EDF. MULTIPORTO – INDIANÓPOLIS/CARUARU-PE
 
 CARACTERÍSTICAS DO IMÓVEL:
@@ -2544,7 +2552,9 @@ CARACTERÍSTICAS DO IMÓVEL:
 
 VALOR DA LOCAÇÃO: R$ 2.200,00/mês — incluso condomínio e IPTU.
 
-CONDIÇÕES: garantia mediante caução.`,
+CONDIÇÕES: garantia mediante caução.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
   videos: [],
   images: Array.from(
     { length: 10 },
@@ -2556,6 +2566,7 @@ CONDIÇÕES: garantia mediante caução.`,
     "Sala Integrada à Cozinha",
     "Condomínio e IPTU Inclusos",
     "Garantia mediante Caução",
+    "Imóvel Alugado",
   ],
   backUrl: "/empreendimentos/imoveis-para-alugar",
   backLabel: "Voltar para Imóveis para Alugar",
@@ -2625,13 +2636,16 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
   bathrooms: 1,
   parking: 0,
   area: "",
+  alugado: true,
   description: `FLAT PARA LOCAÇÃO | BELLE VILLE – CARUARU/PE
 
 Flat com 01 quarto disponível para locação.
 
 VALOR DA LOCAÇÃO: R$ 2.500,00/mês — incluso condomínio e IPTU.
 
-CONDIÇÕES: garantia mediante caução em 3x.`,
+CONDIÇÕES: garantia mediante caução em 3x.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
   videos: [],
   images: Array.from(
     { length: 8 },
@@ -2642,6 +2656,7 @@ CONDIÇÕES: garantia mediante caução em 3x.`,
     "Flat Mobiliado",
     "Condomínio e IPTU Inclusos",
     "Garantia: Caução em 3x",
+    "Imóvel Alugado",
   ],
   backUrl: "/empreendimentos/imoveis-para-alugar",
   backLabel: "Voltar para Imóveis para Alugar",
