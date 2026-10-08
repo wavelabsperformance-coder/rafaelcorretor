@@ -36,7 +36,7 @@ export interface ImovelVenda {
   videos?: string[]
   images: string[]
   amenities: string[]
-  /** true = imóvel alugado (selo vermelho; continua disponível para venda) */
+  /** true = imóvel alugado (só informativo; o selo "Alugado" não aparece nesta listagem de venda) */
   alugado?: boolean
 }
 
@@ -1734,27 +1734,6 @@ function PropertyCard({ property }: { property: ImovelVenda }) {
               {property.videos && property.videos.length > 1
                 ? `${property.videos.length} Vídeos`
                 : "Vídeo"}
-            </div>
-          )}
-
-          {/* BADGE ALUGADO */}
-          {property.alugado && (
-            <div
-              className="
-                absolute
-                bottom-3
-                right-3
-                bg-red-600
-                text-white
-                px-3
-                py-1
-                text-xs
-                rounded-full
-                font-medium
-                shadow-sm
-              "
-            >
-              Alugado
             </div>
           )}
 
