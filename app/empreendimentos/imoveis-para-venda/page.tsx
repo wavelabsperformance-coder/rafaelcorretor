@@ -612,7 +612,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação 
     title: "Casa Duplex no Bairro Indianópolis",
     price: "R$ 225.000",
     location: "Indianópolis, Caruaru - PE",
-    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/1.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -645,7 +645,7 @@ Não aceita financiamento.
 OBS.: também disponível para locação por R$ 2.000,00/mês.`,
     videos: [],
     images: Array.from(
-      { length: 31 },
+      { length: 16 },
       (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
     ),
     amenities: [
@@ -931,7 +931,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   title: "Apartamento de Alto Padrão no Edifício Andrezza",
   price: "R$ 800.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/1.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/4.jpeg",
   bedrooms: 4,
   bathrooms: 4,
   parking: 3,
@@ -989,7 +989,7 @@ VALOR DE VENDA: R$ 800.000,00`,
   title: "Apartamento com Varanda no Maurício de Nassau",
   price: "R$ 450.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/10.jpeg",
   bedrooms: 3,
   bathrooms: 2,
   parking: 2,
@@ -1139,7 +1139,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação 
   title: "Casa de Grandes Proporções no Maurício de Nassau",
   price: "R$ 2.500.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/1.jpeg",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/14.jpeg",
   bedrooms: 8,
   bathrooms: 6,
   parking: 0,
@@ -1190,7 +1190,7 @@ VALOR DE VENDA: R$ 2.500.000,00 — imóvel escriturado. Negocia e aceita troca.
   title: "Casa Duplex de Alto Padrão no Quintas da Colina II",
   price: "R$ 2.100.000",
   location: "Quintas da Colina II, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/1.jpeg",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/8.jpeg",
   bedrooms: 5,
   bathrooms: 5,
   parking: 4,
@@ -1232,7 +1232,7 @@ CONDOMÍNIO:
 VALOR DE VENDA: R$ 2.100.000,00 — aceita imóvel de menor valor como permuta.`,
   videos: [],
   images: Array.from(
-    { length: 24 },
+    { length: 23 },
     (_, i) => `/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/${i + 1}.jpeg`
   ),
   amenities: [
@@ -1300,7 +1300,7 @@ Condomínio: R$ 340,00.`,
   title: "Casa de Alto Padrão no Bairro Luiz Gonzaga",
   price: "R$ 499.000",
   location: "Luiz Gonzaga, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/1.jpeg",
+  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/6.jpeg",
   bedrooms: 3,
   bathrooms: 4,
   parking: 3,
@@ -1342,7 +1342,7 @@ VALOR DE VENDA: R$ 499.000,00 — pode ser financiada.`,
   title: "Lote no Condomínio Solar da Serra – Villa do Vitorino",
   price: "R$ 85.000",
   location: "Villa do Vitorino, Caruaru - PE",
-  coverImage: "/imoveis/terrenos-e-lotes/lote-solar-da-serra-villa-do-vitorino/1.jpeg",
+  coverImage: "/imoveis/terrenos-e-lotes/lote-solar-da-serra-villa-do-vitorino/2.jpeg",
   bedrooms: 0,
   bathrooms: 0,
   parking: 0,
@@ -1611,12 +1611,14 @@ const bairrosDisponiveis = Array.from(
 ).sort((a, b) => a.localeCompare(b, "pt-BR"))
 
 function PropertyCard({ property }: { property: ImovelVenda }) {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
-
   const images =
     property.images && property.images.length > 0
       ? property.images
       : [property.coverImage]
+
+  const [currentImgIndex, setCurrentImgIndex] = useState(
+    Math.max(0, images.indexOf(property.coverImage))
+  )
 
   const totalImages = images.length
   const hasVideos = Boolean(property.videos?.length)

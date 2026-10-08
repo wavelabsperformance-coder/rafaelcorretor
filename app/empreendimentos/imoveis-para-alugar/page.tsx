@@ -504,7 +504,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
     price: "R$ 4.000 / mês",
     location: "Maurício de Nassau, Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-alugar/edificio-monalisa/1.jpeg",
+      "/imoveis/apartamentos-para-alugar/edificio-monalisa/4.jpeg",
     bedrooms: 3,
     bathrooms: 2,
     parking: 2,
@@ -728,7 +728,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
     title: "Casa Duplex para Locação no Bairro Indianópolis",
     price: "R$ 2.000 / mês",
     location: "Indianópolis, Caruaru - PE",
-    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/1.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -761,7 +761,7 @@ Condomínio e IPTU inclusos. Garantia mediante caução.
 OBS.: a casa também está à venda por R$ 225.000,00.`,
     videos: [],
     images: Array.from(
-      { length: 31 },
+      { length: 16 },
       (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
     ),
     amenities: [
@@ -1063,7 +1063,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
   title: "Apartamento com Varanda no Maurício de Nassau",
   price: "R$ 2.600 / mês",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/10.jpeg",
   bedrooms: 3,
   bathrooms: 2,
   parking: 2,
@@ -1262,12 +1262,14 @@ const bairrosDisponiveis = Array.from(
 ).sort((a, b) => a.localeCompare(b, "pt-BR"))
 
 function PropertyCard({ property }: { property: ImovelAluguel }) {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
-
   const images =
     property.images && property.images.length > 0
       ? property.images
       : [property.coverImage]
+
+  const [currentImgIndex, setCurrentImgIndex] = useState(
+    Math.max(0, images.indexOf(property.coverImage))
+  )
 
   const totalImages = images.length
   const hasVideos = Boolean(property.videos?.length)

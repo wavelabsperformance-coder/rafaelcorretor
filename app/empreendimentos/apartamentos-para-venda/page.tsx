@@ -445,7 +445,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   title: "Apartamento de Alto Padrão no Edifício Andrezza",
   price: "R$ 800.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/1.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/4.jpeg",
   bedrooms: 4,
   bathrooms: 4,
   parking: 3,
@@ -502,7 +502,7 @@ VALOR DE VENDA: R$ 800.000,00`,
   title: "Apartamento com Varanda no Maurício de Nassau",
   price: "R$ 450.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/10.jpeg",
   bedrooms: 3,
   bathrooms: 2,
   parking: 2,
@@ -558,7 +558,9 @@ function PropertyCard({
   property: (typeof apartamentosVenda)[0]
   onSelect: () => void
 }) {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
+  const [currentImgIndex, setCurrentImgIndex] = useState(
+    Math.max(0, property.images.indexOf(property.coverImage))
+  )
   const totalImages = property.images.length
   const hasVideos = property.videos && property.videos.length > 0
 

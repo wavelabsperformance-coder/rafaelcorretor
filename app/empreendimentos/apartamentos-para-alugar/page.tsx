@@ -647,7 +647,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
   title: "Apartamento com Varanda no Maurício de Nassau",
   price: "R$ 2.600 / mês",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/1.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-mauricio-de-nassau-80m/10.jpeg",
   bedrooms: 3,
   bathrooms: 2,
   parking: 2,
@@ -698,7 +698,9 @@ function PropertyCard({
   property: (typeof apartamentosAluguel)[0]
   onSelect: () => void
 }) {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
+  const [currentImgIndex, setCurrentImgIndex] = useState(
+    Math.max(0, property.images.indexOf(property.coverImage))
+  )
   const totalImages = property.images.length
 
   const handlePrev = (e: React.MouseEvent) => {

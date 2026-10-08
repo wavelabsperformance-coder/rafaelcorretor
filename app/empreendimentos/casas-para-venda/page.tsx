@@ -216,7 +216,7 @@ Lazer e infraestrutura do condomínio:
     title: "Casa Duplex no Bairro Indianópolis",
     price: "R$ 225.000",
     location: "Indianópolis, Caruaru - PE",
-    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/16.jpeg",
+    coverImage: "/imoveis/casas-para-venda/casa-duplex-indianopolis/1.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -249,7 +249,7 @@ Não aceita financiamento.
 OBS.: também disponível para locação por R$ 2.000,00/mês.`,
     video: null,
     images: Array.from(
-      { length: 31 },
+      { length: 16 },
       (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
     ),
     amenities: [
@@ -462,7 +462,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação 
   title: "Casa de Grandes Proporções no Maurício de Nassau",
   price: "R$ 2.500.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/1.jpeg",
+  coverImage: "/imoveis/casas-para-venda/casa-mauricio-de-nassau-ampla/14.jpeg",
   bedrooms: 8,
   bathrooms: 6,
   parking: 0,
@@ -512,7 +512,7 @@ VALOR DE VENDA: R$ 2.500.000,00 — imóvel escriturado. Negocia e aceita troca.
   title: "Casa Duplex de Alto Padrão no Quintas da Colina II",
   price: "R$ 2.100.000",
   location: "Quintas da Colina II, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/1.jpeg",
+  coverImage: "/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/8.jpeg",
   bedrooms: 5,
   bathrooms: 5,
   parking: 4,
@@ -554,7 +554,7 @@ CONDOMÍNIO:
 VALOR DE VENDA: R$ 2.100.000,00 — aceita imóvel de menor valor como permuta.`,
   video: null,
   images: Array.from(
-    { length: 24 },
+    { length: 23 },
     (_, i) => `/imoveis/casas-para-venda/casa-duplex-quintas-da-colina-ii/${i + 1}.jpeg`
   ),
   amenities: [
@@ -620,7 +620,7 @@ Condomínio: R$ 340,00.`,
   title: "Casa de Alto Padrão no Bairro Luiz Gonzaga",
   price: "R$ 499.000",
   location: "Luiz Gonzaga, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/1.jpeg",
+  coverImage: "/imoveis/casas-para-venda/casa-luiz-gonzaga/6.jpeg",
   bedrooms: 3,
   bathrooms: 4,
   parking: 3,
@@ -665,7 +665,9 @@ function PropertyCard({
   property: (typeof casasVenda)[0]
   onSelect: () => void
 }) {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
+  const [currentImgIndex, setCurrentImgIndex] = useState(
+    Math.max(0, property.images.indexOf(property.coverImage))
+  )
   const totalImages = property.images.length
 
   const handlePrev = (e: React.MouseEvent) => {

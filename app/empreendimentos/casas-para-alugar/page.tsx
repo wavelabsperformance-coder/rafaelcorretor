@@ -66,7 +66,7 @@ Condomínio e IPTU inclusos. Garantia mediante caução.
 OBS.: a casa também está à venda por R$ 225.000,00.`,
     video: null,
     images: Array.from(
-      { length: 31 },
+      { length: 16 },
       (_, i) => `/imoveis/casas-para-venda/casa-duplex-indianopolis/${i + 1}.jpeg`
     ),
     amenities: [

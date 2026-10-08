@@ -256,7 +256,7 @@ OPÇÕES DISPONÍVEIS:
 - Loja (ponto): R$ 1.400,00/mês`,
   videos: [],
   images: Array.from(
-    { length: 27 },
+    { length: 14 },
     (_, i) => `/imoveis/pontos-comerciais/sala-loja-universitario/${i + 1}.jpeg`
   ),
   amenities: [
@@ -412,12 +412,14 @@ const bairrosDisponiveis = Array.from(
 ).sort((a, b) => a.localeCompare(b, "pt-BR"))
 
 function PropertyCard({ property }: { property: ImovelComercial }) {
-  const [currentImgIndex, setCurrentImgIndex] = useState(0)
-
   const images =
     property.images && property.images.length > 0
       ? property.images
       : [property.coverImage]
+
+  const [currentImgIndex, setCurrentImgIndex] = useState(
+    Math.max(0, images.indexOf(property.coverImage))
+  )
 
   const totalImages = images.length
   const hasVideos = Boolean(property.videos?.length)
