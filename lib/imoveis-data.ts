@@ -604,6 +604,7 @@ VALOR DE VENDA: R$ 580.000,00`,
   bathrooms: 2,
   parking: 0,
   area: "60m²",
+  alugado: true,
   description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
 
 Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade. Uma excelente opção para quem busca conforto, praticidade e ótima localização.
@@ -619,7 +620,9 @@ CARACTERÍSTICAS DO IMÓVEL:
 VALOR DE VENDA: R$ 410.000,00
 Imóvel escriturado e pronto para financiamento.
 
-OBS.: o mesmo apartamento também está disponível para locação por R$ 2.700,00/mês (condomínio e IPTU inclusos, mediante caução equivalente a 03 meses de aluguel).`,
+OBS.: o mesmo apartamento também está disponível para locação por R$ 2.700,00/mês (condomínio e IPTU inclusos, mediante caução equivalente a 03 meses de aluguel).
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação por R$ 2.700,00/mês, incluso condomínio e IPTU).`,
   images: Array.from(
     { length: 13 },
     (_, i) => `/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/${i + 1}.jpeg`
@@ -633,6 +636,7 @@ OBS.: o mesmo apartamento também está disponível para locação por R$ 2.700,
     "Sala para 02 Ambientes",
     "Bairro Universitário",
     "Escriturado - Pronto para Financiamento",
+    "Imóvel Alugado - Disponível para Venda",
   ],
   backUrl: "/empreendimentos/imoveis-para-venda",
   backLabel: "Voltar para Imóveis para Venda",
@@ -2249,6 +2253,7 @@ VALOR DE LOCAÇÃO: R$ 4.000,00/mês (Condomínio e IPTU inclusos).`,
   bathrooms: 2,
   parking: 0,
   area: "60m²",
+  alugado: true,
   description: `APARTAMENTO PARA LOCAÇÃO | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
 
 Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade. Uma excelente opção para quem busca conforto, praticidade e ótima localização.
@@ -2265,7 +2270,9 @@ VALOR DA LOCAÇÃO: R$ 2.700,00/mês
 Condomínio e IPTU inclusos.
 Locação mediante caução equivalente a 03 meses de aluguel.
 
-OBS.: o mesmo apartamento também está à venda por R$ 410.000,00 (escriturado e pronto para financiamento).`,
+OBS.: o mesmo apartamento também está à venda por R$ 410.000,00 (escriturado e pronto para financiamento).
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
   images: Array.from(
     { length: 13 },
     (_, i) => `/imoveis/apartamentos-para-venda/eko-home-club-torre-ipe/${i + 1}.jpeg`
@@ -2279,6 +2286,7 @@ OBS.: o mesmo apartamento também está à venda por R$ 410.000,00 (escriturado 
     "Condomínio e IPTU Inclusos",
     "Caucão de 03 Meses de Aluguel",
     "Bairro Universitário",
+    "Imóvel Alugado",
   ],
   backUrl: "/empreendimentos/imoveis-para-alugar",
   backLabel: "Voltar para Imóveis para Alugar",

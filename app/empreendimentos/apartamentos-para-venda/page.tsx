@@ -240,6 +240,7 @@ VALOR DE VENDA: R$ 580.000,00`,
     bathrooms: 2,
     parking: 0,
     area: "60m²",
+    alugado: true,
     description: `APARTAMENTO À VENDA | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
 
 Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade.
@@ -255,7 +256,9 @@ CARACTERÍSTICAS DO IMÓVEL:
 VALOR DE VENDA: R$ 410.000,00
 Imóvel escriturado e pronto para financiamento.
 
-OBS.: também disponível para locação por R$ 2.700,00/mês.`,
+OBS.: também disponível para locação por R$ 2.700,00/mês.
+
+ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda (locação por R$ 2.700,00/mês, incluso condomínio e IPTU).`,
     videos: [],
     images: Array.from(
       { length: 13 },
@@ -270,6 +273,7 @@ OBS.: também disponível para locação por R$ 2.700,00/mês.`,
       "Sala para 02 Ambientes",
       "Bairro Universitário",
       "Escriturado - Pronto para Financiamento",
+      "Imóvel Alugado - Disponível para Venda",
     ],
   },
   // 5. APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA)

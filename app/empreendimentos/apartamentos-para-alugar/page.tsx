@@ -381,6 +381,7 @@ Localização privilegiada: a poucos passos do Caruaru Shopping, faculdades e pr
     bathrooms: 2,
     parking: 0,
     area: "60m²",
+    alugado: true,
     description: `APARTAMENTO PARA LOCAÇÃO | EKO HOME CLUB – TORRE IPÊ – CARUARU/PE
 
 Localizado em uma das áreas mais valorizadas do bairro Universitário, próximo aos principais polos médico, jurídico e estudantil da cidade.
@@ -397,7 +398,9 @@ VALOR DA LOCAÇÃO: R$ 2.700,00/mês
 Condomínio e IPTU inclusos.
 Locação mediante caução equivalente a 03 meses de aluguel.
 
-OBS.: o mesmo apartamento também está à venda por R$ 410.000,00.`,
+OBS.: o mesmo apartamento também está à venda por R$ 410.000,00.
+
+ATENÇÃO: imóvel atualmente ALUGADO.`,
     video: null,
     images: Array.from(
       { length: 13 },
@@ -412,6 +415,7 @@ OBS.: o mesmo apartamento também está à venda por R$ 410.000,00.`,
       "Condomínio e IPTU Inclusos",
       "Caucão de 03 Meses",
       "Bairro Universitário",
+      "Imóvel Alugado",
     ],
   },
   // 7. APARTAMENTO MOBILIADO NO EDIFÍCIO PLAZA (ALUGADA)
