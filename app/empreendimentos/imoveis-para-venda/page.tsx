@@ -873,14 +873,14 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
     "Aceita Financiamento",
   ],
   },
-  // 19. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - SEM FOTOS)
+  // 19. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA)
   {
   id: "ap-lusia-maciel",
   tipo: "apartamento",
   title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
   price: "R$ 850.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-lusia-maciel/3.jpeg",
   bedrooms: 3,
   bathrooms: 3,
   parking: 2,
@@ -910,7 +910,7 @@ VALOR DE VENDA: R$ 850.000,00 — não aceita financiamento no momento.
 
 ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   videos: [],
-  images: [],
+  images: Array.from({ length: 13 }, (_, i) => `/imoveis/apartamentos-para-venda/ap-lusia-maciel/${i + 1}.jpeg`),
   amenities: [
     "107m² de Área",
     "Exclusivo 02 por Andar",
@@ -1455,14 +1455,14 @@ VALOR: R$ 47.000,00 por hectare (negociável) — 11,5 hectares.`,
     "Valor Negociável",
   ],
   },
-  // 31. TERRENO DE 2.500M² ÀS MARGENS DA BR-232 (SEM FOTOS)
+  // 31. TERRENO DE 2.500M² ÀS MARGENS DA BR-232
   {
   id: "terreno-br-232-caruaru",
   tipo: "terreno",
   title: "Terreno de 2.500m² às Margens da BR-232",
   price: "R$ 3.000.000",
   location: "BR-232, Caruaru - PE",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/terrenos-e-lotes/terreno-br-232-caruaru/2.jpeg",
   bedrooms: 0,
   bathrooms: 0,
   parking: 0,
@@ -1482,8 +1482,8 @@ POTENCIAL DE USO:
 - Outros ramos de atividades
 
 VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
-  videos: [],
-  images: [],
+  videos: ["/imoveis/terrenos-e-lotes/terreno-br-232-caruaru/1.mp4"],
+  images: Array.from({ length: 3 }, (_, i) => `/imoveis/terrenos-e-lotes/terreno-br-232-caruaru/${i + 1}.jpeg`),
   amenities: [
     "2.500m² Escriturado",
     "Às Margens da BR-232",
@@ -1493,14 +1493,14 @@ VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
     "Aceita Troca",
   ],
   },
-  // 32. BELÍSSIMA CHÁCARA EM CONDOMÍNIO NA ZONA RURAL DE CARUARU (SEM FOTOS)
+  // 32. BELÍSSIMA CHÁCARA EM CONDOMÍNIO NA ZONA RURAL DE CARUARU
   {
   id: "chacara-zona-rural-caruaru",
   tipo: "terreno",
   title: "Belíssima Chácara em Condomínio na Zona Rural de Caruaru",
   price: "R$ 850.000",
   location: "Zona Rural, Caruaru - PE",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/terrenos-e-lotes/chacara-zona-rural-caruaru/17.jpeg",
   bedrooms: 3,
   bathrooms: 4,
   parking: 6,
@@ -1533,7 +1533,7 @@ VALOR DE VENDA: R$ 850.000,00
 
 Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de vida.`,
   videos: [],
-  images: [],
+  images: Array.from({ length: 17 }, (_, i) => `/imoveis/terrenos-e-lotes/chacara-zona-rural-caruaru/${i + 1}.jpeg`),
   amenities: [
     "3.168m² (88 x 36 m)",
     "Condomínio Fechado com 247 Lotes",

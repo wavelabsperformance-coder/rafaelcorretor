@@ -933,7 +933,7 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
   backLabel: "Voltar para Imóveis para Venda",
   },
 
-  // --- APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - SEM FOTOS - À VENDA) ---
+  // --- APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - À VENDA) ---
   {
   id: "ap-lusia-maciel",
   title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
@@ -941,7 +941,7 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
   location: "Maurício de Nassau, Caruaru - PE",
   type: "venda",
   category: "apartamento",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-lusia-maciel/3.jpeg",
   bedrooms: 3,
   bathrooms: 3,
   parking: 2,
@@ -971,7 +971,7 @@ VALOR DE VENDA: R$ 850.000,00 — não aceita financiamento no momento.
 
 ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   videos: [],
-  images: [],
+  images: Array.from({ length: 13 }, (_, i) => `/imoveis/apartamentos-para-venda/ap-lusia-maciel/${i + 1}.jpeg`),
   amenities: [
     "107m² de Área",
     "Exclusivo 02 por Andar",
@@ -1563,7 +1563,7 @@ VALOR: R$ 47.000,00 por hectare (negociável) — 11,5 hectares.`,
   backLabel: "Voltar para Imóveis para Venda",
   },
 
-  // --- TERRENO DE 2.500M² ÀS MARGENS DA BR-232 (SEM FOTOS - À VENDA) ---
+  // --- TERRENO DE 2.500M² ÀS MARGENS DA BR-232 (À VENDA) ---
   {
   id: "terreno-br-232-caruaru",
   title: "Terreno de 2.500m² às Margens da BR-232",
@@ -1571,7 +1571,7 @@ VALOR: R$ 47.000,00 por hectare (negociável) — 11,5 hectares.`,
   location: "BR-232, Caruaru - PE",
   type: "venda",
   category: "terreno",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/terrenos-e-lotes/terreno-br-232-caruaru/2.jpeg",
   bedrooms: 0,
   bathrooms: 0,
   parking: 0,
@@ -1591,8 +1591,8 @@ POTENCIAL DE USO:
 - Outros ramos de atividades
 
 VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
-  videos: [],
-  images: [],
+  videos: ["/imoveis/terrenos-e-lotes/terreno-br-232-caruaru/1.mp4"],
+  images: Array.from({ length: 3 }, (_, i) => `/imoveis/terrenos-e-lotes/terreno-br-232-caruaru/${i + 1}.jpeg`),
   amenities: [
     "2.500m² Escriturado",
     "Às Margens da BR-232",
@@ -1605,7 +1605,7 @@ VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
   backLabel: "Voltar para Imóveis para Venda",
   },
 
-  // --- BELÍSSIMA CHÁCARA EM CONDOMÍNIO NA ZONA RURAL DE CARUARU (SEM FOTOS - À VENDA) ---
+  // --- BELÍSSIMA CHÁCARA EM CONDOMÍNIO NA ZONA RURAL DE CARUARU (À VENDA) ---
   {
   id: "chacara-zona-rural-caruaru",
   title: "Belíssima Chácara em Condomínio na Zona Rural de Caruaru",
@@ -1613,7 +1613,7 @@ VALOR DE VENDA: R$ 3.000.000,00 — aceita troca, dependendo da negociação.`,
   location: "Zona Rural, Caruaru - PE",
   type: "venda",
   category: "terreno",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/terrenos-e-lotes/chacara-zona-rural-caruaru/17.jpeg",
   bedrooms: 3,
   bathrooms: 4,
   parking: 6,
@@ -1646,7 +1646,7 @@ VALOR DE VENDA: R$ 850.000,00
 
 Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de vida.`,
   videos: [],
-  images: [],
+  images: Array.from({ length: 17 }, (_, i) => `/imoveis/terrenos-e-lotes/chacara-zona-rural-caruaru/${i + 1}.jpeg`),
   amenities: [
     "3.168m² (88 x 36 m)",
     "Condomínio Fechado com 247 Lotes",
@@ -2477,7 +2477,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
   backLabel: "Voltar para Imóveis para Alugar",
   },
 
-  // --- FLAT MOBILIADO NO LIFE CENTER (SEM FOTOS - LOCAÇÃO) ---
+  // --- FLAT MOBILIADO NO LIFE CENTER (LOCAÇÃO) ---
   {
   id: "ap-life-center-flat-mobiliado",
   title: "Flat Mobiliado no Life Center",
@@ -2485,7 +2485,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
   location: "Life Center, Caruaru - PE",
   type: "aluguel",
   category: "apartamento",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-life-center-flat-mobiliado/3.jpeg",
   bedrooms: 1,
   bathrooms: 1,
   parking: 0,
@@ -2512,7 +2512,7 @@ CONDIÇÕES:
 - Água, gás e energia são consumos individuais
 - Vaga de garagem opcional, contratada diretamente com o condomínio`,
   videos: [],
-  images: [],
+  images: Array.from({ length: 13 }, (_, i) => `/imoveis/apartamentos-para-alugar/ap-life-center-flat-mobiliado/${i + 1}.jpeg`),
   amenities: [
     "40m² de Área",
     "Cozinha Equipada",

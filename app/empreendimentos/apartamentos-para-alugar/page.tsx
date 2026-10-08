@@ -476,13 +476,13 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
     "Imóvel Alugado",
   ],
   },
-  // 8. FLAT MOBILIADO NO LIFE CENTER (SEM FOTOS)
+  // 8. FLAT MOBILIADO NO LIFE CENTER
   {
   id: "ap-life-center-flat-mobiliado",
   title: "Flat Mobiliado no Life Center",
   price: "R$ 2.500 / mês",
   location: "Life Center, Caruaru - PE",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-life-center-flat-mobiliado/3.jpeg",
   bedrooms: 1,
   bathrooms: 1,
   parking: 0,
@@ -509,7 +509,7 @@ CONDIÇÕES:
 - Água, gás e energia são consumos individuais
 - Vaga de garagem opcional, contratada diretamente com o condomínio`,
   video: null,
-  images: [],
+  images: Array.from({ length: 13 }, (_, i) => `/imoveis/apartamentos-para-alugar/ap-life-center-flat-mobiliado/${i + 1}.jpeg`),
   amenities: [
     "40m² de Área",
     "Cozinha Equipada",

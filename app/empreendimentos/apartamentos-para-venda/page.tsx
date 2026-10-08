@@ -389,13 +389,13 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
     "Aceita Financiamento",
   ],
   },
-  // 7. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA - SEM FOTOS)
+  // 7. APARTAMENTO DE ALTO PADRÃO NO EDIFÍCIO LUSIA MACIEL (ALUGADA)
   {
   id: "ap-lusia-maciel",
   title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
   price: "R$ 850.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-lusia-maciel/3.jpeg",
   bedrooms: 3,
   bathrooms: 3,
   parking: 2,
@@ -425,7 +425,7 @@ VALOR DE VENDA: R$ 850.000,00 — não aceita financiamento no momento.
 
 ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   videos: [],
-  images: [],
+  images: Array.from({ length: 13 }, (_, i) => `/imoveis/apartamentos-para-venda/ap-lusia-maciel/${i + 1}.jpeg`),
   amenities: [
     "107m² de Área",
     "Exclusivo 02 por Andar",
