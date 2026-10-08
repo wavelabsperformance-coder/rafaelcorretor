@@ -88,64 +88,6 @@ INVESTIMENTO: A partir de R$ 450.000,00`,
 },
 
   {
-  id: "casa-luar-do-sumare-indianopolis",
-  title: "Casa Térrea Residencial no Luar do Sumaré",
-  price: "R$ 450.000",
-  location: "Indianópolis, Caruaru - PE",
-  type: "venda",
-  category: "casa",
-  featured: true,
-  coverImage: "/imoveis/casas-para-venda/casa-luar-do-sumare/1.jpeg",
-  bedrooms: 3,
-  bathrooms: 2,
-  parking: 1,
-  area: "109m²",
-  description: `CASA TÉRREA RESIDENCIAL À VENDA | LUAR DO SUMARÉ — INDIANÓPOLIS/PE
-
-Excelente oportunidade para morar ou investir em uma das regiões mais valorizadas de Caruaru!
-
-Casas térreas em localização privilegiada, no Indianópolis, a apenas 5 minutos do Centro e próximas ao Caruaru Shopping e ao Parque Ambiental Severino Montenegro.
-
-ÁREAS DO IMÓVEL:
-- Terreno: 150 m²
-- Área construída: 109 m²
-
-CARACTERÍSTICAS DO IMÓVEL:
-- Sala para 02 ambientes
-- 03 quartos, sendo 01 suíte máster
-- Cozinha
-- WC social
-- Jardim de inverno
-- Área de serviço
-- Garagem
-
-DIFERENCIAIS:
-- Possibilidade de implantação de área gourmet
-- Cisterna com capacidade de 12.000 litros
-- Casas térreas com excelente aproveitamento dos espaços
-- Possibilidade de financiamento bancário
-
-INVESTIMENTO: A partir de R$ 450.000,00`,
-  images: [
-    ...Array.from(
-      { length: 7 },
-      (_, i) =>
-        `/imoveis/casas-para-venda/casa-luar-do-sumare/${i + 1}.jpeg`
-    ),
-  ],
-  amenities: [
-    "1 Suíte Máster",
-    "Jardim de Inverno",
-    "Cisterna de 12.000 Litros",
-    "Possibilidade de Área Gourmet",
-    "A 5 Minutos do Centro",
-    "Próximo ao Caruaru Shopping",
-    "Aceita Financiamento",
-  ],
-  backUrl: "/empreendimentos/imoveis-para-alugar",
-  backLabel: "Voltar para Imóveis",
-},
-  {
     id: "casa-terrea-quintas-da-colina-2",
     title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
     price: "Consulte o valor",
@@ -1730,7 +1672,7 @@ VALOR DE VENDA: R$ 1.500.000,00 — escritura para desmembrar.`,
   type: "aluguel",
   category: "casa",
   featured: true,
-  coverImage: "/imoveis/casas-para-alugar/casa-petropolis/1.jpeg",
+  coverImage: "/imoveis/casas-para-alugar/casa-petropolis/6.jpeg",
   bedrooms: 4,
   bathrooms: 2,
   parking: 2,
@@ -1755,10 +1697,15 @@ Uma ótima oportunidade para quem busca espaço, conforto e praticidade em uma d
 
 VALOR DE LOCAÇÃO: R$ 3.500,00/mês (IPTU incluso).`,
   images: [
+    "/imoveis/casas-para-alugar/casa-petropolis/6.jpeg",
     ...Array.from(
       { length: 12 },
       (_, i) =>
         `/imoveis/casas-para-alugar/casa-petropolis/${i + 1}.jpeg`
+    ).filter(
+      (img) =>
+        img !==
+        "/imoveis/casas-para-alugar/casa-petropolis/6.jpeg"
     ),
   ],
   amenities: [
@@ -1839,7 +1786,7 @@ Garantia: caução.`,
     type: "aluguel",
     category: "casa",
     featured: true,
-    coverImage: "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/1.jpeg",
+    coverImage: "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg",
     bedrooms: 4,
     bathrooms: 4,
     parking: 4,
@@ -1855,7 +1802,18 @@ A casa tem 200 m² e oferece:
 
 VALOR DE LOCAÇÃO: R$ 6.500,00 por mês (com condomínio e IPTU inclusos).
 Garantia: caução.`,
-    images: Array.from({ length: 17 }, (_, i) => `/imoveis/casas-para-alugar/casa-green-garden-condominio-club/${i + 1}.jpeg`),
+    images: [
+      "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg",
+      ...Array.from(
+        { length: 17 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-green-garden-condominio-club/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-green-garden-condominio-club/16.jpeg"
+      ),
+    ],
     amenities: [
       "3 Suítes",
       "Jacuzzi Privativa",
@@ -1968,7 +1926,7 @@ VALOR DE LOCAÇÃO: R$ 10.000,00/mês (incluso Condomínio e IPTU)`,
     type: "aluguel",
     category: "casa",
     featured: true,
-    coverImage: "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/1.jpeg",
+    coverImage: "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/4.jpeg",
     bedrooms: 4,
     bathrooms: 5,
     parking: 4,
@@ -1998,7 +1956,18 @@ DIFERENCIAIS:
 
 LOCAÇÃO: R$ 10.000,00/mês
 Condomínio Terras Alpha | Caruaru – PE`,
-    images: Array.from({ length: 16 }, (_, i) => `/imoveis/casas-para-alugar/casa-duplex-terras-alpha/${i + 1}.jpeg`),
+    images: [
+      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/4.jpeg",
+      ...Array.from(
+        { length: 16 },
+        (_, i) =>
+          `/imoveis/casas-para-alugar/casa-duplex-terras-alpha/${i + 1}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/4.jpeg"
+      ),
+    ],
     amenities: [
       "3 Suítes",
       "Elevador de Acessibilidade",
@@ -2024,6 +1993,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
     bathrooms: 1,
     parking: 1,
     area: "38m²",
+    alugado: true,
     description: `Apartamento mobiliado e completo no Condomínio Mr. Rotterdam na Av. Amazonas no Bairro Universitário. Vista Sul, 4º andar, piscina e academia.`,
     images: [
       "/imoveis/apartamentos-para-alugar/edificio-mr-rotterdam/2.jpeg",

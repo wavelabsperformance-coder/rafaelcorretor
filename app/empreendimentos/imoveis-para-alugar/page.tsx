@@ -227,7 +227,7 @@ VALOR DE LOCAÇÃO: R$ 10.000,00/mês (incluso Condomínio e IPTU)`,
     price: "R$ 10.000 / mês",
     location: "Terras Alpha, Caruaru - PE",
     coverImage:
-      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/16.jpeg",
+      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/4.jpeg",
     bedrooms: 4,
     bathrooms: 5,
     parking: 4,
@@ -259,7 +259,7 @@ LOCAÇÃO: R$ 10.000,00/mês
 Condomínio Terras Alpha | Caruaru – PE`,
     videos: [],
     images: [
-      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/16.jpeg",
+      "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/4.jpeg",
       ...Array.from(
         { length: 16 },
         (_, i) =>
@@ -267,7 +267,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
       ).filter(
         (img) =>
           img !==
-          "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/16.jpeg"
+          "/imoveis/casas-para-alugar/casa-duplex-terras-alpha/4.jpeg"
       ),
     ],
     amenities: [
@@ -622,7 +622,7 @@ Garantia: caução.`,
   price: "R$ 3.500 / mês (Incluso IPTU)",
   location: "Petrópolis, Caruaru - PE",
   coverImage:
-    "/imoveis/casas-para-alugar/casa-petropolis/1.jpeg",
+    "/imoveis/casas-para-alugar/casa-petropolis/6.jpeg",
   bedrooms: 4,
   bathrooms: 2,
   parking: 2,
@@ -656,7 +656,7 @@ VALOR DE LOCAÇÃO: R$ 3.500,00/mês (IPTU incluso).`,
     ).filter(
       (img) =>
         img !==
-        "/imoveis/casas-para-alugar/casa-petropolis/1.jpeg"
+        "/imoveis/casas-para-alugar/casa-petropolis/6.jpeg"
     ),
   ],
   amenities: [
