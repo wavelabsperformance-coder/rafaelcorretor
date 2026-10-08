@@ -367,7 +367,7 @@ Imóvel também disponível para locação.`,
 
   // 10. MAGNÍFICA CASA TÉRREA | QUINTAS DA COLINA II (também para locação)
   {
-    id: "casa-terrea-quintas-da-colina-2-venda",
+    id: "casa-terrea-quintas-da-colina-2",
     tipo: "casa",
     title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
     price: "R$ 2.500.000",

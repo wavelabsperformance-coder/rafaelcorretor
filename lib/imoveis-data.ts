@@ -90,7 +90,7 @@ INVESTIMENTO: A partir de R$ 450.000,00`,
   {
     id: "casa-terrea-quintas-da-colina-2",
     title: "Magnífica Casa de Alto Padrão no Quintas da Colina II",
-    price: "Consulte o valor",
+    price: "R$ 2.500.000",
     location: "Quintas da Colina II, Caruaru - PE",
     type: "venda",
     category: "casa",
