@@ -1661,6 +1661,60 @@ Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de
   backLabel: "Voltar para Imóveis para Venda",
   },
 
+  // --- CHÁCARA NA LAGOA DO PAULISTA - MATA NEGRA (À VENDA) ---
+  {
+  id: "chacara-lagoa-do-paulista",
+  title: "Chácara na Lagoa do Paulista - Mata Negra",
+  price: "R$ 1.500.000",
+  location: "Lagoa do Paulista, Caruaru - PE",
+  type: "venda",
+  category: "terreno",
+  coverImage: "/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/12.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 0,
+  area: "3.300m²",
+  description: `CHÁCARA À VENDA | LAGOA DO PAULISTA – MATA NEGRA, CARUARU/PE
+
+- Área construída: 500 m²
+- Terreno: 3.300 m²
+
+ESTRUTURA:
+- 04 suítes com varanda
+- Piscina com borda infinita — 14 m de ponta a ponta e 7 m no meio
+- Fire pit
+- Área gourmet com churrasqueira e forno
+- Energia solar de 2.500 kW
+
+ÁGUA:
+- Cisterna de 100 mil litros
+- Cisterna de 80 mil litros
+- Cisterna de 20 mil litros
+
+ACESSO:
+- São 4,3 km de estrada até a chácara
+
+VALOR DE VENDA: R$ 1.500.000,00 — escritura para desmembrar.`,
+  videos: [],
+  images: Array.from(
+    { length: 28 },
+    (_, i) => `/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "500m² de Área Construída",
+    "Terreno de 3.300m²",
+    "04 Suítes com Varanda",
+    "Piscina com Borda Infinita (14 x 7 m)",
+    "Fire Pit",
+    "Área Gourmet com Churrasqueira e Forno",
+    "Energia Solar de 2.500 kW",
+    "Cisternas de 100, 80 e 20 Mil Litros",
+    "Escritura para Desmembrar",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-venda",
+  backLabel: "Voltar para Imóveis para Venda",
+  },
+
   // =========================================================================
   // --- LOCAÇÃO ---
   // =========================================================================
@@ -3146,6 +3200,66 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
     "Centro de Caruaru",
     "Ao Lado da Loja Rota do Mar",
     "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/pontos-comerciais",
+  backLabel: "Voltar para Pontos Comerciais",
+  },
+
+  // 9. DUAS SALAS COMERCIAIS INTEGRADAS NO TIMES BUSINESS CENTER (À VENDA)
+  {
+  id: "sala-comercial-times-business-center",
+  title: "Duas Salas Comerciais Integradas no Times Business Center",
+  price: "R$ 950.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  type: "comercial",
+  category: "ponto",
+  coverImage: "/imoveis/pontos-comerciais/times-business-center/3.jpeg",
+  bedrooms: 0,
+  bathrooms: 3,
+  parking: 0,
+  area: "67,27m²",
+  description: `DUAS SALAS COMERCIAIS INTEGRADAS À VENDA | TIMES BUSINESS CENTER
+
+Excelente oportunidade para instalar sua empresa ou investir em um dos endereços empresariais mais conhecidos de Caruaru.
+
+Localizado no bairro Maurício de Nassau, próximo à Avenida Agamenon Magalhães e cercado por clínicas, escritórios, farmácias, restaurantes e diversos serviços, o Times Business Center oferece localização estratégica, fácil acesso e grande circulação de profissionais e clientes.
+
+O empreendimento possui 264 salas empresariais e foi projetado para receber diferentes atividades, como consultórios, escritórios de advocacia e contabilidade, imobiliárias, agências, empresas administrativas e prestadores de serviços.
+
+As duas salas disponíveis para venda são reformadas, integradas e possuem ambientes bem distribuídos, proporcionando conforto, organização e funcionalidade. Permanecem no imóvel todos os móveis fixos planejados, permitindo uma instalação mais rápida da nova empresa.
+
+ÁREAS:
+• Sala 1: 35,11 m²
+• Sala 2: 32,16 m²
+• Área total integrada: 67,27 m²
+
+DISTRIBUIÇÃO DOS AMBIENTES:
+• Recepção com WC
+• Copa equipada
+• Banheiro social
+• Sala privativa com WC
+• Sala de diretoria e reuniões
+• Sala administrativa com almoxarifado
+• Sala reservada para atendimento
+
+Uma excelente estrutura para clínicas, consultórios, escritórios, empresas administrativas ou investidores que buscam um imóvel comercial pronto e bem localizado.
+
+VALOR DE VENDA: R$ 950.000,00
+Imóvel escriturado.`,
+  videos: [],
+  images: Array.from(
+    { length: 10 },
+    (_, i) => `/imoveis/pontos-comerciais/times-business-center/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "67,27m² Integrados (35,11 + 32,16 m²)",
+    "Duas Salas Reformadas e Integradas",
+    "Móveis Fixos Planejados Inclusos",
+    "Recepção com WC e Copa Equipada",
+    "Sala de Diretoria e Reuniões",
+    "Bairro Maurício de Nassau",
+    "Próximo à Av. Agamenon Magalhães",
+    "Imóvel Escriturado",
   ],
   backUrl: "/empreendimentos/pontos-comerciais",
   backLabel: "Voltar para Pontos Comerciais",

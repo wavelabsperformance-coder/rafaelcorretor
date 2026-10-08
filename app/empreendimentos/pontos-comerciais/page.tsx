@@ -349,6 +349,59 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
     "Imóvel Alugado",
   ],
   },
+  // 9. DUAS SALAS COMERCIAIS INTEGRADAS NO TIMES BUSINESS CENTER (À VENDA)
+  {
+  id: "sala-comercial-times-business-center",
+  title: "Duas Salas Comerciais Integradas no Times Business Center",
+  price: "R$ 950.000",
+  location: "Maurício de Nassau, Caruaru - PE",
+  coverImage: "/imoveis/pontos-comerciais/times-business-center/3.jpeg",
+  bathrooms: 3,
+  area: "67,27m²",
+  description: `DUAS SALAS COMERCIAIS INTEGRADAS À VENDA | TIMES BUSINESS CENTER
+
+Excelente oportunidade para instalar sua empresa ou investir em um dos endereços empresariais mais conhecidos de Caruaru.
+
+Localizado no bairro Maurício de Nassau, próximo à Avenida Agamenon Magalhães e cercado por clínicas, escritórios, farmácias, restaurantes e diversos serviços, o Times Business Center oferece localização estratégica, fácil acesso e grande circulação de profissionais e clientes.
+
+O empreendimento possui 264 salas empresariais e foi projetado para receber diferentes atividades, como consultórios, escritórios de advocacia e contabilidade, imobiliárias, agências, empresas administrativas e prestadores de serviços.
+
+As duas salas disponíveis para venda são reformadas, integradas e possuem ambientes bem distribuídos, proporcionando conforto, organização e funcionalidade. Permanecem no imóvel todos os móveis fixos planejados, permitindo uma instalação mais rápida da nova empresa.
+
+ÁREAS:
+• Sala 1: 35,11 m²
+• Sala 2: 32,16 m²
+• Área total integrada: 67,27 m²
+
+DISTRIBUIÇÃO DOS AMBIENTES:
+• Recepção com WC
+• Copa equipada
+• Banheiro social
+• Sala privativa com WC
+• Sala de diretoria e reuniões
+• Sala administrativa com almoxarifado
+• Sala reservada para atendimento
+
+Uma excelente estrutura para clínicas, consultórios, escritórios, empresas administrativas ou investidores que buscam um imóvel comercial pronto e bem localizado.
+
+VALOR DE VENDA: R$ 950.000,00
+Imóvel escriturado.`,
+  videos: [],
+  images: Array.from(
+    { length: 10 },
+    (_, i) => `/imoveis/pontos-comerciais/times-business-center/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "67,27m² Integrados (35,11 + 32,16 m²)",
+    "Duas Salas Reformadas e Integradas",
+    "Móveis Fixos Planejados Inclusos",
+    "Recepção com WC e Copa Equipada",
+    "Sala de Diretoria e Reuniões",
+    "Bairro Maurício de Nassau",
+    "Próximo à Av. Agamenon Magalhães",
+    "Imóvel Escriturado",
+  ],
+  },
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis

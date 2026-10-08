@@ -1545,6 +1545,56 @@ Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de
     "Posição Nascente",
   ],
   },
+  // 33. CHÁCARA NA LAGOA DO PAULISTA - MATA NEGRA
+  {
+  id: "chacara-lagoa-do-paulista",
+  tipo: "terreno",
+  title: "Chácara na Lagoa do Paulista - Mata Negra",
+  price: "R$ 1.500.000",
+  location: "Lagoa do Paulista, Caruaru - PE",
+  coverImage: "/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/12.jpeg",
+  bedrooms: 4,
+  bathrooms: 4,
+  parking: 0,
+  area: "3.300m²",
+  description: `CHÁCARA À VENDA | LAGOA DO PAULISTA – MATA NEGRA, CARUARU/PE
+
+- Área construída: 500 m²
+- Terreno: 3.300 m²
+
+ESTRUTURA:
+- 04 suítes com varanda
+- Piscina com borda infinita — 14 m de ponta a ponta e 7 m no meio
+- Fire pit
+- Área gourmet com churrasqueira e forno
+- Energia solar de 2.500 kW
+
+ÁGUA:
+- Cisterna de 100 mil litros
+- Cisterna de 80 mil litros
+- Cisterna de 20 mil litros
+
+ACESSO:
+- São 4,3 km de estrada até a chácara
+
+VALOR DE VENDA: R$ 1.500.000,00 — escritura para desmembrar.`,
+  videos: [],
+  images: Array.from(
+    { length: 28 },
+    (_, i) => `/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "500m² de Área Construída",
+    "Terreno de 3.300m²",
+    "04 Suítes com Varanda",
+    "Piscina com Borda Infinita (14 x 7 m)",
+    "Fire Pit",
+    "Área Gourmet com Churrasqueira e Forno",
+    "Energia Solar de 2.500 kW",
+    "Cisternas de 100, 80 e 20 Mil Litros",
+    "Escritura para Desmembrar",
+  ],
+  },
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis
