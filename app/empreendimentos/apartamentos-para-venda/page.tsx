@@ -31,7 +31,7 @@ const apartamentosVenda = [
     title: "Apartamento Pronto para Morar no Condomínio Vog Ville Norte",
     price: "R$ 290.000",
     location: "Caruaru - PE",
-    coverImage: "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/3.jpeg",
+    coverImage: "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
     bedrooms: 2,
     bathrooms: 2, // 1 suíte + 1 social
     parking: 1,
@@ -59,6 +59,7 @@ Estrutura e lazer do condomínio:
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/2.mp4",
     ],
     images: [
+      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/3.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/4.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/5.jpeg",
@@ -68,7 +69,6 @@ Estrutura e lazer do condomínio:
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/10.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/11.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/13.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/14.jpeg",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/15.jpeg",

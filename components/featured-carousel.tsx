@@ -39,7 +39,12 @@ function PropertyCardSlide({
   const targetUrl = `/imoveis/${property.id}`
   const isLocacao = type === "aluguel"
 
-  const priceParts = (property.price || "Sob Consulta").split("/")
+  const priceRaw = property.price || "Sob Consulta"
+  const priceNote = priceRaw.match(/\(([^)]+)\)/)?.[1]?.trim() ?? null
+  const priceParts = priceRaw
+    .replace(/\s*\([^)]*\)\s*$/, "")
+    .trim()
+    .split("/")
   const priceMain = priceParts[0].trim()
   const priceSuffix = priceParts[1]?.trim()
   const hasValue = /\d/.test(priceMain)
@@ -154,6 +159,12 @@ function PropertyCardSlide({
                 )}
 
               </div>
+
+              {priceNote && (
+                <span className="block text-[10px] sm:text-[11px] leading-tight text-white/70 font-medium truncate mt-0.5">
+                  {priceNote}
+                </span>
+              )}
             </div>
 
             <Button

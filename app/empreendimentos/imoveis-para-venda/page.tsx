@@ -216,34 +216,6 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     ],
   },
 
-  // 5. CASA MODERNA COM QUINTAL
-  {
-    id: "casa-moderna-com-quintal",
-    tipo: "casa",
-    title: "Casa Moderna com Quintal e Excelente Padrão",
-    price: "Consulte o valor",
-    location: "Caruaru - PE",
-    coverImage:
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    area: "56m²",
-    description: `Excelente oportunidade de casa à venda com ótimo padrão de acabamento e quintal amplo nos fundos de 5x7m.`,
-    images: Array.from(
-      { length: 10 },
-      (_, i) =>
-        `/imoveis/casas-para-venda/casa-moderna-com-quintal/${i + 1}.jpeg`
-    ),
-    amenities: [
-      "1 Suíte",
-      "Cozinha Planejada",
-      "Quintal Amplo (5x7m)",
-      "Garagem Privativa",
-      "Projeto Luminotécnico",
-    ],
-  },
-
   // 6. THE HOUSE CLUB
   {
     id: "casa-the-house-club-caruaru",
@@ -280,7 +252,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     price: "R$ 290.000",
     location: "Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/3.jpeg",
+      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -290,11 +262,18 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/1.mp4",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/2.mp4",
     ],
-    images: Array.from(
-      { length: 20 },
-      (_, i) =>
-        `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
-    ),
+    images: [
+      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
+      ...Array.from(
+        { length: 20 },
+        (_, i) =>
+          `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
+      ).filter(
+        (img) =>
+          img !==
+          "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg"
+      ),
+    ],
     amenities: [
       "1 Suíte",
       "Ar-condicionado",
@@ -670,7 +649,7 @@ OBS.: também disponível para locação por R$ 2.000,00/mês.`,
     coverImage: "/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/11.jpeg",
     bedrooms: 2,
     bathrooms: 2,
-    parking: 0,
+    parking: 1,
     area: "56m²",
     alugado: true,
     description: `CASA À VENDA | LOTEAMENTO 7 LUAS – ALTO DO MOURA – CARUARU/PE

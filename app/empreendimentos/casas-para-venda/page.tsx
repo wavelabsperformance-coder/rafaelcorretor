@@ -90,55 +90,6 @@ Gleydson Tabosa - (81) 99547-7776`,
     ],
   },
 
-  // 2. CASA MODERNA COM QUINTAL (10 FOTOS - SEM VÍDEO)
-  {
-    id: "casa-moderna-com-quintal",
-    title: "Casa Moderna com Quintal e Excelente Padrão",
-    price: "Consulte o valor",
-    location: "Caruaru - PE",
-    coverImage: "/imoveis/casas-para-venda/casa-moderna-com-quintal/1.jpeg",
-    bedrooms: 2,
-    bathrooms: 2,
-    parking: 1,
-    area: "56m²",
-    description: `Excelente oportunidade de casa à venda com ótimo padrão de acabamento e aproveitamento inteligente de espaços. 
-
-Imóvel construído em terreno medindo 7 x 22 metros, totalizando 154 m² de terreno e 56 m² de área construída coberta, oferecendo conforto, funcionalidade e grande potencial de ampliação.
-
-Configuração do imóvel:
-• Área frontal de 5 x 7 metros com garagem para 1 carro
-• Sala de estar e jantar integradas, proporcionando amplitude e aconchego
-• Cozinha planejada com móveis sob medida e bancada em mármore
-• 2 quartos bem ventilados (sendo 1 suíte)
-• Banheiros completos com bancadas em mármore, móveis planejados e projeto de luminárias
-• Quintal amplo nos fundos medindo 5 x 7 metros, com estrutura e espaço para construção de um terceiro quarto ou área de lazer privativa
-
-Imóvel ideal para quem busca modernidade, excelente distribuição de cômodos e possibilidade futura de expansão.`,
-    video: null,
-    images: [
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/1.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/2.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/3.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/4.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/5.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/6.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/7.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/8.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/9.jpeg",
-      "/imoveis/casas-para-venda/casa-moderna-com-quintal/10.jpeg",
-    ],
-    amenities: [
-      "1 Suíte",
-      "Cozinha Planejada com Mármore",
-      "Móveis Planejados nos Banheiros",
-      "Salas de Estar e Jantar Integradas",
-      "Quintal Amplo (5x7m)",
-      "Espaço para 3º Quarto",
-      "Área Frontal com Garagem",
-      "Projeto Luminotécnico",
-    ],
-  },
-
   // 3. CASA EM CONDOMÍNIO - THE HOUSE CLUB (18 FOTOS - SEM VÍDEO)
   {
     id: "casa-the-house-club-caruaru",
@@ -273,7 +224,7 @@ OBS.: também disponível para locação por R$ 2.000,00/mês.`,
     coverImage: "/imoveis/casas-para-venda/casa-alto-do-moura-7-luas/11.jpeg",
     bedrooms: 2,
     bathrooms: 2,
-    parking: 0,
+    parking: 1,
     area: "56m²",
     alugado: true,
     description: `CASA À VENDA | LOTEAMENTO 7 LUAS – ALTO DO MOURA – CARUARU/PE
