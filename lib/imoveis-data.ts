@@ -946,7 +946,6 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
   bathrooms: 3,
   parking: 2,
   area: "107m²",
-  alugado: true,
   description: `APARTAMENTO À VENDA | EDF. LUSIA MACIEL – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
 
 Imóvel totalmente reformado com fino acabamento de alto padrão, na área nobre do bairro Maurício de Nassau. Exclusivo: 02 apartamentos por andar.
@@ -2872,6 +2871,57 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
     "Jardim Lateral",
     "IPTU Incluso",
     "Imóvel Alugado",
+  ],
+  backUrl: "/empreendimentos/imoveis-para-alugar",
+  backLabel: "Voltar para Imóveis para Alugar",
+  },
+
+  // --- APARTAMENTO NO EDF. MULTIPORTO – INDIANÓPOLIS (LOCAÇÃO) ---
+  {
+  id: "ap-edf-multiporto-indianopolis",
+  title: "Apartamento no Edf. Multiporto - Indianópolis",
+  price: "R$ 2.000 / mês (Condomínio e IPTU Inclusos)",
+  location: "Indianópolis, Caruaru - PE",
+  type: "aluguel",
+  category: "apartamento",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-multiporto-indianopolis/4.jpeg",
+  bedrooms: 1,
+  bathrooms: 1,
+  parking: 1,
+  area: "40m²",
+  description: `APARTAMENTO PARA LOCAÇÃO | EDF. MULTIPORTO – INDIANÓPOLIS/CARUARU-PE
+
+Em frente ao maior Shopping da cidade, acesso fácil ao centro de Caruaru.
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 40 m²
+- 01 quarto
+- 01 banheiro
+- 01 vaga de garagem
+
+ESTRUTURA DO CONDOMÍNIO:
+- Portaria remota 24 horas
+- Mini mercado
+- Piscina
+- Academia
+- Salão de festa Gourmet
+
+VALOR DA LOCAÇÃO: R$ 2.000,00/mês — condomínio e IPTU inclusos.`,
+  videos: [],
+  images: Array.from(
+    { length: 15 },
+    (_, i) => `/imoveis/apartamentos-para-alugar/ap-edf-multiporto-indianopolis/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "40m² de Área",
+    "01 Quarto",
+    "01 Banheiro",
+    "01 Vaga de Garagem",
+    "Portaria Remota 24 Horas",
+    "Mini Mercado",
+    "Piscina e Academia",
+    "Salão de Festas Gourmet",
+    "Condomínio e IPTU Inclusos",
   ],
   backUrl: "/empreendimentos/imoveis-para-alugar",
   backLabel: "Voltar para Imóveis para Alugar",

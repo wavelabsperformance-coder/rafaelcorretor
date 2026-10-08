@@ -423,6 +423,7 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
 
   const totalImages = images.length
   const hasVideos = Boolean(property.videos?.length)
+  const isAlugado = Boolean(property.alugado)
 
   // Preço: "R$ 1.800 / mês (Incluso ...)" vira "R$ 1.800" + "/mês" menor, para caber no bloco.
   // "Consulte o valor" vira "Sob consulta".
@@ -455,22 +456,31 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
           <img
             src={images[currentImgIndex] || "/placeholder.jpg"}
             alt={`${property.title} - foto ${currentImgIndex + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+              isAlugado ? "grayscale opacity-70" : ""
+            }`}
           />
 
-          {/* BADGE COMERCIAL */}
-          <div className="absolute top-3 left-3 bg-[#0d3b2e] text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
-            Comercial
+          {/* BADGE COMERCIAL / ALUGADO */}
+          <div
+            className={`absolute top-3 left-3 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm ${
+              isAlugado ? "bg-red-600" : "bg-[#0d3b2e]"
+            }`}
+          >
+            {isAlugado ? "Alugado" : "Comercial"}
           </div>
 
-          {property.alugado && (
-            <div className="absolute bottom-3 right-3 bg-red-600 text-white px-3 py-1 text-xs rounded-full font-medium shadow-sm">
-              Alugado
+          {/* FAIXA CENTRAL "ALUGADO" */}
+          {isAlugado && (
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="bg-black/65 backdrop-blur-sm text-white text-sm font-bold tracking-[0.25em] uppercase px-6 py-2 rounded-full border border-white/30">
+                Alugado
+              </span>
             </div>
           )}
 
           {/* VÍDEO */}
-          {hasVideos && (
+          {hasVideos && !isAlugado && (
             <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
               <Play className="h-3 w-3 fill-white" />
               {property.videos && property.videos.length > 1
@@ -544,13 +554,17 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
 
       {/* PREÇO + CTA */}
       <div className="px-1 sm:px-2 pb-2 pt-2">
-        <div className="rounded-2xl bg-[#b85d19] pl-4 pr-2 py-2 flex items-center justify-between gap-2">
+        <div
+          className={`rounded-2xl pl-4 pr-2 py-2 flex items-center justify-between gap-2 ${
+            isAlugado ? "bg-neutral-500" : "bg-[#b85d19]"
+          }`}
+        >
           <span className="min-w-0 flex items-baseline gap-1 whitespace-nowrap">
             <span className="font-serif font-bold text-white text-sm leading-none">
-              {priceMain}
+              {isAlugado ? "Alugado" : priceMain}
             </span>
 
-            {priceSuffix && (
+            {!isAlugado && priceSuffix && (
               <span className="text-[11px] font-medium text-white/80 leading-none">
                 {priceSuffix}
               </span>

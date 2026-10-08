@@ -400,7 +400,6 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
   bathrooms: 3,
   parking: 2,
   area: "107m²",
-  alugado: true,
   description: `APARTAMENTO À VENDA | EDF. LUSIA MACIEL – BAIRRO MAURÍCIO DE NASSAU – CARUARU/PE
 
 Imóvel totalmente reformado com fino acabamento de alto padrão, na área nobre do bairro Maurício de Nassau. Exclusivo: 02 apartamentos por andar.
