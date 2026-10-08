@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 // Imagem da coluna da direita (troque por uma imagem do Rafael quando tiver)
-const CONTACT_IMAGE = "images/sobre/perfil.png"
+const CONTACT_IMAGE = "/images/sobre/Perfil.png"
 
 // Ícone vetorial oficial do WhatsApp
 function WhatsAppIcon({ className }: { className?: string }) {
