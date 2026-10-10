@@ -68,8 +68,15 @@ export default function ImovelDetalhesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Top Bar com Navegação */}
-      <section className="pt-28 pb-8 bg-[#0d3b2e] text-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-28 pb-8 bg-[#0d3b2e] text-white">
+        <img
+          src="/predio.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d3b2e]/95 via-[#0d3b2e]/85 to-[#0d3b2e]/70" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <Link
             href={imovel.backUrl || "/empreendimentos"}
             className="inline-flex items-center text-sm text-white/70 hover:text-white transition-colors mb-4"
