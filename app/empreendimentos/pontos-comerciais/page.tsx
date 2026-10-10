@@ -121,7 +121,7 @@ Destaques:
 {
   id: "galeria-agamenon-espacos-disponiveis",
   title: "Salas e Lojas Comerciais na Galeria Agamenon",
-  price: "A partir de R$ 700 / mês",
+  price: "R$ 700 / mês",
   location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
   coverImage:
     "/imoveis/pontos-comerciais/galeria-agamenon/1.jpeg",
@@ -156,13 +156,13 @@ ESTRUTURA DA GALERIA:
     "Ideal para Consultórios e Lojas",
   ],
 },
-  // 4. SALA COMERCIAL À VENDA NO EMPRESARIAL NORDESTE CORPORATE (SEM FOTOS)
+  // 4. SALA COMERCIAL À VENDA NO EMPRESARIAL NORDESTE CORPORATE
   {
   id: "sala-nordeste-corporate-venda",
   title: "Sala Comercial à Venda no Empresarial Nordeste Corporate",
   price: "R$ 330.000",
   location: "Bairro Universitário, Caruaru - PE",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/pontos-comerciais/sala-nordeste-corporate-venda/1.jpeg",
   bathrooms: 1,
   area: "40m²",
   description: `SALA COMERCIAL À VENDA | EMPRESARIAL NORDESTE CORPORATE – CARUARU/PE
@@ -178,7 +178,10 @@ Praticidade e localização privilegiada para seu escritório ou consultório.
 
 VALOR DE VENDA: R$ 330.000,00 — aceita financiamento.`,
   videos: [],
-  images: [],
+  images: Array.from(
+    { length: 1 },
+    (_, i) => `/imoveis/pontos-comerciais/sala-nordeste-corporate-venda/${i + 1}.jpeg`
+  ),
   amenities: [
     "40m² de Área",
     "01 Vaga de Garagem",
@@ -242,7 +245,7 @@ VALOR DA LOCAÇÃO: R$ 15.000,00/mês`,
   {
   id: "sala-loja-universitario",
   title: "Sala Comercial e Ponto de Loja no Bairro Universitário",
-  price: "A partir de R$ 1.200 / mês",
+  price: "R$ 1.200 / mês",
   location: "Rua Aracati, Bairro Universitário, Caruaru - PE",
   coverImage: "/imoveis/pontos-comerciais/sala-loja-universitario/1.jpeg",
   bathrooms: 1,
@@ -555,11 +558,11 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
       {/* PREÇO + CTA */}
       <div className="px-1 sm:px-2 pb-2 pt-2">
         <div
-          className={`rounded-2xl pl-4 pr-2 py-2 flex items-center justify-between gap-2 ${
+          className={`rounded-2xl pl-4 pr-2 py-2 flex flex-wrap items-center justify-between gap-2 ${
             isAlugado ? "bg-neutral-500" : "bg-[#b85d19]"
           }`}
         >
-          <span className="min-w-0 flex items-baseline gap-1 whitespace-nowrap">
+          <span className="flex items-baseline gap-1 whitespace-nowrap">
             <span className="font-serif font-bold text-white text-sm leading-none">
               {isAlugado ? "Alugado" : priceMain}
             </span>
@@ -574,7 +577,7 @@ function PropertyCard({ property }: { property: ImovelComercial }) {
           <Button
             asChild
             size="sm"
-            className="rounded-full bg-[#0d3b2e] hover:bg-white hover:text-[#0d3b2e] text-white transition-all duration-200 h-9 px-3 shrink-0 text-[13px] font-semibold"
+            className="ml-auto rounded-full bg-[#0d3b2e] hover:bg-white hover:text-[#0d3b2e] text-white transition-all duration-200 h-9 px-3 shrink-0 text-[13px] font-semibold"
           >
             <Link href={`/imoveis/${property.id}`}>Ver Detalhes</Link>
           </Button>

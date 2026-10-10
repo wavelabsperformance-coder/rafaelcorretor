@@ -2967,7 +2967,7 @@ Destaques:
 {
   id: "galeria-agamenon-espacos-disponiveis",
   title: "Salas e Lojas Comerciais na Galeria Agamenon",
-  price: "A partir de R$ 700 / mês",
+  price: "R$ 700 / mês",
   location: "Av. Agamenon Magalhães, Maurício de Nassau, Caruaru - PE",
   type: "comercial",
   category: "ponto",
@@ -3007,7 +3007,7 @@ ESTRUTURA DA GALERIA:
   backLabel: "Voltar para Pontos Comerciais",
 },
 
-  // 4. SALA COMERCIAL À VENDA NO EMPRESARIAL NORDESTE CORPORATE (SEM FOTOS)
+  // 4. SALA COMERCIAL À VENDA NO EMPRESARIAL NORDESTE CORPORATE
   {
   id: "sala-nordeste-corporate-venda",
   title: "Sala Comercial à Venda no Empresarial Nordeste Corporate",
@@ -3015,7 +3015,7 @@ ESTRUTURA DA GALERIA:
   location: "Bairro Universitário, Caruaru - PE",
   type: "comercial",
   category: "ponto",
-  coverImage: "/placeholder.jpg",
+  coverImage: "/imoveis/pontos-comerciais/sala-nordeste-corporate-venda/1.jpeg",
   bedrooms: 0,
   bathrooms: 1,
   parking: 1,
@@ -3033,7 +3033,10 @@ Praticidade e localização privilegiada para seu escritório ou consultório.
 
 VALOR DE VENDA: R$ 330.000,00 — aceita financiamento.`,
   videos: [],
-  images: [],
+  images: Array.from(
+    { length: 1 },
+    (_, i) => `/imoveis/pontos-comerciais/sala-nordeste-corporate-venda/${i + 1}.jpeg`
+  ),
   amenities: [
     "40m² de Área",
     "01 Vaga de Garagem",
@@ -3107,7 +3110,7 @@ VALOR DA LOCAÇÃO: R$ 15.000,00/mês`,
   {
   id: "sala-loja-universitario",
   title: "Sala Comercial e Ponto de Loja no Bairro Universitário",
-  price: "A partir de R$ 1.200 / mês",
+  price: "R$ 1.200 / mês",
   location: "Rua Aracati, Bairro Universitário, Caruaru - PE",
   type: "comercial",
   category: "ponto",
