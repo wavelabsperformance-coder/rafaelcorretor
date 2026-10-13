@@ -17,12 +17,8 @@ export const metadata: Metadata = {
     "Fale com o Rafael Cavalcante, corretor de imóveis em Caruaru.",
 }
 
-<<<<<<< HEAD
+// Imagem da coluna da direita
 const CONTACT_IMAGE = "/images/sobre/Perfil.png"
-=======
-// Imagem da coluna da direita (troque por uma imagem do Rafael quando tiver)
-const CONTACT_IMAGE = "/images/sobre/perfil.png"
->>>>>>> 8866387 ( 3 imoveis para pagina de imovei para vendaa)
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (

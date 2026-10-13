@@ -606,6 +606,57 @@ VALOR DE VENDA: R$ 499.000,00 — pode ser financiada.`,
     "Aceita Financiamento",
   ],
   },
+
+  // 12. CASA COM SALÃO DE FESTAS NO JARDIM PANORAMA
+  {
+  id: "casa-jardim-panorama",
+  title: "Casa com Salão de Festas no Jardim Panorama",
+  price: "R$ 500.000",
+  location: "Jardim Panorama, Caruaru - PE",
+  coverImage: "/imoveis/casas-para-venda/casa-jardim-panorama/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 2,
+  area: "173m²",
+  description: `CASA À VENDA | JARDIM PANORAMA – CARUARU/PE
+
+Conforto, espaço e uma excelente estrutura para você e sua família!
+
+DETALHES DO IMÓVEL:
+- Terreno: 8 x 22,5 m = 180 m²
+- Área construída: 173 m²
+
+PAVIMENTO TÉRREO:
+- 03 quartos, sendo 02 suítes
+- 02 vagas de garagem
+- 02 cisternas com capacidade total de 18.000 litros
+- Caixa d'água de 2.500 litros
+
+PAVIMENTO SUPERIOR:
+- Amplo salão de festas
+- Banheiro de apoio
+- Espaço ideal para reunir familiares e amigos
+
+VALOR DE VENDA: R$ 500.000,00 — aceita financiamento bancário.
+
+Uma excelente oportunidade para quem busca conforto, espaço e uma área exclusiva para momentos de lazer. Agende sua visita!`,
+  video: null,
+  images: Array.from(
+    { length: 17 },
+    (_, i) => `/imoveis/casas-para-venda/casa-jardim-panorama/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "Terreno de 180m² (8 x 22,5 m)",
+    "173m² de Área Construída",
+    "03 Quartos, sendo 02 Suítes",
+    "02 Vagas de Garagem",
+    "Salão de Festas no Pavimento Superior",
+    "Banheiro de Apoio",
+    "Cisternas de 18.000 Litros",
+    "Caixa d'Água de 2.500 Litros",
+    "Aceita Financiamento",
+  ],
+  },
 ]
 
 // Componente do Card com navegação individual de fotos

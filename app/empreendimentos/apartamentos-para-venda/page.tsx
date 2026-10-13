@@ -544,6 +544,75 @@ OBS.: o imóvel está alugado por R$ 2.600,00/mês e continua disponível para v
     "Imóvel Alugado - Disponível para Venda",
   ],
   },
+
+  // 10. APARTAMENTO DE ALTO PADRÃO NO ALAMEDA UNIQUE
+  {
+  id: "ap-alameda-unique-torre-garden",
+  title: "Apartamento de Alto Padrão no Alameda Unique",
+  price: "R$ 1.350.000",
+  location: "Universitário, Caruaru - PE",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-alameda-unique-torre-garden/1.jpeg",
+  bedrooms: 3,
+  bathrooms: 4,
+  parking: 2,
+  area: "125m²",
+  description: `APARTAMENTO À VENDA | ALAMEDA UNIQUE – BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Torre Garden | Posição Sul | Andar alto
+
+Sofisticação, exclusividade e conforto em um dos empreendimentos mais modernos de Caruaru!
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 125 m² de área privativa
+- 03 suítes, sendo 01 master com closet
+- Sala ampla para 02 ambientes
+- Varanda integrada
+- Lavabo
+- Cozinha com despensa
+- Área de serviço
+- Dependência completa
+- 02 vagas de garagem cobertas
+
+DIFERENCIAIS:
+- Posição sul
+- Apenas 02 apartamentos por andar
+- Arquitetura contemporânea
+- Privacidade e exclusividade
+
+CONDOMÍNIO CLUBE:
+- Piscinas adulto e infantil
+- Academia equipada
+- Salão de festas e espaço gourmet
+- Quadra de squash
+- Playground e espaço kids
+- Coworking e Beauty Place
+- Pet Wash e Delivery Room
+- Áreas verdes e espaços de convivência
+
+VALOR DE VENDA: R$ 1.350.000,00 — aceita financiamento bancário.
+
+Uma oportunidade exclusiva para quem valoriza qualidade de vida e alto padrão. Agende sua visita!`,
+  videos: [],
+  images: Array.from(
+    { length: 40 },
+    (_, i) => `/imoveis/apartamentos-para-venda/ap-alameda-unique-torre-garden/${i + 1}.jpeg`
+  ),
+  amenities: [
+    "125m² de Área Privativa",
+    "03 Suítes, sendo 01 Master com Closet",
+    "Torre Garden - Andar Alto",
+    "Posição Sul",
+    "Apenas 02 Apartamentos por Andar",
+    "Varanda Integrada",
+    "Dependência Completa",
+    "02 Vagas de Garagem Cobertas",
+    "Piscinas Adulto e Infantil",
+    "Academia Equipada",
+    "Quadra de Squash",
+    "Coworking e Beauty Place",
+    "Pet Wash e Delivery Room",
+  ],
+  },
 ]
 
 // =========================================================================
