@@ -156,7 +156,7 @@ export function HeroSection() {
         className="
           hidden md:flex
           absolute
-          left-[53.5%]
+          left-[50%]
           top-[75%]
           -translate-y-1/2
           z-10

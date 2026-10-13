@@ -907,7 +907,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda.`,
   id: "ap-andrezza-mauricio-de-nassau",
   tipo: "apartamento",
   title: "Apartamento de Alto Padrão no Edifício Andrezza",
-  price: "R$ 800.000",
+  price: "R$ 789.000",
   location: "Maurício de Nassau, Caruaru - PE",
   coverImage: "/imoveis/apartamentos-para-venda/ap-andrezza-mauricio-de-nassau/4.jpeg",
   bedrooms: 4,
@@ -1577,6 +1577,190 @@ VALOR DE VENDA: R$ 1.500.000,00 — escritura para desmembrar.`,
     "Escritura para Desmembrar",
   ],
   },
+
+     // 34. APARTAMENTO DE ALTO PADRÃO NO ALAMEDA UNIQUE
+  {
+    id: "ap-alameda-unique-torre-garden",
+    tipo: "apartamento",
+    title: "Apartamento de Alto Padrão no Alameda Unique",
+    price: "R$ 1.350.000",
+    location: "Universitário, Caruaru - PE",
+    coverImage: "/imoveis/apartamentos-para-venda/ap-alameda-unique-torre-garden/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 4,
+    parking: 2,
+    area: "125m²",
+    description: `APARTAMENTO À VENDA | ALAMEDA UNIQUE – BAIRRO UNIVERSITÁRIO – CARUARU/PE
+
+Torre Garden | Posição Sul | Andar alto
+
+Sofisticação, exclusividade e conforto em um dos empreendimentos mais modernos de Caruaru!
+
+CARACTERÍSTICAS DO IMÓVEL:
+- 125 m² de área privativa
+- 03 suítes, sendo 01 master com closet
+- Sala ampla para 02 ambientes
+- Varanda integrada
+- Lavabo
+- Cozinha com despensa
+- Área de serviço
+- Dependência completa
+- 02 vagas de garagem cobertas
+
+DIFERENCIAIS:
+- Posição sul
+- Apenas 02 apartamentos por andar
+- Arquitetura contemporânea
+- Privacidade e exclusividade
+
+CONDOMÍNIO CLUBE:
+- Piscinas adulto e infantil
+- Academia equipada
+- Salão de festas e espaço gourmet
+- Quadra de squash
+- Playground e espaço kids
+- Coworking e Beauty Place
+- Pet Wash e Delivery Room
+- Áreas verdes e espaços de convivência
+
+VALOR DE VENDA: R$ 1.350.000,00 — aceita financiamento bancário.
+
+Uma oportunidade exclusiva para quem valoriza qualidade de vida e alto padrão. Agende sua visita!`,
+    videos: [],
+    images: Array.from(
+      { length: 40 },
+      (_, i) => `/imoveis/apartamentos-para-venda/ap-alameda-unique-torre-garden/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "125m² de Área Privativa",
+      "03 Suítes, sendo 01 Master com Closet",
+      "Torre Garden - Andar Alto",
+      "Posição Sul",
+      "Apenas 02 Apartamentos por Andar",
+      "Varanda Integrada",
+      "Dependência Completa",
+      "02 Vagas de Garagem Cobertas",
+      "Piscinas Adulto e Infantil",
+      "Academia Equipada",
+      "Quadra de Squash",
+      "Coworking e Beauty Place",
+      "Pet Wash e Delivery Room",
+      "Aceita Financiamento",
+    ],
+  },
+
+    // 35. CHÁCARA EM SERRA VERDE - VITORINO
+  {
+    id: "chacara-serra-verde-vitorino",
+    tipo: "terreno",
+    title: "Chácara com Piscina Aquecida e Salão de Festas em Serra Verde",
+    price: "R$ 620.000",
+    location: "Serra Verde, Vitorino - PE",
+    coverImage: "/imoveis/terrenos-e-lotes/chacara-serra-verde-vitorino/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 3,
+    parking: 0,
+    area: "2.000m²",
+    description: `CHÁCARA À VENDA | SERRA VERDE – VITORINO/PE
+
+Conforto, lazer e tranquilidade em um só lugar!
+
+Excelente chácara, ideal para quem busca qualidade de vida, momentos inesquecíveis com a família ou um espaço para lazer e confraternizações.
+
+ÁREA DO IMÓVEL:
+- Terreno: 2.000 m² (20 x 100 m)
+- Casa com 180 m² de área construída
+
+ESTRUTURA DA CASA:
+- 03 quartos, sendo 01 suíte
+- Copa
+- 01 quarto de serviço
+- 02 banheiros de serviço
+
+ÁREA DE LAZER COMPLETA:
+- Piscina aquecida
+- Quadra de areia
+- Amplo salão de festas com 84 m² (7 x 12 m)
+- Espaço gourmet com churrasqueira
+- Forno a lenha
+- Amplo espaço para lazer e convivência
+
+VALOR DE VENDA: R$ 620.000,00
+Documentação: contrato de compra e venda.
+
+Uma excelente oportunidade para investir em lazer, conforto e qualidade de vida. Agende sua visita!`,
+    videos: [],
+    images: Array.from(
+      { length: 25 },
+      (_, i) => `/imoveis/terrenos-e-lotes/chacara-serra-verde-vitorino/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Terreno de 2.000m² (20 x 100 m)",
+      "Casa com 180m² Construídos",
+      "03 Quartos, sendo 01 Suíte",
+      "Piscina Aquecida",
+      "Quadra de Areia",
+      "Salão de Festas de 84m² (7 x 12 m)",
+      "Espaço Gourmet com Churrasqueira",
+      "Forno a Lenha",
+      "Quarto e 02 Banheiros de Serviço",
+      "Contrato de Compra e Venda",
+    ],
+  },
+   
+    // 36. CASA NO JARDIM PANORAMA
+  {
+    id: "casa-jardim-panorama",
+    tipo: "casa",
+    title: "Casa com Salão de Festas no Jardim Panorama",
+    price: "R$ 500.000",
+    location: "Jardim Panorama, Caruaru - PE",
+    coverImage: "/imoveis/casas-para-venda/casa-jardim-panorama/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 4,
+    parking: 2,
+    area: "173m²",
+    description: `CASA À VENDA | JARDIM PANORAMA – CARUARU/PE
+
+Conforto, espaço e uma excelente estrutura para você e sua família!
+
+DETALHES DO IMÓVEL:
+- Terreno: 8 x 22,5 m = 180 m²
+- Área construída: 173 m²
+
+PAVIMENTO TÉRREO:
+- 03 quartos, sendo 02 suítes
+- 02 vagas de garagem
+- 02 cisternas com capacidade total de 18.000 litros
+- Caixa d'água de 2.500 litros
+
+PAVIMENTO SUPERIOR:
+- Amplo salão de festas
+- Banheiro de apoio
+- Espaço ideal para reunir familiares e amigos
+
+VALOR DE VENDA: R$ 500.000,00 — aceita financiamento bancário.
+
+Uma excelente oportunidade para quem busca conforto, espaço e uma área exclusiva para momentos de lazer. Agende sua visita!`,
+    videos: [],
+    images: Array.from(
+      { length: 17 },
+      (_, i) => `/imoveis/casas-para-venda/casa-jardim-panorama/${i + 1}.jpeg`
+    ),
+    amenities: [
+      "Terreno de 180m² (8 x 22,5 m)",
+      "173m² de Área Construída",
+      "03 Quartos, sendo 02 Suítes",
+      "02 Vagas de Garagem",
+      "Salão de Festas no Pavimento Superior",
+      "Banheiro de Apoio",
+      "Cisternas de 18.000 Litros",
+      "Caixa d'Água de 2.500 Litros",
+      "Aceita Financiamento",
+    ],
+  },
+
+
 ]
 
 // Lista de bairros gerada automaticamente a partir dos imóveis

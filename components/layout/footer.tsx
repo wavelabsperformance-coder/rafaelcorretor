@@ -3,7 +3,7 @@ import { BadgeCheck, Instagram, Mail, MapPin, Phone } from "lucide-react"
 import { siteConfig, propertyCategories } from "@/lib/data"
 
 // Logo do footer (se tiver uma versão clara, salve em public/images/ e troque o caminho)
-const FOOTER_LOGO = "/images/logo.png"
+const FOOTER_LOGO = "/logo-2.png"
 
 // CRECI do Rafael (confirme o número com ele)
 const CRECI = "CRECI/PE 17370"
