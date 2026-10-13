@@ -1,15 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/data"
 import { cn } from "@/lib/utils"
 
-// Se tiver uma versão clara da logo, coloque em public/images/ e troque o caminho de LOGO_TOP
-const LOGO_TOP = "/images/logo.png"
-const LOGO_SCROLLED = "/images/logo.png"
+const LOGO = "/images/logo.png"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -24,37 +22,14 @@ const navigation = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
-    <header
-      className={cn(
-        "fixed left-0 right-0 top-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "bg-background/98 py-3 shadow-sm backdrop-blur-md"
-          : "bg-transparent py-5"
-      )}
-    >
-      {/* Sombra atrás da logo: curta, só no canto esquerdo, some ao rolar */}
-      <div
-        aria-hidden="true"
-        className={cn(
-          "pointer-events-none absolute left-0 top-0 h-24 w-3/4 bg-gradient-to-r from-black/70 via-black/30 to-transparent transition-opacity duration-500 [-webkit-mask-image:linear-gradient(to_bottom,black_55%,transparent)] [mask-image:linear-gradient(to_bottom,black_55%,transparent)] md:w-1/2 xl:w-2/5",
-          isScrolled ? "opacity-0" : "opacity-100"
-        )}
-      />
-
+    <header className="fixed left-0 right-0 top-0 z-50 bg-background py-3 shadow-sm">
       <div className="relative mx-auto max-w-[1600px] px-4 sm:px-6 xl:px-8">
         <nav className="flex items-center justify-between gap-6">
           <Link href="/" className="shrink-0">
             <img
-              src={isScrolled ? LOGO_SCROLLED : LOGO_TOP}
+              src={LOGO}
               alt="Rafael Cavalcante, corretor de imóveis"
               className="h-12 w-auto max-w-none object-contain"
             />
@@ -65,10 +40,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={cn(
-                  "relative whitespace-nowrap text-sm font-medium tracking-wide transition-colors after:absolute after:bottom-[-7px] after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full",
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                )}
+                className="relative whitespace-nowrap text-sm font-medium tracking-wide text-foreground transition-colors after:absolute after:bottom-[-7px] after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all hover:text-accent hover:after:w-full"
               >
                 {item.name}
               </Link>
@@ -99,10 +71,7 @@ export function Header() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={cn(
-              "p-2 xl:hidden",
-              isScrolled ? "text-foreground" : "text-primary-foreground"
-            )}
+            className="p-2 text-foreground xl:hidden"
             aria-label="Menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
