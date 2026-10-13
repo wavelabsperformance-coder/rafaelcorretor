@@ -1563,18 +1563,18 @@ function ImoveisParaAlugarContent() {
       <section className="py-12 bg-[#faf7f2]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           
-          <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl shadow-black/5 border border-border/60 mb-12">
+          <div className="bg-[#0d3b2e] rounded-2xl p-4 md:p-6 shadow-xl shadow-black/20 border border-white/10 mb-12">
             <div className="flex items-center justify-between px-2 mb-4">
               <div className="flex items-center gap-2">
-                <Filter className="h-4 w-4 text-[#b85d19]" />
-                <span className="text-xs font-bold uppercase tracking-widest text-[#0d3b2e]">
+                <Filter className="h-4 w-4 text-[#e9a66f]" />
+                <span className="text-xs font-bold uppercase tracking-widest text-white">
                   Filtrar Catálogo de Locação
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="text-xs font-medium text-muted-foreground">
-                  <strong className="text-[#0d3b2e] font-bold">{imoveisFiltrados.length}</strong> {imoveisFiltrados.length === 1 ? "imóvel encontrado" : "imóveis encontrados"}
+                <span className="text-xs font-medium text-white/70">
+                  <strong className="text-[#e9a66f] font-bold">{imoveisFiltrados.length}</strong> {imoveisFiltrados.length === 1 ? "imóvel encontrado" : "imóveis encontrados"}
                 </span>
 
                 {(tipoFiltro !== "todos" || bairroFiltro !== "todos" || faixaPrecoFiltro !== "todas") && (
@@ -1585,7 +1585,7 @@ function ImoveisParaAlugarContent() {
                       setBairroFiltro("todos")
                       setFaixaPrecoFiltro("todas")
                     }}
-                    className="text-xs font-semibold text-[#b85d19] hover:text-[#0d3b2e] transition-colors"
+                    className="text-xs font-semibold text-[#e9a66f] hover:text-white transition-colors"
                   >
                     Resetar
                   </button>
@@ -1593,44 +1593,44 @@ function ImoveisParaAlugarContent() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 bg-[#faf8f5] rounded-xl border border-border/80 divide-y md:divide-y-0 md:divide-x divide-border/80 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-3 bg-black/20 rounded-xl border border-white/10 divide-y md:divide-y-0 md:divide-x divide-white/10 overflow-hidden">
               
-              <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
+              <div className="relative p-3.5 px-4 hover:bg-white/5 transition-colors duration-200 flex items-center gap-3">
+                <div className="p-2.5 rounded-lg bg-white/10 text-[#e9a66f] shrink-0">
                   <Home className="h-4 w-4" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#e9a66f]">
                     Tipo de Imóvel
                   </label>
                   <div className="relative mt-0.5">
                     <select
                       value={tipoFiltro}
                       onChange={(e) => setTipoFiltro(e.target.value as any)}
-                      className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
+                      className="select-dark w-full bg-transparent text-sm font-semibold text-white focus:outline-none appearance-none cursor-pointer pr-6 truncate"
                     >
                       <option value="todos">Todos os Tipos (Casas e Apts)</option>
                       <option value="casa">Casas</option>
                       <option value="apartamento">Apartamentos</option>
                     </select>
-                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-white/50 pointer-events-none" />
                   </div>
                 </div>
               </div>
 
-              <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
+              <div className="relative p-3.5 px-4 hover:bg-white/5 transition-colors duration-200 flex items-center gap-3">
+                <div className="p-2.5 rounded-lg bg-white/10 text-[#e9a66f] shrink-0">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#e9a66f]">
                     Bairro em Caruaru
                   </label>
                   <div className="relative mt-0.5">
                     <select
                       value={bairroFiltro}
                       onChange={(e) => setBairroFiltro(e.target.value)}
-                      className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
+                      className="select-dark w-full bg-transparent text-sm font-semibold text-white focus:outline-none appearance-none cursor-pointer pr-6 truncate"
                     >
                       <option value="todos">Todos os Bairros</option>
                       {bairrosDisponiveis.map((bairro) => (
@@ -1639,31 +1639,31 @@ function ImoveisParaAlugarContent() {
                         </option>
                       ))}
                     </select>
-                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-white/50 pointer-events-none" />
                   </div>
                 </div>
               </div>
 
-              <div className="relative p-3.5 px-4 hover:bg-white transition-colors duration-200 flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-[#0d3b2e]/5 text-[#0d3b2e] shrink-0">
+              <div className="relative p-3.5 px-4 hover:bg-white/5 transition-colors duration-200 flex items-center gap-3">
+                <div className="p-2.5 rounded-lg bg-white/10 text-[#e9a66f] shrink-0">
                   <Building className="h-4 w-4" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#b85d19]">
+                  <label className="block text-[10px] font-bold uppercase tracking-wider text-[#e9a66f]">
                     Valor Mensal
                   </label>
                   <div className="relative mt-0.5">
                     <select
                       value={faixaPrecoFiltro}
                       onChange={(e) => setFaixaPrecoFiltro(e.target.value)}
-                      className="w-full bg-transparent text-sm font-semibold text-foreground focus:outline-none appearance-none cursor-pointer pr-6 truncate"
+                      className="select-dark w-full bg-transparent text-sm font-semibold text-white focus:outline-none appearance-none cursor-pointer pr-6 truncate"
                     >
                       <option value="todas">Todas as Faixas de Aluguel</option>
                       <option value="ate_2000">Até R$ 2.000 / mês</option>
                       <option value="2000_3500">R$ 2.000 – R$ 3.500 / mês</option>
                       <option value="acima_3500">Acima de R$ 3.500 / mês</option>
                     </select>
-                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                    <ChevronDown className="absolute right-0 top-1/2 -translate-y-1/2 h-4 w-4 text-white/50 pointer-events-none" />
                   </div>
                 </div>
               </div>

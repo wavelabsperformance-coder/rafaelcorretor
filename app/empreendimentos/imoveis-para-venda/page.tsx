@@ -2267,21 +2267,21 @@ function ImoveisParaVendaContent() {
           {/* FILTROS */}
           <div
             className="
-              bg-white
+              bg-[#0d3b2e]
               rounded-2xl
               p-4
               md:p-6
               shadow-xl
-              shadow-black/5
+              shadow-black/20
               border
-              border-border/60
+              border-white/10
               mb-12
             "
           >
             {/* TOPO DOS FILTROS */}
             <div className="flex items-center justify-between px-2 mb-4">
               <div className="flex items-center gap-2">
-                <Filter className="h-4 w-4 text-[#b85d19]" />
+                <Filter className="h-4 w-4 text-[#e9a66f]" />
 
                 <span
                   className="
@@ -2289,7 +2289,7 @@ function ImoveisParaVendaContent() {
                     font-bold
                     uppercase
                     tracking-widest
-                    text-[#0d3b2e]
+                    text-white
                   "
                 >
                   Filtrar Catálogo
@@ -2297,8 +2297,8 @@ function ImoveisParaVendaContent() {
               </div>
 
               <div className="flex items-center gap-3">
-                <span className="text-xs font-medium text-muted-foreground">
-                  <strong className="text-[#0d3b2e] font-bold">
+                <span className="text-xs font-medium text-white/70">
+                  <strong className="text-[#e9a66f] font-bold">
                     {imoveisFiltrados.length}
                   </strong>{" "}
                   {imoveisFiltrados.length === 1
@@ -2319,8 +2319,8 @@ function ImoveisParaVendaContent() {
                     className="
                       text-xs
                       font-semibold
-                      text-[#b85d19]
-                      hover:text-[#0d3b2e]
+                      text-[#e9a66f]
+                      hover:text-white
                       transition-colors
                     "
                   >
@@ -2336,14 +2336,14 @@ function ImoveisParaVendaContent() {
                 grid
                 grid-cols-1
                 md:grid-cols-3
-                bg-[#faf8f5]
+                bg-black/20
                 rounded-xl
                 border
-                border-border/80
+                border-white/10
                 divide-y
                 md:divide-y-0
                 md:divide-x
-                divide-border/80
+                divide-white/10
                 overflow-hidden
               "
             >
@@ -2353,7 +2353,7 @@ function ImoveisParaVendaContent() {
                   relative
                   p-3.5
                   px-4
-                  hover:bg-white
+                  hover:bg-white/5
                   transition-colors
                   duration-200
                   flex
@@ -2365,8 +2365,8 @@ function ImoveisParaVendaContent() {
                   className="
                     p-2.5
                     rounded-lg
-                    bg-[#0d3b2e]/5
-                    text-[#0d3b2e]
+                    bg-white/10
+                    text-[#e9a66f]
                     shrink-0
                   "
                 >
@@ -2381,7 +2381,7 @@ function ImoveisParaVendaContent() {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-[#b85d19]
+                      text-[#e9a66f]
                     "
                   >
                     Tipo de Imóvel
@@ -2400,11 +2400,12 @@ function ImoveisParaVendaContent() {
                         )
                       }
                       className="
+                        select-dark
                         w-full
                         bg-transparent
                         text-sm
                         font-semibold
-                        text-foreground
+                        text-white
                         focus:outline-none
                         appearance-none
                         cursor-pointer
@@ -2437,7 +2438,7 @@ function ImoveisParaVendaContent() {
                         -translate-y-1/2
                         h-4
                         w-4
-                        text-muted-foreground
+                        text-white/50
                         pointer-events-none
                       "
                     />
@@ -2451,7 +2452,7 @@ function ImoveisParaVendaContent() {
                   relative
                   p-3.5
                   px-4
-                  hover:bg-white
+                  hover:bg-white/5
                   transition-colors
                   duration-200
                   flex
@@ -2463,8 +2464,8 @@ function ImoveisParaVendaContent() {
                   className="
                     p-2.5
                     rounded-lg
-                    bg-[#0d3b2e]/5
-                    text-[#0d3b2e]
+                    bg-white/10
+                    text-[#e9a66f]
                     shrink-0
                   "
                 >
@@ -2479,7 +2480,7 @@ function ImoveisParaVendaContent() {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-[#b85d19]
+                      text-[#e9a66f]
                     "
                   >
                     Bairro em Caruaru
@@ -2492,11 +2493,12 @@ function ImoveisParaVendaContent() {
                         setBairroFiltro(e.target.value)
                       }
                       className="
+                        select-dark
                         w-full
                         bg-transparent
                         text-sm
                         font-semibold
-                        text-foreground
+                        text-white
                         focus:outline-none
                         appearance-none
                         cursor-pointer
@@ -2526,7 +2528,7 @@ function ImoveisParaVendaContent() {
                         -translate-y-1/2
                         h-4
                         w-4
-                        text-muted-foreground
+                        text-white/50
                         pointer-events-none
                       "
                     />
@@ -2540,7 +2542,7 @@ function ImoveisParaVendaContent() {
                   relative
                   p-3.5
                   px-4
-                  hover:bg-white
+                  hover:bg-white/5
                   transition-colors
                   duration-200
                   flex
@@ -2552,8 +2554,8 @@ function ImoveisParaVendaContent() {
                   className="
                     p-2.5
                     rounded-lg
-                    bg-[#0d3b2e]/5
-                    text-[#0d3b2e]
+                    bg-white/10
+                    text-[#e9a66f]
                     shrink-0
                   "
                 >
@@ -2568,7 +2570,7 @@ function ImoveisParaVendaContent() {
                       font-bold
                       uppercase
                       tracking-wider
-                      text-[#b85d19]
+                      text-[#e9a66f]
                     "
                   >
                     Valor Investimento
@@ -2581,11 +2583,12 @@ function ImoveisParaVendaContent() {
                         setFaixaPrecoFiltro(e.target.value)
                       }
                       className="
+                        select-dark
                         w-full
                         bg-transparent
                         text-sm
                         font-semibold
-                        text-foreground
+                        text-white
                         focus:outline-none
                         appearance-none
                         cursor-pointer
@@ -2622,7 +2625,7 @@ function ImoveisParaVendaContent() {
                         -translate-y-1/2
                         h-4
                         w-4
-                        text-muted-foreground
+                        text-white/50
                         pointer-events-none
                       "
                     />

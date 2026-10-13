@@ -198,3 +198,9 @@
 .image-hover-zoom:hover img {
   transform: scale(1.05);
 }
+
+/* Opções dos selects dentro dos filtros verde-escuro: dropdown sempre legível */
+.select-dark option {
+  color: #0d3b2e;
+  background-color: #ffffff;
+}
