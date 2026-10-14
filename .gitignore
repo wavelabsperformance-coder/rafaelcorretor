@@ -14,3 +14,13 @@ next.user-config.*
 node_modules
 .next/
 .DS_Store
+
+# Arquivos de build/ferramentas locais
+*.tsbuildinfo
+*.zip
+
+# opencode (agente de desenvolvimento local)
+.opencode/
+
+# Relatórios locais (não versionar)
+Relatorio-Pendencias-*.pdf

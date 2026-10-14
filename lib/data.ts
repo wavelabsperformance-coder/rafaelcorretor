@@ -322,24 +322,24 @@ Espaços multiuso e home offices bem projetados refletem a nova realidade do tra
   },
   {
     id: "2",
-    slug: "investir-imoveis-caruaru",
-    title: "Por Que Morar e Investir em Imóveis em Caruaru",
+    slug: "investir-imoveis-recife",
+    title: "Por Que Investir em Imóveis de Alto Padrão em Recife",
     excerpt:
-      "Conheça os bairros, a infraestrutura e os fatores que fazem de Caruaru uma boa escolha para morar, alugar ou investir.",
-    content: `Caruaru é uma das cidades mais dinâmicas do interior de Pernambuco e reúne comércio forte, serviços de saúde e educação, o que mantém a procura por imóveis aquecida tanto para moradia quanto para investimento.
+      "Análise completa do mercado imobiliário de luxo na capital pernambucana e as melhores oportunidades.",
+    content: `Recife se consolida como um dos mercados mais promissores para investimentos imobiliários de alto padrão no Nordeste brasileiro.
 
-Cada bairro tem um perfil. O Universitário concentra polos de saúde e de educação, como hospitais, clínicas e faculdades, e é muito procurado por estudantes e profissionais da área médica e jurídica. O Maurício de Nassau reúne comércio, serviços e acesso rápido às principais avenidas da cidade. Já Indianópolis atrai quem busca praticidade e proximidade com o Caruaru Shopping.
+A valorização constante dos bairros nobres, como Boa Viagem, Casa Forte e Pina, demonstra a solidez do mercado local. A infraestrutura urbana em constante melhoria e os novos empreendimentos elevam o padrão da região.
 
-Para quem quer alugar, a oferta de apartamentos mobiliados e condomínios com lazer facilita a mudança, principalmente para quem chega à cidade a trabalho ou para estudar. Para quem quer comprar, há desde apartamentos compactos até casas em condomínio fechado e residências de alto padrão.
+O potencial turístico da cidade atrai investidores interessados em imóveis para temporada e short stay. A proximidade com o aeroporto internacional e a estrutura hoteleira consolidada são vantagens competitivas.
 
-Antes de fechar negócio, vale conferir a documentação do imóvel, os custos de condomínio e IPTU e a localização em relação ao seu dia a dia. Visitar mais de uma opção e contar com um corretor que conheça a cidade ajuda a decidir com mais segurança.
+A qualidade de vida oferecida pela cidade, com praias urbanas, gastronomia reconhecida e opções culturais diversificadas, atrai profissionais de alto poder aquisitivo de outras regiões.
 
-Se você está pensando em alugar, comprar ou vender em Caruaru, fale comigo e receba uma orientação personalizada para o seu perfil.`,
+O mercado de locação de alto padrão também apresenta demanda consistente, oferecendo retornos atrativos para investidores que buscam renda passiva.`,
     image:
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
     date: "2024-01-10",
     author: "Rafael Cavalcante",
-    category: "Mercado",
+    category: "Investimentos",
   },
   {
     id: "3",
@@ -363,5 +363,121 @@ Não tenha pressa. Visitar diferentes opções e comparar características permi
     date: "2024-01-05",
     author: "Rafael Cavalcante",
     category: "Dicas",
+  },
+  {
+    id: "4",
+    slug: "melhores-bairros-para-morar-em-caruaru",
+    title: "Melhores bairros para morar em Caruaru",
+    excerpt:
+      "Universitário, Indianópolis, Maurício de Nassau e Luiz Gonzaga: compare estrutura, segurança e valorização para escolher onde morar em Caruaru.",
+    content: `Escolher o bairro certo em Caruaru faz toda a diferença na qualidade de vida. A cidade tem regiões para todos os perfis, do estudante ao investidor que busca alto padrão.
+
+Universitário é o endereço preferido de quem estuda ou trabalha na área da saúde, pela proximidade com faculdades, hospitais e serviços. O bairro concentra apartamentos funcionais e com boa demanda de locação.
+
+Indianópolis se destaca pela tranquilidade e pelos condomínios novos, muitos deles de frente para o Parque Ambiental. É a escolha de famílias que valorizam lazer, segurança e ar livre.
+
+Maurício de Nassau e Luiz Gonzaga ficam na rota da Avenida Agamenon, o principal corredor comercial de Caruaru. São ideais para quem quer conveniência, comércio forte e deslocamento rápido para qualquer ponto da cidade.
+
+Na hora de decidir, avalie a rotina, o perfil do condomínio, as metragens disponíveis e o potencial de valorização. O corretor Rafael Cavalcante reúne apartamentos e casas nos principais bairros de Caruaru e auxilia na comparação entre regiões com atendimento personalizado.`,
+    image: "/blog/caruaru-bairros.webp",
+    date: "2024-02-18",
+    author: "Rafael Cavalcante",
+    category: "Bairros",
+  },
+  {
+    id: "5",
+    slug: "como-alugar-apartamento-em-boa-viagem-recife",
+    title: "Como alugar apartamento em Boa Viagem, Recife",
+    excerpt:
+      "Passo a passo para locar em Boa Viagem: documentação, valores médios, o que analisar no contrato e os bairros vizinhos como alternativa.",
+    content: `Alugar um apartamento em Boa Viagem é o sonho de muita gente que trabalha ou estuda no Recife. Além da orla, o bairro reúne transporte, comércio e serviços completos.
+
+Os valores de locação de apartamentos de 2 quartos em Boa Viagem ficam em torno de R$ 3.800 a R$ 4.500 mensais. Unidades amobiliadas ou de alto padrão, em andares altos ou próximas da praia, podem passar de R$ 5.000.
+
+Antes de assinar o contrato, separe os documentos: identidade e CPF, comprovante de renda e de residência, além de garantias (fiador, seguro-fiança ou depósito caução). Analise também o condomínio, o número de vagas e as condições de pagamento.
+
+Boa Viagem é forte para moradia e para investidores em locação, com demanda constante durante todo o ano. Para quem quer custo menor, bairros próximos do litoral, como Candeias, também são boas alternativas.
+
+O corretor Rafael Cavalcante tem opções de locação e orienta sobre os melhores prédios, valores e documentação, do primeiro contato à assinatura do contrato.`,
+    image: "/blog/boa-viagem-orla.webp",
+    date: "2024-02-14",
+    author: "Rafael Cavalcante",
+    category: "Aluguel",
+  },
+  {
+    id: "6",
+    slug: "financiamento-caixa-caruaru-mcmv-2026",
+    title: "Como financiar um apartamento pela Caixa em Caruaru em 2026",
+    excerpt:
+      "Minha Casa Minha Vida, FGTS na entrada e parcelas limitadas à renda: entenda o caminho para financiar seu imóvel novo em Caruaru.",
+    content: `Financiar a casa própria é a forma mais usada para comprar o primeiro imóvel em Caruaru, e a Caixa Econômica Federal concentra a grande maioria desses contratos no Agreste pernambucano.
+
+Em 2026, o programa Minha Casa Minha Vida segue como o principal caminho para famílias com renda compatível. O subsídio, que pode chegar a dezenas de milhares de reais, é reduzido do valor do imóvel e o restante é financiado em até 420 meses, com parcelas limitadas a cerca de 30% da renda familiar.
+
+O FGTS pode ser usado na entrada ou para amortizar parcelas. Antes de buscar o imóvel, verifique seu saldo e o valor máximo de financiamento liberado na Caixa — isso ajuda a filtrar os apartamentos que cabem no seu bolso.
+
+O passo a passo típico em Caruaru é: 1) simulação de crédito; 2) escolha da unidade; 3) reserva do imóvel; 4) análise da documentação e do banco; 5) assinatura do contrato de financiamento. Imóveis em construção costumam permitir parcelas diretas com a construtora até a entrega das chaves.
+
+Os condomínios-clube de Caruaru, como os da região do Universitário, Indianópolis e Luiz Gonzaga, oferecem plantas de 2 quartos com preços competitivos para financiamento e boa infraestrutura de lazer — um ótimo custo-benefício para quem começa agora.
+
+O corretor Rafael Cavalcante acompanha compradores desde a simulação até as chaves, indicando as melhores condições e construtoras parceiras em Caruaru.`,
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
+    date: "2026-09-20",
+    author: "Rafael Cavalcante",
+    category: "Financiamento",
+  },
+  {
+    id: "7",
+    slug: "dicas-para-reduzir-custo-aluguel",
+    title: "9 dicas para reduzir o custo do aluguel sem abrir mão de conforto",
+    excerpt:
+      "Negociar o valor, escolher bem a garantia e avaliar taxas inclusas podem economizar centenas de reais por mês na locação.",
+    content: `Alugar não precisa ser sinônimo de custo fixo alto. Pequenas decisões na assinatura do contrato podem reduzir bastante o gasto mensal com moradia.
+
+1. Compare valores na mesma região. Dois bairros vizinhos podem ter diferenças grandes de aluguel. Em Recife, por exemplo, Boa Viagem tem preços mais altos que bairros próximos com estrutura parecida.
+
+2. Negocie o valor anunciado. No mercado de locação, principalmente de imóveis parados há mais tempo, há espaço para descontos — vale oferecer um valor próximo e fechar rápido.
+
+3. Prefira imóveis com taxas inclusas. Quando condomínio, IPTU ou gás já vêm no valor, o custo total fica previsível e você evita surpresas.
+
+4. Escolha a garantia certa. Fiador, seguro-fiança ou depósito caução: cada uma tem custo inicial diferente. O seguro-fiança costuma diluir o desembolso de entrada em parcelas.
+
+5. Evite imóveis recém-reformados em bairros de alta demanda — a disputa eleva o valor. Bairros com bom estoque permitem negociação melhor.
+
+6. Calcule o gasto com transporte. Um apartamento mais barato mas distante pode custar mais caro no fim do mês.
+
+7. Dê preferência a fechar o contrato direto com o corretor, para ter documentos e condições claras.
+
+8. Confira o percentual de reajuste anual e a data-base do contrato antes de assinar.
+
+9. Use o prazo de carência para reformas pequenas que valorizem o imóvel — e o deixem mais confortável para você.
+
+O corretor Rafael Cavalcante ajuda a encontrar apartamentos e casas para alugar em Caruaru e região, sempre deixando claras as condições e taxas antes da assinatura.`,
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80",
+    date: "2026-09-02",
+    author: "Rafael Cavalcante",
+    category: "Aluguel",
+  },
+  {
+    id: "8",
+    slug: "guia-pontos-comerciais-caruaru",
+    title: "Como escolher um ponto comercial em Caruaru para abrir seu negócio",
+    excerpt:
+      "Fluxo de pessoas, faixa de valor, exposição e documentação: o que analisar na hora de alugar uma sala ou loja no Agreste.",
+    content: `Abrir um negócio em Caruaru é uma decisão que começa antes do balcão: ela começa na escolha do endereço. Um bom ponto comercial faz toda a diferença no movimento do primeiro dia.
+
+Fluxo é o critério número 1. Avenidas como a Agamenon Magalhães concentram alto tráfego de veículos e pedestres, ideais para serviços, lojas e escritórios. Galerias e centros empresariais oferecem custo menor com boa exposição.
+
+Analise a faixa de valor antes de visitar. Salas comerciais em Caruaru costumam variar conforme localização, metragem e se o condomínio/IPTU estão inclusos. Prefira pontos onde as taxas já estejam somadas ao aluguel para simular com precisão.
+
+Verifique a área útil, banheiros, vagas de garagem e a possibilidade de adequação (ar-condicionado, fachada, horário de acesso). Em centros comerciais, confira o horário de funcionamento do prédio e a segurança.
+
+A documentação também importa: formalize a locação por contrato, com garantias claras, para proteger o seu negócio e permitir eventuais investimentos no ponto.
+
+A Agamenon Magalhães concentra os pontos mais disputados da cidade, ideais para consultórios, estética, escritórios e lojas. O corretor Rafael Cavalcante tem salas e espaços comerciais em Caruaru e orienta sobre fluxo, valores e contrato antes da assinatura.`,
+    image: "/blog/ponto-comercial-caruaru.webp",
+    date: "2026-08-15",
+    author: "Rafael Cavalcante",
+    category: "Comercial",
   },
 ]

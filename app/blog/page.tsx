@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 // Banner editável - altere a URL da imagem aqui
-const heroBannerImage = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80"
+const heroBannerImage = "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80"
 
 export default function BlogPage() {
   const formatDate = (dateString: string) => {
