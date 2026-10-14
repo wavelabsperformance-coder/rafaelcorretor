@@ -300,71 +300,6 @@ export const brokers: Broker[] = []
 
 export const blogPosts = [
   {
-    id: "1",
-    slug: "tendencias-arquitetura-2024",
-    title: "Tendências de Arquitetura para Imóveis de Alto Padrão em 2024",
-    excerpt:
-      "Descubra as principais tendências que estão moldando os projetos de imóveis de luxo neste ano.",
-    content: `A arquitetura de alto padrão está em constante evolução, refletindo as mudanças nos estilos de vida e as inovações tecnológicas. Em 2024, algumas tendências se destacam nos projetos mais exclusivos.
-
-A integração com a natureza continua sendo uma prioridade. Jardins internos, paredes verdes e grandes aberturas que conectam os ambientes internos ao exterior são elementos essenciais nos projetos contemporâneos.
-
-A sustentabilidade também ganha cada vez mais espaço. Sistemas de energia solar, reuso de água, materiais ecológicos e certificações verdes são diferenciais valorizados por compradores conscientes.
-
-O conceito de casa inteligente evoluiu significativamente. Automação residencial integrada, sistemas de segurança avançados e controle por voz se tornaram padrão em imóveis de luxo.
-
-Espaços multiuso e home offices bem projetados refletem a nova realidade do trabalho híbrido. Ambientes versáteis que se adaptam às diferentes necessidades do dia a dia são altamente valorizados.`,
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
-    date: "2024-01-15",
-    author: "Rafael Cavalcante",
-    category: "Arquitetura",
-  },
-  {
-    id: "2",
-    slug: "investir-imoveis-recife",
-    title: "Por Que Investir em Imóveis de Alto Padrão em Recife",
-    excerpt:
-      "Análise completa do mercado imobiliário de luxo na capital pernambucana e as melhores oportunidades.",
-    content: `Recife se consolida como um dos mercados mais promissores para investimentos imobiliários de alto padrão no Nordeste brasileiro.
-
-A valorização constante dos bairros nobres, como Boa Viagem, Casa Forte e Pina, demonstra a solidez do mercado local. A infraestrutura urbana em constante melhoria e os novos empreendimentos elevam o padrão da região.
-
-O potencial turístico da cidade atrai investidores interessados em imóveis para temporada e short stay. A proximidade com o aeroporto internacional e a estrutura hoteleira consolidada são vantagens competitivas.
-
-A qualidade de vida oferecida pela cidade, com praias urbanas, gastronomia reconhecida e opções culturais diversificadas, atrai profissionais de alto poder aquisitivo de outras regiões.
-
-O mercado de locação de alto padrão também apresenta demanda consistente, oferecendo retornos atrativos para investidores que buscam renda passiva.`,
-    image:
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
-    date: "2024-01-10",
-    author: "Rafael Cavalcante",
-    category: "Investimentos",
-  },
-  {
-    id: "3",
-    slug: "guia-compra-primeiro-imovel-luxo",
-    title: "Guia Completo: Como Comprar Seu Primeiro Imóvel de Luxo",
-    excerpt:
-      "Tudo o que você precisa saber antes de investir em um imóvel de alto padrão pela primeira vez.",
-    content: `Adquirir um imóvel de alto padrão é uma decisão importante que requer planejamento e conhecimento. Este guia oferece orientações essenciais para uma compra segura e satisfatória.
-
-Defina claramente suas prioridades: localização, tamanho, características específicas e orçamento disponível. Ter clareza sobre suas necessidades facilita a busca e a tomada de decisão.
-
-Conte com profissionais especializados. Uma imobiliária focada em alto padrão possui conhecimento específico do mercado, acesso a imóveis exclusivos e pode oferecer assessoria completa durante todo o processo.
-
-Verifique toda a documentação do imóvel e do vendedor. Due diligence completa evita problemas futuros e garante segurança jurídica na transação.
-
-Avalie a infraestrutura do condomínio e os custos de manutenção. Em imóveis de alto padrão, esses valores podem ser significativos e devem ser considerados no planejamento financeiro.
-
-Não tenha pressa. Visitar diferentes opções e comparar características permite uma escolha mais consciente e alinhada com suas expectativas.`,
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
-    date: "2024-01-05",
-    author: "Rafael Cavalcante",
-    category: "Dicas",
-  },
-  {
     id: "4",
     slug: "melhores-bairros-para-morar-em-caruaru",
     title: "Melhores bairros para morar em Caruaru",
@@ -383,26 +318,6 @@ Na hora de decidir, avalie a rotina, o perfil do condomínio, as metragens dispo
     date: "2024-02-18",
     author: "Rafael Cavalcante",
     category: "Bairros",
-  },
-  {
-    id: "5",
-    slug: "como-alugar-apartamento-em-boa-viagem-recife",
-    title: "Como alugar apartamento em Boa Viagem, Recife",
-    excerpt:
-      "Passo a passo para locar em Boa Viagem: documentação, valores médios, o que analisar no contrato e os bairros vizinhos como alternativa.",
-    content: `Alugar um apartamento em Boa Viagem é o sonho de muita gente que trabalha ou estuda no Recife. Além da orla, o bairro reúne transporte, comércio e serviços completos.
-
-Os valores de locação de apartamentos de 2 quartos em Boa Viagem ficam em torno de R$ 3.800 a R$ 4.500 mensais. Unidades amobiliadas ou de alto padrão, em andares altos ou próximas da praia, podem passar de R$ 5.000.
-
-Antes de assinar o contrato, separe os documentos: identidade e CPF, comprovante de renda e de residência, além de garantias (fiador, seguro-fiança ou depósito caução). Analise também o condomínio, o número de vagas e as condições de pagamento.
-
-Boa Viagem é forte para moradia e para investidores em locação, com demanda constante durante todo o ano. Para quem quer custo menor, bairros próximos do litoral, como Candeias, também são boas alternativas.
-
-O corretor Rafael Cavalcante tem opções de locação e orienta sobre os melhores prédios, valores e documentação, do primeiro contato à assinatura do contrato.`,
-    image: "/blog/boa-viagem-orla.webp",
-    date: "2024-02-14",
-    author: "Rafael Cavalcante",
-    category: "Aluguel",
   },
   {
     id: "6",
@@ -434,7 +349,7 @@ O corretor Rafael Cavalcante acompanha compradores desde a simulação até as c
       "Negociar o valor, escolher bem a garantia e avaliar taxas inclusas podem economizar centenas de reais por mês na locação.",
     content: `Alugar não precisa ser sinônimo de custo fixo alto. Pequenas decisões na assinatura do contrato podem reduzir bastante o gasto mensal com moradia.
 
-1. Compare valores na mesma região. Dois bairros vizinhos podem ter diferenças grandes de aluguel. Em Recife, por exemplo, Boa Viagem tem preços mais altos que bairros próximos com estrutura parecida.
+1. Compare valores na mesma região. Dois bairros vizinhos podem ter diferenças grandes de aluguel. Em Caruaru, por exemplo, o valor varia bastante entre regiões próximas, mesmo quando a estrutura é parecida.
 
 2. Negocie o valor anunciado. No mercado de locação, principalmente de imóveis parados há mais tempo, há espaço para descontos — vale oferecer um valor próximo e fechar rápido.
 
