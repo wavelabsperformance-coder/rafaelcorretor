@@ -1,21 +1,32 @@
 import { HeroSection } from "@/components/home/hero-section"
-import { FeaturedPropertiesSection } from "@/components/home/featured-properties-section"
+import { FeaturedCarousel } from "@/components/featured-carousel"
 import { DifferentialsSection } from "@/components/home/differentials-section"
 import { AboutPreviewSection } from "@/components/home/about-preview-section"
+import { FeaturedPropertiesSection } from "@/components/home/featured-properties-section"
 import { ServicesSection } from "@/components/home/services-section"
 import { TestimonialsSection } from "@/components/home/testimonials-section"
 import { CTASection } from "@/components/home/cta-section"
 import { MapSection } from "@/components/home/map-section"
+import { rentalProperties } from "@/lib/data"
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
 
-      <FeaturedPropertiesSection />
+      <FeaturedCarousel
+        properties={rentalProperties}
+        title="Imóveis para Alugar"
+        subtitle="Destaques"
+        type="aluguel"
+        viewAllHref="/empreendimentos/imoveis-para-alugar"
+      />
 
       <DifferentialsSection />
       <AboutPreviewSection />
+
+      <FeaturedPropertiesSection />
+
       <ServicesSection />
       <TestimonialsSection />
       <CTASection />
