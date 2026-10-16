@@ -1835,6 +1835,55 @@ VALOR DE VENDA: R$ 1.500.000,00 — escritura para desmembrar.`,
   backUrl: "/empreendimentos/imoveis-para-venda",
   backLabel: "Voltar para Imóveis para Venda",
   },
+  {
+    id: "casa-nova-caruaru",
+    title: "Casa com Amplo Terreno e Piscina no Nova Caruaru",
+    price: "R$ 1.300.000",
+    location: "Nova Caruaru, Caruaru - PE",
+    type: "venda",
+    category: "casa",
+    featured: true,
+    coverImage: "/imoveis/casas-para-alugar/casa-nova-caruaru/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 2,
+    parking: 4,
+    area: "350m²",
+    description: `CASA PARA VENDA OU LOCAÇÃO | NOVA CARUARU – CARUARU/PE
+
+Localizada em uma das áreas nobres do bairro Nova Caruaru, esta excelente propriedade oferece amplitude, conforto, privacidade e uma localização privilegiada. Posição nascente/sul, com ótima ventilação e iluminação natural.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 900 m² (30 x 30 m)
+- Área construída: 350 m²
+
+CARACTERÍSTICAS:
+- Sala ampla para 03 ambientes
+- 03 quartos, sendo 01 suíte
+- Cozinha ampla
+- 02 cisternas com capacidade de 13.000 litros cada
+- Piscina com capacidade de 75.000 litros
+- Ampla área verde e excelente espaço externo
+
+VENDA: R$ 1.300.000,00
+- Valor referente exclusivamente ao terreno.
+- Terreno escriturado.
+- Lote adicional informado: 12 x 30 m = 360 m².
+
+LOCAÇÃO: R$ 6.000,00/mês (destinação exclusivamente residencial).`,
+    images: Array.from({ length: 27 }, (_, i) => `/imoveis/casas-para-alugar/casa-nova-caruaru/${i + 1}.jpeg`),
+    amenities: [
+      "Terreno de 900 m²",
+      "Área Construída de 350 m²",
+      "Piscina",
+      "03 Quartos (01 Suíte)",
+      "Sala para 03 Ambientes",
+      "02 Cisternas de 13.000 Litros",
+      "Ampla Área Verde",
+      "Terreno Escriturado",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-venda",
+    backLabel: "Voltar para Imóveis para Venda",
+  },
 
   // =========================================================================
   // --- LOCAÇÃO ---
@@ -3073,6 +3122,53 @@ VALOR DA LOCAÇÃO: R$ 2.000,00/mês — condomínio e IPTU inclusos.`,
   ],
   backUrl: "/empreendimentos/imoveis-para-alugar",
   backLabel: "Voltar para Imóveis para Alugar",
+  },
+  {
+    id: "casa-nova-caruaru",
+    title: "Casa com Amplo Terreno e Piscina no Nova Caruaru",
+    price: "R$ 6.000 / mês",
+    location: "Nova Caruaru, Caruaru - PE",
+    type: "aluguel",
+    category: "casa",
+    featured: true,
+    coverImage: "/imoveis/casas-para-alugar/casa-nova-caruaru/1.jpeg",
+    bedrooms: 3,
+    bathrooms: 2,
+    parking: 4,
+    area: "350m²",
+    description: `CASA PARA VENDA OU LOCAÇÃO | NOVA CARUARU – CARUARU/PE
+
+Localizada em uma das áreas nobres do bairro Nova Caruaru, esta excelente propriedade oferece amplitude, conforto, privacidade e uma localização privilegiada. Posição nascente/sul, com ótima ventilação e iluminação natural.
+
+ÁREAS DO IMÓVEL:
+- Terreno: 900 m² (30 x 30 m)
+- Área construída: 350 m²
+
+CARACTERÍSTICAS:
+- Sala ampla para 03 ambientes
+- 03 quartos, sendo 01 suíte
+- Cozinha ampla
+- 02 cisternas com capacidade de 13.000 litros cada
+- Piscina com capacidade de 75.000 litros
+- Ampla área verde e excelente espaço externo
+
+LOCAÇÃO: R$ 6.000,00/mês
+- Destinação exclusivamente residencial.
+
+Disponível também para VENDA: R$ 1.300.000,00 (valor referente exclusivamente ao terreno, que está escriturado; lote adicional informado de 12 x 30 m = 360 m²).`,
+    images: Array.from({ length: 27 }, (_, i) => `/imoveis/casas-para-alugar/casa-nova-caruaru/${i + 1}.jpeg`),
+    amenities: [
+      "Terreno de 900 m²",
+      "Área Construída de 350 m²",
+      "Piscina",
+      "03 Quartos (01 Suíte)",
+      "Sala para 03 Ambientes",
+      "02 Cisternas de 13.000 L",
+      "Ampla Área Verde",
+      "Destinação Residencial",
+    ],
+    backUrl: "/empreendimentos/imoveis-para-alugar",
+    backLabel: "Voltar para Imóveis para Alugar",
   },
 
  // ==========================================
