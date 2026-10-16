@@ -252,7 +252,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     price: "R$ 290.000",
     location: "Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
+      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -263,7 +263,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/2.mp4",
     ],
     images: [
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg",
+      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
       ...Array.from(
         { length: 20 },
         (_, i) =>
@@ -271,7 +271,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
       ).filter(
         (img) =>
           img !==
-          "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/12.jpeg"
+          "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg"
       ),
     ],
     amenities: [
@@ -859,7 +859,7 @@ VALOR DE VENDA: R$ 420.000,00 — quitado, aceita financiamento.`,
   title: "Apartamento de Alto Padrão no Edifício Lusia Maciel",
   price: "R$ 850.000",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-venda/ap-lusia-maciel/3.jpeg",
+  coverImage: "/imoveis/apartamentos-para-venda/ap-lusia-maciel/11.jpeg",
   bedrooms: 3,
   bathrooms: 3,
   parking: 2,

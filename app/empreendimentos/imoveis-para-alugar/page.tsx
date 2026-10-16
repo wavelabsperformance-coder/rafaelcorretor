@@ -171,7 +171,7 @@ Disponível também para VENDA (Consulte o valor).`,
     price: "R$ 10.000 / mês",
     location: "Quintas da Colina II, Caruaru - PE",
     coverImage:
-      "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/4.jpeg",
+      "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/3.jpeg",
     bedrooms: 4,
     bathrooms: 5,
     parking: 4,
@@ -197,7 +197,7 @@ CARACTERÍSTICAS:
 VALOR DE LOCAÇÃO: R$ 10.000,00/mês (incluso Condomínio e IPTU)`,
     videos: [],
     images: [
-      "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/4.jpeg",
+      "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/3.jpeg",
       ...Array.from(
         { length: 5 },
         (_, i) =>
@@ -205,7 +205,7 @@ VALOR DE LOCAÇÃO: R$ 10.000,00/mês (incluso Condomínio e IPTU)`,
       ).filter(
         (img) =>
           img !==
-          "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/4.jpeg"
+          "/imoveis/casas-para-alugar/casa-quintas-da-colina-2/3.jpeg"
       ),
     ],
     amenities: [
@@ -379,7 +379,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
     price: "R$ 4.000 / mês",
     location: "Maurício de Nassau, Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/1.jpeg",
+      "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/3.jpeg",
     bedrooms: 1,
     bathrooms: 1,
     parking: 1,
@@ -389,7 +389,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
       "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/19.mp4",
     ],
     images: [
-      "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/1.jpeg",
+      "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/3.jpeg",
       ...Array.from(
         { length: 29 },
         (_, i) =>
@@ -397,7 +397,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
       ).filter(
         (img) =>
           img !==
-          "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/1.jpeg"
+          "/imoveis/apartamentos-para-alugar/apartamento-alto-padrao-pronto-morar/3.jpeg"
       ),
     ],
     amenities: ["Alto Padrão Decorado", "Academia Equipada", "Coworking"],
@@ -1262,7 +1262,7 @@ ATENÇÃO: imóvel atualmente ALUGADO.`,
   title: "Apartamento no Edf. Multiporto - Indianópolis",
   price: "R$ 2.000 / mês (Condomínio e IPTU Inclusos)",
   location: "Indianópolis, Caruaru - PE",
-  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-multiporto-indianopolis/4.jpeg",
+  coverImage: "/imoveis/apartamentos-para-alugar/ap-edf-multiporto-indianopolis/6.jpeg",
   bedrooms: 1,
   bathrooms: 1,
   parking: 1,
