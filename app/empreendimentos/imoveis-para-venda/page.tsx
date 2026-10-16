@@ -1534,7 +1534,7 @@ Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de
   title: "Chácara na Lagoa do Paulista - Mata Negra",
   price: "R$ 1.500.000",
   location: "Lagoa do Paulista, Caruaru - PE",
-  coverImage: "/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/12.jpeg",
+  coverImage: "/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/13.jpeg",
   bedrooms: 4,
   bathrooms: 4,
   parking: 0,

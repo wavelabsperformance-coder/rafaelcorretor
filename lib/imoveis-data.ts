@@ -1791,7 +1791,7 @@ Ideal para quem busca um local de lazer com muita paz, segurança e qualidade de
   location: "Lagoa do Paulista, Caruaru - PE",
   type: "venda",
   category: "terreno",
-  coverImage: "/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/12.jpeg",
+  coverImage: "/imoveis/terrenos-e-lotes/chacara-lagoa-do-paulista/13.jpeg",
   bedrooms: 4,
   bathrooms: 4,
   parking: 0,

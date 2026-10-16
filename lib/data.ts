@@ -18,7 +18,7 @@ export const siteConfig = {
   whatsappLink: "https://wa.me/5581996863213",
   email: "Rafael.cavalcantecorretorpe@gmail.com",
   address: "Caruaru - PE",
-  instagram: "https://instagram.com/",
+  instagram: "https://www.instagram.com/rafael.cavalcantecorretorpe/",
   googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Caruaru+PE",
   googleMapsEmbed: "https://www.google.com/maps?q=Caruaru,+PE&output=embed",
   googleReviewsLink: "",
