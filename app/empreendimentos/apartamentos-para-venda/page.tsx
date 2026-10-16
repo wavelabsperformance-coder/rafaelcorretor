@@ -31,7 +31,7 @@ const apartamentosVenda = [
     title: "Apartamento Pronto para Morar no Condomínio Vog Ville Norte",
     price: "R$ 290.000",
     location: "Caruaru - PE",
-    coverImage: "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
+    coverImage: "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/11.jpeg",
     bedrooms: 2,
     bathrooms: 2, // 1 suíte + 1 social
     parking: 1,
@@ -58,28 +58,11 @@ Estrutura e lazer do condomínio:
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/1.mp4",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/2.mp4",
     ],
-    images: [
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/3.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/4.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/5.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/6.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/7.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/8.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/10.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/11.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/13.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/14.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/15.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/16.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/17.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/18.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/19.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/20.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/21.jpeg",
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/22.jpeg",
-    ],
+    images: Array.from(
+      { length: 20 },
+      (_, i) =>
+        `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
+    ),
     amenities: [
       "1 Suíte",
       "Ar-condicionado nos Quartos",

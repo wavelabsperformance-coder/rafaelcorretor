@@ -604,7 +604,7 @@ Estrutura completa de lazer, bem-estar e conveniência:
     type: "venda",
     category: "apartamento",
     featured: false,
-    coverImage: "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
+    coverImage: "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/11.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -614,13 +614,10 @@ Estrutura completa de lazer, bem-estar e conveniência:
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/1.mp4",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/2.mp4",
     ],
-    images: [
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
-      ...Array.from(
-        { length: 20 },
-        (_, i) => `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
-      ).filter((img) => img !== "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg"),
-    ],
+    images: Array.from(
+      { length: 20 },
+      (_, i) => `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
+    ),
     amenities: ["1 Suíte", "Ar-condicionado", "Móveis Planejados", "Piscina Adulto e Infantil", "Academia Equipada"],
     backUrl: "/empreendimentos/imoveis-para-venda",
     backLabel: "Voltar para Imóveis para Venda",

@@ -252,7 +252,7 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
     price: "R$ 290.000",
     location: "Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
+      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/11.jpeg",
     bedrooms: 2,
     bathrooms: 2,
     parking: 1,
@@ -262,18 +262,11 @@ EDIFÍCIO CELY MIRANDA | UNIVERSITÁRIO`,
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/1.mp4",
       "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/2.mp4",
     ],
-    images: [
-      "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg",
-      ...Array.from(
-        { length: 20 },
-        (_, i) =>
-          `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
-      ).filter(
-        (img) =>
-          img !==
-          "/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/9.jpeg"
-      ),
-    ],
+    images: Array.from(
+      { length: 20 },
+      (_, i) =>
+        `/imoveis/apartamentos-para-venda/edificio-vog-ville-norte/${i + 3}.jpeg`
+    ),
     amenities: [
       "1 Suíte",
       "Ar-condicionado",
