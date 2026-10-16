@@ -232,6 +232,9 @@ const categoriaPorTipo: Record<ImovelCompleto["type"], string> = {
 }
 
 function paraCarrossel(imovel: ImovelCompleto): Property {
+  const capa = imovel.coverImage || imovel.images[0] || "/placeholder.jpg"
+  const demaisFotos = imovel.images.filter((foto) => foto !== capa)
+
   return {
     id: imovel.id,
     title: imovel.title,
@@ -244,7 +247,7 @@ function paraCarrossel(imovel: ImovelCompleto): Property {
     description: imovel.description,
     category: categoriaPorTipo[imovel.type],
     featured: imovel.featured ?? false,
-    images: [imovel.coverImage || imovel.images[0] || "/placeholder.jpg"],
+    images: [capa, ...demaisFotos],
     video: imovel.videos?.[0] ?? null,
   }
 }

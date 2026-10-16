@@ -8,12 +8,12 @@ import {
   Car,
   Maximize,
   MapPin,
-  Play,
   ChevronLeft,
   ChevronRight,
   ArrowRight,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { CardGallery } from "@/components/card-gallery"
 import type { Property } from "@/lib/data"
 
 interface FeaturedCarouselProps {
@@ -49,8 +49,6 @@ function PropertyCardSlide({
   const priceSuffix = priceParts[1]?.trim()
   const hasValue = /\d/.test(priceMain)
 
- const accentColor = isLocacao ? "#0d3b2e" : "#b85d19"
-
   return (
     <div
       key={uniqueKey}
@@ -59,30 +57,14 @@ function PropertyCardSlide({
       <article className="group bg-white rounded-3xl p-2 border border-[#0d3b2e]/10 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#0d3b2e]/30 transition-all duration-300 flex flex-col justify-between h-full">
 
         <div>
-          <Link
+          <CardGallery
             href={targetUrl}
-            className="block aspect-[4/3] overflow-hidden relative cursor-pointer bg-muted rounded-2xl"
-          >
-            <img
-              src={property.images?.[0] || "/placeholder.jpg"}
-              alt={property.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-
-            <div
-              className="absolute top-3 left-3 text-white px-3.5 py-1 text-xs rounded-full font-semibold shadow-md"
-              style={{ backgroundColor: accentColor }}
-            >
-              {isLocacao ? "Locação" : "Venda"}
-            </div>
-
-            {property.video && (
-              <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-2.5 py-1 text-[11px] rounded-full font-medium flex items-center gap-1">
-                <Play className="h-3 w-3 fill-white" />
-                Vídeo
-              </div>
-            )}
-          </Link>
+            images={property.images}
+            title={property.title}
+            badge={isLocacao ? "Locação" : "Venda"}
+            badgeClassName={isLocacao ? "bg-[#0d3b2e]" : "bg-[#b85d19]"}
+            isVideo={Boolean(property.video)}
+          />
 
           <div className="px-3 sm:px-4 pt-4 pb-2">
             <span className="text-[11px] uppercase tracking-wider text-muted-foreground flex items-center gap-1 font-medium">

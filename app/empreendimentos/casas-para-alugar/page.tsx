@@ -135,7 +135,7 @@ ATENÇÃO: imóvel atualmente ALUGADO, porém disponível para venda por R$ 750.
   title: "Casa para Locação Comercial no Maurício de Nassau",
   price: "R$ 5.000 / mês",
   location: "Maurício de Nassau, Caruaru - PE",
-  coverImage: "/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/1.jpeg",
+  coverImage: "/imoveis/casas-para-alugar/casa-mauricio-de-nassau-comercial/22.jpeg",
   bedrooms: 4,
   bathrooms: 4,
   parking: 2,

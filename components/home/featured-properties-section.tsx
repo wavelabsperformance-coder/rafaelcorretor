@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowUpRight, Bath, Bed, Car, MapPin, Maximize, Play } from "lucide-react"
+import { ArrowUpRight, Bath, Bed, Car, MapPin, Maximize } from "lucide-react"
 import { rentalProperties, saleProperties, type Property } from "@/lib/data"
 import { Button } from "@/components/ui/button"
+import { CardGallery } from "@/components/card-gallery"
 import { motion } from "framer-motion"
 
 function parsePrice(price: string) {
@@ -29,24 +30,13 @@ function HomePropertyCard({ property, locacao }: { property: Property; locacao: 
   return (
     <article className="group flex h-full flex-col justify-between rounded-3xl border border-[#0d3b2e]/10 bg-white p-2 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0d3b2e]/30 hover:shadow-xl">
       <div>
-        <Link href={href} className="relative block aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-muted">
-          <img
-            src={property.images?.[0] || "/placeholder.jpg"}
-            alt={property.title}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-
-          <div className="absolute left-3 top-3 rounded-full bg-[#b85d19] px-3 py-1 text-xs font-medium text-white shadow-sm">
-            {locacao ? "Locação" : "Venda"}
-          </div>
-
-          {property.video && (
-            <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
-              <Play className="h-3 w-3 fill-white" />
-              Vídeo
-            </div>
-          )}
-        </Link>
+        <CardGallery
+          href={href}
+          images={property.images}
+          title={property.title}
+          badge={locacao ? "Locação" : "Venda"}
+          isVideo={Boolean(property.video)}
+        />
 
         <div className="px-3 pb-2 pt-4 sm:px-4">
           <span className="flex items-center gap-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
