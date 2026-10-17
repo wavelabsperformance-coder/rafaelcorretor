@@ -107,7 +107,7 @@ Condições de locação:
     title: "Apartamento Mobiliado no Edifício Jardim dos Alecrins",
     price: "R$ 2.800 / mês (Incluso Água, Gás, Condomínio e IPTU)",
     location: "Universitário, Caruaru - PE",
-    coverImage: "/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/1.jpeg",
+    coverImage: "/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/32.jpeg",
     bedrooms: 2,
     bathrooms: 1,
     parking: 1,

@@ -349,7 +349,7 @@ Condomínio Terras Alpha | Caruaru – PE`,
     price: "R$ 2.800 / mês",
     location: "Universitário, Caruaru - PE",
     coverImage:
-      "/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/1.jpeg",
+      "/imoveis/apartamentos-para-alugar/edificio-jardim-dos-alecrins/32.jpeg",
     bedrooms: 2,
     bathrooms: 1,
     parking: 1,
